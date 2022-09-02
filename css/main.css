@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #455834;
+  background: #0d2ef2;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2293,4 +2293,12 @@ embed {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.fa-bilibili {
+  background: url("/images/bilibili.svg");
+/* background: url(https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/bilibili.svg); */
+  background-position: 50% 75%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
 }
