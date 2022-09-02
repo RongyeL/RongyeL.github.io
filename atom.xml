@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-09-02T12:58:19.512Z</updated>
+  <updated>2022-09-02T14:48:53.770Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://rongyel.github.io/2022/09/01/test/"/>
     <id>https://rongyel.github.io/2022/09/01/test/</id>
     <published>2022-09-01T13:30:35.000Z</published>
-    <updated>2022-09-02T12:58:19.512Z</updated>
+    <updated>2022-09-02T14:48:53.770Z</updated>
     
-    <content type="html"><![CDATA[<p>参考文章：</p><p><a href="https://zhuanlan.zhihu.com/p/26625249/">https://zhuanlan.zhihu.com/p/26625249\</a></p><p><a href="https://zhuanlan.zhihu.com/p/60578464">https://zhuanlan.zhihu.com/p/60578464</a></p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>将hexo根目录下的.deploy_git/删除掉，然后使用hexo deploy重新部署就可以了。<br>但是暂时不清楚是什么原因引起的错误。</p><p>可以hexo d但是在打开网站后只能看到readme文件。</p><p>原因在于没有设置默认分支为master。自动建立了一个main branch。</p><p>在设置中设置默认分支，并删除掉main branch。</p><p>删除.deploy_git，并重新hexo d</p><p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662046825295-7e21c2e8-9190-4735-8547-7d58502824a3.png" alt="img"></p><p>现在可以在<a href="https://rongyel.github.io/">https://rongyel.github.io/</a></p><p>看到自己的博客界面啦。</p><p>更换为next主题后，本地服务可以看到页面已经换了</p><p>但是.io的页面还是原来的样子。</p><p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662047399987-fa958900-f5f9-47cf-b8ea-4bf4f7a17989.png" alt="img"></p><p>npm install hexo-renderer-pug hexo-renderer-stylus –save</p><p>安装以后再hexo d</p><p>不知道为什么就可以了。</p><p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662047471308-3cd2c599-ad34-4c5a-8557-b253bbbfcd35.png" alt="img"></p><p>每次hexo d推送之前，最好先清除浏览器的缓存。不然会发现没有变化。</p><p>因为我已经搭建好图床了，所以从语雀移植过来的图片需要进行重新上传。</p><p><a href="https://zhuanlan.zhihu.com/p/351031589">https://zhuanlan.zhihu.com/p/351031589</a></p><p>对自己的页面进行一些配置</p>]]></content>
+    <content type="html"><![CDATA[<p>参考文章：</p><p><a href="https://zhuanlan.zhihu.com/p/26625249/">https://zhuanlan.zhihu.com/p/26625249\</a></p><p><a href="https://zhuanlan.zhihu.com/p/60578464">https://zhuanlan.zhihu.com/p/60578464</a></p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>将hexo根目录下的.deploy_git/删除掉，然后使用hexo deploy重新部署就可以了。<br>但是暂时不清楚是什么原因引起的错误。</p><p>可以hexo d但是在打开网站后只能看到readme文件。</p><p>原因在于没有设置默认分支为master。自动建立了一个main branch。</p><p>在设置中设置默认分支，并删除掉main branch。</p><p>删除.deploy_git，并重新hexo d</p><p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662046825295-7e21c2e8-9190-4735-8547-7d58502824a3.png" alt="img"></p><p>现在可以在<a href="https://rongyel.github.io/">https://rongyel.github.io/</a></p><p>看到自己的博客界面啦。</p><p>更换为next主题后，本地服务可以看到页面已经换了</p><p>但是.io的页面还是原来的样子。</p><p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662047399987-fa958900-f5f9-47cf-b8ea-4bf4f7a17989.png" alt="img"></p><p>npm install hexo-renderer-pug hexo-renderer-stylus –save</p><p>安装以后再hexo d</p><p>不知道为什么就可以了。</p><p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662047471308-3cd2c599-ad34-4c5a-8557-b253bbbfcd35.png" alt="img"></p><p>每次hexo d推送之前，最好先清除浏览器的缓存。不然会发现没有变化。</p><p>因为我已经搭建好图床了，所以从语雀移植过来的图片需要进行重新上传。</p><p><a href="https://zhuanlan.zhihu.com/p/351031589">https://zhuanlan.zhihu.com/p/351031589</a></p><p>对自己的页面进行一些配置</p><p><a href="https://zhuanlan.zhihu.com/p/28128674">https://zhuanlan.zhihu.com/p/28128674</a></p>]]></content>
     
     
       
