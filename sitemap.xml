@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rongyel.github.io/2022/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/</loc>
+    
+    <lastmod>2022-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/2022/typoratest/</loc>
     
     <lastmod>2022-09-04</lastmod>
@@ -30,15 +39,6 @@
   
   <url>
     <loc>https://rongyel.github.io/categories/index.html</loc>
-    
-    <lastmod>2022-09-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/2022/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/</loc>
     
     <lastmod>2022-09-04</lastmod>
     
