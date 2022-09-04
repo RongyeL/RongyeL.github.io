@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://rongyel.github.io/tags/index.html</loc>
+    
+    <lastmod>2022-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/2022/hello-world/</loc>
     
     <lastmod>2022-09-04</lastmod>
@@ -30,15 +39,6 @@
   
   <url>
     <loc>https://rongyel.github.io/2022/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2022-09-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/tags/index.html</loc>
     
     <lastmod>2022-09-04</lastmod>
     
@@ -74,6 +74,13 @@
 
   
   <url>
+    <loc>https://rongyel.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -82,13 +89,6 @@
   
   <url>
     <loc>https://rongyel.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-09-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
