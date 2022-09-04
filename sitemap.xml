@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rongyel.github.io/2022/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2022-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/2022/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/</loc>
     
     <lastmod>2022-09-04</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://rongyel.github.io/2022/typoratest/</loc>
-    
-    <lastmod>2022-09-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/2022/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2022-09-04</lastmod>
     
