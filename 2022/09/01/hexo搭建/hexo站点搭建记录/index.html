@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/%E8%8A%AF%E7%89%87.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/%E8%8A%AF%E7%89%87.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/%E8%8A%AF%E7%89%87.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"rongyel.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="记录自己搭建hexo的过程。全是坑。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客初步搭建">
+<meta property="og:url" content="https://rongyel.github.io/2022/09/01/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="IC攻城狮的自我修养">
+<meta property="og:description" content="记录自己搭建hexo的过程。全是坑。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662046825295-7e21c2e8-9190-4735-8547-7d58502824a3.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662047399987-fa958900-f5f9-47cf-b8ea-4bf4f7a17989.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662047471308-3cd2c599-ad34-4c5a-8557-b253bbbfcd35.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/bilibili.svg">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220903011954966.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220904114335282.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220904174552260.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220904174723854.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220904174756313.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220904190835888.png">
+<meta property="article:published_time" content="2022-09-01T13:30:35.000Z">
+<meta property="article:modified_time" content="2022-09-04T12:02:01.258Z">
+<meta property="article:author" content="Rong晔">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662046825295-7e21c2e8-9190-4735-8547-7d58502824a3.png">
+
+<link rel="canonical" href="https://rongyel.github.io/2022/09/01/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hexo博客初步搭建 | IC攻城狮的自我修养</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="IC攻城狮的自我修养" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">IC攻城狮的自我修养</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">To be a better IC engineer, maybe?</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-rss">
+
+    <a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/RongyeL" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rongyel.github.io/2022/09/01/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/37.png">
+      <meta itemprop="name" content="Rong晔">
+      <meta itemprop="description" content="记录自己在IC领域的所学所想。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IC攻城狮的自我修养">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo博客初步搭建
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-01 21:30:35" itemprop="dateCreated datePublished" datetime="2022-09-01T21:30:35+08:00">2022-09-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-04 20:02:01" itemprop="dateModified" datetime="2022-09-04T20:02:01+08:00">2022-09-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">hexo博客</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <div class="post-description">记录自己搭建hexo的过程。全是坑。</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>参考文章：</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249/">https://zhuanlan.zhihu.com/p/26625249\</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60578464">https://zhuanlan.zhihu.com/p/60578464</a></p>
+<h2 id="搭建计划："><a href="#搭建计划：" class="headerlink" title="搭建计划："></a>搭建计划：</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 设定主题为next</li>
+<li><input checked="" disabled="" type="checkbox"> 版权声明</li>
+<li><input checked="" disabled="" type="checkbox"> 导航栏配置</li>
+<li><input checked="" disabled="" type="checkbox"> 侧边栏头像</li>
+<li><input disabled="" type="checkbox"> 侧边栏社交小图标-b站未完成</li>
+<li><input checked="" disabled="" type="checkbox"> 显示阅读进度</li>
+<li><input checked="" disabled="" type="checkbox"> 增加搜索功能</li>
+<li><input checked="" disabled="" type="checkbox"> 修改文章底部标签图标</li>
+<li><input checked="" disabled="" type="checkbox"> 文章末尾增加本文结束</li>
+<li><input checked="" disabled="" type="checkbox"> 网站底部增加访问量</li>
+<li><input checked="" disabled="" type="checkbox"> 增加字数统计</li>
+<li><input checked="" disabled="" type="checkbox"> 设置网站的图标</li>
+<li><input checked="" disabled="" type="checkbox"> 博文置顶配置</li>
+<li><input disabled="" type="checkbox"> 代码复制</li>
+<li><input disabled="" type="checkbox"> </li>
+</ul>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>将hexo根目录下的.deploy_git/删除掉，然后使用hexo deploy重新部署就可以了。<br>但是暂时不清楚是什么原因引起的错误。</p>
+<p>可以hexo d但是在打开网站后只能看到readme文件。</p>
+<p>原因在于没有设置默认分支为master。自动建立了一个main branch。</p>
+<p>在设置中设置默认分支，并删除掉main branch。</p>
+<p>删除.deploy_git，并重新hexo d</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662046825295-7e21c2e8-9190-4735-8547-7d58502824a3.png" alt="img"></p>
+<p>现在可以在<a href="https://rongyel.github.io/">https://rongyel.github.io/</a></p>
+<p>看到自己的博客界面啦。</p>
+<p>更换为next主题后，本地服务可以看到页面已经换了</p>
+<p>但是.io的页面还是原来的样子。</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662047399987-fa958900-f5f9-47cf-b8ea-4bf4f7a17989.png" alt="img"></p>
+<p>npm install hexo-renderer-pug hexo-renderer-stylus –save</p>
+<p>安装以后再hexo d</p>
+<p>不知道为什么就可以了。</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/1662047471308-3cd2c599-ad34-4c5a-8557-b253bbbfcd35.png" alt="img"></p>
+<p>每次hexo d推送之前，最好先清除浏览器的缓存。不然会发现没有变化。</p>
+<p>因为我已经搭建好图床了，所以从语雀移植过来的图片需要进行重新上传。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/351031589">https://zhuanlan.zhihu.com/p/351031589</a></p>
+<p>对自己的页面进行一些配置</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28128674">https://zhuanlan.zhihu.com/p/28128674</a></p>
+<p>改变图标</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43340547/article/details/120581558">https://blog.csdn.net/qq_43340547/article/details/120581558</a></p>
+<p>总是不成功……b站的图标一直没搞出来</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/bilibili.svg" alt="bilibili"></p>
+<p>算了，搞不定</p>
+<p>添加搜索功能</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/fdd8e4e36c57">https://www.jianshu.com/p/fdd8e4e36c57</a></p>
+<p>这个教程有问题</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45877759/article/details/107141789">https://blog.csdn.net/weixin_45877759/article/details/107141789</a></p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220903011954966.png" alt="image-20220903011954966"></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/as480133937/article/details/100138838">https://blog.csdn.net/as480133937/article/details/100138838</a></p>
+<p>配置了很久以后，发现自己的next版本太旧了，很多修改方式都对不上。无语了，</p>
+<p>浪费了好多时间啊。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a></p>
+<p>设置近期文章</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cscshi/p/15196107.html">https://www.cnblogs.com/cscshi/p/15196107.html</a></p>
+<p>增加评论功能</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48927364/article/details/123321038">https://blog.csdn.net/weixin_48927364/article/details/123321038</a></p>
+<p>后面这个更准确</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b5f509f25872">https://www.jianshu.com/p/b5f509f25872</a></p>
+<p>增加rss</p>
+<p>需要补充</p>
+<p><a target="_blank" rel="noopener" href="https://www.dazhuanlan.com/appleking2003/topics/1441463">https://www.dazhuanlan.com/appleking2003/topics/1441463</a></p>
+<p>一直不成功</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220904114335282.png" alt="image-20220904114335282"></p>
+<p>其实已经成功了，只是我不明白rss的工作原理。</p>
+<p>在谷歌浏览器安装RSS阅读插件就可以看到了。</p>
+<p>b站图标问题还是没有能够解决</p>
+<p>我靠我终于解决了这个问题！！！</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220904174552260.png" alt="image-20220904174552260"></p>
+<p>网络上搜到的办法没一个成功的！！！最后我自己灵机一动搞定了！！！！</p>
+<p>无语了，<a target="_blank" rel="noopener" href="https://fontawesome.com/icons/bilibili?s=&amp;f=brands">https://fontawesome.com/icons/bilibili?s=&amp;f=brands</a></p>
+<p>其实这个b站的图标，在最新的fontawesome网站上是有的，</p>
+<p>只是next之类的主题自己默认配置的版本不是最新的，</p>
+<p>要6.0.0的版本才可以。</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220904174723854.png" alt="image-20220904174723854"></p>
+<p>可以看到自带的版本是5.13.0的</p>
+<p>我自己设置为6.0.0</p>
+<p>然后<img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220904174756313.png" alt="image-20220904174756313"></p>
+<p>就可以正常的直接调用该图标了！！！无语了。根本不需要自己添加什么图标文件。</p>
+<h2 id="让百度和百度收录博客"><a href="#让百度和百度收录博客" class="headerlink" title="让百度和百度收录博客"></a>让百度和百度收录博客</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lfri/p/12219639.html">https://www.cnblogs.com/lfri/p/12219639.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://craftboss.net/2019/10/23/hexo%E5%8D%9A%E5%AE%A2%E9%AA%8C%E8%AF%81%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF/">https://craftboss.net/2019/10/23/hexo%E5%8D%9A%E5%AE%A2%E9%AA%8C%E8%AF%81%E7%99%BE%E5%BA%A6%E7%AB%99%E9%95%BF/</a></p>
+<p>文件验证的方法</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220904190835888.png" alt="image-20220904190835888"></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/100922816%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E9%85%8D%E7%BD%AE">https://zhuanlan.zhihu.com/p/100922816主动推送配置</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/MoYu-zc/p/14402037.html">https://www.cnblogs.com/MoYu-zc/p/14402037.html</a> 主要参考推送设置</p>
+<p>最后使用sitmap的方式进行推送，谷歌必应百度都已经设置完毕了，过几天看看能不能搜索到就好了。</p>
+
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束，感谢您的关注-------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Rong晔
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://rongyel.github.io/2022/09/01/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" title="Hexo博客初步搭建">https://rongyel.github.io/2022/09/01/hexo搭建/hexo站点搭建记录/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/09/01/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/09/02/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/" rel="next" title="Gvim 配置文件.vimrc">
+      Gvim 配置文件.vimrc <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+
+    <div>
+        
+        
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '419d888f11979e625e56',
+      clientSecret: '181ace9ce2327195e0f54f46edba1f124181d6b4',
+      repo        : 'hexo_comment',
+      owner       : 'RongyeL',
+      admin       : ['RongyeL'],
+      id          : '951bb50a278fe1be4d82a96063a69f2f',
+        language: 'zh-CN',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+        
+    </div>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E8%AE%A1%E5%88%92%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">搭建计划：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A9%E7%99%BE%E5%BA%A6%E5%92%8C%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95%E5%8D%9A%E5%AE%A2"><span class="nav-number">3.</span> <span class="nav-text">让百度和百度收录博客</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Rong晔"
+      src="/images/37.png">
+  <p class="site-author-name" itemprop="name">Rong晔</p>
+  <div class="site-description" itemprop="description">记录自己在IC领域的所学所想。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/RongyeL" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;RongyeL" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/3280670" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;3280670" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最近文章
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/2022/09/02/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/" title="2022&#x2F;09&#x2F;02&#x2F;Gvim 配置文件.vimrc&#x2F;">Gvim 配置文件.vimrc</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/2022/09/01/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" title="2022&#x2F;09&#x2F;01&#x2F;hexo搭建&#x2F;hexo站点搭建记录&#x2F;">Hexo博客初步搭建</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/2022/09/01/hello-world/" title="2022&#x2F;09&#x2F;01&#x2F;hello-world&#x2F;">Hello World</a>
+        </li>
+    </ul>
+  </div>
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rong晔</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '419d888f11979e625e56',
+      clientSecret: '181ace9ce2327195e0f54f46edba1f124181d6b4',
+      repo        : 'hexo_comment',
+      owner       : 'RongyeL',
+      admin       : ['RongyeL'],
+      id          : '951bb50a278fe1be4d82a96063a69f2f',
+        language: 'zh-CN',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
