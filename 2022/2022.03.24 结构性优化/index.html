@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"rongyel.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="睡不着思考自己设计存在的问题。一个过不去的点就是，id.v这样的模块是有问题的。我思来想去，不应该用id作为模块名称，这里应该更正为ctrl.v 即control模块。该模块只根据inst的最低7位来生成控制信号。不过，前面的pc设计我还得思考一下。 感觉还是不能按照这本书的来，这样设计太好了，太复杂了。我还是应该设计的简陋一些 CPU的设计，应当分为数据通路和控制部件两大部分。 这张图可以稍稍解">
+  <meta name="description" content="Hello World。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IC攻城狮的自我修养">
+<meta property="og:title" content="结构性优化">
 <meta property="og:url" content="https://rongyel.github.io/2022/2022.03.24%20%E7%BB%93%E6%9E%84%E6%80%A7%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="IC攻城狮的自我修养">
-<meta property="og:description" content="睡不着思考自己设计存在的问题。一个过不去的点就是，id.v这样的模块是有问题的。我思来想去，不应该用id作为模块名称，这里应该更正为ctrl.v 即control模块。该模块只根据inst的最低7位来生成控制信号。不过，前面的pc设计我还得思考一下。 感觉还是不能按照这本书的来，这样设计太好了，太复杂了。我还是应该设计的简陋一些 CPU的设计，应当分为数据通路和控制部件两大部分。 这张图可以稍稍解">
+<meta property="og:description" content="Hello World。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/23037179/1648056445714-1b239084-a7b3-4b87-9e5d-20c95c54e08a.png#clientId=ufc5b987b-092a-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=549&id=ucd724939&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1098&originWidth=1274&originalType=binary&ratio=1&rotation=0&showTitle=false&size=530662&status=done&style=none&taskId=uf0d0b4dc-7e41-4871-88a6-7b9fa3a2291&title=&width=637">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/23037179/1648058028439-df7b924f-90a5-47a7-aba7-d6ade2b382d1.png#clientId=u05c8589a-5027-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u3c7f165f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=599&originWidth=935&originalType=url&ratio=1&rotation=0&showTitle=false&size=180556&status=done&style=none&taskId=u667513d9-a6aa-4d5b-a380-5891d8a6f7f&title=">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/23037179/1648058269101-16717c22-93b9-441e-868d-102db820d543.png#clientId=uef0fe8d8-774f-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u224b2166&margin=%5Bobject%20Object%5D&name=image.png&originHeight=291&originWidth=521&originalType=url&ratio=1&rotation=0&showTitle=false&size=37976&status=done&style=none&taskId=uefbb1de9-6656-42d1-a433-b754f58b917&title=">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/23037179/1648005850465-f40b4352-c696-4d2a-ade3-8016f19af9f6.png#clientId=u83135158-e9ce-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=1294&id=Nw0TR&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2588&originWidth=2000&originalType=url&ratio=1&rotation=0&showTitle=false&size=652466&status=done&style=none&taskId=u70c9514b-698c-4097-a2b6-35cdd1e3170&title=&width=1000">
-<meta property="article:published_time" content="2022-09-04T15:36:15.908Z">
-<meta property="article:modified_time" content="2022-09-04T15:36:08.730Z">
+<meta property="article:published_time" content="2022-09-01T13:30:00.000Z">
+<meta property="article:modified_time" content="2022-09-04T16:05:33.962Z">
 <meta property="article:author" content="Rong晔">
-<meta property="article:tag" content="ASIC">
+<meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/23037179/1648056445714-1b239084-a7b3-4b87-9e5d-20c95c54e08a.png#clientId=ufc5b987b-092a-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=549&id=ucd724939&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1098&originWidth=1274&originalType=binary&ratio=1&rotation=0&showTitle=false&size=530662&status=done&style=none&taskId=uf0d0b4dc-7e41-4871-88a6-7b9fa3a2291&title=&width=637">
 
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title> | IC攻城狮的自我修养</title>
+  <title>结构性优化 | IC攻城狮的自我修养</title>
   
 
 
@@ -217,7 +217,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          结构性优化
         </h1>
 
         <div class="post-meta">
@@ -226,9 +226,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-09-04 23:36:15 / 修改时间：23:36:08" itemprop="dateCreated datePublished" datetime="2022-09-04T23:36:15+08:00">2022-09-04</time>
+              <time title="创建时间：2022-09-01 21:30:00" itemprop="dateCreated datePublished" datetime="2022-09-01T21:30:00+08:00">2022-09-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-05 00:05:33" itemprop="dateModified" datetime="2022-09-05T00:05:33+08:00">2022-09-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">hexo博客</span></a>
+                </span>
             </span>
 
           
@@ -239,6 +254,7 @@
               <span class="post-meta-item-text">阅读次数：</span>
               <span id="busuanzi_value_page_pv"></span>
             </span>
+            <div class="post-description">Hello World。</div>
 
         </div>
       </header>
@@ -284,7 +300,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://rongyel.github.io/2022/2022.03.24%20%E7%BB%93%E6%9E%84%E6%80%A7%E4%BC%98%E5%8C%96/" title="">https://rongyel.github.io/2022/2022.03.24 结构性优化/</a>
+    <a href="https://rongyel.github.io/2022/2022.03.24%20%E7%BB%93%E6%9E%84%E6%80%A7%E4%BC%98%E5%8C%96/" title="结构性优化">https://rongyel.github.io/2022/2022.03.24 结构性优化/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -294,17 +310,20 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2022/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/" rel="prev" title="Gvim 配置文件.vimrc">
-      <i class="fa fa-chevron-left"></i> Gvim 配置文件.vimrc
-    </a></div>
       <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" rel="next" title="Hexo博客初步搭建">
+      Hexo博客初步搭建 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -394,7 +413,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -420,13 +439,13 @@
     </div>
     <ul class="links-of-recent-posts-list">
         <li class="links-of-recent-posts-item">
-          <a href="/2022/2022.03.24%20%E7%BB%93%E6%9E%84%E6%80%A7%E4%BC%98%E5%8C%96/" title="2022&#x2F;2022.03.24 结构性优化&#x2F;"></a>
-        </li>
-        <li class="links-of-recent-posts-item">
           <a href="/2022/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/" title="2022&#x2F;Gvim 配置文件.vimrc&#x2F;">Gvim 配置文件.vimrc</a>
         </li>
         <li class="links-of-recent-posts-item">
           <a href="/2022/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" title="2022&#x2F;hexo搭建&#x2F;hexo站点搭建记录&#x2F;">Hexo博客初步搭建</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/2022/2022.03.24%20%E7%BB%93%E6%9E%84%E6%80%A7%E4%BC%98%E5%8C%96/" title="2022&#x2F;2022.03.24 结构性优化&#x2F;">结构性优化</a>
         </li>
     </ul>
   </div>
