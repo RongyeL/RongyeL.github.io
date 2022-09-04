@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-09-04T12:46:10.745Z</updated>
+  <updated>2022-09-04T16:08:28.370Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ic_list</title>
+    <link href="https://rongyel.github.io/2022/ic-list/"/>
+    <id>https://rongyel.github.io/2022/ic-list/</id>
+    <published>2022-09-04T16:08:15.000Z</published>
+    <updated>2022-09-04T16:08:28.370Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;标题&lt;/th&gt;
+&lt;th&gt;单选&lt;/th&gt;
+&lt;th&gt;日期&lt;/th&gt;
+&lt;th&gt;链接&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;什么是数字IC工程师&lt;/td&gt;
+&lt;td&gt;待开始&lt;/td&gt;
+&lt;td&gt;2022-08</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Gvim 配置文件.vimrc</title>
