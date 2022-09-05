@@ -1288,7 +1288,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #0d2eff;
+  background: #9fe2f7;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2741,7 +2741,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 .post-body h2 {
-  border-bottom: 5px solid #eee;
+  border-bottom: 4px solid #aaa;
 }
 .post-body h3 {
 /*     if ($use-seo) { */
@@ -2749,7 +2749,10 @@ ul.breadcrumb li + li:last-child {
 /* } else { */
 /* border-bottom: 1px dotted $body-bg-color; */
 /* } */
-  border-left: 3px solid;
+  font-size: 1.5em;
+  line-height: 1.43;
+  padding-left: 9px;
+  border-left: 5px solid;
 }
 .post-body h4::before {
   content: '#' !important;
