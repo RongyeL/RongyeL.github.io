@@ -74,6 +74,13 @@
 
   
   <url>
+    <loc>https://rongyel.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2022-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-09-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -82,13 +89,6 @@
   
   <url>
     <loc>https://rongyel.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2022-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
