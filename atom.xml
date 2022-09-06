@@ -55,6 +55,27 @@
   </entry>
   
   <entry>
+    <title>ic_list</title>
+    <link href="https://rongyel.github.io/2022/%E9%9A%90%E8%97%8F/ic-list/"/>
+    <id>https://rongyel.github.io/2022/%E9%9A%90%E8%97%8F/ic-list/</id>
+    <published>2022-09-04T16:08:15.000Z</published>
+    <updated>2022-09-06T13:33:23.176Z</updated>
+    
+    
+    <summary type="html">记录自己的blog更新情况</summary>
+    
+    
+    
+    <category term="开发环境" scheme="https://rongyel.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+    
+    <category term="hexo" scheme="https://rongyel.github.io/tags/hexo/"/>
+    
+    <category term="记录" scheme="https://rongyel.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Gvim 配置文件.vimrc</title>
     <link href="https://rongyel.github.io/2022/%E5%B7%A5%E5%85%B7/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/"/>
     <id>https://rongyel.github.io/2022/%E5%B7%A5%E5%85%B7/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/</id>

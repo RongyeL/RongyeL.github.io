@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rongyel.github.io/2022/%E9%9A%90%E8%97%8F/ic-list/</loc>
+    
+    <lastmod>2022-09-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/2022/%E5%B7%A5%E5%85%B7/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/</loc>
     
     <lastmod>2022-09-06</lastmod>
@@ -106,14 +115,21 @@
   </url>
   
   <url>
-    <loc>https://rongyel.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://rongyel.github.io/tags/vim/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://rongyel.github.io/tags/vim/</loc>
+    <loc>https://rongyel.github.io/tags/%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2022-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
