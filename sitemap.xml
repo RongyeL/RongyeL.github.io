@@ -20,15 +20,6 @@
   </url>
   
   <url>
-    <loc>https://rongyel.github.io/posts/d87f7e0c/</loc>
-    
-    <lastmod>2022-09-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://rongyel.github.io/tags/index.html</loc>
     
     <lastmod>2022-09-04</lastmod>
@@ -104,7 +95,7 @@
 
   
   <url>
-    <loc>https://rongyel.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://rongyel.github.io/categories/hexo/</loc>
     <lastmod>2022-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
