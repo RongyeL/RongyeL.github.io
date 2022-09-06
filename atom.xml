@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-09-06T13:32:31.976Z</updated>
+  <updated>2022-09-06T13:31:44.334Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,23 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>软件还是硬件</title>
-    <link href="https://rongyel.github.io/2022/%E6%80%9D%E7%BB%B4%E6%AE%BF%E5%A0%82/%E8%BD%AF%E4%BB%B6%E8%BF%98%E6%98%AF%E7%A1%AC%E4%BB%B6/"/>
-    <id>https://rongyel.github.io/2022/%E6%80%9D%E7%BB%B4%E6%AE%BF%E5%A0%82/%E8%BD%AF%E4%BB%B6%E8%BF%98%E6%98%AF%E7%A1%AC%E4%BB%B6/</id>
-    <published>2022-09-06T12:47:21.000Z</published>
-    <updated>2022-09-06T13:32:31.976Z</updated>
-    
-    
-    
-    
-    <category term="思维殿堂" scheme="https://rongyel.github.io/categories/%E6%80%9D%E7%BB%B4%E6%AE%BF%E5%A0%82/"/>
-    
-    
-    <category term="工作" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
-    
-  </entry>
   
   <entry>
     <title>typoratest</title>
@@ -72,27 +55,6 @@
     <category term="hexo" scheme="https://rongyel.github.io/tags/hexo/"/>
     
     <category term="记录" scheme="https://rongyel.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gvim 配置文件.vimrc</title>
-    <link href="https://rongyel.github.io/2022/%E5%B7%A5%E5%85%B7/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/"/>
-    <id>https://rongyel.github.io/2022/%E5%B7%A5%E5%85%B7/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/</id>
-    <published>2022-09-02T13:30:35.000Z</published>
-    <updated>2022-09-06T13:38:23.436Z</updated>
-    
-    
-    <summary type="html">记录自己使用的gvim配置文件，包含基础配置及插件功能配置。</summary>
-    
-    
-    
-    <category term="开发环境" scheme="https://rongyel.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="技术" scheme="https://rongyel.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="vim" scheme="https://rongyel.github.io/tags/vim/"/>
     
   </entry>
   
