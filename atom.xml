@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-09-06T13:31:44.334Z</updated>
+  <updated>2022-09-06T13:50:49.077Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,82 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>typoratest</title>
-    <link href="https://rongyel.github.io/2022/%E9%9A%90%E8%97%8F/typoratest/"/>
-    <id>https://rongyel.github.io/2022/%E9%9A%90%E8%97%8F/typoratest/</id>
-    <published>2022-09-04T16:25:51.000Z</published>
-    <updated>2022-09-06T13:31:44.334Z</updated>
-    
-    
-    <summary type="html">修改next css测试</summary>
+    <title>test</title>
+    <link href="https://rongyel.github.io/2022/test/"/>
+    <id>https://rongyel.github.io/2022/test/</id>
+    <published>2022-09-06T13:50:31.000Z</published>
+    <updated>2022-09-06T13:50:49.077Z</updated>
     
     
     
-    <category term="开发环境" scheme="https://rongyel.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     
+    <category term="测试" scheme="https://rongyel.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
     
-    <category term="hexo" scheme="https://rongyel.github.io/tags/hexo/"/>
     
     <category term="测试" scheme="https://rongyel.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ic_list</title>
-    <link href="https://rongyel.github.io/2022/%E9%9A%90%E8%97%8F/ic-list/"/>
-    <id>https://rongyel.github.io/2022/%E9%9A%90%E8%97%8F/ic-list/</id>
-    <published>2022-09-04T16:08:15.000Z</published>
-    <updated>2022-09-06T13:33:23.176Z</updated>
-    
-    
-    <summary type="html">记录自己的blog更新情况</summary>
-    
-    
-    
-    <category term="开发环境" scheme="https://rongyel.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="hexo" scheme="https://rongyel.github.io/tags/hexo/"/>
-    
-    <category term="记录" scheme="https://rongyel.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客初步搭建</title>
-    <link href="https://rongyel.github.io/2022/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/"/>
-    <id>https://rongyel.github.io/2022/hexo%E6%90%AD%E5%BB%BA/hexo%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</id>
-    <published>2022-09-01T13:30:35.000Z</published>
-    <updated>2022-09-06T13:32:49.643Z</updated>
-    
-    
-    <summary type="html">记录自己搭建hexo的过程。全是坑。</summary>
-    
-    
-    
-    <category term="开发环境" scheme="https://rongyel.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-    
-    <category term="hexo" scheme="https://rongyel.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://rongyel.github.io/2022/%E9%9A%90%E8%97%8F/hello-world/"/>
-    <id>https://rongyel.github.io/2022/%E9%9A%90%E8%97%8F/hello-world/</id>
-    <published>2022-09-01T13:30:00.000Z</published>
-    <updated>2022-09-06T13:37:47.121Z</updated>
-    
-    
-    <summary type="html">Hello World。</summary>
-    
-    
-    
-    <category term="转载" scheme="https://rongyel.github.io/categories/%E8%BD%AC%E8%BD%BD/"/>
-    
-    
-    <category term="hexo" scheme="https://rongyel.github.io/tags/hexo/"/>
     
   </entry>
   
