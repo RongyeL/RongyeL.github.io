@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-09-06T12:45:13.798Z</updated>
+  <updated>2022-09-06T12:48:28.612Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>软件还是硬件</title>
+    <link href="https://rongyel.github.io/2022/%E6%80%9D%E7%BB%B4%E6%AE%BF%E5%A0%82/%E8%BD%AF%E4%BB%B6%E8%BF%98%E6%98%AF%E7%A1%AC%E4%BB%B6/"/>
+    <id>https://rongyel.github.io/2022/%E6%80%9D%E7%BB%B4%E6%AE%BF%E5%A0%82/%E8%BD%AF%E4%BB%B6%E8%BF%98%E6%98%AF%E7%A1%AC%E4%BB%B6/</id>
+    <published>2022-09-06T12:47:21.000Z</published>
+    <updated>2022-09-06T12:48:28.612Z</updated>
+    
+    
+    
+    
+    
+    <category term="技术" scheme="https://rongyel.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>typoratest</title>
     <link href="https://rongyel.github.io/2022/typoratest/"/>
     <id>https://rongyel.github.io/2022/typoratest/</id>
     <published>2022-09-04T16:25:51.000Z</published>
-    <updated>2022-09-06T12:45:13.798Z</updated>
+    <updated>2022-09-06T12:48:14.709Z</updated>
     
     
     <summary type="html">修改next css测试</summary>
@@ -59,7 +74,7 @@
     <link href="https://rongyel.github.io/2022/%E5%B7%A5%E5%85%B7/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/"/>
     <id>https://rongyel.github.io/2022/%E5%B7%A5%E5%85%B7/Gvim%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.vimrc/</id>
     <published>2022-09-02T13:30:35.000Z</published>
-    <updated>2022-09-06T12:45:35.652Z</updated>
+    <updated>2022-09-06T12:48:51.530Z</updated>
     
     
     <summary type="html">记录自己使用的gvim配置文件，包含基础配置及插件功能配置。</summary>
@@ -69,7 +84,7 @@
     <category term="环境" scheme="https://rongyel.github.io/categories/%E7%8E%AF%E5%A2%83/"/>
     
     
-    <category term="工具" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="技术 工具" scheme="https://rongyel.github.io/tags/%E6%8A%80%E6%9C%AF-%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -89,6 +104,25 @@
     
     
     <category term="笔记" scheme="https://rongyel.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://rongyel.github.io/2022/hello-world/"/>
+    <id>https://rongyel.github.io/2022/hello-world/</id>
+    <published>2022-09-01T13:30:00.000Z</published>
+    <updated>2022-09-06T12:47:59.278Z</updated>
+    
+    
+    <summary type="html">Hello World。</summary>
+    
+    
+    
+    <category term="学习" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="教程" scheme="https://rongyel.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
