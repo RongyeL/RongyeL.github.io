@@ -1284,7 +1284,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff1bdf;
+  background: #f9297e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2527,10 +2527,10 @@ embed {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.post-body h2 {
+.post-body h1 {
   border-bottom: 2px solid #aaa;
 }
-.post-body h3 {
+.post-body h2 {
 /*     if ($use-seo) { */
 /* border-bottom: 1px solid $body-bg-color; */
 /* } else { */
@@ -2542,8 +2542,11 @@ embed {
   padding-left: 6px;
   border-left: 5px solid;
 }
+.post-body h3::before {
+  content: '# ' !important;
+}
 .post-body h4::before {
-  content: '#' !important;
+  content: '- ' !important;
 }
 .links-of-recent-posts {
   font-size: 0.8125em;

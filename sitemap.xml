@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rongyel.github.io/posts/3f31a850/</loc>
+    
+    <lastmod>2022-09-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/posts/620a08d1/</loc>
     
     <lastmod>2022-09-06</lastmod>
@@ -58,36 +67,64 @@
 
   <url>
     <loc>https://rongyel.github.io/</loc>
-    <lastmod>2022-09-06</lastmod>
+    <lastmod>2022-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://rongyel.github.io/tags/%E5%8F%AA%E5%AD%A6%E5%85%AD%E6%88%90/</loc>
+    <lastmod>2022-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/AXI/</loc>
+    <lastmod>2022-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2022-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2022-09-06</lastmod>
+    <lastmod>2022-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rongyel.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-09-06</lastmod>
+    <lastmod>2022-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rongyel.github.io/tags/vim/</loc>
-    <lastmod>2022-09-06</lastmod>
+    <lastmod>2022-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rongyel.github.io/tags/IC/</loc>
-    <lastmod>2022-09-06</lastmod>
+    <lastmod>2022-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -95,15 +132,22 @@
 
   
   <url>
+    <loc>https://rongyel.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/categories/hexo/</loc>
-    <lastmod>2022-09-06</lastmod>
+    <lastmod>2022-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rongyel.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2022-09-06</lastmod>
+    <lastmod>2022-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
