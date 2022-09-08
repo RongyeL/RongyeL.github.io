@@ -1284,7 +1284,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f2f;
+  background: #52ff71;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2527,18 +2527,64 @@ embed {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.post-body #write {
+  counter-reset: h1 0 h2 0 h3 0 h4 0 h5 0 h6 0;
+}
+.post-body h1 {
+  counter-reset: h2;
+}
+.post-body h2 {
+  counter-reset: h3;
+}
+.post-body h3 {
+  counter-reset: h4;
+}
+.post-body h4 {
+  counter-reset: h5;
+}
+.post-body h5 {
+  counter-reset: h6;
+}
+.post-body #write h1:before {
+  counter-increment: h1;
+  content: counter(h1) " ";
+}
+.post-body #write h2:before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) " ";
+}
+.post-body #write h3:before,
+.post-body h3.md-focus.md-heading:before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) " ";
+}
+.post-body #write>h3.md-focus:before,
+.post-body #write>h4.md-focus:before,
+.post-body #write>h5.md-focus:before,
+.post-body #write>h6.md-focus:before,
+.post-body h3.md-focus:before,
+.post-body h4.md-focus:before,
+.post-body h5.md-focus:before,
+.post-body h6.md-focus:before {
+  color: inherit;
+  border: inherit;
+  border-radius: inherit;
+  position: inherit;
+  left: initial;
+  float: none;
+  top: initial;
+  font-size: inherit;
+  padding-left: inherit;
+  padding-right: inherit;
+  vertical-align: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
 .post-body h1 {
   border-bottom: 2px solid #aaa;
 }
 .post-body h2 {
-/*     if ($use-seo) { */
-/* border-bottom: 1px solid $body-bg-color; */
-/* } else { */
-/* border-bottom: 1px dotted $body-bg-color; */
-/* } */
-/* font-size: 1.5em; */
   line-height: 1px;
-/* margin: 0px 0px 0px 0px; */
   padding-left: 6px;
   border-left: 5px solid;
 }
