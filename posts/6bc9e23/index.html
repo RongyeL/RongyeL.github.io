@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909180135914.png">
 <meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909181627370.png">
 <meta property="article:published_time" content="2022-09-09T07:59:06.000Z">
-<meta property="article:modified_time" content="2022-09-09T10:46:26.925Z">
+<meta property="article:modified_time" content="2022-09-09T10:49:25.911Z">
 <meta property="article:author" content="Rong晔">
 <meta property="article:tag" content="协议">
 <meta property="article:tag" content="SMMU">
@@ -250,7 +250,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-09-09 15:59:06 / 修改时间：18:46:26" itemprop="dateCreated datePublished" datetime="2022-09-09T15:59:06+08:00">2022-09-09</time>
+              <time title="创建时间：2022-09-09 15:59:06 / 修改时间：18:49:25" itemprop="dateCreated datePublished" datetime="2022-09-09T15:59:06+08:00">2022-09-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -346,7 +346,8 @@
 <p>该图还显示，来自NS.EL0 和NS.EL1 的虚拟地址经过两组表（图中的stage1和stage2）。这些表支持虚拟化，并允许hypervisor来管理虚拟机 （VM） 看到的物理地址空间。</p>
 <p>在虚拟化中，我们将由操作系统控制的一组翻译称为第 1 阶段。<strong>阶段 1 表将虚拟地址转换为中间物理地址 （IPA）。</strong>在第 1 阶段，操作系统认为 IPA 是物理地址空间。但是，虚拟机管理程序控制第二组翻译，我们称之为阶段 2。<strong>第二组转换将 IPA 转换为物理地址。</strong>下图显示了两组翻译的工作原理：</p>
 <p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909174502929.png" alt="image-20220909174502929"></p>
-<h4 id="官方文档这里的表述可能有点绕，补充一点个人理解："><span class="post-title-index"> </span><a href="#官方文档这里的表述可能有点绕，补充一点个人理解：" class="headerlink" title="官方文档这里的表述可能有点绕，补充一点个人理解："></a>官方文档这里的表述可能有点绕，补充一点个人理解：</h4><p>之前我们讨论的是，操作系统或者应用程序的虚拟地址VA转换为物理地址PA对吧。</p>
+<p><strong>官方文档这里的表述可能有点绕，补充一点个人理解：</strong></p>
+<p>之前我们讨论的是，操作系统或者应用程序的虚拟地址VA转换为物理地址PA对吧。</p>
 <p>那么，如果此时还存在一个虚拟机（虚拟机可以理解为一种应用程序，该应用程序模拟了一台计算机），那么虚拟机这么一台计算机，是不是也会拥有一个<strong>“虚拟机的物理地址”</strong>，这就是中间物理地址IPA。在虚拟机运行的应用程序，将“虚拟机的虚拟地址”转化为“虚拟机的物理地址”，这个“虚拟机的物理地址”，还需要再转化为“实体机的物理地址”，即VA-&gt;IPA-&gt;PA整个流程的意思。</p>
 <h2 id="空间大小"><span class="post-title-index">5.2 </span><a href="#空间大小" class="headerlink" title="空间大小"></a>空间大小</h2><p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909180135914.png" alt="image-20220909180135914"></p>
 <p>EL0/EL1 虚拟地址空间有两个区域：<strong>内核空间和应用程序空间</strong>。这两个区域显示在关系图的左侧，内核空间位于顶部，应用程序空间（标记为“用户空间”）位于地址空间的底部。内核空间和用户空间具有单独的转换表，这意味着它们的映射可以保持<strong>独立</strong>。</p>
@@ -470,7 +471,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99"><span class="nav-text">1 学习资料</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="nav-text">2 内存管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">2.1 基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="nav-text">2.2 使用虚拟地址的好处</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MMU%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%8D%95%E5%85%83"><span class="nav-text">3 MMU内存管理单元</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%BB%84%E6%88%90"><span class="nav-text">3.1 主要组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-entry-%E8%A1%A8%E6%9D%A1%E7%9B%AE"><span class="nav-text">3.2 Table entry 表条目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-lookup-%E8%A1%A8%E6%9F%A5%E6%89%BE"><span class="nav-text">3.3 Table lookup  表查找</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TLB"><span class="nav-text">4 TLB</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Address-spaces-%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4"><span class="nav-text">5 Address spaces  地址空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E7%BB%93%E6%9E%84"><span class="nav-text">5.1 空间结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E8%BF%99%E9%87%8C%E7%9A%84%E8%A1%A8%E8%BF%B0%E5%8F%AF%E8%83%BD%E6%9C%89%E7%82%B9%E7%BB%95%EF%BC%8C%E8%A1%A5%E5%85%85%E4%B8%80%E7%82%B9%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="nav-text"> 官方文档这里的表述可能有点绕，补充一点个人理解：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F"><span class="nav-text">5.2 空间大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-text">5.3 空间标识符</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99"><span class="nav-text">1 学习资料</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="nav-text">2 内存管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">2.1 基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="nav-text">2.2 使用虚拟地址的好处</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MMU%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%8D%95%E5%85%83"><span class="nav-text">3 MMU内存管理单元</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%BB%84%E6%88%90"><span class="nav-text">3.1 主要组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-entry-%E8%A1%A8%E6%9D%A1%E7%9B%AE"><span class="nav-text">3.2 Table entry 表条目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-lookup-%E8%A1%A8%E6%9F%A5%E6%89%BE"><span class="nav-text">3.3 Table lookup  表查找</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TLB"><span class="nav-text">4 TLB</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Address-spaces-%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4"><span class="nav-text">5 Address spaces  地址空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E7%BB%93%E6%9E%84"><span class="nav-text">5.1 空间结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F"><span class="nav-text">5.2 空间大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-text">5.3 空间标识符</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
