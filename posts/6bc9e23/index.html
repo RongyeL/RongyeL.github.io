@@ -20,21 +20,27 @@
     var CONFIG = {"hostname":"rongyel.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="记录自己的blog更新情况">
+  <meta name="description" content="本文摘要：SMMU（System Memory Management Unit，系统内存管理单元）可以认为是MMU的衍生，在开始SMMU的协议学习之前，先掌握MMU的相关基础知识。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ic_list">
-<meta property="og:url" content="https://rongyel.github.io/posts/d2edd4a2/index.html">
+<meta property="og:title" content="MMU&#x2F;TLB基础——SMMU协议学习笔记">
+<meta property="og:url" content="https://rongyel.github.io/posts/6bc9e23/index.html">
 <meta property="og:site_name" content="IC攻城狮的自我修养">
-<meta property="og:description" content="记录自己的blog更新情况">
+<meta property="og:description" content="本文摘要：SMMU（System Memory Management Unit，系统内存管理单元）可以认为是MMU的衍生，在开始SMMU的协议学习之前，先掌握MMU的相关基础知识。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-04T16:08:15.000Z">
-<meta property="article:modified_time" content="2022-09-06T14:21:48.463Z">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909163726631.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909170506304.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909170731739.png">
+<meta property="og:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909171024632.png">
+<meta property="article:published_time" content="2022-09-09T07:59:06.000Z">
+<meta property="article:modified_time" content="2022-09-09T09:17:27.318Z">
 <meta property="article:author" content="Rong晔">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="记录">
+<meta property="article:tag" content="协议">
+<meta property="article:tag" content="SMMU">
+<meta property="article:tag" content="ARM">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909163726631.png">
 
-<link rel="canonical" href="https://rongyel.github.io/posts/d2edd4a2/">
+<link rel="canonical" href="https://rongyel.github.io/posts/6bc9e23/">
 
 
 <script id="page-configurations">
@@ -60,7 +66,7 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>ic_list | IC攻城狮的自我修养</title><meta name="robots" content="noindex">
+  <title>MMU/TLB基础——SMMU协议学习笔记 | IC攻城狮的自我修养</title>
   
 
 
@@ -214,7 +220,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://rongyel.github.io/posts/d2edd4a2/">
+    <link itemprop="mainEntityOfPage" href="https://rongyel.github.io/posts/6bc9e23/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/37.png">
@@ -227,7 +233,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ic_list
+          MMU/TLB基础——SMMU协议学习笔记
         </h1>
 
         <div class="post-meta">
@@ -236,23 +242,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-09-05 00:08:15" itemprop="dateCreated datePublished" datetime="2022-09-05T00:08:15+08:00">2022-09-05</time>
+              <time title="创建时间：2022-09-09 15:59:06 / 修改时间：17:17:27" itemprop="dateCreated datePublished" datetime="2022-09-09T15:59:06+08:00">2022-09-09</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-06 22:21:48" itemprop="dateModified" datetime="2022-09-06T22:21:48+08:00">2022-09-06</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" itemprop="url" rel="index"><span itemprop="name">开发环境</span></a>
+                  <a href="/categories/%E5%8D%8F%E8%AE%AE%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">协议学习</span></a>
                 </span>
             </span>
 
@@ -264,7 +264,6 @@
               <span class="post-meta-item-text">阅读次数：</span>
               <span id="busuanzi_value_page_pv"></span>
             </span>
-            <div class="post-description">记录自己的blog更新情况</div>
 
         </div>
       </header>
@@ -275,71 +274,40 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <table>
-<thead>
-<tr>
-<th>标题</th>
-<th>单选</th>
-<th>日期</th>
-<th>链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>什么是数字IC工程师</td>
-<td>待开始</td>
-<td>2022-08-27</td>
-<td></td>
-</tr>
-<tr>
-<td>GVIM简洁开发环境</td>
-<td>已完成</td>
-<td>2022-08-27</td>
-<td></td>
-</tr>
-<tr>
-<td>gvim开发环境梳理+git基本环境</td>
-<td>进行中</td>
-<td>2022-08-29</td>
-<td></td>
-</tr>
-<tr>
-<td>typora markdown笔记环境</td>
-<td>已完成</td>
-<td>2022-08-30</td>
-<td></td>
-</tr>
-<tr>
-<td>Gvim配置.vimrc文件整理 + windows环境配置</td>
-<td>已完成</td>
-<td>2022-08-31</td>
-<td></td>
-</tr>
-<tr>
-<td>搭建hexo博客环境</td>
-<td>已完成</td>
-<td>2022-09-01</td>
-<td></td>
-</tr>
-<tr>
-<td>配置HEXO博客环境</td>
-<td>已完成</td>
-<td>2022-09-02</td>
-<td></td>
-</tr>
-<tr>
-<td>完成hexo博客环境</td>
-<td>已完成</td>
-<td>2022-09-04</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<!-- flag of hidden posts -->
+        <p>本文摘要：SMMU（System Memory Management Unit，系统内存管理单元）可以认为是MMU的衍生，在开始SMMU的协议学习之前，先掌握MMU的相关基础知识。</p>
+<span id="more"></span>
+
+<h1 id="学习资料"><span class="post-title-index">1 </span><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h1><h2 id="主要资料"><span class="post-title-index">1.1 </span><a href="#主要资料" class="headerlink" title="主要资料"></a>主要资料</h2><p>最好的学习资料就是协议书，本文基于ARM官方的文档开展MMU的基础知识学习。</p>
+<p><a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/101811/0102/">Learn the architecture - AArch64 memory management Version 1.2</a></p>
+<h2 id="补充资料"><span class="post-title-index">1.2 </span><a href="#补充资料" class="headerlink" title="补充资料"></a>补充资料</h2><h1 id="内存管理"><span class="post-title-index">2 </span><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><h2 id="基本概念"><span class="post-title-index">2.1 </span><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p><strong>虚拟地址（VA，Virtual Address）</strong>：处理器上运行的操作系统、应用程序所能看到的地址空间。虚拟地址并不真实存在于计算机中。</p>
+<p><strong>物理地址（PA，Physical Address）</strong>：实际存储地址空间，如DDR、Flash、SRAM等实际存储数据的地方。</p>
+<p>在处理器运行的过程中，需要将<strong>虚拟地址空间</strong>与<strong>物理地址空间</strong>进行转换，并对内存访问进行保护，即内存管理的主要工作。</p>
+<p>虚拟地址通过映射转换为物理地址。虚拟地址和物理地址之间的映射存储在转换表（有时称为页表）。</p>
+<h2 id="使用虚拟地址的好处"><span class="post-title-index">2.2 </span><a href="#使用虚拟地址的好处" class="headerlink" title="使用虚拟地址的好处"></a>使用虚拟地址的好处</h2><ol>
+<li>使用虚拟地址的一个好处是，操作系统可以<strong>将零碎的物理地址空间拼接成连续的虚拟空间，供应用程序使用。</strong>连续的空间对于应用的运行而言当然是有好处的。</li>
+<li>虚拟地址也有利于软件开发人员，他们在编写应用程序时不会也不需要知道系统的确切内存地址，由操作系统和硬件共同执行地址转换。</li>
+<li>在实践中，每个应用程序都可以使用自己的一组虚拟地址，这些地址将映射到物理系统中的不同位置。当操作系统在不同的应用程序之间切换时，它会重新编程映射。</li>
+</ol>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909163726631.png" alt="image-20220909163726631"></p>
+<h1 id="MMU内存管理单元"><span class="post-title-index">3 </span><a href="#MMU内存管理单元" class="headerlink" title="MMU内存管理单元"></a>MMU内存管理单元</h1><p>内存管理单元Memory Management Unit (MMU)  ， 负责将软件使用的虚拟地址转换为内存系统中使用的物理地址。</p>
+<h2 id="主要组成"><span class="post-title-index">3.1 </span><a href="#主要组成" class="headerlink" title="主要组成"></a>主要组成</h2><p>包含以下内容：</p>
+<ul>
+<li>table walk unit单元，它包含从内存中读取转换表的逻辑。</li>
+<li>Translation Lookaside Buffers (TLBs)  ，用于缓存最近使用的转换内容。</li>
+</ul>
+<p>软件发出的所有内存地址都是虚拟的。这些内存地址被传递到MMU，MMU会检查 TLB 中是否有最近使用的缓存转换。如果 MMU 找不到最近缓存的转换，则table walk unit将从内存中读取相应的Table entry 表条目，如下所示：</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909170506304.png" alt="image-20220909170506304"></p>
+<h2 id="Table-entry-表条目"><span class="post-title-index">3.2 </span><a href="#Table-entry-表条目" class="headerlink" title="Table entry 表条目"></a>Table entry 表条目</h2><p>转换表的工作原理是将虚拟地址空间划分为大小相等的块，并在表中为每个块提供一个Table entry表条目。</p>
+<p>表中的条目entry 0 提供page 0 的映射，entry 1 提供page 1 的映射，依此类推。每个条目都包含<strong>相应物理内存块的地址</strong>以及<strong>访问物理地址时要使用的属性</strong>。</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909170731739.png" alt="image-20220909170731739"></p>
+<h2 id="Table-lookup-表查找"><span class="post-title-index">3.3 </span><a href="#Table-lookup-表查找" class="headerlink" title="Table lookup  表查找"></a>Table lookup  表查找</h2><p>进行转换时，将进行表查找。当转换发生时，软件发出的虚拟地址被一分为二，如下图所示：</p>
+<p><img src="https://picgo-ry.obs.cn-south-1.myhuaweicloud.com/image-20220909171024632.png" alt="image-20220909171024632"></p>
+<p>该图所展示的是一个单级表查找示例。</p>
+<p>下方软件的虚拟地址分为两截：</p>
+<p>upper-order bits 高位bits会告知，这是哪一个条目。基于该信息可以在Translation Table转换表中找到对应的PA base物理基地址以及内存属性。</p>
+<p>lower-order bits  低位保有块偏移量信息，该信息并且不会因地址转换而发生任何改变。</p>
+<p>最后将转换表中获得的物理基地址以及最开始就知晓的块偏移量相结合，得到最后的一个物理地址。</p>
+
     </div>
 
     <div>
@@ -365,7 +333,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://rongyel.github.io/posts/d2edd4a2/" title="ic_list">https://rongyel.github.io/posts/d2edd4a2/</a>
+    <a href="https://rongyel.github.io/posts/6bc9e23/" title="MMU&#x2F;TLB基础——SMMU协议学习笔记">https://rongyel.github.io/posts/6bc9e23/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -376,14 +344,22 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
-              <a href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag"><i class="fa fa-tag"></i> 记录</a>
+              <a href="/tags/%E5%8D%8F%E8%AE%AE/" rel="tag"><i class="fa fa-tag"></i> 协议</a>
+              <a href="/tags/SMMU/" rel="tag"><i class="fa fa-tag"></i> SMMU</a>
+              <a href="/tags/ARM/" rel="tag"><i class="fa fa-tag"></i> ARM</a>
           </div>
 
         
 
 
         
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/620a08d1/" rel="prev" title="myhexotest">
+      <i class="fa fa-chevron-left"></i> myhexotest
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
     
   </article>
@@ -444,6 +420,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99"><span class="nav-text">1 学习资料</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E8%B5%84%E6%96%99"><span class="nav-text">1.1 主要资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E5%85%85%E8%B5%84%E6%96%99"><span class="nav-text">1.2 补充资料</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="nav-text">2 内存管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">2.1 基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="nav-text">2.2 使用虚拟地址的好处</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MMU%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%8D%95%E5%85%83"><span class="nav-text">3 MMU内存管理单元</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%BB%84%E6%88%90"><span class="nav-text">3.1 主要组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-entry-%E8%A1%A8%E6%9D%A1%E7%9B%AE"><span class="nav-text">3.2 Table entry 表条目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-lookup-%E8%A1%A8%E6%9F%A5%E6%89%BE"><span class="nav-text">3.3 Table lookup  表查找</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -459,20 +436,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -497,6 +474,9 @@
       最近文章
     </div>
     <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/posts/6bc9e23/" title="posts&#x2F;6bc9e23&#x2F;">MMU/TLB基础——SMMU协议学习笔记</a>
+        </li>
         <li class="links-of-recent-posts-item">
           <a href="/posts/620a08d1/" title="posts&#x2F;620a08d1&#x2F;">myhexotest</a>
         </li>
@@ -655,7 +635,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'hexo_comment',
       owner       : 'RongyeL',
       admin       : ['RongyeL'],
-      id          : '718d8a43e8e990253b9a22714d9dfbfd',
+      id          : 'ea5aa17827e6114b681c155d193231a4',
         language: 'zh-CN',
       distractionFreeMode: false
     });

@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-09-08T16:53:55.458Z</updated>
+  <updated>2022-09-09T09:17:27.318Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MMU/TLB基础——SMMU协议学习笔记</title>
+    <link href="https://rongyel.github.io/posts/6bc9e23/"/>
+    <id>https://rongyel.github.io/posts/6bc9e23/</id>
+    <published>2022-09-09T07:59:06.000Z</published>
+    <updated>2022-09-09T09:17:27.318Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文摘要：SMMU（System Memory Management Unit，系统内存管理单元）可以认为是MMU的衍生，在开始SMMU的协议学习之前，先掌握MMU的相关基础知识。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="协议学习" scheme="https://rongyel.github.io/categories/%E5%8D%8F%E8%AE%AE%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="协议" scheme="https://rongyel.github.io/tags/%E5%8D%8F%E8%AE%AE/"/>
+    
+    <category term="SMMU" scheme="https://rongyel.github.io/tags/SMMU/"/>
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+  </entry>
   
   <entry>
     <title>myhexotest</title>
