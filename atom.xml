@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-09-09T12:03:18.037Z</updated>
+  <updated>2022-09-19T14:24:28.682Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>初识CHI——CHI协议学习笔记</title>
+    <link href="https://rongyel.github.io/posts/74d65944/"/>
+    <id>https://rongyel.github.io/posts/74d65944/</id>
+    <published>2022-09-19T14:19:50.000Z</published>
+    <updated>2022-09-19T14:24:28.682Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;CHI协议是AMBA的第五代协议，用于解决多个CPU（RN）之间的数据一致性问题。当前网络上相关的资料较少，最好的学习方式就是阅读CHI协议书。本文在通读协议全文后，将根据自己对CHI协议学习的理解，整理相关知识要点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="协议学习" scheme="https://rongyel.github.io/categories/%E5%8D%8F%E8%AE%AE%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="协议" scheme="https://rongyel.github.io/tags/%E5%8D%8F%E8%AE%AE/"/>
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="CHI" scheme="https://rongyel.github.io/tags/CHI/"/>
+    
+    <category term="AMBA" scheme="https://rongyel.github.io/tags/AMBA/"/>
+    
+    <category term="总线" scheme="https://rongyel.github.io/tags/%E6%80%BB%E7%BA%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>我与EDG</title>
