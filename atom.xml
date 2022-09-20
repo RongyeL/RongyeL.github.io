@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-09-19T14:24:28.682Z</updated>
+  <updated>2022-09-20T14:09:14.511Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rongyel.github.io/posts/74d65944/"/>
     <id>https://rongyel.github.io/posts/74d65944/</id>
     <published>2022-09-19T14:19:50.000Z</published>
-    <updated>2022-09-19T14:24:28.682Z</updated>
+    <updated>2022-09-20T14:09:14.511Z</updated>
     
     
     <summary type="html">&lt;p&gt;CHI协议是AMBA的第五代协议，用于解决多个CPU（RN）之间的数据一致性问题。当前网络上相关的资料较少，最好的学习方式就是阅读CHI协议书。本文在通读协议全文后，将根据自己对CHI协议学习的理解，整理相关知识要点。&lt;/p&gt;</summary>
