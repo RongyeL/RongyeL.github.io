@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-09-29T13:43:26.854Z</updated>
+  <updated>2022-09-29T13:45:37.870Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,14 +17,14 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>为什么要用git</title>
+    <title>【叶】为什么要用git</title>
     <link href="https://rongyel.github.io/posts/8e45073/"/>
     <id>https://rongyel.github.io/posts/8e45073/</id>
     <published>2022-09-29T13:37:40.000Z</published>
-    <updated>2022-09-29T13:43:26.854Z</updated>
+    <updated>2022-09-29T13:45:37.870Z</updated>
     
     
-    <summary type="html">&lt;p&gt;最强的代码版本管理工具，git。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;思考一下这个场景：你想要在一个稳定的版本上，添加新的功能。但又担心在开发过程中，对稳定的版本造成影响，导致出错。为此，你肯定会想备份一份原版再开发对吧。如果你是用复制源文件的方式，那是不是很麻烦？如果代码量大，还很浪费空间。这时候，git就的版本管理能力就体现出来了。&lt;/p&gt;</summary>
     
     
     
