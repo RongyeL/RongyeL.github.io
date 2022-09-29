@@ -1,3 +1,4 @@
+https://rongyel.github.io/posts/8e45073/
 https://rongyel.github.io/posts/74d65944/
 https://rongyel.github.io/posts/6bc9e23/
 https://rongyel.github.io/posts/cc5cc578/
@@ -19,6 +20,8 @@ https://rongyel.github.io/tags/%E6%84%9F%E6%83%B3/
 https://rongyel.github.io/tags/CHI/
 https://rongyel.github.io/tags/AMBA/
 https://rongyel.github.io/tags/%E6%80%BB%E7%BA%BF/
+https://rongyel.github.io/tags/git/
+https://rongyel.github.io/tags/%E5%8F%B6/
 https://rongyel.github.io/categories/%E5%8D%8F%E8%AE%AE%E5%AD%A6%E4%B9%A0/
 https://rongyel.github.io/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/
 https://rongyel.github.io/categories/hexo/
