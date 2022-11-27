@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-11-27T12:17:11.191Z</updated>
+  <updated>2022-11-27T12:33:36.728Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rongyel.github.io/posts/c6dc63a6/"/>
     <id>https://rongyel.github.io/posts/c6dc63a6/</id>
     <published>2022-11-27T12:02:44.000Z</published>
-    <updated>2022-11-27T12:17:11.191Z</updated>
+    <updated>2022-11-27T12:33:36.728Z</updated>
     
     
     <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
