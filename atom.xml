@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-11-27T12:03:53.547Z</updated>
+  <updated>2022-11-27T12:17:11.191Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,24 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://rongyel.github.io/posts/0/"/>
-    <id>https://rongyel.github.io/posts/0/</id>
-    <published>2022-11-27T12:04:07.445Z</published>
-    <updated>2022-11-27T12:03:53.547Z</updated>
+    <title>MMU-TLB基础——SMMU协议学习笔记</title>
+    <link href="https://rongyel.github.io/posts/c6dc63a6/"/>
+    <id>https://rongyel.github.io/posts/c6dc63a6/</id>
+    <published>2022-11-27T12:02:44.000Z</published>
+    <updated>2022-11-27T12:17:11.191Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;MMU-TLB基础——SMMU协议学习笔记&quot;&gt;&lt;a href=&quot;#MMU-TLB基础——SMMU协议学习笔记&quot; class=&quot;headerlink&quot; title=&quot;MMU-TLB基础——SMMU协议学习笔记&quot;&gt;&lt;/a&gt;MMU-TLB基础——SMMU协议学习笔记&lt;/h1&gt;&lt;hr&gt;
-&lt;p&gt;title: MMU基础&lt;br&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ARM&lt;br&gt;categories:&lt;/li&gt;
-&lt;li&gt;学习笔记&lt;br&gt;hidden: false&lt;br&gt;top: 10&lt;br&gt;date: 2022-11-27 20:02:44&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
     
     
     
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
     
   </entry>
   
