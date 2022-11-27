@@ -11,24 +11,6 @@
   </url>
   
   <url>
-    <loc>https://rongyel.github.io/posts/0/</loc>
-    
-    <lastmod>2022-11-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/posts/9bb8bd71/</loc>
-    
-    <lastmod>2022-11-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://rongyel.github.io/tags/index.html</loc>
     
     <lastmod>2022-09-04</lastmod>
@@ -73,20 +55,6 @@
   </url>
 
   
-  <url>
-    <loc>https://rongyel.github.io/tags/ARM/</loc>
-    <lastmod>2022-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>
