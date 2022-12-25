@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2022-12-24T03:58:01.477Z</updated>
+  <updated>2022-12-25T04:18:07.553Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo测试用文档</title>
+    <link href="https://rongyel.github.io/posts/7ac37644/"/>
+    <id>https://rongyel.github.io/posts/7ac37644/</id>
+    <published>2022-12-25T04:15:00.000Z</published>
+    <updated>2022-12-25T04:18:07.553Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文摘要&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么要用Markdown做笔记</title>
