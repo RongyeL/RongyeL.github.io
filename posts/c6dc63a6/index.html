@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909180135914-20221001010727-hc4ab0e.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909181627370-20221001010727-n6pou3a.png">
 <meta property="article:published_time" content="2023-01-04T03:16:00.000Z">
-<meta property="article:modified_time" content="2023-01-04T13:08:15.500Z">
+<meta property="article:modified_time" content="2023-01-04T13:20:14.702Z">
 <meta property="article:author" content="Rong晔">
 <meta property="article:tag" content="ARM">
 <meta property="article:tag" content="IC攻城狮的自我修养">
@@ -251,7 +251,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-01-04 11:16:00 / 修改时间：21:08:15" itemprop="dateCreated datePublished" datetime="2023-01-04T11:16:00+08:00">2023-01-04</time>
+              <time title="创建时间：2023-01-04 11:16:00 / 修改时间：21:20:14" itemprop="dateCreated datePublished" datetime="2023-01-04T11:16:00+08:00">2023-01-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -284,30 +284,31 @@
         <p>SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。</p>
 <span id="more"></span>
 
-<h1 id="MMU-TLB基础——SMMU协议学习笔记"><span class="post-title-index">1 </span><a href="#MMU-TLB基础——SMMU协议学习笔记" class="headerlink" title="MMU-TLB基础——SMMU协议学习笔记"></a>MMU-TLB基础——SMMU协议学习笔记</h1><h2 id="参考文献"><span class="post-title-index">1.1 </span><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>最好的学习资料就是协议书，本文基于 ARM 官方的文档开展 MMU 的基础知识学习。<br>MMU 学习：<a href="3-%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/31-%E7%AC%94%E8%AE%B0/assets/learn_the_architecture_-_aarch64_memory_management_101811_0102_00_en-20221001012120-9hhrxua.pdf">learn_the_architecture_-_aarch64_memory_management_101811_0102_00_en.pdf</a><br>Arm® 架构参考手册：<a href="DDI0487H_a_a-profile_architecture_reference_manual-20221001011703-0ahykvc.pdf">DDI0487H_a_a-profile_architecture_reference_manual.pdf</a></p>
+
+<h1 id="参考文献"><span class="post-title-index">1 </span><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>最好的学习资料就是协议书，本文基于 ARM 官方的文档开展 MMU 的基础知识学习。<br>MMU 学习：<a href="3-%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/31-%E7%AC%94%E8%AE%B0/assets/learn_the_architecture_-_aarch64_memory_management_101811_0102_00_en-20221001012120-9hhrxua.pdf">learn_the_architecture_-_aarch64_memory_management_101811_0102_00_en.pdf</a><br>Arm® 架构参考手册：<a href="DDI0487H_a_a-profile_architecture_reference_manual-20221001011703-0ahykvc.pdf">DDI0487H_a_a-profile_architecture_reference_manual.pdf</a></p>
 <p>‍</p>
-<h2 id="基本概念"><span class="post-title-index">1.2 </span><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p><strong>虚拟地址（VA，Virtual Address）</strong>：处理器上运行的操作系统、应用程序所能看到的地址空间。虚拟地址并不真实存在于计算机中。</p>
+<h1 id="基本概念"><span class="post-title-index">2 </span><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p><strong>虚拟地址（VA，Virtual Address）</strong>：处理器上运行的操作系统、应用程序所能看到的地址空间。虚拟地址并不真实存在于计算机中。</p>
 <p><strong>物理地址（PA，Physical Address）</strong>：实际存储地址空间，如 DDR、Flash、SRAM 等实际存储数据的地方。</p>
 <p>在处理器运行的过程中，需要将<strong>虚拟地址空间</strong>与<strong>物理地址空间</strong>进行转换，并对内存访问进行保护，即内存管理的主要工作。</p>
 <p>虚拟地址通过映射转换为物理地址。虚拟地址和物理地址之间的映射存储在转换表（有时称为页表）。</p>
-<h2 id="使用虚拟地址的好处"><span class="post-title-index">1.3 </span><a href="#使用虚拟地址的好处" class="headerlink" title="使用虚拟地址的好处"></a>使用虚拟地址的好处</h2><ol>
+<h1 id="使用虚拟地址的好处"><span class="post-title-index">3 </span><a href="#使用虚拟地址的好处" class="headerlink" title="使用虚拟地址的好处"></a>使用虚拟地址的好处</h1><ol>
 <li>使用虚拟地址的一个好处是，操作系统可以<strong>将零碎的物理地址空间拼接成连续的虚拟空间，供应用程序使用。</strong>连续的空间对于应用的运行而言当然是有好处的。</li>
 <li>虚拟地址也有利于软件开发人员，他们在编写应用程序时不会也不需要知道系统的确切内存地址，由操作系统和硬件共同执行地址转换。</li>
 <li>在实践中，每个应用程序都可以使用自己的一组虚拟地址，这些地址将映射到物理系统中的不同位置。当操作系统在不同的应用程序之间切换时，它会重新编程映射。</li>
 </ol>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909163726631-20221001010726-zi9sybz.png" alt="image-net-img-image-20220909163726631-20221001010726-zi9sybz"></p>
-<h2 id="MMU-内存管理单元"><span class="post-title-index">1.4 </span><a href="#MMU-内存管理单元" class="headerlink" title="MMU 内存管理单元"></a>MMU 内存管理单元</h2><p>内存管理单元 Memory Management Unit (MMU)  ， 负责将软件使用的虚拟地址转换为内存系统中使用的物理地址。</p>
-<h3 id="主要组成"><span class="post-title-index">1.4.1 </span><a href="#主要组成" class="headerlink" title="主要组成"></a>主要组成</h3><p>包含以下内容：</p>
+<h1 id="MMU-内存管理单元"><span class="post-title-index">4 </span><a href="#MMU-内存管理单元" class="headerlink" title="MMU 内存管理单元"></a>MMU 内存管理单元</h1><p>内存管理单元 Memory Management Unit (MMU)  ， 负责将软件使用的虚拟地址转换为内存系统中使用的物理地址。</p>
+<h2 id="主要组成"><span class="post-title-index">4.1 </span><a href="#主要组成" class="headerlink" title="主要组成"></a>主要组成</h2><p>包含以下内容：</p>
 <ul>
 <li>table walk unit 单元，它包含从内存中读取转换表的逻辑。</li>
 <li>Translation Lookaside Buffers (TLBs)  ，用于缓存最近使用的转换内容。</li>
 </ul>
 <p>软件发出的所有内存地址都是虚拟的。这些内存地址被传递到 MMU，MMU 会检查 TLB 中是否有最近使用的缓存转换。如果 MMU 找不到最近缓存的转换，则 table walk unit 将从内存中读取相应的 Table entry 表条目，如下所示：</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909170506304-20221001010727-d2hrjxr.png" alt="image-net-img-image-20220909170506304-20221001010727-d2hrjxr"></p>
-<h3 id="Table-entry-表条目"><span class="post-title-index">1.4.2 </span><a href="#Table-entry-表条目" class="headerlink" title="Table entry 表条目"></a>Table entry 表条目</h3><p>转换表的工作原理是将虚拟地址空间划分为大小相等的块，并在表中为每个块提供一个 Table entry 表条目。</p>
+<h2 id="Table-entry-表条目"><span class="post-title-index">4.2 </span><a href="#Table-entry-表条目" class="headerlink" title="Table entry 表条目"></a>Table entry 表条目</h2><p>转换表的工作原理是将虚拟地址空间划分为大小相等的块，并在表中为每个块提供一个 Table entry 表条目。</p>
 <p>表中的条目 entry 0 提供 page 0 的映射，entry 1 提供 page 1 的映射，依此类推。每个条目都包含<strong>相应物理内存块的地址</strong>以及<strong>访问物理地址时要使用的属性</strong>。</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909170731739-20221001010727-nnvlg5f.png" alt="image-net-img-image-20220909170731739-20221001010727-nnvlg5f"></p>
-<h3 id="Table-lookup-表查找"><span class="post-title-index">1.4.3 </span><a href="#Table-lookup-表查找" class="headerlink" title="Table lookup  表查找"></a>Table lookup  表查找</h3><p>进行转换时，将进行表查找。当转换发生时，软件发出的虚拟地址被一分为二，如下图所示：</p>
+<h2 id="Table-lookup-表查找"><span class="post-title-index">4.3 </span><a href="#Table-lookup-表查找" class="headerlink" title="Table lookup  表查找"></a>Table lookup  表查找</h2><p>进行转换时，将进行表查找。当转换发生时，软件发出的虚拟地址被一分为二，如下图所示：</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909171024632-20221001010727-zy5p5x1.png" alt="image-net-img-image-20220909171024632-20221001010727-zy5p5x1"></p>
 <p>该图所展示的是一个单级表查找示例。</p>
 <p>下方软件的虚拟地址分为两截：</p>
@@ -321,7 +322,7 @@
 <li>小块使软件<strong>能够对内存分配进行精细控制</strong>。但是，小块在 TLB 中缓存的效率较低，因为小块需要多次读取关卡才能转换。</li>
 </ul>
 <p>为了管理这种权衡，操作系统必须在使用大块映射的效率与使用小块映射的灵活性之间取得平衡，以获得最佳性能。</p>
-<h2 id="TLB"><span class="post-title-index">1.5 </span><a href="#TLB" class="headerlink" title="TLB"></a>TLB</h2><p><strong>TLB就是一个cache</strong>，俗称快表。</p>
+<h1 id="TLB"><span class="post-title-index">5 </span><a href="#TLB" class="headerlink" title="TLB"></a>TLB</h1><p><strong>TLB就是一个cache</strong>，俗称快表。</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909183537860-20221001010727-ykwz2dn.png" alt="image-net-img-image-20220909183537860-20221001010727-ykwz2dn"></p>
 <p>简单来讲，上面说了 MMU 会通过查表的方式将虚拟地址 VA 转化为物理地址 PA。但查表是要花时间的。一般来讲这个表是放在内存里，读内存是有比较大的代价的。</p>
 <p>对于 CPU，通过给他添加 cache 来加快访问数据的速度。</p>
@@ -330,7 +331,7 @@
 </blockquote>
 <p>那么对于 MMU，TLB 就是它的 cache，用来加快查表的速度。</p>
 <p>MMU 首先查询 TLB，发现有（hit），直接得到物理地址，在内存根据物理地址取数据。如果 TLB 没有这个虚拟地址（miss），那么就只能费力的通过页表来查找了。这个流程跟 cache 其实是一模一样的，当然，因为它本质就是一个 cache。</p>
-<h2 id="Address-spaces-地址空间"><span class="post-title-index">1.6 </span><a href="#Address-spaces-地址空间" class="headerlink" title="Address spaces  地址空间"></a>Address spaces  地址空间</h2><h3 id="空间结构"><span class="post-title-index">1.6.1 </span><a href="#空间结构" class="headerlink" title="空间结构"></a>空间结构</h3><p>AArch64 中有几个独立的虚拟地址空间。下图显示了以下虚拟地址空间：</p>
+<h1 id="Address-spaces-地址空间"><span class="post-title-index">6 </span><a href="#Address-spaces-地址空间" class="headerlink" title="Address spaces  地址空间"></a>Address spaces  地址空间</h1><h2 id="空间结构"><span class="post-title-index">6.1 </span><a href="#空间结构" class="headerlink" title="空间结构"></a>空间结构</h2><p>AArch64 中有几个独立的虚拟地址空间。下图显示了以下虚拟地址空间：</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909172953525-20221001010727-y2d25wn.png" alt="image-net-img-image-20220909172953525-20221001010727-y2d25wn"></p>
 <p>下图显示了三个虚拟地址空间：</p>
 <ul>
@@ -349,15 +350,15 @@
 <p><strong>官方文档这里的表述可能有点绕，补充一点个人理解：</strong></p>
 <p>之前我们讨论的是，操作系统或者应用程序的虚拟地址 VA 转换为物理地址 PA 对吧。</p>
 <p>那么，如果此时还存在一个虚拟机（虚拟机可以理解为一种应用程序，该应用程序模拟了一台计算机），那么虚拟机这么一台计算机，是不是也会拥有一个<strong>“虚拟机的物理地址”</strong>，这就是中间物理地址 IPA。在虚拟机运行的应用程序，将“虚拟机的虚拟地址”转化为“虚拟机的物理地址”，这个“虚拟机的物理地址”，还需要再转化为“实体机的物理地址”，即 VA-&gt;IPA-&gt;PA 整个流程的意思。</p>
-<h3 id="空间大小"><span class="post-title-index">1.6.2 </span><a href="#空间大小" class="headerlink" title="空间大小"></a>空间大小</h3><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909180135914-20221001010727-hc4ab0e.png" alt="image-net-img-image-20220909180135914-20221001010727-hc4ab0e"></p>
+<h2 id="空间大小"><span class="post-title-index">6.2 </span><a href="#空间大小" class="headerlink" title="空间大小"></a>空间大小</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909180135914-20221001010727-hc4ab0e.png" alt="image-net-img-image-20220909180135914-20221001010727-hc4ab0e"></p>
 <p>EL0/EL1 虚拟地址空间有两个区域：<strong>内核空间和应用程序空间</strong>。这两个区域显示在关系图的左侧，内核空间位于顶部，应用程序空间（标记为“用户空间”）位于地址空间的底部。内核空间和用户空间具有单独的转换表，这意味着它们的映射可以保持<strong>独立</strong>。</p>
 <p>独立很重要，独立表明这两个东西不会相互影响。简单来说，<strong>当应用程序出现重大错误的时候，不会影响内核系统的运行</strong>，系统不会受到太大的影响。</p>
-<h3 id="空间标识符"><span class="post-title-index">1.6.3 </span><a href="#空间标识符" class="headerlink" title="空间标识符"></a>空间标识符</h3><p>现代操作系统的应用程序似乎都从同一地址区域运行，这就是我们所描述的用户空间。在实践中，不同的应用程序需要不同的映射。这意味着，例如，VA 0x8000 的转换取决于当前正在运行的应用程序。</p>
+<h2 id="空间标识符"><span class="post-title-index">6.3 </span><a href="#空间标识符" class="headerlink" title="空间标识符"></a>空间标识符</h2><p>现代操作系统的应用程序似乎都从同一地址区域运行，这就是我们所描述的用户空间。在实践中，不同的应用程序需要不同的映射。这意味着，例如，VA 0x8000 的转换取决于当前正在运行的应用程序。</p>
 <p>理想情况下，我们希望<strong>不同应用程序在TLB 中共存</strong>，在 Armv8-A 中，通过地址空间标识符 （ASID）来进行管理。</p>
 <p>对于 EL0/EL1 虚拟地址空间，可以使用转换表条目的属性<strong>字段</strong>中的 nG 位将转换标记为全局 （G） 或非全局 （nG）。例如，<strong>内核映射是全局转换，而应用程序映射是非全局转换</strong>。全局翻译适用于当前正在运行的任何应用程序。非全局翻译仅适用于特定应用程序。</p>
 <p>非全局映射在 TLB 中用 ASID 进行标记。在 TLB 查找中，会<strong>将 TLB 条目中的 ASID 与当前选定的 ASID 进行比较</strong>。如果它们不匹配，则不使用 TLB 条目。下图显示了内核空间中没有 ASID 标记的全局映射和用户空间中具有 ASID 标记的非全局映射：</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-net-img-image-20220909181627370-20221001010727-n6pou3a.png" alt="image-net-img-image-20220909181627370-20221001010727-n6pou3a"></p>
-<h2 id="小结"><span class="post-title-index">1.7 </span><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本文仅仅是简要介绍了 MMU 和 TLB，对 MMU 的意义、组成有一定的了解就好。接下来再阅读 ARM 的架构书，补充一些 MMU 具体的内容。</p>
+<h1 id="小结"><span class="post-title-index">7 </span><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>本文仅仅是简要介绍了 MMU 和 TLB，对 MMU 的意义、组成有一定的了解就好。接下来再阅读 ARM 的架构书，补充一些 MMU 具体的内容。</p>
 
     </div>
 
@@ -503,7 +504,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

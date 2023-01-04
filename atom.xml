@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2023-01-04T13:08:15.515Z</updated>
+  <updated>2023-01-04T13:18:13.426Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rongyel.github.io/posts/c1f4e46a/"/>
     <id>https://rongyel.github.io/posts/c1f4e46a/</id>
     <published>2023-01-04T13:04:00.000Z</published>
-    <updated>2023-01-04T13:08:15.515Z</updated>
+    <updated>2023-01-04T13:18:13.426Z</updated>
     
     
     <summary type="html">&lt;p&gt;兜兜转转选择了使用obsidian作为自己的markdown笔记工具。&lt;br&gt;记录一下自己使用其他笔记工具的感受。&lt;/p&gt;</summary>
@@ -44,7 +44,7 @@
     <link href="https://rongyel.github.io/posts/8c81189d/"/>
     <id>https://rongyel.github.io/posts/8c81189d/</id>
     <published>2023-01-04T13:00:00.000Z</published>
-    <updated>2023-01-04T13:08:15.498Z</updated>
+    <updated>2023-01-04T13:20:48.167Z</updated>
     
     
     <summary type="html">&lt;p&gt;本人在B站视频相关的项目文件汇总。&lt;/p&gt;</summary>
@@ -63,7 +63,7 @@
     <link href="https://rongyel.github.io/posts/35eaf17c/"/>
     <id>https://rongyel.github.io/posts/35eaf17c/</id>
     <published>2023-01-04T12:58:00.000Z</published>
-    <updated>2023-01-04T13:08:15.495Z</updated>
+    <updated>2023-01-04T13:19:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;一个简单的例程，掌握AXI基本事务流程。&lt;/p&gt;</summary>
@@ -90,7 +90,7 @@
     <link href="https://rongyel.github.io/posts/a6a87a63/"/>
     <id>https://rongyel.github.io/posts/a6a87a63/</id>
     <published>2023-01-04T12:54:00.000Z</published>
-    <updated>2023-01-04T13:08:15.503Z</updated>
+    <updated>2023-01-04T13:19:12.129Z</updated>
     
     
     <summary type="html">&lt;p&gt;ARM的access flag和dirty state机制用于进行页表的维护，经过一段时间的思考，现在总算是理清楚了。&lt;/p&gt;</summary>
@@ -113,15 +113,21 @@
     <link href="https://rongyel.github.io/posts/c97fc71d/"/>
     <id>https://rongyel.github.io/posts/c97fc71d/</id>
     <published>2023-01-04T12:51:00.000Z</published>
-    <updated>2023-01-04T13:08:15.516Z</updated>
+    <updated>2023-01-04T13:18:03.445Z</updated>
     
     
     <summary type="html">&lt;p&gt;markdown有个说法，叫做让人可以专注于笔记内容上。&lt;br&gt;这句话是什么意思呢，我分享一下自己的感受。&lt;/p&gt;</summary>
     
     
     
+    <category term="心得体会" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
     
-    <category term="IC攻城狮的自我修养/心得体会" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB-%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
+    
+    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
+    
+    <category term="心得体会" scheme="https://rongyel.github.io/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
+    
+    <category term="markdown" scheme="https://rongyel.github.io/tags/markdown/"/>
     
   </entry>
   
@@ -130,7 +136,7 @@
     <link href="https://rongyel.github.io/posts/8ba797de/"/>
     <id>https://rongyel.github.io/posts/8ba797de/</id>
     <published>2023-01-04T12:50:00.000Z</published>
-    <updated>2023-01-04T13:08:15.518Z</updated>
+    <updated>2023-01-04T13:17:58.545Z</updated>
     
     
     <summary type="html">&lt;p&gt;IC热潮引得一些人投入到培训市场来赚快钱了。&lt;/p&gt;</summary>
@@ -149,7 +155,7 @@
     <link href="https://rongyel.github.io/posts/c6dc63a6/"/>
     <id>https://rongyel.github.io/posts/c6dc63a6/</id>
     <published>2023-01-04T03:16:00.000Z</published>
-    <updated>2023-01-04T13:08:15.500Z</updated>
+    <updated>2023-01-04T13:20:14.702Z</updated>
     
     
     <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
@@ -174,7 +180,7 @@
     <link href="https://rongyel.github.io/posts/f07a99ab/"/>
     <id>https://rongyel.github.io/posts/f07a99ab/</id>
     <published>2023-01-04T03:16:00.000Z</published>
-    <updated>2023-01-04T13:08:15.505Z</updated>
+    <updated>2023-01-04T13:18:50.355Z</updated>
     
     
     <summary type="html">&lt;p&gt;搭建一个能够运行tinyriscv项目的EDA环境。&lt;/p&gt;</summary>
@@ -197,7 +203,7 @@
     <link href="https://rongyel.github.io/posts/f60848c2/"/>
     <id>https://rongyel.github.io/posts/f60848c2/</id>
     <published>2023-01-04T03:16:00.000Z</published>
-    <updated>2023-01-04T13:08:15.513Z</updated>
+    <updated>2023-01-04T13:19:28.335Z</updated>
     
     
     <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
@@ -220,7 +226,7 @@
     <link href="https://rongyel.github.io/posts/18d93dea/"/>
     <id>https://rongyel.github.io/posts/18d93dea/</id>
     <published>2023-01-04T03:16:00.000Z</published>
-    <updated>2023-01-04T13:08:15.520Z</updated>
+    <updated>2023-01-04T13:20:56.844Z</updated>
     
     
     <summary type="html">&lt;p&gt;有时候在工作中的代码，会看到DW01_decode这样的模块例化，看起来很奇怪。&lt;/p&gt;</summary>
@@ -241,7 +247,7 @@
     <link href="https://rongyel.github.io/posts/3252ed/"/>
     <id>https://rongyel.github.io/posts/3252ed/</id>
     <published>2023-01-04T03:16:00.000Z</published>
-    <updated>2023-01-04T13:08:15.530Z</updated>
+    <updated>2023-01-04T13:21:09.168Z</updated>
     
     
     <summary type="html">&lt;p&gt;看到的一些优秀的数字IC相关文章汇总。&lt;/p&gt;</summary>
