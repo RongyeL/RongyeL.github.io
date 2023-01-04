@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://rongyel.github.io/posts/c1f4e46a/</loc>
-    
-    <lastmod>2023-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://rongyel.github.io/posts/3252ed/</loc>
     
     <lastmod>2023-01-04</lastmod>
@@ -29,52 +20,7 @@
   </url>
   
   <url>
-    <loc>https://rongyel.github.io/posts/8c81189d/</loc>
-    
-    <lastmod>2023-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/posts/c6dc63a6/</loc>
-    
-    <lastmod>2023-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/posts/35eaf17c/</loc>
-    
-    <lastmod>2023-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/posts/f60848c2/</loc>
-    
-    <lastmod>2023-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/posts/a6a87a63/</loc>
-    
-    <lastmod>2023-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/posts/f07a99ab/</loc>
+    <loc>https://rongyel.github.io/posts/8ba797de/</loc>
     
     <lastmod>2023-01-04</lastmod>
     
@@ -92,7 +38,61 @@
   </url>
   
   <url>
-    <loc>https://rongyel.github.io/posts/8ba797de/</loc>
+    <loc>https://rongyel.github.io/posts/c1f4e46a/</loc>
+    
+    <lastmod>2023-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/f60848c2/</loc>
+    
+    <lastmod>2023-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/f07a99ab/</loc>
+    
+    <lastmod>2023-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/a6a87a63/</loc>
+    
+    <lastmod>2023-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/c6dc63a6/</loc>
+    
+    <lastmod>2023-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/8c81189d/</loc>
+    
+    <lastmod>2023-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/35eaf17c/</loc>
     
     <lastmod>2023-01-04</lastmod>
     
