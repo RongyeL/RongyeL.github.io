@@ -20,12 +20,12 @@ https://rongyel.github.io/tags/ARM/
 https://rongyel.github.io/tags/AMBA/
 https://rongyel.github.io/tags/AXI/
 https://rongyel.github.io/tags/MMU/
+https://rongyel.github.io/tags/Linux/
 https://rongyel.github.io/tags/ARM%E6%9E%B6%E6%9E%84/
 https://rongyel.github.io/tags/gvim/
 https://rongyel.github.io/tags/IC%E8%AE%BE%E8%AE%A1/
 https://rongyel.github.io/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/
 https://rongyel.github.io/tags/markdown/
-https://rongyel.github.io/tags/Linux/
 https://rongyel.github.io/tags/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/
 https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
 https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/

@@ -1,342 +1,471 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/%E8%8A%AF%E7%89%87.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/%E8%8A%AF%E7%89%87.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/%E8%8A%AF%E7%89%87.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"rongyel.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
-  </script>
-
-  <meta name="description" content="搭建一个能够运行tinyriscv项目的EDA环境。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="从零开始EDA环境搭建">
-<meta property="og:url" content="https://rongyel.github.io/posts/f07a99ab/index.html">
-<meta property="og:site_name" content="IC攻城狮的自我修养">
-<meta property="og:description" content="搭建一个能够运行tinyriscv项目的EDA环境。">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814139944-ee857d06-56b0-4d69-a57b-8b83a29c8aee.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814400398-fd896e87-372c-4ce4-9177-d423c692c644.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829810760-93f15068-6b1c-47ee-af81-7b8843dd386f.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829829171-d855cfa3-ec50-4f4f-88b7-7b316a89a593.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829848863-87d4e0c1-999e-4a29-abe9-3306b0d09240.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831202456-ca6153e9-4e95-4717-bb93-74f835a79310.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831294171-c0bf3940-7faf-475b-a04e-e1fa9b64f4b9.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831444058-7f51190d-48f7-4228-ab1e-88728e160c45.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831663793-2cc405fc-702b-41a3-a5f5-37505f3bef45.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832085505-4083f8f3-8875-4025-966d-288470b7b616.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832223302-cea5786f-ed22-44f5-99c2-4777876b68e8.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832306465-4bf0df99-b56b-4d08-af38-3a126c16b70c.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832430900-461128d2-8ee0-494f-8780-741a212df340.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850990398-f8ba9d61-5e90-4ca8-b9dc-354a42fe99ba.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832699123-4b90ce9e-6a38-4338-995d-5863b68cac4b.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642833660190-54aff599-35c8-43df-bdf3-bea7950d7581.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642833876149-8e21b86d-b5f7-4248-a905-f7dbf72fd342.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834156631-494551b1-0033-4366-b518-fc1504af9137.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834214819-f9f6ca15-4a16-4d76-9a28-066b6393a01b.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834365801-df8a4199-25a1-4528-b16f-fcb2764bca81.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834454930-eacfece9-ac6a-4dd9-9739-546d4a1df344.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834551371-8b3c1c95-90ee-4be8-82a1-580628f43fca.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834618117-d6d28b0a-e669-4c4a-84ec-31cc0a4cbcf9.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834674019-aed36f99-f880-4194-b719-df6b27ae984e.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834785652-2f39f13f-116c-4099-b46e-211e6687115e.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834806309-107d1bcf-de09-4916-8a52-6101f7c461a0.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834850719-192e0499-95a3-43dd-92fb-8f313cee672d.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834940453-c8d30666-550c-49ea-b4fd-27c0bfb2cb30.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835002193-d53301fb-1174-48ff-bb4e-79dcf7344567.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835036097-3d9262b6-367a-45fa-ac93-6281843f4a31.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835123217-9287ebb2-edbf-409a-9dda-c1a00fa03573.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835235819-ac6f193c-cf9d-43b3-bebf-7a50ac1a2f18.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835266517-931a7777-e33d-4ab3-bffe-118db1c78114.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835316942-095f8bad-a398-4968-ae59-59bbab8702ee.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835757055-4ef639a0-69f4-47cf-b3ec-7ebe62b0a49a.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835867407-93b23c3f-fd30-4d96-8b85-1ae5a1d7f84b.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835837664-9db24cbc-9e0b-4218-9c0d-e31b93c8cd36.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835915355-08e896d7-4eea-43b6-a05d-e9165eb0b61c.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835986079-5cd04ad3-816b-4138-ab5b-8600453b6edb.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835999572-167196a3-213d-491f-b500-ad4e482ca46b.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836126443-95a38a4d-0c06-47af-962c-e244cbcdb597.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836247989-d49e121b-351a-4f25-bc29-7257736724be.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836322444-5034dc42-bcad-40b4-b776-dc6e7fc47a14.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836388198-78492ac0-e820-46b5-8b9f-7ed749cea853.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836752195-29d99d2d-b451-4471-9d1a-7352238e5998.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836802184-98b9a839-c939-409f-8ca4-82dcc0802e0a.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836831887-fd0dfc2e-dec8-4f06-a631-fca3a414cedf.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836915497-ee469afe-1742-4dc4-a51c-3fe7d481ff74.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836964664-86131e0d-5dbd-40c5-83e0-c61cd391fbcb.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837624498-7e7949de-1278-41ce-819c-63d7adc912e4.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837670858-0baf19e7-46b1-4f73-b501-d4aa97cad09b.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837742180-cdcfaced-2eac-479e-be12-606d1f9e7f13.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837844198-e40a3ae4-9e6a-46f8-a8b5-b1865ae8fe65.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837948750-15e0920b-4f32-4629-9396-df892a8f11bf.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642838023430-1f5c289b-4a22-4221-8d45-17af4c3e22f4.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642841698753-5575bf55-0b9a-4031-9468-4460a37c453a.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642841849110-e2fadf15-b7d2-4645-b936-1db7b30e2afc.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850188870-cbe6f9fb-8a8a-4b9c-bfe7-ebb2abd644e2.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642843934150-06521622-27cb-4990-ae48-31be79b750f9.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642844568496-0eb9bd3d-8f41-4e3d-8fde-451e4961b778.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850481531-9c985367-461a-4aac-8814-e9470b6efe83.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642845563701-97b3bd7d-d83b-4217-95ac-84ecc9d44539.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849298195-291dbe76-f976-4ffc-9899-66345ac03da2.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642848549441-fd8d6505-7ab4-4923-a6e6-2efc77ef0d2d.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849032103-675596f5-f767-43b3-bd70-e9546f14ce6e.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849045300-28590f80-c0da-4973-920f-f5b17112c5b3.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849088312-75a6736b-e0c5-4498-84d0-e4f1e90ea30b.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849150317-3b885dcb-0e75-4f58-b58d-1a5d4e89b46b.png">
-<meta property="article:published_time" content="2023-01-04T03:16:00.000Z">
-<meta property="article:modified_time" content="2023-01-04T13:21:46.599Z">
-<meta property="article:author" content="Rong晔">
-<meta property="article:tag" content="IC攻城狮的自我修养">
-<meta property="article:tag" content="学习笔记">
-<meta property="article:tag" content="Linux">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814139944-ee857d06-56b0-4d69-a57b-8b83a29c8aee.png">
-
-<link rel="canonical" href="https://rongyel.github.io/posts/f07a99ab/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
-#needsharebutton-float {
-  bottom: 88px;
-  cursor: pointer;
-  left: -8px;
-  position: fixed;
-  z-index: 9999;
-}
-#needsharebutton-float .btn {
-  border: 1px solid $btn-default-border-color;
-  border-radius: 4px;
-  padding: 0 10px 0 14px;
-}
-</style>
+  <meta charset="utf-8">
   <title>从零开始EDA环境搭建 | IC攻城狮的自我修养</title>
-  
+  <meta name="keywords" content=" IC攻城狮的自我修养 , 学习笔记 , Linux ">
+  <meta name="description" content="从零开始EDA环境搭建 | IC攻城狮的自我修养">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="记录自己在IC领域的所学所想。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://rongyel.github.io/categories/index.html">
+<meta property="og:site_name" content="IC攻城狮的自我修养">
+<meta property="og:description" content="记录自己在IC领域的所学所想。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-03T03:58:23.000Z">
+<meta property="article:modified_time" content="2022-09-04T12:56:06.695Z">
+<meta property="article:author" content="Rong晔">
+<meta property="article:tag" content="ASIC">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/芯片.png">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/gruvbox-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
 
 
 
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
 
+<script src="/js/iconfont.js?v=1.1.0" ></script>
 
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-<link rel="alternate" href="/atom.xml" title="IC攻城狮的自我修养" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="IC攻城狮的自我修养" type="application/atom+xml">
 </head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">IC攻城狮的自我修养</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">To be a better IC engineer, maybe?</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
 </div>
 
 
 
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-rss">
-
-    <a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/37.png"/>
+</a>
+<div class="author">
+    <span>Rong晔</span>
 </div>
 
-    </div>
-  </div>
-
-</div>
-    </header>
-
+<div class="icon">
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/RongyeL"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="bilibili"
+               href="https://space.bilibili.com/3280670  || fab fa-bilibili"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-bilibili"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
 
-  <a href="https://github.com/RongyeL" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
             
+                <small>(11)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="心得体会">
+                        
+                        心得体会
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="学习笔记">
+                        
+                        学习笔记
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="知识碎片">
+                        
+                        知识碎片
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="11">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>心得体会</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>学习笔记</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>知识碎片</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>AMBA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ARM</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ARM架构</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>AXI</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>gvim</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>IC攻城狮的自我修养</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>IC设计</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>MMU</a>
+            </li>
+        
+    </div>
+
+</div>
 
     
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://rongyel.github.io/posts/f07a99ab/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/37.png">
-      <meta itemprop="name" content="Rong晔">
-      <meta itemprop="description" content="记录自己在IC领域的所学所想。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IC攻城狮的自我修养">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          从零开始EDA环境搭建
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-01-04 11:16:00 / 修改时间：21:21:46" itemprop="dateCreated datePublished" datetime="2023-01-04T11:16:00+08:00">2023-01-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 "
+           href="/posts/8c81189d/"
+           data-tag="IC攻城狮的自我修养,学习笔记"
+           data-author="" >
+            <span class="post-title" title="Rong晔 B站视频 项目文件">Rong晔 B站视频 项目文件</span>
+            <span class="post-date" title="2023-01-04 21:00:00">2023/01/04</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 学习笔记 "
+           href="/posts/35eaf17c/"
+           data-tag="IC攻城狮的自我修养,学习笔记,ARM,AMBA,AXI"
+           data-author="" >
+            <span class="post-title" title="EASY_AXI：一个简单的例程，掌握AXI基本事务流程">EASY_AXI：一个简单的例程，掌握AXI基本事务流程</span>
+            <span class="post-date" title="2023-01-04 20:58:00">2023/01/04</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 知识碎片 "
+           href="/posts/3252ed/"
+           data-tag="IC攻城狮的自我修养,知识碎片"
+           data-author="" >
+            <span class="post-title" title="数字IC相关文献收集">数字IC相关文献收集</span>
+            <span class="post-date" title="2023-01-04 11:16:00">2023/01/04</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 心得体会 "
+           href="/posts/c1f4e46a/"
+           data-tag="IC攻城狮的自我修养,心得体会,markdown"
+           data-author="" >
+            <span class="post-title" title="markdown笔记工具分析">markdown笔记工具分析</span>
+            <span class="post-date" title="2023-01-04 21:04:00">2023/01/04</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 学习笔记 "
+           href="/posts/a6a87a63/"
+           data-tag="IC攻城狮的自我修养,学习笔记,ARM架构"
+           data-author="" >
+            <span class="post-title" title="对ARM access flag和dirty state机制理解">对ARM access flag和dirty state机制理解</span>
+            <span class="post-date" title="2023-01-04 20:54:00">2023/01/04</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 心得体会 "
+           href="/posts/c97fc71d/"
+           data-tag="IC攻城狮的自我修养,心得体会,markdown"
+           data-author="" >
+            <span class="post-title" title="为什么要用Markdown做笔记">为什么要用Markdown做笔记</span>
+            <span class="post-date" title="2023-01-04 20:51:00">2023/01/04</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 "
+           href="/posts/8ba797de/"
+           data-tag="IC攻城狮的自我修养,心得体会"
+           data-author="" >
+            <span class="post-title" title="报IC设计培训课程有用吗">报IC设计培训课程有用吗</span>
+            <span class="post-date" title="2023-01-04 20:50:00">2023/01/04</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 学习笔记 "
+           href="/posts/c6dc63a6/"
+           data-tag="IC攻城狮的自我修养,学习笔记,ARM,MMU"
+           data-author="" >
+            <span class="post-title" title="MMU-TLB基础——SMMU协议学习笔记">MMU-TLB基础——SMMU协议学习笔记</span>
+            <span class="post-date" title="2023-01-04 11:16:00">2023/01/04</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 学习笔记 "
+           href="/posts/f07a99ab/"
+           data-tag="IC攻城狮的自我修养,学习笔记,Linux"
+           data-author="" >
+            <span class="post-title" title="从零开始EDA环境搭建">从零开始EDA环境搭建</span>
+            <span class="post-date" title="2023-01-04 11:16:00">2023/01/04</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 "
+           href="/posts/f60848c2/"
+           data-tag="IC攻城狮的自我修养,学习笔记,gvim,IC设计"
+           data-author="" >
+            <span class="post-title" title="数字IC设计开发Gvim配置">数字IC设计开发Gvim配置</span>
+            <span class="post-date" title="2023-01-04 11:16:00">2023/01/04</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 知识碎片 "
+           href="/posts/18d93dea/"
+           data-tag="IC攻城狮的自我修养,知识碎片"
+           data-author="" >
+            <span class="post-title" title="奇怪的DW01 decode">奇怪的DW01 decode</span>
+            <span class="post-date" title="2023-01-04 11:16:00">2023/01/04</span>
+        </a>
+        
+        <div id="no-item-tips">
 
         </div>
-      </header>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
 
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-学习笔记/从零开始EDA环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
     
+        <h1 class="article-title">从零开始EDA环境搭建</h1>
     
+    <div class="article-meta">
+        
+        <span class="top"><a>置顶</a></span>
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="学习笔记">学习笔记</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">IC攻城狮的自我修养</a>
+            
+            <a class="color5">学习笔记</a>
+            
+            <a class="color1">Linux</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-01-04 21:21:46'>2023-01-04 11:16</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
     
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu18-04-%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="toc-text">Ubuntu18.04 系统安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E5%A4%87%E4%BB%BD%E6%BA%90%E5%88%97%E8%A1%A8"><span class="toc-text">首先备份源列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%BC%80sources-list%E6%96%87%E4%BB%B6"><span class="toc-text">打开sources.list文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#gvim%E5%9F%BA%E6%9C%AC%E5%AE%89%E8%A3%85"><span class="toc-text">gvim基本安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tinyriscv%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">tinyriscv环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#FPGA%E7%A7%BB%E6%A4%8D%E5%87%86%E5%A4%87"><span class="toc-text">FPGA移植准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#FPGA%E7%A7%BB%E6%A4%8D%E5%B7%A5%E4%BD%9C"><span class="toc-text">FPGA移植工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#FPGA%E8%BF%90%E8%A1%8C%E8%B0%83%E8%AF%95"><span class="toc-text">FPGA运行调试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E8%A1%A5%E5%85%85"><span class="toc-text">其他补充</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
       
         <p>搭建一个能够运行tinyriscv项目的EDA环境。</p>
 <span id="more"></span>
@@ -344,15 +473,15 @@
 
 
 
-<h1 id="Ubuntu18-04-系统安装"><span class="post-title-index">1 </span><a href="#Ubuntu18-04-系统安装" class="headerlink" title="Ubuntu18.04 系统安装"></a>Ubuntu18.04 系统安装</h1><p><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu-releases/18.04/">http://mirrors.aliyun.com/ubuntu-releases/18.04/</a></p>
+<h1 id="Ubuntu18-04-系统安装"><a href="#Ubuntu18-04-系统安装" class="headerlink" title="Ubuntu18.04 系统安装"></a>Ubuntu18.04 系统安装</h1><p><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu-releases/18.04/">http://mirrors.aliyun.com/ubuntu-releases/18.04/</a></p>
 <p>阿里云镜像下载</p>
 <p>VMware配置安装后，启动后为英文。</p>
 <p>在更改语言前，先换源。</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814139944-ee857d06-56b0-4d69-a57b-8b83a29c8aee.png" alt="image-1642814139944-ee857d06-56b0-4d69-a57b-8b83a29c8aee"></p>
 <p>换源<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/61228593">https://zhuanlan.zhihu.com/p/61228593</a></p>
 <p>桌面右键打开terminal</p>
-<h2 id="首先备份源列表"><span class="post-title-index">1.1 </span><a href="#首先备份源列表" class="headerlink" title="首先备份源列表"></a>首先备份源列表</h2><p>sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup  </p>
-<h2 id="打开sources-list文件"><span class="post-title-index">1.2 </span><a href="#打开sources-list文件" class="headerlink" title="打开sources.list文件"></a>打开sources.list文件</h2><p>sudo gedit /etc/apt/sources.list  </p>
+<h2 id="首先备份源列表"><a href="#首先备份源列表" class="headerlink" title="首先备份源列表"></a>首先备份源列表</h2><p>sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup  </p>
+<h2 id="打开sources-list文件"><a href="#打开sources-list文件" class="headerlink" title="打开sources.list文件"></a>打开sources.list文件</h2><p>sudo gedit /etc/apt/sources.list  </p>
 <p>阿里源</p>
 <p>deb <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic main restricted universe multiverse</p>
 <p>deb <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic-security main restricted universe multiverse</p>
@@ -380,7 +509,7 @@
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831444058-7f51190d-48f7-4228-ab1e-88728e160c45.png" alt="image-1642831444058-7f51190d-48f7-4228-ab1e-88728e160c45"></p>
 <p>下面开始准备gvim</p>
 <hr>
-<h1 id="gvim基本安装"><span class="post-title-index">2 </span><a href="#gvim基本安装" class="headerlink" title="gvim基本安装"></a>gvim基本安装</h1><p>系统自带的vi会出现乱码问题，先卸载</p>
+<h1 id="gvim基本安装"><a href="#gvim基本安装" class="headerlink" title="gvim基本安装"></a>gvim基本安装</h1><p>系统自带的vi会出现乱码问题，先卸载</p>
 <p>sudo apt-get remove vim-common</p>
 <p>重新安装，直接装vim-gtk3</p>
 <p>sudo apt install vim-gtk3</p>
@@ -412,7 +541,7 @@
 <p>先拍摄一个快照保存一下</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832699123-4b90ce9e-6a38-4338-995d-5863b68cac4b.png" alt="image-1642832699123-4b90ce9e-6a38-4338-995d-5863b68cac4b"></p>
 <hr>
-<h1 id="tinyriscv环境搭建"><span class="post-title-index">3 </span><a href="#tinyriscv环境搭建" class="headerlink" title="tinyriscv环境搭建"></a>tinyriscv环境搭建</h1><p>那么目前是没有多余配置的，</p>
+<h1 id="tinyriscv环境搭建"><a href="#tinyriscv环境搭建" class="headerlink" title="tinyriscv环境搭建"></a>tinyriscv环境搭建</h1><p>那么目前是没有多余配置的，</p>
 <p>接下来先把tinyriscv的环境准备好。</p>
 <p>作者的gitee库</p>
 <p><a target="_blank" rel="noopener" href="https://gitee.com/liangkangnan/tinyriscv/">https://gitee.com/liangkangnan/tinyriscv/</a></p>
@@ -484,7 +613,7 @@
 <p>通过，那么至此基本仿真已经没有问题了。</p>
 <p>下面测试FPGA移植。</p>
 <hr>
-<h1 id="FPGA移植准备"><span class="post-title-index">4 </span><a href="#FPGA移植准备" class="headerlink" title="FPGA移植准备"></a>FPGA移植准备</h1><p>移植需要准备vivado集成开发环境和FPGA，CMSIS-DAP调试器。</p>
+<h1 id="FPGA移植准备"><a href="#FPGA移植准备" class="headerlink" title="FPGA移植准备"></a>FPGA移植准备</h1><p>移植需要准备vivado集成开发环境和FPGA，CMSIS-DAP调试器。</p>
 <p>我这里安装的是vivado2017.4和Digilent 的 ARTY A7 35T开发板</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834940453-c8d30666-550c-49ea-b4fd-27c0bfb2cb30.png" alt="image-1642834940453-c8d30666-550c-49ea-b4fd-27c0bfb2cb30"></p>
 <p>安装vivado需要准备安装包和许可文件，请自行准备。</p>
@@ -536,7 +665,7 @@
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836126443-95a38a4d-0c06-47af-962c-e244cbcdb597.png" alt="image-1642836126443-95a38a4d-0c06-47af-962c-e244cbcdb597"></p>
 <p>那么vivado也准备完毕以后，开始移植tinyriscv到FPGA上</p>
 <hr>
-<h1 id="FPGA移植工作"><span class="post-title-index">5 </span><a href="#FPGA移植工作" class="headerlink" title="FPGA移植工作"></a>FPGA移植工作</h1><p>新建工程</p>
+<h1 id="FPGA移植工作"><a href="#FPGA移植工作" class="headerlink" title="FPGA移植工作"></a>FPGA移植工作</h1><p>新建工程</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836247989-d49e121b-351a-4f25-bc29-7257736724be.png" alt="image-1642836247989-d49e121b-351a-4f25-bc29-7257736724be"></p>
 <p>我的板子ARTY A7 35T</p>
 <p>器件属性选择xc7a35ticsg324-1l</p>
@@ -569,7 +698,7 @@
 <p>板子上的LED亮起，说明顺利烧写进去了，</p>
 <p>接下来进行JTAG调试。</p>
 <hr>
-<h1 id="FPGA运行调试"><span class="post-title-index">6 </span><a href="#FPGA运行调试" class="headerlink" title="FPGA运行调试"></a>FPGA运行调试</h1><p>调试需要使用到CMSIS-DAP，连好线，做好管脚约束才能使用。</p>
+<h1 id="FPGA运行调试"><a href="#FPGA运行调试" class="headerlink" title="FPGA运行调试"></a>FPGA运行调试</h1><p>调试需要使用到CMSIS-DAP，连好线，做好管脚约束才能使用。</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837742180-cdcfaced-2eac-479e-be12-606d1f9e7f13.png" alt="image-1642837742180-cdcfaced-2eac-479e-be12-606d1f9e7f13"></p>
 <p>同时还需要上位机，作者提供的只有exe也就是windows下的软件。</p>
 <p>*<strong>注意，Linux下的openocd安装非常麻烦，我遇到了很多问题，虽然现在顺利安装并使用了。</strong></p>
@@ -676,7 +805,7 @@
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849150317-3b885dcb-0e75-4f58-b58d-1a5d4e89b46b.png" alt="image-1642849150317-3b885dcb-0e75-4f58-b58d-1a5d4e89b46b"></p>
 <p>烧写进去并且resume以后，可以看到串口助手窗口打印了hello world。</p>
 <p>至此，整个tinyriscv的linux开发环境搭建完成，可以运行整个项目的所有内容。</p>
-<h1 id="其他补充"><span class="post-title-index">7 </span><a href="#其他补充" class="headerlink" title="其他补充"></a>其他补充</h1><p>输入su命令获取root权限时， 出现了</p>
+<h1 id="其他补充"><a href="#其他补充" class="headerlink" title="其他补充"></a>其他补充</h1><p>输入su命令获取root权限时， 出现了</p>
 <p>authentication failure 的问题，即身份验证失败。</p>
 <p>需要进行下面操作：</p>
 <p>$ sudo passwd root</p>
@@ -687,349 +816,159 @@
 <p>passwd: password updated successfully</p>
 <p>此时再用su命令，就可以获取到root权限了。</p>
 
-    </div>
-
-    <div>
       
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束，感谢您的关注-------------</div>
-    
-</div>
-
-      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
     </div>
-
-    
-    
-    
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>Rongye
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://rongyel.github.io/posts/f07a99ab/" title="从零开始EDA环境搭建">https://rongyel.github.io/posts/f07a99ab/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
+</article>
 
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/" rel="tag"><i class="fa fa-tag"></i> IC攻城狮的自我修养</a>
-              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
-              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
-          </div>
-
-        
 
 
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/posts/18d93dea/" rel="prev" title="奇怪的DW01 decode">
-      <i class="fa fa-chevron-left"></i> 奇怪的DW01 decode
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/f60848c2/" rel="next" title="数字IC设计开发Gvim配置">
-      数字IC设计开发Gvim配置 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-
-
-  
-  
-  
 
 
 
-          </div>
-          
-    <div class="comments" id="gitalk-container"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Rong晔"
-      src="/images/37.png">
-  <p class="site-author-name" itemprop="name">Rong晔</p>
-  <div class="site-description" itemprop="description">记录自己在IC领域的所学所想。</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">11</span>
-          <span class="site-state-item-name">文章</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">13</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/RongyeL" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;RongyeL" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://space.bilibili.com/3280670" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;3280670" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
-      </span>
-  </div>
-  <div class="cc-license motion-element" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
-  </div>
+    
 
 
 
-  <div class="links-of-recent-posts motion-element">
-    <div class="links-of-recent-posts-title">
-      <i class="fa fa-history fa-fw"></i>
-      最近文章
-    </div>
-    <ul class="links-of-recent-posts-list">
-        <li class="links-of-recent-posts-item">
-          <a href="/posts/c1f4e46a/" title="posts&#x2F;c1f4e46a&#x2F;">markdown笔记工具分析</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/posts/8c81189d/" title="posts&#x2F;8c81189d&#x2F;">Rong晔 B站视频 项目文件</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/posts/35eaf17c/" title="posts&#x2F;35eaf17c&#x2F;">EASY_AXI：一个简单的例程，掌握AXI基本事务流程</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/posts/a6a87a63/" title="posts&#x2F;a6a87a63&#x2F;">对ARM access flag和dirty state机制理解</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/posts/c97fc71d/" title="posts&#x2F;c97fc71d&#x2F;">为什么要用Markdown做笔记</a>
-        </li>
-    </ul>
-  </div>
-
-
-      </div>
 
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2022 Rong晔
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Rong晔</span>
-</div>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-<script src="/js/bookmark.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-<div id="needsharebutton-float">
-      <span class="btn">
-        <i class="fa fa-share-alt" aria-hidden="true"></i>
-      </span>
     </div>
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
-  <script>
-      flOptions = {};
-        flOptions.iconStyle = "box";
-        flOptions.boxForm = "horizontal";
-        flOptions.position = "middleRight";
-        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      new needShareButton('#needsharebutton-float', flOptions);
-  </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
 
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '419d888f11979e625e56',
-      clientSecret: '181ace9ce2327195e0f54f46edba1f124181d6b4',
-      repo        : 'hexo_comment',
-      owner       : 'RongyeL',
-      admin       : ['RongyeL'],
-      id          : '466c77faf41215927c42b032e558f39f',
-        language: 'zh-CN',
-      distractionFreeMode: false
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
+    </div>
+</div>
 
 </body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
 </html>
