@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2023-01-05T15:00:36.342Z</updated>
+  <updated>2023-01-05T15:27:10.793Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Stage1页表属性使用attrindex而不是memattr的原因</title>
+    <link href="https://rongyel.github.io/posts/a66b31bc/"/>
+    <id>https://rongyel.github.io/posts/a66b31bc/</id>
+    <published>2023-01-04T12:41:00.000Z</published>
+    <updated>2023-01-05T15:27:10.793Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;stage1的页表最低位属性用的是AttrIndex，而在stage2的页表属性用的是MemAttr。&lt;br&gt;这样设计的原因可能是为了减少无效化操作。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+    
+    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
+    
+    <category term="页表" scheme="https://rongyel.github.io/tags/%E9%A1%B5%E8%A1%A8/"/>
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/tags/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+    <category term="ARM架构" scheme="https://rongyel.github.io/tags/ARM%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>数字IC相关文献收集</title>
     <link href="https://rongyel.github.io/posts/3252ed/"/>
     <id>https://rongyel.github.io/posts/3252ed/</id>
     <published>2023-01-03T13:47:00.000Z</published>
-    <updated>2023-01-05T15:00:36.342Z</updated>
+    <updated>2023-01-05T15:01:20.540Z</updated>
     
     
     <summary type="html">&lt;p&gt;看到的一些优秀的数字IC相关文章汇总。&lt;/p&gt;</summary>
@@ -44,7 +69,7 @@
     <link href="https://rongyel.github.io/posts/35eaf17c/"/>
     <id>https://rongyel.github.io/posts/35eaf17c/</id>
     <published>2023-01-01T09:49:00.000Z</published>
-    <updated>2023-01-05T14:55:06.658Z</updated>
+    <updated>2023-01-05T15:01:20.513Z</updated>
     
     
     <summary type="html">&lt;p&gt;一个简单的例程，掌握AXI基本事务流程。&lt;/p&gt;</summary>
@@ -71,7 +96,7 @@
     <link href="https://rongyel.github.io/posts/18d93dea/"/>
     <id>https://rongyel.github.io/posts/18d93dea/</id>
     <published>2022-12-31T03:37:00.000Z</published>
-    <updated>2023-01-05T15:00:16.910Z</updated>
+    <updated>2023-01-05T15:01:20.538Z</updated>
     
     
     <summary type="html">&lt;p&gt;有时候在工作中的代码，会看到DW01_decode这样的模块例化，看起来很奇怪。&lt;/p&gt;</summary>
@@ -94,7 +119,7 @@
     <link href="https://rongyel.github.io/posts/8ba797de/"/>
     <id>https://rongyel.github.io/posts/8ba797de/</id>
     <published>2022-12-26T04:09:00.000Z</published>
-    <updated>2023-01-05T14:58:30.636Z</updated>
+    <updated>2023-01-05T15:01:20.537Z</updated>
     
     
     <summary type="html">&lt;p&gt;IC热潮引得一些人投入到培训市场来赚快钱了。&lt;/p&gt;</summary>
@@ -117,7 +142,7 @@
     <link href="https://rongyel.github.io/posts/a6a87a63/"/>
     <id>https://rongyel.github.io/posts/a6a87a63/</id>
     <published>2022-12-24T02:52:00.000Z</published>
-    <updated>2023-01-05T14:56:51.580Z</updated>
+    <updated>2023-01-05T15:01:20.522Z</updated>
     
     
     <summary type="html">&lt;p&gt;ARM的access flag和dirty state机制用于进行页表的维护，经过一段时间的思考，现在总算是理清楚了。&lt;/p&gt;</summary>
@@ -142,7 +167,7 @@
     <link href="https://rongyel.github.io/posts/f07a99ab/"/>
     <id>https://rongyel.github.io/posts/f07a99ab/</id>
     <published>2022-12-21T16:03:00.000Z</published>
-    <updated>2023-01-05T14:57:10.187Z</updated>
+    <updated>2023-01-05T15:01:20.521Z</updated>
     
     
     <summary type="html">&lt;p&gt;搭建一个能够运行tinyriscv项目的EDA环境。&lt;/p&gt;</summary>
@@ -165,7 +190,7 @@
     <link href="https://rongyel.github.io/posts/c1f4e46a/"/>
     <id>https://rongyel.github.io/posts/c1f4e46a/</id>
     <published>2022-12-12T16:16:00.000Z</published>
-    <updated>2023-01-05T14:57:35.430Z</updated>
+    <updated>2023-01-05T15:01:20.533Z</updated>
     
     
     <summary type="html">&lt;p&gt;兜兜转转选择了使用obsidian作为自己的markdown笔记工具。&lt;br&gt;记录一下自己使用其他笔记工具的感受。&lt;/p&gt;</summary>
@@ -190,7 +215,7 @@
     <link href="https://rongyel.github.io/posts/c97fc71d/"/>
     <id>https://rongyel.github.io/posts/c97fc71d/</id>
     <published>2022-12-01T15:41:00.000Z</published>
-    <updated>2023-01-05T14:57:59.012Z</updated>
+    <updated>2023-01-05T15:01:20.535Z</updated>
     
     
     <summary type="html">&lt;p&gt;markdown有个说法，叫做让人可以专注于笔记内容上。&lt;br&gt;这句话是什么意思呢，我分享一下自己的感受。&lt;/p&gt;</summary>
@@ -213,7 +238,7 @@
     <link href="https://rongyel.github.io/posts/c6dc63a6/"/>
     <id>https://rongyel.github.io/posts/c6dc63a6/</id>
     <published>2022-11-27T17:12:00.000Z</published>
-    <updated>2023-01-05T14:54:27.344Z</updated>
+    <updated>2023-01-05T15:01:20.516Z</updated>
     
     
     <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
@@ -238,7 +263,7 @@
     <link href="https://rongyel.github.io/posts/f60848c2/"/>
     <id>https://rongyel.github.io/posts/f60848c2/</id>
     <published>2022-11-27T17:12:00.000Z</published>
-    <updated>2023-01-05T14:56:00.200Z</updated>
+    <updated>2023-01-05T15:01:20.523Z</updated>
     
     
     <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
@@ -263,7 +288,7 @@
     <link href="https://rongyel.github.io/posts/8c81189d/"/>
     <id>https://rongyel.github.io/posts/8c81189d/</id>
     <published>2022-11-27T12:47:00.000Z</published>
-    <updated>2023-01-05T14:53:57.345Z</updated>
+    <updated>2023-01-05T15:01:20.519Z</updated>
     
     
     <summary type="html">&lt;p&gt;b站视频相关项目文件汇总&lt;/p&gt;</summary>
