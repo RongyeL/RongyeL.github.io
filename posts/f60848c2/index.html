@@ -475,7 +475,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-07 20:55:10'>2022-11-28 01:12</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-07 20:55:39'>2022-11-28 01:12</time>
         
     </div>
     <div class="article-meta">
@@ -492,6 +492,17 @@
             </span>
         </span>
         
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
         
     </div>
     
@@ -822,6 +833,27 @@ endfunction
 
 
 
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: '419d888f11979e625e56',
+            clientSecret: '181ace9ce2327195e0f54f46edba1f124181d6b4',
+            repo: 'hexo_comment',
+            owner: 'RongyeL',
+            admin: ['RongyeL'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'false',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
 
 
 
