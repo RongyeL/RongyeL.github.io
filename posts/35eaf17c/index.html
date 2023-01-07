@@ -477,7 +477,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-05 22:55:06'>2023-01-01 17:49</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-07 20:40:47'>2023-01-01 17:49</time>
         
     </div>
     <div class="article-meta">
@@ -555,13 +555,13 @@
 <h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ol>
 <li>确保开发环境，安装iverilog和gtkwave。</li>
 <li>终端下输入命令make</li>
-<li><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175503.png" alt="image.png"></li>
+<li><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175503.png"></li>
 <li>运行后会自动打开gtkwave</li>
-<li>file-&gt;read save file，选择.gtkw文件，加载已调整好的波形配置。<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175606.png" alt="image.png"></li>
+<li>file-&gt;read save file，选择.gtkw文件，加载已调整好的波形配置。<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175606.png"></li>
 <li>可以直接看到当前设计案例的波形结果</li>
-<li><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175706.png" alt="image.png"></li>
+<li><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175706.png"></li>
 </ol>
-<h1 id="代码说明"><a href="#代码说明" class="headerlink" title="代码说明"></a>代码说明</h1><h2 id="easy-axi-tb-v"><a href="#easy-axi-tb-v" class="headerlink" title="easy_axi_tb.v"></a>easy_axi_tb.v</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101180321.png" alt="image.png"><br>按顺序执行所配置的事务。<br>当前无法在上一个事务结束前执行下一个事务，因此需要设置时间间隔。<br>必须先进行写事务，否则读出来的结果为x，因此slave的存储空间未进行初始化。</p>
+<h1 id="代码说明"><a href="#代码说明" class="headerlink" title="代码说明"></a>代码说明</h1><h2 id="easy-axi-tb-v"><a href="#easy-axi-tb-v" class="headerlink" title="easy_axi_tb.v"></a>easy_axi_tb.v</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101180321.png"><br>按顺序执行所配置的事务。<br>当前无法在上一个事务结束前执行下一个事务，因此需要设置时间间隔。<br>必须先进行写事务，否则读出来的结果为x，因此slave的存储空间未进行初始化。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>

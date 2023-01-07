@@ -473,7 +473,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-05 23:27:10'>2023-01-04 20:41</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-07 20:42:13'>2023-01-04 20:41</time>
         
     </div>
     <div class="article-meta">
@@ -517,10 +517,10 @@
 
 
 
-<p>在看ARM VMSAv8的时候，注意到一个有意思的地方。<br>最后获取到page或者block的时候，属性域段中，<br>stage1的页表最低位属性用的是AttrIndex，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231054.png" alt="image.png"><br>而在stage2的页表属性用的是MemAttr<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231311.png" alt="image.png"></p>
-<p>这两者主要是什么区别呢，也不是很难理解，<br>像下面这个，4bit的MenAttr直接就表示memory类型，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231427.png" alt="image.png"><br>高2bit用来区分Device和normal memory的类型。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231505.png" alt="image.png"><br>低2bit用来具体细分是什么device或normal memory类型。</p>
+<p>在看ARM VMSAv8的时候，注意到一个有意思的地方。<br>最后获取到page或者block的时候，属性域段中，<br>stage1的页表最低位属性用的是AttrIndex，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231054.png"><br>而在stage2的页表属性用的是MemAttr<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231311.png"></p>
+<p>这两者主要是什么区别呢，也不是很难理解，<br>像下面这个，4bit的MenAttr直接就表示memory类型，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231427.png"><br>高2bit用来区分Device和normal memory的类型。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231505.png"><br>低2bit用来具体细分是什么device或normal memory类型。</p>
 <p>这里就不展开讲了。</p>
-<p>重点是上面的stage1 页表，attrindex的使用，它并不是单独就能表示属性的<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231651.png" alt="image.png"><br>这个index索引，指的是对MAIR（Memory Attribute Indirection Register）这个寄存器内部进行索引。<br>MAIR根据不同异常级别有好几个，但其实内部都是一样的，<br>从图上就可以看出，一个64bit的MAIR寄存器中有8个Attr，每8bit为一个Attr。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105232001.png" alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105232010.png" alt="image.png"><br>至于这8bit是如何进一步表示属性的，这里也不展开说了，具体可以看架构手册D13.2.97</p>
+<p>重点是上面的stage1 页表，attrindex的使用，它并不是单独就能表示属性的<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231651.png"><br>这个index索引，指的是对MAIR（Memory Attribute Indirection Register）这个寄存器内部进行索引。<br>MAIR根据不同异常级别有好几个，但其实内部都是一样的，<br>从图上就可以看出，一个64bit的MAIR寄存器中有8个Attr，每8bit为一个Attr。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105232001.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105232010.png"><br>至于这8bit是如何进一步表示属性的，这里也不展开说了，具体可以看架构手册D13.2.97</p>
 <p>通过stage1 page中的attrindex属性域段，加上MAIR寄存器中配置的Attr，才能够表示一个地址空间的属性。这样可以理解，但重点在于为什么要这样做。</p>
 <p>减少无效化操作，就是这种设计的核心意义。</p>
 <p>如果想要改变属性，就需要改页表的话，修改页表后必须发出无效化命令到各个tlb中进行无效化，<br>而进行无效化的代价其实是很大的。<br>那为了减少无效化操作，就尽可能不要修改页表，</p>
