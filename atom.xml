@@ -163,11 +163,11 @@
   </entry>
   
   <entry>
-    <title>AXI总线协议笔记</title>
-    <link href="https://rongyel.github.io/posts/94e6073b/"/>
-    <id>https://rongyel.github.io/posts/94e6073b/</id>
+    <title>AXI协议学习笔记</title>
+    <link href="https://rongyel.github.io/posts/fe51682c/"/>
+    <id>https://rongyel.github.io/posts/fe51682c/</id>
     <published>2022-12-22T12:00:00.000Z</published>
-    <updated>2023-01-07T12:37:32.748Z</updated>
+    <updated>2023-01-07T12:44:26.977Z</updated>
     
     
     <summary type="html">&lt;p&gt;AXI总线是当前最常用的总线协议，身为IC工程师，对AXI的掌握可以说是必须的。&lt;/p&gt;</summary>
@@ -309,11 +309,11 @@
   </entry>
   
   <entry>
-    <title>初识CHI——CHI协议学习笔记</title>
-    <link href="https://rongyel.github.io/posts/74d65944/"/>
-    <id>https://rongyel.github.io/posts/74d65944/</id>
+    <title>CHI协议学习笔记</title>
+    <link href="https://rongyel.github.io/posts/fa53c274/"/>
+    <id>https://rongyel.github.io/posts/fa53c274/</id>
     <published>2022-11-27T17:12:00.000Z</published>
-    <updated>2023-01-07T12:37:09.341Z</updated>
+    <updated>2023-01-07T12:44:31.157Z</updated>
     
     
     <summary type="html">&lt;p&gt;CHI协议是AMBA的第五代协议，用于解决多个CPU（RN）之间的数据一致性问题。当前网络上相关的资料较少，最好的学习方式就是阅读CHI协议书。本文在通读协议全文后，将根据自己对CHI协议学习的理解，整理相关知识要点。&lt;/p&gt;</summary>
