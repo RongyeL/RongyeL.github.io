@@ -234,31 +234,6 @@
   </entry>
   
   <entry>
-    <title>MMU-TLB基础——SMMU协议学习笔记</title>
-    <link href="https://rongyel.github.io/posts/c6dc63a6/"/>
-    <id>https://rongyel.github.io/posts/c6dc63a6/</id>
-    <published>2022-11-27T17:12:00.000Z</published>
-    <updated>2023-01-05T15:01:20.516Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
-    
-  </entry>
-  
-  <entry>
     <title>数字IC设计开发Gvim配置</title>
     <link href="https://rongyel.github.io/posts/f60848c2/"/>
     <id>https://rongyel.github.io/posts/f60848c2/</id>
@@ -280,6 +255,31 @@
     <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     <category term="gvim" scheme="https://rongyel.github.io/tags/gvim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MMU-TLB基础——SMMU协议学习笔记</title>
+    <link href="https://rongyel.github.io/posts/c6dc63a6/"/>
+    <id>https://rongyel.github.io/posts/c6dc63a6/</id>
+    <published>2022-11-27T17:12:00.000Z</published>
+    <updated>2023-01-05T15:01:20.516Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
     
   </entry>
   
