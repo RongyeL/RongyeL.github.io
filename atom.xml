@@ -179,9 +179,9 @@
     
     <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
     
-    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -202,11 +202,11 @@
     
     <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
     
-    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
     <category term="心得体会" scheme="https://rongyel.github.io/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
     
     <category term="markdown" scheme="https://rongyel.github.io/tags/markdown/"/>
+    
+    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -234,6 +234,31 @@
   </entry>
   
   <entry>
+    <title>数字IC设计开发Gvim配置</title>
+    <link href="https://rongyel.github.io/posts/f60848c2/"/>
+    <id>https://rongyel.github.io/posts/f60848c2/</id>
+    <published>2022-11-27T17:12:00.000Z</published>
+    <updated>2023-01-07T11:03:42.204Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
+    
+    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="gvim" scheme="https://rongyel.github.io/tags/gvim/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MMU-TLB基础——SMMU协议学习笔记</title>
     <link href="https://rongyel.github.io/posts/c6dc63a6/"/>
     <id>https://rongyel.github.io/posts/c6dc63a6/</id>
@@ -255,31 +280,6 @@
     <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
     
     <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数字IC设计开发Gvim配置</title>
-    <link href="https://rongyel.github.io/posts/f60848c2/"/>
-    <id>https://rongyel.github.io/posts/f60848c2/</id>
-    <published>2022-11-27T17:12:00.000Z</published>
-    <updated>2023-01-07T11:03:01.170Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="gvim" scheme="https://rongyel.github.io/tags/gvim/"/>
     
   </entry>
   
