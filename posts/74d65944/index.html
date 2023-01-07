@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>markdown笔记工具分析 | IC攻城狮的自我修养</title>
-  <meta name="keywords" content=" IC攻城狮的自我修养 , 心得体会 , markdown , 开发工具 ">
-  <meta name="description" content="markdown笔记工具分析 | IC攻城狮的自我修养">
+  <title>初识CHI——CHI协议学习笔记 | IC攻城狮的自我修养</title>
+  <meta name="keywords" content=" IC攻城狮的自我修养 , 学习笔记 , ARM , CHI ">
+  <meta name="description" content="初识CHI——CHI协议学习笔记 | IC攻城狮的自我修养">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="记录自己在IC领域的所学所想。">
 <meta property="og:type" content="website">
@@ -440,9 +440,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-心得体会/markdown笔记工具分析" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-学习笔记/CHI协议学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">markdown笔记工具分析</h1>
+        <h1 class="article-title">初识CHI——CHI协议学习笔记</h1>
     
     <div class="article-meta">
         
@@ -452,7 +452,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="心得体会">心得体会</a>
+            <a  data-rel="学习笔记">学习笔记</a>
             
         </span>
         
@@ -462,18 +462,18 @@
             
             <a class="color1">IC攻城狮的自我修养</a>
             
-            <a class="color5">心得体会</a>
+            <a class="color5">学习笔记</a>
             
-            <a class="color4">markdown</a>
+            <a class="color4">ARM</a>
             
-            <a class="color5">开发工具</a>
+            <a class="color4">CHI</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-05 22:57:35'>2022-12-13 00:16</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-07 20:37:09'>2022-11-28 01:12</time>
         
     </div>
     <div class="article-meta">
@@ -495,7 +495,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#typora"><span class="toc-text">typora</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%9D%E6%BA%90"><span class="toc-text">思源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%AD%E9%9B%80"><span class="toc-text">语雀</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#obsidian"><span class="toc-text">obsidian</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VSCODE-office-view%E6%89%A9%E5%B1%95"><span class="toc-text">VSCODE+office view扩展</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CHI%E5%85%A8%E6%99%AF%E5%9B%BE"><span class="toc-text">CHI全景图</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -511,16 +511,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>兜兜转转选择了使用obsidian作为自己的markdown笔记工具。<br>记录一下自己使用其他笔记工具的感受。</p>
+        <p>CHI协议是AMBA的第五代协议，用于解决多个CPU（RN）之间的数据一致性问题。当前网络上相关的资料较少，最好的学习方式就是阅读CHI协议书。本文在通读协议全文后，将根据自己对CHI协议学习的理解，整理相关知识要点。</p>
 <span id="more"></span>
 
-<h1 id="typora"><a href="#typora" class="headerlink" title="typora"></a>typora</h1><p>能很好的完成markdown的编写工作，但缺少文件管理能力。<br>没有标签页。没有其他功能。</p>
-<h1 id="思源"><a href="#思源" class="headerlink" title="思源"></a>思源</h1><p>支持markdown编辑，但数据格式其实是sy这样的私有格式。<br>每一段都有链接能力，粒度太小，其实我用不上。<br>加载速度较慢。<br>导出markdown还算方便，可以整个笔记本导出。</p>
-<h1 id="语雀"><a href="#语雀" class="headerlink" title="语雀"></a>语雀</h1><p>建议不要使用它进行编辑。只作为发布平台。<br>真的，绑架用户是最垃圾的行为。<br>导出便捷性极差，不能整个知识库导出。<br>文章只能一篇一篇导出。<br>我清楚的记得，早期的语雀是可以整个知识库一起导出的，<br>而且导出的格式有很多种，包括word，pdf，markdown等等。<br>我才放心使用的，没想到后面更新后把这些都嘎掉了。<br>现在知识库导出只能导出私有格式，<br>文章导出除了私有格式只有markdown，<br>真的，很，讨厌你们这样的行为。</p>
-<p>迁移成本高，说到底就是绑架用户，<br>网页端体验不佳，切换页面加载很不舒服。<br>不能离线使用。</p>
-<h1 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h1><p>比较全面的工具。<br>官方同步功能价格昂贵，<br>还好有remote save这样的插件可以实现同步功能，<br>我个人结合OneDrive使用十分方便，<br>移动端和PC端同步数据方便。<br>数据就是markdown，备份方便。</p>
-<p>缺点：在公司不敢用。</p>
-<h1 id="VSCODE-office-view扩展"><a href="#VSCODE-office-view扩展" class="headerlink" title="VSCODE+office view扩展"></a>VSCODE+office view扩展</h1><p>不得已的选择，不过比typora文件管理方便一些。</p>
+
+
+<h2 id="CHI全景图"><a href="#CHI全景图" class="headerlink" title="CHI全景图"></a>CHI全景图</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/net-img-CHI-20221001195512-itu593u.png"></p>
+<p>‍</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>

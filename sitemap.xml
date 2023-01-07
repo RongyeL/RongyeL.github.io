@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rongyel.github.io/posts/94e6073b/</loc>
+    
+    <lastmod>2023-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/74d65944/</loc>
+    
+    <lastmod>2023-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/posts/f60848c2/</loc>
     
     <lastmod>2023-01-07</lastmod>
@@ -65,15 +83,6 @@
   </url>
   
   <url>
-    <loc>https://rongyel.github.io/posts/a6a87a63/</loc>
-    
-    <lastmod>2023-01-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://rongyel.github.io/posts/f07a99ab/</loc>
     
     <lastmod>2023-01-05</lastmod>
@@ -83,7 +92,16 @@
   </url>
   
   <url>
-    <loc>https://rongyel.github.io/posts/8c81189d/</loc>
+    <loc>https://rongyel.github.io/posts/a6a87a63/</loc>
+    
+    <lastmod>2023-01-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/35eaf17c/</loc>
     
     <lastmod>2023-01-05</lastmod>
     
@@ -101,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://rongyel.github.io/posts/35eaf17c/</loc>
+    <loc>https://rongyel.github.io/posts/8c81189d/</loc>
     
     <lastmod>2023-01-05</lastmod>
     
@@ -261,6 +279,13 @@
   
   <url>
     <loc>https://rongyel.github.io/tags/Synopsys/</loc>
+    <lastmod>2023-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/CHI/</loc>
     <lastmod>2023-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
