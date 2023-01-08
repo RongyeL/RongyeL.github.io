@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>奇怪的DW01 decode | IC攻城狮的自我修养</title>
-  <meta name="keywords" content=" IC攻城狮的自我修养 , 知识碎片 , Synopsys ">
-  <meta name="description" content="奇怪的DW01 decode | IC攻城狮的自我修养">
+  <title>gvim非常舒适的一些操作 | IC攻城狮的自我修养</title><meta name="robots" content="noindex">
+  <meta name="keywords" content=" IC攻城狮的自我修养 , 撰写 ">
+  <meta name="description" content="gvim非常舒适的一些操作 | IC攻城狮的自我修养">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="记录自己在IC领域的所学所想。">
 <meta property="og:type" content="website">
@@ -462,21 +462,13 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-IC攻城狮的自我修养/知识碎片/奇怪的DW01 decode" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-IC攻城狮的自我修养/撰写/gvim非常舒适的一些操作" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">奇怪的DW01 decode</h1>
+        <h1 class="article-title">gvim非常舒适的一些操作</h1>
     
     <div class="article-meta">
         
         
-        
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="知识碎片">知识碎片</a>
-            
-        </span>
         
         
         <span class="tag">
@@ -484,16 +476,14 @@
             
             <a class="color1">IC攻城狮的自我修养</a>
             
-            <a class="color5">知识碎片</a>
-            
-            <a class="color4">Synopsys</a>
+            <a class="color3">撰写</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-05 23:00:16'>2022-12-31 11:37</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-08 13:34:21'>2022-12-25 20:51</time>
         
     </div>
     <div class="article-meta">
@@ -526,7 +516,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%85%A8%E6%96%87%E8%A1%8C%E5%B0%BEtab%E5%92%8C%E7%A9%BA%E6%A0%BC"><span class="toc-text">删除全文行尾tab和空格</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -542,16 +532,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有时候在工作中的代码，会看到DW01_decode这样的模块例化，看起来很奇怪。</p>
+        <p>本文摘要</p>
 <span id="more"></span>
 
 
-
-<p>有时候在工作中的代码，会看到DW01_decode这样的模块例化，看起来很奇怪。<br>这个东西其实是综合工具提供的cell代码。</p>
-<p>IC设计中使用Synopsys DesignWare中提供的Cell往往可以起到减少logic level，优化timing的效果，</p>
-<p>DesignWare Standard Cell Libraries provide high-speed (HS), high-density (HD) and ultra high-density (UHD) architectures to optimize circuits for performance, power and area tradeoffs.<br>DesignWare标准单元库提供高速（HS）、高密度（HD）和超高密度（UHD）架构，以优化电路的性能、功耗和面积权衡。 </p>
-<p>实际设计中常用的Combinational Logic Cell有：<br>DW01_binenc:Binary Encoder<br>DW01_decode: Decoder<br>DW01_mux_any: Universal Multiplexer<br>DW01_prienc: Priority Encoder</p>
-
+<p>快速选词，vw<br>快速删词，dw(word)</p>
+<h2 id="删除全文行尾tab和空格"><a href="#删除全文行尾tab和空格" class="headerlink" title="删除全文行尾tab和空格"></a>删除全文行尾tab和空格</h2><pre><code>%s#\s\+$##g
+</code></pre>
+<p>【%s】表示全文替换，【%】表示全文的意思，【#】是分隔符。</p>
+<!-- flag of hidden posts -->
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
     </div>

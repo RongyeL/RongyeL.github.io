@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>奇怪的DW01 decode | IC攻城狮的自我修养</title>
-  <meta name="keywords" content=" IC攻城狮的自我修养 , 知识碎片 , Synopsys ">
-  <meta name="description" content="奇怪的DW01 decode | IC攻城狮的自我修养">
+  <title>ARM memory属性理解 | IC攻城狮的自我修养</title>
+  <meta name="keywords" content=" IC攻城狮的自我修养 , 学习笔记 , ARM ">
+  <meta name="description" content="ARM memory属性理解 | IC攻城狮的自我修养">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="记录自己在IC领域的所学所想。">
 <meta property="og:type" content="website">
@@ -462,11 +462,13 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-IC攻城狮的自我修养/知识碎片/奇怪的DW01 decode" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-IC攻城狮的自我修养/学习笔记/对ARM各种协议中，memory属性的理解" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">奇怪的DW01 decode</h1>
+        <h1 class="article-title">ARM memory属性理解</h1>
     
     <div class="article-meta">
+        
+        <span class="top"><a>置顶</a></span>
         
         
         
@@ -474,7 +476,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="知识碎片">知识碎片</a>
+            <a  data-rel="学习笔记">学习笔记</a>
             
         </span>
         
@@ -484,16 +486,16 @@
             
             <a class="color1">IC攻城狮的自我修养</a>
             
-            <a class="color5">知识碎片</a>
+            <a class="color5">学习笔记</a>
             
-            <a class="color4">Synopsys</a>
+            <a class="color4">ARM</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-05 23:00:16'>2022-12-31 11:37</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-08 13:29:53'>2023-01-04 20:42</time>
         
     </div>
     <div class="article-meta">
@@ -526,7 +528,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">参考文献</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CHI%E4%B8%AD%E5%AF%B9%E5%B1%9E%E6%80%A7%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="toc-text">CHI中对属性的描述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MemAttr"><span class="toc-text">MemAttr</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#EWA"><span class="toc-text">EWA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Device"><span class="toc-text">Device</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cacheable"><span class="toc-text">Cacheable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Allocate"><span class="toc-text">Allocate</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SnpAttr"><span class="toc-text">SnpAttr</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%87%E6%80%BB"><span class="toc-text">汇总</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AXI%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0"><span class="toc-text">AXI相关属性描述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AxCACHE"><span class="toc-text">AxCACHE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ARM%E6%9E%B6%E6%9E%84%E6%89%8B%E5%86%8C%E7%9B%B8%E5%85%B3%E6%8F%8F%E8%BF%B0"><span class="toc-text">ARM架构手册相关描述</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -542,15 +544,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有时候在工作中的代码，会看到DW01_decode这样的模块例化，看起来很奇怪。</p>
+        <p>在看ARM的各种技术手册中，会多次看到对于memory属性的描述，诸如Cacheable、Allocate、Device nRnE等等。本文主要以CHI中的MemAttr、SnpAttr域段，展开对memory属性的学习。</p>
 <span id="more"></span>
 
 
-
-<p>有时候在工作中的代码，会看到DW01_decode这样的模块例化，看起来很奇怪。<br>这个东西其实是综合工具提供的cell代码。</p>
-<p>IC设计中使用Synopsys DesignWare中提供的Cell往往可以起到减少logic level，优化timing的效果，</p>
-<p>DesignWare Standard Cell Libraries provide high-speed (HS), high-density (HD) and ultra high-density (UHD) architectures to optimize circuits for performance, power and area tradeoffs.<br>DesignWare标准单元库提供高速（HS）、高密度（HD）和超高密度（UHD）架构，以优化电路的性能、功耗和面积权衡。 </p>
-<p>实际设计中常用的Combinational Logic Cell有：<br>DW01_binenc:Binary Encoder<br>DW01_decode: Decoder<br>DW01_mux_any: Universal Multiplexer<br>DW01_prienc: Priority Encoder</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/353995383">ARM各种Memory类型理解 - 知乎</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43936338/article/details/119774287">Cache知识整理-Read-Allocate/Write-Allocate_IC小牛牛的博客-CSDN博客_write allocate</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/wenxiaohua_113/article/details/110069428">Write-back，Write-through及write allocate_wenxiaohua_supper的博客-CSDN博客</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/q876507447/article/details/122285902#:~:text=%E6%89%80%E4%BB%A5chi%E5%8D%8F%E8%AE%AE%EF%BC%8C,%E8%87%B4%E6%80%A7%E7%9A%84%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F%E3%80%82">CHI到底是干嘛的 保证cache一致性 2.3 snoop_数字芯片设计与验证－－关易寿的博客-CSDN博客_cache一致性的 chi协议</a></p>
+<h2 id="CHI中对属性的描述"><a href="#CHI中对属性的描述" class="headerlink" title="CHI中对属性的描述"></a>CHI中对属性的描述</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108124646.png" alt="image.png"><br>memattr和snpattr，在CHI的协议层通道域段中，是有单独表述的。</p>
+<h3 id="MemAttr"><a href="#MemAttr" class="headerlink" title="MemAttr"></a>MemAttr</h3><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108124813.png" alt="image.png"><br>根据链接，可以看到memattr(memory attributes)，涵盖的是EWA(early write acknowledgement)，Device，cacheable和allocate这几个属性的信息。</p>
+<h4 id="EWA"><a href="#EWA" class="headerlink" title="EWA"></a>EWA</h4><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108130254.png" alt="image.png"></p>
+<p>EWA主要是针对写事务响应的来源进行了指示，<br>这部分内容主要与保序机制相关。</p>
+<p>写事务完成与否，是需要给出反馈的，<br>这里的early，涵盖的意思就是写完成响应能不能提前返回。<br>什么叫提前返回呢，这里涉及到CHI总线的结构，<br>当某个请求节点发出写事务，会经过中间节点，然后再发给实际进行写的节点，比如一个ddr memory。</p>
+<p>那么，如果写完成响应，是在写数据实实在在的到达了ddr memory以后才发出，这就属于标准的完成响应。<br>如果，在写事务从中间节点发出了， 不管有没有真的写到ddr memory，都算写事务完成了，然后中间节点直接返回了一个写完成响应，那么这就叫做提前返回。</p>
+<p>EWA指示的就是，本次事务能不能提前返回写完成响应。</p>
+<h4 id="Device"><a href="#Device" class="headerlink" title="Device"></a>Device</h4><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108130246.png" alt="image.png"></p>
+<p>device属性是和normal memory相对应的概念。</p>
+<p>Device，就是设备。表面这段memory空间是一个设备在使用的。<br>这里简单理解就是，它不是一个单纯的存数据的memory空间。<br>很多Device memory空间，里面放的是对这个设备进行控制的信息，比如是否使能这个设备。<br>所以对于这种Device属性，会有很多特殊的要求，比如保序要求会更高。</p>
+<p>normal memory就是我们普通概念的内存，如DDR。</p>
+<h4 id="Cacheable"><a href="#Cacheable" class="headerlink" title="Cacheable"></a>Cacheable</h4><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108130237.png" alt="image.png"></p>
+<p>顾名思义，就是可缓存性。</p>
+<p>如果一个事务访问的memory空间是可缓存的，这代表该段内存的数据在cache中也有，<br>本次事务可以先去看看cache里面数据是否有效，如果能直接从cache中把数据读走，那就最好了。因此访问cache的速度是远快于访问内存的。</p>
+<h4 id="Allocate"><a href="#Allocate" class="headerlink" title="Allocate"></a>Allocate</h4><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108130231.png" alt="image.png"><br>关于allocate，需要展开说说Read-Allocate/Write-Allocate<br>它指示的是在访问cache以后发生的行为。</p>
+<p>假定现在进行读事务，访问cache miss了，<br>如果是Read through，即直接从内存中读取数据；<br>如果是Read allocate，则需要先把数据读取到Cache中，再从Cache中读数据。</p>
+<p>如果是写事务，则不太一样，需要分为hit和miss的情况，<br>hit的时候看的是Write through还是Write back。<br>miss的时候看是否Write allocate。</p>
+<p>假定现在进行写事务，访问cache hit了，<br>如果是Write through，就把数据同时写到Cache和内存中；<br>如果是Write back，则先只把数据写到Cache中，等到释放这个cache的时候，才把修改后的内容刷新到内存中。</p>
+<p>写事务访问cache miss了，<br>如果是Write allocate，就先把要写的数据载入到Cache中，等到释放这个cache的时候，才把修改后的内容刷新到内存中。</p>
+<p>一般，Write Allocate与Write Back一起使用，No Write Allocate与Write Through一起使用。</p>
+<h3 id="SnpAttr"><a href="#SnpAttr" class="headerlink" title="SnpAttr"></a>SnpAttr</h3><p>这个属性域段就比较简单，与snoop行为相关<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108131539.png" alt="image.png"><br>这个东西倒是在CHI中才有，CHI协议全称是Coherent Hub Interface。<br>重点就在这个coherent一致性上，该协议用来确保Cache的一致性。<br>而Snoop就是CHI实现一致性维护的机制，这里就不展开说明了。</p>
+<p>这个域段就是用来描述本次事务是否会进行snoop。</p>
+<h3 id="汇总"><a href="#汇总" class="headerlink" title="汇总"></a>汇总</h3><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108132251.png" alt="image.png"><br>这个表中还讲了下order，这里的保序是CHI中使用的，就不进一步展开了。<br>看这个表，前面的多种属性描述，最终会汇总为一个Memory type属性。</p>
+<h2 id="AXI相关属性描述"><a href="#AXI相关属性描述" class="headerlink" title="AXI相关属性描述"></a>AXI相关属性描述</h2><h3 id="AxCACHE"><a href="#AxCACHE" class="headerlink" title="AxCACHE"></a>AxCACHE</h3><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108132115.png" alt="image.png"><br>在AXI总线协议中，主要是在AxCACHE这个域段中对事务的memory属性进行了定义。<br>这边会简单一点，因为没有一致性维护的工作。保序机制也不是通过这个属性域段实现的。<br>可以看到，这边最后也是汇总描述为memory type，<br>可以对比看一下上面那个表，它是非常接近的，</p>
+<p>所以说，ARM整个架构中，对于memory属性的描述是有一套非常丰富的机制的，<br>如果要将各种协议融汇贯通使用起来，对memory 属性的深入理解应该是必不可少的。</p>
+<h2 id="ARM架构手册相关描述"><a href="#ARM架构手册相关描述" class="headerlink" title="ARM架构手册相关描述"></a>ARM架构手册相关描述</h2><p>关于memory属性最全面的描述，那当然还是在ARM架构手册中<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108132837.png" alt="image.png"><br>在B2.7这一个章节中，对所有的memory 属性表述都进行了说明<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230108132921.png" alt="image.png"><br>内容实在是太多了，本文讲不完，以后再针对性的进行学习。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
