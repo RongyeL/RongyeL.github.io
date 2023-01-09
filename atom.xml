@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2023-01-08T05:48:07.407Z</updated>
+  <updated>2023-01-09T14:35:23.556Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,25 +17,50 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ARM各种协议中，memory属性的理解</title>
+    <title>CHI flitpend是干嘛的</title>
+    <link href="https://rongyel.github.io/posts/p4xk9u13/"/>
+    <id>https://rongyel.github.io/posts/p4xk9u13/</id>
+    <published>2023-01-09T14:22:00.000Z</published>
+    <updated>2023-01-09T14:35:23.556Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+    
+    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="CHI" scheme="https://rongyel.github.io/tags/CHI/"/>
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/tags/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ARM memory属性的理解</title>
     <link href="https://rongyel.github.io/posts/fd765838/"/>
     <id>https://rongyel.github.io/posts/fd765838/</id>
     <published>2023-01-04T12:42:00.000Z</published>
-    <updated>2023-01-08T05:48:07.407Z</updated>
+    <updated>2023-01-09T14:24:01.225Z</updated>
     
     
     <summary type="html">&lt;p&gt;在看ARM的各种技术手册中，会多次看到对于memory属性的描述，诸如Cacheable、Allocate、Device nRnE等等。本文主要以CHI中的MemAttr、SnpAttr域段，展开对memory属性的学习。&lt;/p&gt;</summary>
     
     
     
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
     
     
     <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
     
-    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/tags/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
     
   </entry>
   
@@ -44,7 +69,7 @@
     <link href="https://rongyel.github.io/posts/a66b31bc/"/>
     <id>https://rongyel.github.io/posts/a66b31bc/</id>
     <published>2023-01-04T12:41:00.000Z</published>
-    <updated>2023-01-08T06:00:09.706Z</updated>
+    <updated>2023-01-09T14:23:58.707Z</updated>
     
     
     <summary type="html">&lt;p&gt;stage1的页表最低位属性用的是AttrIndex，而在stage2的页表属性用的是MemAttr。&lt;br&gt;这样设计的原因可能是为了减少无效化操作。&lt;/p&gt;</summary>
@@ -69,7 +94,7 @@
     <link href="https://rongyel.github.io/posts/3252ed/"/>
     <id>https://rongyel.github.io/posts/3252ed/</id>
     <published>2023-01-03T13:47:00.000Z</published>
-    <updated>2023-01-08T05:59:59.621Z</updated>
+    <updated>2023-01-09T14:24:02.386Z</updated>
     
     
     <summary type="html">&lt;p&gt;看到的一些优秀的数字IC相关文章汇总。&lt;/p&gt;</summary>
@@ -92,7 +117,7 @@
     <link href="https://rongyel.github.io/posts/35eaf17c/"/>
     <id>https://rongyel.github.io/posts/35eaf17c/</id>
     <published>2023-01-01T09:49:00.000Z</published>
-    <updated>2023-01-08T05:59:23.302Z</updated>
+    <updated>2023-01-09T14:24:08.472Z</updated>
     
     
     <summary type="html">&lt;p&gt;一个简单的例程，掌握AXI基本事务流程。&lt;/p&gt;</summary>
@@ -119,7 +144,7 @@
     <link href="https://rongyel.github.io/posts/18d93dea/"/>
     <id>https://rongyel.github.io/posts/18d93dea/</id>
     <published>2022-12-31T03:37:00.000Z</published>
-    <updated>2023-01-08T05:59:50.645Z</updated>
+    <updated>2023-01-09T14:24:03.549Z</updated>
     
     
     <summary type="html">&lt;p&gt;有时候在工作中的代码，会看到DW01_decode这样的模块例化，看起来很奇怪。&lt;/p&gt;</summary>
@@ -165,7 +190,7 @@
     <link href="https://rongyel.github.io/posts/4c26b43f/"/>
     <id>https://rongyel.github.io/posts/4c26b43f/</id>
     <published>2022-12-25T04:15:00.000Z</published>
-    <updated>2023-01-08T06:00:04.783Z</updated>
+    <updated>2023-01-09T14:23:59.930Z</updated>
     
     
     <summary type="html">&lt;p&gt;HEXO个人博客测试用例&lt;/p&gt;</summary>
@@ -190,23 +215,23 @@
     <link href="https://rongyel.github.io/posts/a6a87a63/"/>
     <id>https://rongyel.github.io/posts/a6a87a63/</id>
     <published>2022-12-24T02:52:00.000Z</published>
-    <updated>2023-01-08T05:58:50.297Z</updated>
+    <updated>2023-01-09T14:24:04.686Z</updated>
     
     
     <summary type="html">&lt;p&gt;ARM的access flag和dirty state机制用于进行页表的维护，经过一段时间的思考，现在总算是理清楚了。&lt;/p&gt;</summary>
     
     
     
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
     
     
     <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
     
-    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
     
     <category term="页表" scheme="https://rongyel.github.io/tags/%E9%A1%B5%E8%A1%A8/"/>
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/tags/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
     
   </entry>
   
@@ -215,7 +240,7 @@
     <link href="https://rongyel.github.io/posts/fe51682c/"/>
     <id>https://rongyel.github.io/posts/fe51682c/</id>
     <published>2022-12-22T12:00:00.000Z</published>
-    <updated>2023-01-08T05:59:13.064Z</updated>
+    <updated>2023-01-09T14:24:10.921Z</updated>
     
     
     <summary type="html">&lt;p&gt;AXI总线是当前最常用的总线协议，身为IC工程师，对AXI的掌握可以说是必须的。&lt;/p&gt;</summary>
@@ -240,7 +265,7 @@
     <link href="https://rongyel.github.io/posts/f07a99ab/"/>
     <id>https://rongyel.github.io/posts/f07a99ab/</id>
     <published>2022-12-21T16:03:00.000Z</published>
-    <updated>2023-01-08T05:58:43.555Z</updated>
+    <updated>2023-01-09T14:24:13.704Z</updated>
     
     
     <summary type="html">&lt;p&gt;搭建一个能够运行tinyriscv项目的EDA环境。&lt;/p&gt;</summary>
@@ -307,11 +332,36 @@
   </entry>
   
   <entry>
+    <title>数字IC设计开发Gvim配置</title>
+    <link href="https://rongyel.github.io/posts/f60848c2/"/>
+    <id>https://rongyel.github.io/posts/f60848c2/</id>
+    <published>2022-11-27T17:12:00.000Z</published>
+    <updated>2023-01-09T14:24:12.058Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="gvim" scheme="https://rongyel.github.io/tags/gvim/"/>
+    
+    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CHI协议学习笔记</title>
     <link href="https://rongyel.github.io/posts/fa53c274/"/>
     <id>https://rongyel.github.io/posts/fa53c274/</id>
     <published>2022-11-27T17:12:00.000Z</published>
-    <updated>2023-01-08T05:59:18.003Z</updated>
+    <updated>2023-01-09T14:24:09.730Z</updated>
     
     
     <summary type="html">&lt;p&gt;CHI协议是AMBA的第五代协议，用于解决多个CPU（RN）之间的数据一致性问题。当前网络上相关的资料较少，最好的学习方式就是阅读CHI协议书。本文在通读协议全文后，将根据自己对CHI协议学习的理解，整理相关知识要点。&lt;/p&gt;</summary>
@@ -336,7 +386,7 @@
     <link href="https://rongyel.github.io/posts/e0051e00/"/>
     <id>https://rongyel.github.io/posts/e0051e00/</id>
     <published>2022-11-27T17:12:00.000Z</published>
-    <updated>2023-01-08T05:59:29.242Z</updated>
+    <updated>2023-01-09T14:24:07.233Z</updated>
     
     
     <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
@@ -357,36 +407,11 @@
   </entry>
   
   <entry>
-    <title>数字IC设计开发Gvim配置</title>
-    <link href="https://rongyel.github.io/posts/f60848c2/"/>
-    <id>https://rongyel.github.io/posts/f60848c2/</id>
-    <published>2022-11-27T17:12:00.000Z</published>
-    <updated>2023-01-08T05:58:56.090Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="gvim" scheme="https://rongyel.github.io/tags/gvim/"/>
-    
-    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Rong晔 B站视频 项目文件</title>
     <link href="https://rongyel.github.io/posts/8c81189d/"/>
     <id>https://rongyel.github.io/posts/8c81189d/</id>
     <published>2022-11-27T12:47:00.000Z</published>
-    <updated>2023-01-08T05:59:34.872Z</updated>
+    <updated>2023-01-09T14:24:06.201Z</updated>
     
     
     <summary type="html">&lt;p&gt;b站视频相关项目文件汇总&lt;/p&gt;</summary>

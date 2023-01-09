@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>obsidian使用手册 | IC攻城狮的自我修养</title><meta name="robots" content="noindex">
-  <meta name="keywords" content=" IC攻城狮的自我修养 , 撰写 ">
-  <meta name="description" content="obsidian使用手册 | IC攻城狮的自我修养">
+  <title>CHI flitpend是干嘛的 | IC攻城狮的自我修养</title>
+  <meta name="keywords" content=" IC攻城狮的自我修养 , ARM , CHI , 知识碎片 ">
+  <meta name="description" content="CHI flitpend是干嘛的 | IC攻城狮的自我修养">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="记录自己在IC领域的所学所想。">
 <meta property="og:type" content="website">
@@ -471,13 +471,21 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-IC攻城狮的自我修养/撰写/obsidian使用手册" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-IC攻城狮的自我修养/知识碎片/CHI FLITPEND是干嘛的" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">obsidian使用手册</h1>
+        <h1 class="article-title">CHI flitpend是干嘛的</h1>
     
     <div class="article-meta">
         
         
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="知识碎片">知识碎片</a>
+            
+        </span>
         
         
         <span class="tag">
@@ -485,14 +493,18 @@
             
             <a class="color1">IC攻城狮的自我修养</a>
             
-            <a class="color3">撰写</a>
+            <a class="color4">ARM</a>
+            
+            <a class="color4">CHI</a>
+            
+            <a class="color5">知识碎片</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-08 13:34:04'>2022-12-10 11:51</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-09 22:35:23'>2023-01-09 22:22</time>
         
     </div>
     <div class="article-meta">
@@ -525,7 +537,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">参考文献</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FLITPEND%E5%8D%8F%E8%AE%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">FLITPEND协议描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"><span class="toc-text">问题记录</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -541,16 +553,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文摘要</p>
+        <p>定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……</p>
 <span id="more"></span>
 
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>ARM官方手册：<a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/ihi0050/ec/?lang=en">AMBA 5 CHI Architecture Specification</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/483365845">CHI协议链路层 - 知乎</a></p>
+<h2 id="FLITPEND协议描述"><a href="#FLITPEND协议描述" class="headerlink" title="FLITPEND协议描述"></a>FLITPEND协议描述</h2><p>CHI协议链路层的一个信号<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png" alt="image.png"></p>
+<p>之前看协议的时候有点忽略了这个东西<br>这个PEND信号是什么含义，可能字面上不太好理解。<br>它其实就是个时钟门控信号</p>
+<p>FLITPEND信号预测接下来会有一笔有效的flit传输。<br>可以用来开启时钟<br>正常来讲，FLITPEND需要比FLITV快一个时钟，<br>也就是在FLITPEND有效的下一拍发来数据，<br>所以该信号就是一笔预测信号，帮助SLV开启时钟的。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109223107.png" alt="image.png"></p>
+<h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2><p>这次定位问题就是在这个地方，<br>使用了pend，但是发过来的pend不准。<br>本来FLITPEND需要比FLITV早一拍到，<br>但可能由于multicycle的原因，导致慢了一点点，<br>FLITPEND没有在早一拍的时钟上升沿到达，<br>FLITPEND和FLITV同拍了，<br>这会导致时钟门控打开的晚了，</p>
+<p>从时序图可以看到，<br>FLITV和FLIT才是应该同拍的信号，<br>时钟门控打开的晚了，<br>导致在某个模块中，同拍输入FLITV和FLIT，<br>在下一个时钟变成了错拍的情况：<br>FLITV过了一拍，FLIT过了一拍才输出。</p>
+<p>FLITV和FLIT错拍了，<br>后续所有采集都会采错，就，导致系统挂死了。</p>
 
-
-
-<p>memos 在输入时需要带上标签</p>
-<p>注意可迁移性。<br>调整附件链接格式，使用标准md语法。使用相对路径。<br>配置上传图床。</p>
-<p>增加切换源码模式快捷键“ctrl+/”，与typora保持一致</p>
-<!-- flag of hidden posts -->
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
     </div>
