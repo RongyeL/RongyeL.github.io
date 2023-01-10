@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>对ARM access flag和dirty state机制理解 | IC攻城狮的自我修养</title>
-  <meta name="keywords" content=" IC攻城狮的自我修养 , ARM , 页表 , 知识碎片 ">
-  <meta name="description" content="对ARM access flag和dirty state机制理解 | IC攻城狮的自我修养">
+  <title>定位错误是学习的最快方式 | IC攻城狮的自我修养</title>
+  <meta name="keywords" content=" IC攻城狮的自我修养 , 心得体会 ">
+  <meta name="description" content="定位错误是学习的最快方式 | IC攻城狮的自我修养">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="记录自己在IC领域的所学所想。">
 <meta property="og:type" content="website">
@@ -480,9 +480,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-IC攻城狮的自我修养/知识碎片/对ARM access flag和dirty state机制理解" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-IC攻城狮的自我修养/心得体会/定位错误是学习的最快方式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">对ARM access flag和dirty state机制理解</h1>
+        <h1 class="article-title">定位错误是学习的最快方式</h1>
     
     <div class="article-meta">
         
@@ -492,7 +492,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="知识碎片">知识碎片</a>
+            <a  data-rel="心得体会">心得体会</a>
             
         </span>
         
@@ -502,18 +502,14 @@
             
             <a class="color1">IC攻城狮的自我修养</a>
             
-            <a class="color4">ARM</a>
-            
-            <a class="color3">页表</a>
-            
-            <a class="color5">知识碎片</a>
+            <a class="color5">心得体会</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-09 22:24:04'>2022-12-24 10:52</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-10 23:02:12'>2023-01-10 22:00</time>
         
     </div>
     <div class="article-meta">
@@ -546,7 +542,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">参考文献</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#The-Access-flag"><span class="toc-text">The Access flag</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#The-dirty-state"><span class="toc-text">The dirty state</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Page%E7%9A%84%E5%9F%9F%E6%AE%B5"><span class="toc-text">Page的域段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AF%E5%B0%B1%E6%98%AFaccess-flag"><span class="toc-text">AF就是access flag</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AP%E6%98%AF%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90"><span class="toc-text">AP是访问权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#S2AP%E5%92%8CAP%E6%98%AF%E4%B8%80%E6%A0%B7%E7%9A%84"><span class="toc-text">S2AP和AP是一样的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DBM-Dirty%E4%BF%AE%E6%94%B9%E4%BD%8D"><span class="toc-text">DBM Dirty修改位</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86Access-flag"><span class="toc-text">软件管理Access flag</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86Access-flag-%E5%92%8CDirty-state"><span class="toc-text">硬件管理Access flag 和Dirty state</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -562,26 +558,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ARM的access flag和dirty state机制用于进行页表的维护，经过一段时间的思考，现在总算是理清楚了。</p>
+        <p>今天定位了一天错误，看了一天波形，眼睛都要瞎了，<br>不过学习进步显著，对CHI协议的理解大幅提升。</p>
 <span id="more"></span>
 
 
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>官方ARM 架构手册：<a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/ddi0487/ha/?lang=en">Arm Architecture Reference Manual for A-profile architecture</a>H.a版本<br>从D5.4.7小结开始</p>
-<h1 id="The-Access-flag"><a href="#The-Access-flag" class="headerlink" title="The Access flag"></a>The Access flag</h1><p>ARM的access flag和dirty state机制用于进行页表的维护，其中的Access flag其实挺好理解的，就是最后的Page中有个AF域段，如果是0，在被访问以后就更新为1。<br>但dirty state我一直理解都不太好，Page中只有一个DBM（Dirty Bit Modifier）域段，这个域段的是怎样用的，一直没看明白。</p>
-<p>经过一段时间的思考，现在总算是理清楚了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224110917.png"><br>Access flag指示内存页是否被访问过。<br>AF域段被设置为0后，首次被访问时会被修改为1。</p>
-<h1 id="The-dirty-state"><a href="#The-dirty-state" class="headerlink" title="The dirty state"></a>The dirty state</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224111054.png"><br>dirty state指示是否修改了内存页或内存段。<br>dirty state可以由硬件管理，如 D5-4863 页HTTU所述<br>dirty state信息使用访问权限位 AP[2] 和 S2AP[1] 以及 DBM 位进行编码。</p>
-<h1 id="Page的域段"><a href="#Page的域段" class="headerlink" title="Page的域段"></a>Page的域段</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112636.png"><br>这里补充一下AF、AP、S2AP、DBM这几个域段的概念。<br>在page的属性域段中，</p>
-<h2 id="AF就是access-flag"><a href="#AF就是access-flag" class="headerlink" title="AF就是access flag"></a>AF就是access flag</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112741.png"></p>
-<h2 id="AP是访问权限"><a href="#AP是访问权限" class="headerlink" title="AP是访问权限"></a>AP是访问权限</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112755.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112830.png"></p>
-<h2 id="S2AP和AP是一样的"><a href="#S2AP和AP是一样的" class="headerlink" title="S2AP和AP是一样的"></a>S2AP和AP是一样的</h2><p>只是S2AP是stage2翻译的时候获得页的域段。<br>stage2翻译就是IPA-&gt;PA的翻译阶段，这里不过多展开描述。</p>
-<h2 id="DBM-Dirty修改位"><a href="#DBM-Dirty修改位" class="headerlink" title="DBM Dirty修改位"></a>DBM Dirty修改位</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224113009.png"><br>这个东西看起来很抽象，后面再展开表述它的使用</p>
-<h1 id="软件管理Access-flag"><a href="#软件管理Access-flag" class="headerlink" title="软件管理Access flag"></a>软件管理Access flag</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224111310.png"><br>Armv8.0 要求软件管理访问标志。这意味着，每当尝试将访问标志的值为 0 的转换表描述符条目读入 TLB 时，都会生成访问标志错误。<br>访问标志机制期望，当发生访问标志错误时，软件会在导致故障的转换表条目中将访问标志重置为 1。这可以防止下次访问内存位置时发生故障。访问标志设置为 0 的条目永远不会保留在 TLB 中，这意味着软件在设置标志后不必从 TLB 刷新条目。</p>
-<p>这里稍微表述了一下，ARM V8.0是只支持通过软件来管理access flag的。<br>当访问到AF为0的页时，就会产生一个fault错误告诉软件，软件去修改Page的AF为1，然后再次访问就正常了。<br>显然，这里上报fault，软件再去改写AF，其实是要耗费软件的精力的。这就很麻烦。</p>
-<h1 id="硬件管理Access-flag-和Dirty-state"><a href="#硬件管理Access-flag-和Dirty-state" class="headerlink" title="硬件管理Access flag 和Dirty state"></a>硬件管理Access flag 和Dirty state</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224111619.png"><br>从ARM V8.1开始，支持硬件管理了，也就是HTTU(Hardware Translation Table Update)。</p>
-<p>简单来说，就是硬件可以直接去修改AF域段，这里的硬件指的应该是MMU/SMMU，在PTW获取最后一级Page的时候，如果发现AF是0，那就直接自己完成读写原子操作，将page的AF改为1，而无需上报Fault给软件。</p>
-<p>而Dirty state的维护就体现的比较拐弯抹角了。它是同时使用DBM、AP/S2AP这一组域段来表示是否为Dirty的。</p>
-<p>首先，软件会把页的访问权限设置为“不可写”。<br>这里的“不可写”其实区分为“真的不可写”和“为了判断dirty state，暂时不可写”两种情况。<br>这两种情况体现在DBM这个域段上：<br>如果为0，那就是“真的不可写”<br>如果为1，那就是“为了判断dirty state，暂时不可写”</p>
-<p>如果DBM为0，那硬件在想要修改AF的时候，会发生权限错误，然后上报fault给软件。<br>如果DBM为1，那硬件就知道，其实这个是可以写的，直接就将权限AP/S2AP修改为可写的状态。而权限从不可写变为可写这件事情，就表明该页是Dirty的了。</p>
+<p>工作的好伙伴，verdi，<br>这个东西看代码和波形实在是太diao了，<br>就是界面灰灰的，看的不是很好看。</p>
+<p>今天看了一天的波形，给验证定位错误……<br>累是真的累，疲惫是真的疲惫，<br>但学习速度是真的快。</p>
+<p>说实话，之前我也把CHI协议看了个遍了，<br>对协议中涵盖的绝大多数内容也有了一定的概念，<br>但这种概念，终究是停留在纸面上的，<br>只有真正的看了波形，看了代码，<br>才能将协议转化为实践。</p>
+<p>而且，如果是通过定位错误，debug的方式来看波形，效果比正向代码要更好。<br>因此正确的结果千篇一律，错误的原因千奇百怪，<br>通过分析定位错误出现在哪里，为什么会产生，怎么解决，是内部模块逻辑问题还是外部激励问题，<br>理解了这些要点，对于知识的理解将会大幅提升。</p>
+<p>所以，定位错误就是学习的最快方式，<br>各位学习东西的时候一定要把代码跑起来，跑出波形来，<br>这样看起来才更直观更有效。</p>
+<p>错误嘛，说实话肯定是避免不了的，<br>预期之外的错误才是有效错误，<br>希望各位都能遇到更多错误（笑，<br>见的问题多了，就成了大佬了（大概</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>

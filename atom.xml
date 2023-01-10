@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2023-01-09T14:35:23.556Z</updated>
+  <updated>2023-01-10T15:02:12.728Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>定位错误是学习的最快方式</title>
+    <link href="https://rongyel.github.io/posts/37rd4ev8/"/>
+    <id>https://rongyel.github.io/posts/37rd4ev8/</id>
+    <published>2023-01-10T14:00:00.000Z</published>
+    <updated>2023-01-10T15:02:12.728Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天定位了一天错误，看了一天波形，眼睛都要瞎了，&lt;br&gt;不过学习进步显著，对CHI协议的理解大幅提升。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="心得体会" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
+    
+    
+    <category term="IC攻城狮的自我修养" scheme="https://rongyel.github.io/tags/IC%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB/"/>
+    
+    <category term="心得体会" scheme="https://rongyel.github.io/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CHI flitpend是干嘛的</title>
     <link href="https://rongyel.github.io/posts/p4xk9u13/"/>
     <id>https://rongyel.github.io/posts/p4xk9u13/</id>
     <published>2023-01-09T14:22:00.000Z</published>
-    <updated>2023-01-09T14:35:23.556Z</updated>
+    <updated>2023-01-09T14:39:20.712Z</updated>
     
     
     <summary type="html">&lt;p&gt;定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……&lt;/p&gt;</summary>

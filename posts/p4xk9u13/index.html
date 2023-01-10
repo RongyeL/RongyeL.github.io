@@ -117,7 +117,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(17)</small>
+                <small>(18)</small>
             
         </div>
     </li>
@@ -128,7 +128,7 @@
                     <div data-rel="心得体会">
                         
                         心得体会
-                        <small>(3)</small>
+                        <small>(4)</small>
                         
                     </div>
                     
@@ -177,7 +177,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="17">
+<input type="hidden" id="yelog_site_posts_number" value="18">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -334,6 +334,15 @@
            data-author="" >
             <span class="post-title" title="EASY_AXI：一个简单的例程，掌握AXI基本事务流程">EASY_AXI：一个简单的例程，掌握AXI基本事务流程</span>
             <span class="post-date" title="2023-01-01 17:49:00">2023/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 心得体会 "
+           href="/posts/37rd4ev8/"
+           data-tag="IC攻城狮的自我修养,心得体会"
+           data-author="" >
+            <span class="post-title" title="定位错误是学习的最快方式">定位错误是学习的最快方式</span>
+            <span class="post-date" title="2023-01-10 22:00:00">2023/01/10</span>
         </a>
         
         
@@ -504,7 +513,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-09 22:35:23'>2023-01-09 22:22</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-09 22:39:20'>2023-01-09 22:22</time>
         
     </div>
     <div class="article-meta">
@@ -557,9 +566,9 @@
 <span id="more"></span>
 
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>ARM官方手册：<a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/ihi0050/ec/?lang=en">AMBA 5 CHI Architecture Specification</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/483365845">CHI协议链路层 - 知乎</a></p>
-<h2 id="FLITPEND协议描述"><a href="#FLITPEND协议描述" class="headerlink" title="FLITPEND协议描述"></a>FLITPEND协议描述</h2><p>CHI协议链路层的一个信号<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png" alt="image.png"></p>
+<h2 id="FLITPEND协议描述"><a href="#FLITPEND协议描述" class="headerlink" title="FLITPEND协议描述"></a>FLITPEND协议描述</h2><p>CHI协议链路层的一个信号<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png"></p>
 <p>之前看协议的时候有点忽略了这个东西<br>这个PEND信号是什么含义，可能字面上不太好理解。<br>它其实就是个时钟门控信号</p>
-<p>FLITPEND信号预测接下来会有一笔有效的flit传输。<br>可以用来开启时钟<br>正常来讲，FLITPEND需要比FLITV快一个时钟，<br>也就是在FLITPEND有效的下一拍发来数据，<br>所以该信号就是一笔预测信号，帮助SLV开启时钟的。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109223107.png" alt="image.png"></p>
+<p>FLITPEND信号预测接下来会有一笔有效的flit传输。<br>可以用来开启时钟<br>正常来讲，FLITPEND需要比FLITV快一个时钟，<br>也就是在FLITPEND有效的下一拍发来数据，<br>所以该信号就是一笔预测信号，帮助SLV开启时钟的。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109223107.png"></p>
 <h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2><p>这次定位问题就是在这个地方，<br>使用了pend，但是发过来的pend不准。<br>本来FLITPEND需要比FLITV早一拍到，<br>但可能由于multicycle的原因，导致慢了一点点，<br>FLITPEND没有在早一拍的时钟上升沿到达，<br>FLITPEND和FLITV同拍了，<br>这会导致时钟门控打开的晚了，</p>
 <p>从时序图可以看到，<br>FLITV和FLIT才是应该同拍的信号，<br>时钟门控打开的晚了，<br>导致在某个模块中，同拍输入FLITV和FLIT，<br>在下一个时钟变成了错拍的情况：<br>FLITV过了一拍，FLIT过了一拍才输出。</p>
 <p>FLITV和FLIT错拍了，<br>后续所有采集都会采错，就，导致系统挂死了。</p>
