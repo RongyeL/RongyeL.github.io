@@ -57,14 +57,14 @@
   </entry>
   
   <entry>
-    <title>AXI协议学习笔记</title>
-    <link href="https://rongyel.github.io/posts/fe51682c.html"/>
-    <id>https://rongyel.github.io/posts/fe51682c.html</id>
+    <title>EASY_AXI：一个简单的例程，掌握AXI基本事务流程</title>
+    <link href="https://rongyel.github.io/posts/35eaf17c.html"/>
+    <id>https://rongyel.github.io/posts/35eaf17c.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-28T16:46:52.980Z</updated>
+    <updated>2023-10-27T14:33:29.243Z</updated>
     
     
-    <summary type="html">&lt;p&gt;AXI总线是当前最常用的总线协议，身为IC工程师，对AXI的掌握可以说是必须的。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;一个简单的例程，掌握AXI基本事务流程。&lt;/p&gt;</summary>
     
     
     
@@ -78,14 +78,14 @@
   </entry>
   
   <entry>
-    <title>EASY_AXI：一个简单的例程，掌握AXI基本事务流程</title>
-    <link href="https://rongyel.github.io/posts/35eaf17c.html"/>
-    <id>https://rongyel.github.io/posts/35eaf17c.html</id>
+    <title>AXI协议学习笔记</title>
+    <link href="https://rongyel.github.io/posts/fe51682c.html"/>
+    <id>https://rongyel.github.io/posts/fe51682c.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-27T14:33:29.243Z</updated>
+    <updated>2023-10-28T16:46:52.980Z</updated>
     
     
-    <summary type="html">&lt;p&gt;一个简单的例程，掌握AXI基本事务流程。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;AXI总线是当前最常用的总线协议，身为IC工程师，对AXI的掌握可以说是必须的。&lt;/p&gt;</summary>
     
     
     
@@ -141,6 +141,25 @@
   </entry>
   
   <entry>
+    <title>markdown笔记工具分析</title>
+    <link href="https://rongyel.github.io/posts/c1f4e46a.html"/>
+    <id>https://rongyel.github.io/posts/c1f4e46a.html</id>
+    <published>2023-03-23T12:12:01.000Z</published>
+    <updated>2023-10-27T14:33:29.267Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录一下自己使用其他笔记工具的感受。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="心得随写" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/"/>
+    
+    
+    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>数字IC设计开发Gvim配置</title>
     <link href="https://rongyel.github.io/posts/f60848c2.html"/>
     <id>https://rongyel.github.io/posts/f60848c2.html</id>
@@ -158,25 +177,6 @@
     <category term="GVIM" scheme="https://rongyel.github.io/tags/GVIM/"/>
     
     <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdown笔记工具分析</title>
-    <link href="https://rongyel.github.io/posts/c1f4e46a.html"/>
-    <id>https://rongyel.github.io/posts/c1f4e46a.html</id>
-    <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-27T14:33:29.267Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;记录一下自己使用其他笔记工具的感受。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="心得随写" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/"/>
-    
-    
-    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
