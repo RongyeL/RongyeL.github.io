@@ -57,6 +57,27 @@
   </entry>
   
   <entry>
+    <title>EASY_AXI：一个简单的例程，掌握AXI基本事务流程</title>
+    <link href="https://rongyel.github.io/posts/35eaf17c.html"/>
+    <id>https://rongyel.github.io/posts/35eaf17c.html</id>
+    <published>2023-03-23T12:12:01.000Z</published>
+    <updated>2023-10-27T14:33:29.243Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;一个简单的例程，掌握AXI基本事务流程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="AXI" scheme="https://rongyel.github.io/tags/AXI/"/>
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AXI协议学习笔记</title>
     <link href="https://rongyel.github.io/posts/fe51682c.html"/>
     <id>https://rongyel.github.io/posts/fe51682c.html</id>
@@ -101,32 +122,11 @@
   </entry>
   
   <entry>
-    <title>EASY_AXI：一个简单的例程，掌握AXI基本事务流程</title>
-    <link href="https://rongyel.github.io/posts/35eaf17c.html"/>
-    <id>https://rongyel.github.io/posts/35eaf17c.html</id>
-    <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-27T14:33:29.243Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;一个简单的例程，掌握AXI基本事务流程。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="AXI" scheme="https://rongyel.github.io/tags/AXI/"/>
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>从零开始EDA环境搭建</title>
     <link href="https://rongyel.github.io/posts/f07a99ab.html"/>
     <id>https://rongyel.github.io/posts/f07a99ab.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-27T14:33:29.240Z</updated>
+    <updated>2023-10-30T14:40:40.617Z</updated>
     
     
     <summary type="html">&lt;p&gt;搭建一个能够运行tinyriscv项目的EDA环境。&lt;/p&gt;</summary>
@@ -135,27 +135,6 @@
     
     <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    
-    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数字IC设计开发Gvim配置</title>
-    <link href="https://rongyel.github.io/posts/f60848c2.html"/>
-    <id>https://rongyel.github.io/posts/f60848c2.html</id>
-    <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-28T16:46:55.745Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="GVIM" scheme="https://rongyel.github.io/tags/GVIM/"/>
     
     <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
     
@@ -166,7 +145,7 @@
     <link href="https://rongyel.github.io/posts/c1f4e46a.html"/>
     <id>https://rongyel.github.io/posts/c1f4e46a.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-27T14:33:29.267Z</updated>
+    <updated>2023-10-30T14:41:02.944Z</updated>
     
     
     <summary type="html">&lt;p&gt;记录一下自己使用其他笔记工具的感受。&lt;/p&gt;</summary>
@@ -176,26 +155,28 @@
     <category term="心得随写" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/"/>
     
     
-    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    <category term="Markdown" scheme="https://rongyel.github.io/tags/Markdown/"/>
     
   </entry>
   
   <entry>
-    <title>为什么要用Markdown做笔记</title>
-    <link href="https://rongyel.github.io/posts/c97fc71d.html"/>
-    <id>https://rongyel.github.io/posts/c97fc71d.html</id>
+    <title>数字IC设计开发Gvim配置</title>
+    <link href="https://rongyel.github.io/posts/f60848c2.html"/>
+    <id>https://rongyel.github.io/posts/f60848c2.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-27T14:33:29.270Z</updated>
+    <updated>2023-10-30T11:38:50.045Z</updated>
     
     
-    <summary type="html">&lt;p&gt;markdown有个说法，叫做让人可以专注于笔记内容上。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
     
     
     
-    <category term="心得随写" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/"/>
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="开发工具" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
+    
+    <category term="GVim" scheme="https://rongyel.github.io/tags/GVim/"/>
     
   </entry>
   
@@ -219,11 +200,30 @@
   </entry>
   
   <entry>
+    <title>为什么要用Markdown做笔记</title>
+    <link href="https://rongyel.github.io/posts/c97fc71d.html"/>
+    <id>https://rongyel.github.io/posts/c97fc71d.html</id>
+    <published>2023-03-23T12:12:01.000Z</published>
+    <updated>2023-10-30T14:40:57.211Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;markdown有个说法，叫做让人可以专注于笔记内容上。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="心得随写" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/"/>
+    
+    
+    <category term="Markdown" scheme="https://rongyel.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
     <title>报IC设计培训课程有用吗</title>
     <link href="https://rongyel.github.io/posts/8ba797de.html"/>
     <id>https://rongyel.github.io/posts/8ba797de.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-27T15:01:41.225Z</updated>
+    <updated>2023-10-30T15:03:26.486Z</updated>
     
     
     <summary type="html">&lt;p&gt;现在IC设计培训市场是混乱的。&lt;/p&gt;</summary>
@@ -233,9 +233,28 @@
     <category term="心得随写" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/"/>
     
     
-    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
-    
     <category term="工作心得" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E4%BD%9C%E5%BF%83%E5%BE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Stage1页表属性使用attrindex而不是memattr的原因</title>
+    <link href="https://rongyel.github.io/posts/a66b31bc.html"/>
+    <id>https://rongyel.github.io/posts/a66b31bc.html</id>
+    <published>2023-03-23T12:12:00.000Z</published>
+    <updated>2023-10-30T15:57:07.354Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;stage1的页表最低位属性用的是AttrIndex，而在stage2的页表属性用的是MemAttr。&lt;br&gt;这样设计的原因可能是为了减少无效化操作。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="页表" scheme="https://rongyel.github.io/tags/%E9%A1%B5%E8%A1%A8/"/>
     
   </entry>
   
