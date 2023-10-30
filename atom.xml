@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2023-10-30T16:19:48.836Z</updated>
+  <updated>2023-10-30T16:23:41.095Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rongyel.github.io/posts/d429f5fd.html"/>
     <id>https://rongyel.github.io/posts/d429f5fd.html</id>
     <published>2023-10-30T16:18:44.126Z</published>
-    <updated>2023-10-30T16:19:48.836Z</updated>
+    <updated>2023-10-30T16:23:41.095Z</updated>
     
     
     <summary type="html">&lt;p&gt;stage1的页表最低位属性用的是AttrIndex，而在stage2的页表属性用的是MemAttr。&lt;br&gt;这样设计的原因可能是为了减少无效化操作。&lt;/p&gt;</summary>
