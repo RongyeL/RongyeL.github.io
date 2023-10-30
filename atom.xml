@@ -242,7 +242,7 @@
     <link href="https://rongyel.github.io/posts/a66b31bc.html"/>
     <id>https://rongyel.github.io/posts/a66b31bc.html</id>
     <published>2023-03-23T12:12:00.000Z</published>
-    <updated>2023-10-30T15:57:07.354Z</updated>
+    <updated>2023-10-30T16:01:37.625Z</updated>
     
     
     <summary type="html">&lt;p&gt;stage1的页表最低位属性用的是AttrIndex，而在stage2的页表属性用的是MemAttr。&lt;br&gt;这样设计的原因可能是为了减少无效化操作。&lt;/p&gt;</summary>
