@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2023-10-31T14:19:25.929Z</updated>
+  <updated>2023-10-31T14:20:34.110Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rongyel.github.io/posts/2957f6bf.html"/>
     <id>https://rongyel.github.io/posts/2957f6bf.html</id>
     <published>2023-10-31T14:19:04.920Z</published>
-    <updated>2023-10-31T14:19:25.929Z</updated>
+    <updated>2023-10-31T14:20:34.110Z</updated>
     
     
     <summary type="html">&lt;p&gt;在看ARM的各种技术手册中，会多次看到对于memory属性的描述，诸如Cacheable、Allocate、Device nRnE等等。本文主要以CHI中的MemAttr、SnpAttr域段，展开对memory属性的学习。&lt;/p&gt;</summary>
@@ -40,7 +40,7 @@
     <link href="https://rongyel.github.io/posts/d429f5fd.html"/>
     <id>https://rongyel.github.io/posts/d429f5fd.html</id>
     <published>2023-10-30T16:18:44.126Z</published>
-    <updated>2023-10-30T16:25:36.300Z</updated>
+    <updated>2023-10-31T14:25:31.512Z</updated>
     
     
     <summary type="html">&lt;p&gt;stage1的页表最低位属性用的是AttrIndex，而在stage2的页表属性用的是MemAttr。&lt;br&gt;这样设计的原因可能是为了减少无效化操作。&lt;/p&gt;</summary>
@@ -61,7 +61,7 @@
     <link href="https://rongyel.github.io/posts/3b1a7464.html"/>
     <id>https://rongyel.github.io/posts/3b1a7464.html</id>
     <published>2023-10-27T14:42:57.554Z</published>
-    <updated>2023-10-29T02:00:23.373Z</updated>
+    <updated>2023-10-31T14:25:38.894Z</updated>
     
     
     <summary type="html">&lt;p&gt;香格里拉边界荣升我十月最期待新番，着实拿捏了我对于虚拟网游的幻想，就像当年的刀剑一样。&lt;/p&gt;</summary>
@@ -82,7 +82,7 @@
     <link href="https://rongyel.github.io/posts/92a0ec66.html"/>
     <id>https://rongyel.github.io/posts/92a0ec66.html</id>
     <published>2023-10-27T14:35:57.815Z</published>
-    <updated>2023-10-28T16:49:46.453Z</updated>
+    <updated>2023-10-31T14:25:22.388Z</updated>
     
     
     <summary type="html">&lt;p&gt;说实话，折腾这些笔记系统，博客系统，感觉像打游戏一样快乐。时隔多月再次捡起HEXO博客，重新搭建一番，并记录自己的搭建心得。&lt;/p&gt;</summary>
@@ -101,7 +101,7 @@
     <link href="https://rongyel.github.io/posts/35eaf17c.html"/>
     <id>https://rongyel.github.io/posts/35eaf17c.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-27T14:33:29.243Z</updated>
+    <updated>2023-10-31T14:25:10.992Z</updated>
     
     
     <summary type="html">&lt;p&gt;一个简单的例程，掌握AXI基本事务流程。&lt;/p&gt;</summary>
@@ -122,7 +122,7 @@
     <link href="https://rongyel.github.io/posts/fe51682c.html"/>
     <id>https://rongyel.github.io/posts/fe51682c.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-28T16:46:52.980Z</updated>
+    <updated>2023-10-31T14:25:16.432Z</updated>
     
     
     <summary type="html">&lt;p&gt;AXI总线是当前最常用的总线协议，身为IC工程师，对AXI的掌握可以说是必须的。&lt;/p&gt;</summary>
@@ -143,7 +143,7 @@
     <link href="https://rongyel.github.io/posts/e0051e00.html"/>
     <id>https://rongyel.github.io/posts/e0051e00.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-28T16:46:58.758Z</updated>
+    <updated>2023-10-31T14:25:19.305Z</updated>
     
     
     <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
@@ -185,7 +185,7 @@
     <link href="https://rongyel.github.io/posts/c1f4e46a.html"/>
     <id>https://rongyel.github.io/posts/c1f4e46a.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-30T14:41:02.944Z</updated>
+    <updated>2023-10-31T14:25:41.362Z</updated>
     
     
     <summary type="html">&lt;p&gt;记录一下自己使用其他笔记工具的感受。&lt;/p&gt;</summary>
@@ -225,7 +225,7 @@
     <link href="https://rongyel.github.io/posts/b5c1014c.html"/>
     <id>https://rongyel.github.io/posts/b5c1014c.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-27T14:57:23.224Z</updated>
+    <updated>2023-10-31T14:25:46.787Z</updated>
     
     
     <summary type="html">&lt;p&gt;累是真的累，疲惫是真的疲惫，&lt;br&gt;但学习速度是真的快。&lt;/p&gt;</summary>
@@ -244,7 +244,7 @@
     <link href="https://rongyel.github.io/posts/c97fc71d.html"/>
     <id>https://rongyel.github.io/posts/c97fc71d.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-30T14:40:57.211Z</updated>
+    <updated>2023-10-31T14:25:44.300Z</updated>
     
     
     <summary type="html">&lt;p&gt;markdown有个说法，叫做让人可以专注于笔记内容上。&lt;/p&gt;</summary>
@@ -263,7 +263,7 @@
     <link href="https://rongyel.github.io/posts/8ba797de.html"/>
     <id>https://rongyel.github.io/posts/8ba797de.html</id>
     <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-30T15:03:26.486Z</updated>
+    <updated>2023-10-31T14:25:52.489Z</updated>
     
     
     <summary type="html">&lt;p&gt;现在IC设计培训市场是混乱的。&lt;/p&gt;</summary>
