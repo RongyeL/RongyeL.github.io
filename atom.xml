@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2023-10-30T16:25:36.300Z</updated>
+  <updated>2023-10-31T14:19:25.929Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ARM memory属性的理解</title>
+    <link href="https://rongyel.github.io/posts/2957f6bf.html"/>
+    <id>https://rongyel.github.io/posts/2957f6bf.html</id>
+    <published>2023-10-31T14:19:04.920Z</published>
+    <updated>2023-10-31T14:19:25.929Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在看ARM的各种技术手册中，会多次看到对于memory属性的描述，诸如Cacheable、Allocate、Device nRnE等等。本文主要以CHI中的MemAttr、SnpAttr域段，展开对memory属性的学习。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+  </entry>
   
   <entry>
     <title>对Stage1页表属性attrindex理解</title>
