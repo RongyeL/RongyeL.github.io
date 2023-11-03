@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2023-10-31T14:20:34.110Z</updated>
+  <updated>2023-11-03T16:33:58.430Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CHI flitpend是干嘛的</title>
+    <link href="https://rongyel.github.io/posts/b6eda8db.html"/>
+    <id>https://rongyel.github.io/posts/b6eda8db.html</id>
+    <published>2023-11-03T16:32:49.443Z</published>
+    <updated>2023-11-03T16:33:58.430Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="CHI" scheme="https://rongyel.github.io/tags/CHI/"/>
+    
+    <category term="AMBA" scheme="https://rongyel.github.io/tags/AMBA/"/>
+    
+  </entry>
   
   <entry>
     <title>ARM memory属性的理解</title>
