@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2023-11-03T16:33:58.430Z</updated>
+  <updated>2023-11-11T16:17:25.877Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>我的知识笔记流水思维殿堂</title>
+    <link href="https://rongyel.github.io/posts/56a2756d.html"/>
+    <id>https://rongyel.github.io/posts/56a2756d.html</id>
+    <published>2023-11-10T12:59:30.000Z</published>
+    <updated>2023-11-11T16:17:25.877Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Readwise+Obsidian+Hexo，&lt;br&gt;技术与生活的思维殿堂。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="折腾" scheme="https://rongyel.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CHI flitpend是干嘛的</title>
     <link href="https://rongyel.github.io/posts/b6eda8db.html"/>
     <id>https://rongyel.github.io/posts/b6eda8db.html</id>
     <published>2023-11-03T16:32:49.443Z</published>
-    <updated>2023-11-03T16:33:58.430Z</updated>
+    <updated>2023-11-03T16:34:52.700Z</updated>
     
     
     <summary type="html">&lt;p&gt;定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……&lt;/p&gt;</summary>
@@ -297,6 +316,94 @@
     
     
     <category term="工作心得" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E4%BD%9C%E5%BF%83%E5%BE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CHI l-credit的使用关注点</title>
+    <link href="https://rongyel.github.io/posts/418ca596.html"/>
+    <id>https://rongyel.github.io/posts/418ca596.html</id>
+    <published>2023-03-23T12:12:00.000Z</published>
+    <updated>2023-11-11T16:26:41.620Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;CHI协议的LINK层credit握手机制是个很有意思的东西，实际使用的时候有些需要关注的地方。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="AXI" scheme="https://rongyel.github.io/tags/AXI/"/>
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="CHI" scheme="https://rongyel.github.io/tags/CHI/"/>
+    
+    <category term="AMBA" scheme="https://rongyel.github.io/tags/AMBA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对ARM access flag和dirty state机制理解</title>
+    <link href="https://rongyel.github.io/posts/a6a87a63.html"/>
+    <id>https://rongyel.github.io/posts/a6a87a63.html</id>
+    <published>2023-03-23T12:12:00.000Z</published>
+    <updated>2023-11-11T16:27:42.294Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ARM的access flag和dirty state机制用于进行页表的维护，经过一段时间的思考，现在总算是理清楚了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="页表" scheme="https://rongyel.github.io/tags/%E9%A1%B5%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>当前ARM只有64KB粒度页表支持52bit</title>
+    <link href="https://rongyel.github.io/posts/115c5add.html"/>
+    <id>https://rongyel.github.io/posts/115c5add.html</id>
+    <published>2023-03-23T12:12:00.000Z</published>
+    <updated>2023-11-11T16:28:14.056Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ARMv8.2架构支持到52bit了，但仅有64KB粒度的页表才支持&lt;br&gt;ARMv9架构则4k和16k翻译粒度也支持52bit，这里简单理解一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么叫RAS中断</title>
+    <link href="https://rongyel.github.io/posts/4b0c4420.html"/>
+    <id>https://rongyel.github.io/posts/4b0c4420.html</id>
+    <published>2023-01-16T14:43:00.000Z</published>
+    <updated>2023-11-11T16:26:16.251Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ras中断是什么，听的很多但也不太清楚什么中断才能叫做ras中断。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="中断" scheme="https://rongyel.github.io/tags/%E4%B8%AD%E6%96%AD/"/>
     
   </entry>
   

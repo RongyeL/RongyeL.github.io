@@ -1,3 +1,8 @@
+https://rongyel.github.io/posts/115c5add.html
+https://rongyel.github.io/posts/a6a87a63.html
+https://rongyel.github.io/posts/418ca596.html
+https://rongyel.github.io/posts/4b0c4420.html
+https://rongyel.github.io/posts/56a2756d.html
 https://rongyel.github.io/posts/b6eda8db.html
 https://rongyel.github.io/posts/f07a99ab.html
 https://rongyel.github.io/posts/f60848c2.html
@@ -20,6 +25,7 @@ https://rongyel.github.io/tags/AXI/
 https://rongyel.github.io/tags/ARM/
 https://rongyel.github.io/tags/MMU/
 https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/
+https://rongyel.github.io/tags/%E9%A1%B5%E8%A1%A8/
 https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/
 https://rongyel.github.io/tags/HEXO/
 https://rongyel.github.io/tags/Markdown/
@@ -29,6 +35,9 @@ https://rongyel.github.io/tags/%E5%8A%A8%E6%BC%AB/
 https://rongyel.github.io/tags/%E7%BD%91%E6%B8%B8/
 https://rongyel.github.io/tags/CHI/
 https://rongyel.github.io/tags/AMBA/
+https://rongyel.github.io/tags/%E6%8A%98%E8%85%BE/
+https://rongyel.github.io/tags/%E4%B8%AD%E6%96%AD/
 https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
+https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/
 https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/
 https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/
