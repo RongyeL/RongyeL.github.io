@@ -29,6 +29,69 @@
   </url>
   
   <url>
+    <loc>https://rongyel.github.io/posts/115c5add.html</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/a6a87a63.html</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/418ca596.html</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/4b0c4420.html</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/b6eda8db.html</loc>
+    
+    <lastmod>2023-11-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/f07a99ab.html</loc>
+    
+    <lastmod>2023-10-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/f60848c2.html</loc>
+    
+    <lastmod>2023-10-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/posts/c97fc71d.html</loc>
     
     <lastmod>2023-10-31</lastmod>
@@ -39,6 +102,42 @@
   
   <url>
     <loc>https://rongyel.github.io/posts/c1f4e46a.html</loc>
+    
+    <lastmod>2023-10-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/d429f5fd.html</loc>
+    
+    <lastmod>2023-10-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/92a0ec66.html</loc>
+    
+    <lastmod>2023-10-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/e0051e00.html</loc>
+    
+    <lastmod>2023-10-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/2957f6bf.html</loc>
     
     <lastmod>2023-10-31</lastmod>
     
@@ -83,6 +182,55 @@
 
   
   <url>
+    <loc>https://rongyel.github.io/tags/AXI/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/ARM/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/MMU/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/%E9%A1%B5%E8%A1%A8/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/HEXO/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/tags/Markdown/</loc>
     <lastmod>2024-06-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -90,7 +238,35 @@
   </url>
   
   <url>
+    <loc>https://rongyel.github.io/tags/GVim/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/CHI/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/AMBA/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/tags/%E6%8A%98%E8%85%BE/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/%E4%B8%AD%E6%96%AD/</loc>
     <lastmod>2024-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -111,6 +287,20 @@
   </url>
   
 
+  
+  <url>
+    <loc>https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/</loc>

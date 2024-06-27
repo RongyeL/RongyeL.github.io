@@ -113,4 +113,237 @@
     
   </entry>
   
+  <entry>
+    <title>CHI flitpend是干嘛的</title>
+    <link href="https://rongyel.github.io/posts/b6eda8db.html"/>
+    <id>https://rongyel.github.io/posts/b6eda8db.html</id>
+    <published>2023-11-03T16:32:49.443Z</published>
+    <updated>2023-11-03T16:34:52.700Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="CHI" scheme="https://rongyel.github.io/tags/CHI/"/>
+    
+    <category term="AMBA" scheme="https://rongyel.github.io/tags/AMBA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ARM memory属性的理解</title>
+    <link href="https://rongyel.github.io/posts/2957f6bf.html"/>
+    <id>https://rongyel.github.io/posts/2957f6bf.html</id>
+    <published>2023-10-31T14:19:04.920Z</published>
+    <updated>2023-10-31T14:20:34.110Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在看ARM的各种技术手册中，会多次看到对于memory属性的描述，诸如Cacheable、Allocate、Device nRnE等等。本文主要以CHI中的MemAttr、SnpAttr域段，展开对memory属性的学习。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对Stage1页表属性attrindex理解</title>
+    <link href="https://rongyel.github.io/posts/d429f5fd.html"/>
+    <id>https://rongyel.github.io/posts/d429f5fd.html</id>
+    <published>2023-10-30T16:18:44.126Z</published>
+    <updated>2023-10-31T14:25:31.512Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;stage1的页表最低位属性用的是AttrIndex，而在stage2的页表属性用的是MemAttr。&lt;br&gt;这样设计的原因可能是为了减少无效化操作。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>折腾HEXO的快乐</title>
+    <link href="https://rongyel.github.io/posts/92a0ec66.html"/>
+    <id>https://rongyel.github.io/posts/92a0ec66.html</id>
+    <published>2023-10-27T14:35:57.815Z</published>
+    <updated>2023-10-31T14:25:22.388Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;说实话，折腾这些笔记系统，博客系统，感觉像打游戏一样快乐。时隔多月再次捡起HEXO博客，重新搭建一番，并记录自己的搭建心得。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="HEXO" scheme="https://rongyel.github.io/tags/HEXO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始EDA环境搭建</title>
+    <link href="https://rongyel.github.io/posts/f07a99ab.html"/>
+    <id>https://rongyel.github.io/posts/f07a99ab.html</id>
+    <published>2023-03-23T12:12:01.000Z</published>
+    <updated>2023-10-31T14:58:11.347Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;搭建一个能够运行tinyriscv项目的EDA环境。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MMU-TLB基础知识</title>
+    <link href="https://rongyel.github.io/posts/e0051e00.html"/>
+    <id>https://rongyel.github.io/posts/e0051e00.html</id>
+    <published>2023-03-23T12:12:01.000Z</published>
+    <updated>2023-10-31T14:25:19.305Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
+    
+    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数字IC设计开发Gvim配置</title>
+    <link href="https://rongyel.github.io/posts/f60848c2.html"/>
+    <id>https://rongyel.github.io/posts/f60848c2.html</id>
+    <published>2023-03-23T12:12:01.000Z</published>
+    <updated>2023-10-31T14:58:00.959Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
+    
+    <category term="GVim" scheme="https://rongyel.github.io/tags/GVim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CHI l-credit的使用关注点</title>
+    <link href="https://rongyel.github.io/posts/418ca596.html"/>
+    <id>https://rongyel.github.io/posts/418ca596.html</id>
+    <published>2023-03-23T12:12:00.000Z</published>
+    <updated>2023-11-11T16:46:00.386Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;CHI协议的LINK层credit握手机制是个很有意思的东西，实际使用的时候有些需要关注的地方。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="AXI" scheme="https://rongyel.github.io/tags/AXI/"/>
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="CHI" scheme="https://rongyel.github.io/tags/CHI/"/>
+    
+    <category term="AMBA" scheme="https://rongyel.github.io/tags/AMBA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对ARM access flag和dirty state机制理解</title>
+    <link href="https://rongyel.github.io/posts/a6a87a63.html"/>
+    <id>https://rongyel.github.io/posts/a6a87a63.html</id>
+    <published>2023-03-23T12:12:00.000Z</published>
+    <updated>2023-11-11T16:46:00.389Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ARM的access flag和dirty state机制用于进行页表的维护，经过一段时间的思考，现在总算是理清楚了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="页表" scheme="https://rongyel.github.io/tags/%E9%A1%B5%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>当前ARM只有64KB粒度页表支持52bit</title>
+    <link href="https://rongyel.github.io/posts/115c5add.html"/>
+    <id>https://rongyel.github.io/posts/115c5add.html</id>
+    <published>2023-03-23T12:12:00.000Z</published>
+    <updated>2023-11-11T16:46:00.392Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ARMv8.2架构支持到52bit了，但仅有64KB粒度的页表才支持&lt;br&gt;ARMv9架构则4k和16k翻译粒度也支持52bit，这里简单理解一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么叫RAS中断</title>
+    <link href="https://rongyel.github.io/posts/4b0c4420.html"/>
+    <id>https://rongyel.github.io/posts/4b0c4420.html</id>
+    <published>2023-01-16T14:43:00.000Z</published>
+    <updated>2023-11-11T16:46:00.384Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ras中断是什么，听的很多但也不太清楚什么中断才能叫做ras中断。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="知识碎片" scheme="https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="中断" scheme="https://rongyel.github.io/tags/%E4%B8%AD%E6%96%AD/"/>
+    
+  </entry>
+  
 </feed>

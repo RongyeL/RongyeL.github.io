@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>从零开始EDA环境搭建 - IC攻城狮的摸鱼小屋</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="IC攻城狮的摸鱼小屋"><meta name="msapplication-TileImage" content="/img/favicon1.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="IC攻城狮的摸鱼小屋"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="搭建一个能够运行tinyriscv项目的EDA环境。"><meta property="og:type" content="blog"><meta property="og:title" content="从零开始EDA环境搭建"><meta property="og:url" content="https://rongyel.github.io/posts/f07a99ab.html"><meta property="og:site_name" content="IC攻城狮的摸鱼小屋"><meta property="og:description" content="搭建一个能够运行tinyriscv项目的EDA环境。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814139944-ee857d06-56b0-4d69-a57b-8b83a29c8aee.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814400398-fd896e87-372c-4ce4-9177-d423c692c644.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829810760-93f15068-6b1c-47ee-af81-7b8843dd386f.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829829171-d855cfa3-ec50-4f4f-88b7-7b316a89a593.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829848863-87d4e0c1-999e-4a29-abe9-3306b0d09240.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831202456-ca6153e9-4e95-4717-bb93-74f835a79310.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831294171-c0bf3940-7faf-475b-a04e-e1fa9b64f4b9.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831444058-7f51190d-48f7-4228-ab1e-88728e160c45.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831663793-2cc405fc-702b-41a3-a5f5-37505f3bef45.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832085505-4083f8f3-8875-4025-966d-288470b7b616.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832223302-cea5786f-ed22-44f5-99c2-4777876b68e8.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832306465-4bf0df99-b56b-4d08-af38-3a126c16b70c.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832430900-461128d2-8ee0-494f-8780-741a212df340.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850990398-f8ba9d61-5e90-4ca8-b9dc-354a42fe99ba.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832699123-4b90ce9e-6a38-4338-995d-5863b68cac4b.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642833660190-54aff599-35c8-43df-bdf3-bea7950d7581.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642833876149-8e21b86d-b5f7-4248-a905-f7dbf72fd342.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834156631-494551b1-0033-4366-b518-fc1504af9137.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834214819-f9f6ca15-4a16-4d76-9a28-066b6393a01b.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834365801-df8a4199-25a1-4528-b16f-fcb2764bca81.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834454930-eacfece9-ac6a-4dd9-9739-546d4a1df344.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834551371-8b3c1c95-90ee-4be8-82a1-580628f43fca.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834618117-d6d28b0a-e669-4c4a-84ec-31cc0a4cbcf9.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834674019-aed36f99-f880-4194-b719-df6b27ae984e.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834785652-2f39f13f-116c-4099-b46e-211e6687115e.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834806309-107d1bcf-de09-4916-8a52-6101f7c461a0.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834850719-192e0499-95a3-43dd-92fb-8f313cee672d.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834940453-c8d30666-550c-49ea-b4fd-27c0bfb2cb30.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835002193-d53301fb-1174-48ff-bb4e-79dcf7344567.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835036097-3d9262b6-367a-45fa-ac93-6281843f4a31.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835123217-9287ebb2-edbf-409a-9dda-c1a00fa03573.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835235819-ac6f193c-cf9d-43b3-bebf-7a50ac1a2f18.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835266517-931a7777-e33d-4ab3-bffe-118db1c78114.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835316942-095f8bad-a398-4968-ae59-59bbab8702ee.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835757055-4ef639a0-69f4-47cf-b3ec-7ebe62b0a49a.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835867407-93b23c3f-fd30-4d96-8b85-1ae5a1d7f84b.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835837664-9db24cbc-9e0b-4218-9c0d-e31b93c8cd36.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835915355-08e896d7-4eea-43b6-a05d-e9165eb0b61c.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835986079-5cd04ad3-816b-4138-ab5b-8600453b6edb.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835999572-167196a3-213d-491f-b500-ad4e482ca46b.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836126443-95a38a4d-0c06-47af-962c-e244cbcdb597.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836247989-d49e121b-351a-4f25-bc29-7257736724be.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836322444-5034dc42-bcad-40b4-b776-dc6e7fc47a14.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836388198-78492ac0-e820-46b5-8b9f-7ed749cea853.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836752195-29d99d2d-b451-4471-9d1a-7352238e5998.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836802184-98b9a839-c939-409f-8ca4-82dcc0802e0a.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836831887-fd0dfc2e-dec8-4f06-a631-fca3a414cedf.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836915497-ee469afe-1742-4dc4-a51c-3fe7d481ff74.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836964664-86131e0d-5dbd-40c5-83e0-c61cd391fbcb.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837624498-7e7949de-1278-41ce-819c-63d7adc912e4.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837670858-0baf19e7-46b1-4f73-b501-d4aa97cad09b.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837742180-cdcfaced-2eac-479e-be12-606d1f9e7f13.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837844198-e40a3ae4-9e6a-46f8-a8b5-b1865ae8fe65.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837948750-15e0920b-4f32-4629-9396-df892a8f11bf.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642838023430-1f5c289b-4a22-4221-8d45-17af4c3e22f4.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642841698753-5575bf55-0b9a-4031-9468-4460a37c453a.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642841849110-e2fadf15-b7d2-4645-b936-1db7b30e2afc.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850188870-cbe6f9fb-8a8a-4b9c-bfe7-ebb2abd644e2.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642843934150-06521622-27cb-4990-ae48-31be79b750f9.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642844568496-0eb9bd3d-8f41-4e3d-8fde-451e4961b778.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850481531-9c985367-461a-4aac-8814-e9470b6efe83.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642845563701-97b3bd7d-d83b-4217-95ac-84ecc9d44539.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849298195-291dbe76-f976-4ffc-9899-66345ac03da2.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642848549441-fd8d6505-7ab4-4923-a6e6-2efc77ef0d2d.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849032103-675596f5-f767-43b3-bd70-e9546f14ce6e.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849045300-28590f80-c0da-4973-920f-f5b17112c5b3.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849088312-75a6736b-e0c5-4498-84d0-e4f1e90ea30b.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849150317-3b885dcb-0e75-4f58-b58d-1a5d4e89b46b.png"><meta property="article:published_time" content="2023-03-23T12:12:01.000Z"><meta property="article:modified_time" content="2023-10-31T14:58:11.347Z"><meta property="article:author" content="Rongye"><meta property="article:tag" content="数字IC"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814139944-ee857d06-56b0-4d69-a57b-8b83a29c8aee.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://rongyel.github.io/posts/f07a99ab.html"},"headline":"从零开始EDA环境搭建","image":["https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814139944-ee857d06-56b0-4d69-a57b-8b83a29c8aee.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814400398-fd896e87-372c-4ce4-9177-d423c692c644.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829810760-93f15068-6b1c-47ee-af81-7b8843dd386f.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829829171-d855cfa3-ec50-4f4f-88b7-7b316a89a593.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829848863-87d4e0c1-999e-4a29-abe9-3306b0d09240.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831202456-ca6153e9-4e95-4717-bb93-74f835a79310.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831294171-c0bf3940-7faf-475b-a04e-e1fa9b64f4b9.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831444058-7f51190d-48f7-4228-ab1e-88728e160c45.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831663793-2cc405fc-702b-41a3-a5f5-37505f3bef45.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832085505-4083f8f3-8875-4025-966d-288470b7b616.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832223302-cea5786f-ed22-44f5-99c2-4777876b68e8.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832306465-4bf0df99-b56b-4d08-af38-3a126c16b70c.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832430900-461128d2-8ee0-494f-8780-741a212df340.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850990398-f8ba9d61-5e90-4ca8-b9dc-354a42fe99ba.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832699123-4b90ce9e-6a38-4338-995d-5863b68cac4b.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642833660190-54aff599-35c8-43df-bdf3-bea7950d7581.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642833876149-8e21b86d-b5f7-4248-a905-f7dbf72fd342.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834156631-494551b1-0033-4366-b518-fc1504af9137.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834214819-f9f6ca15-4a16-4d76-9a28-066b6393a01b.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834365801-df8a4199-25a1-4528-b16f-fcb2764bca81.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834454930-eacfece9-ac6a-4dd9-9739-546d4a1df344.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834551371-8b3c1c95-90ee-4be8-82a1-580628f43fca.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834618117-d6d28b0a-e669-4c4a-84ec-31cc0a4cbcf9.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834674019-aed36f99-f880-4194-b719-df6b27ae984e.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834785652-2f39f13f-116c-4099-b46e-211e6687115e.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834806309-107d1bcf-de09-4916-8a52-6101f7c461a0.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834850719-192e0499-95a3-43dd-92fb-8f313cee672d.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834940453-c8d30666-550c-49ea-b4fd-27c0bfb2cb30.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835002193-d53301fb-1174-48ff-bb4e-79dcf7344567.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835036097-3d9262b6-367a-45fa-ac93-6281843f4a31.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835123217-9287ebb2-edbf-409a-9dda-c1a00fa03573.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835235819-ac6f193c-cf9d-43b3-bebf-7a50ac1a2f18.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835266517-931a7777-e33d-4ab3-bffe-118db1c78114.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835316942-095f8bad-a398-4968-ae59-59bbab8702ee.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835757055-4ef639a0-69f4-47cf-b3ec-7ebe62b0a49a.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835867407-93b23c3f-fd30-4d96-8b85-1ae5a1d7f84b.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835837664-9db24cbc-9e0b-4218-9c0d-e31b93c8cd36.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835915355-08e896d7-4eea-43b6-a05d-e9165eb0b61c.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835986079-5cd04ad3-816b-4138-ab5b-8600453b6edb.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835999572-167196a3-213d-491f-b500-ad4e482ca46b.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836126443-95a38a4d-0c06-47af-962c-e244cbcdb597.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836247989-d49e121b-351a-4f25-bc29-7257736724be.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836322444-5034dc42-bcad-40b4-b776-dc6e7fc47a14.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836388198-78492ac0-e820-46b5-8b9f-7ed749cea853.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836752195-29d99d2d-b451-4471-9d1a-7352238e5998.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836802184-98b9a839-c939-409f-8ca4-82dcc0802e0a.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836831887-fd0dfc2e-dec8-4f06-a631-fca3a414cedf.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836915497-ee469afe-1742-4dc4-a51c-3fe7d481ff74.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836964664-86131e0d-5dbd-40c5-83e0-c61cd391fbcb.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837624498-7e7949de-1278-41ce-819c-63d7adc912e4.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837670858-0baf19e7-46b1-4f73-b501-d4aa97cad09b.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837742180-cdcfaced-2eac-479e-be12-606d1f9e7f13.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837844198-e40a3ae4-9e6a-46f8-a8b5-b1865ae8fe65.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837948750-15e0920b-4f32-4629-9396-df892a8f11bf.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642838023430-1f5c289b-4a22-4221-8d45-17af4c3e22f4.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642841698753-5575bf55-0b9a-4031-9468-4460a37c453a.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642841849110-e2fadf15-b7d2-4645-b936-1db7b30e2afc.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850188870-cbe6f9fb-8a8a-4b9c-bfe7-ebb2abd644e2.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642843934150-06521622-27cb-4990-ae48-31be79b750f9.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642844568496-0eb9bd3d-8f41-4e3d-8fde-451e4961b778.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850481531-9c985367-461a-4aac-8814-e9470b6efe83.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642845563701-97b3bd7d-d83b-4217-95ac-84ecc9d44539.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849298195-291dbe76-f976-4ffc-9899-66345ac03da2.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642848549441-fd8d6505-7ab4-4923-a6e6-2efc77ef0d2d.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849032103-675596f5-f767-43b3-bd70-e9546f14ce6e.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849045300-28590f80-c0da-4973-920f-f5b17112c5b3.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849088312-75a6736b-e0c5-4498-84d0-e4f1e90ea30b.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849150317-3b885dcb-0e75-4f58-b58d-1a5d4e89b46b.png"],"datePublished":"2023-03-23T12:12:01.000Z","dateModified":"2023-10-31T14:58:11.347Z","author":{"@type":"Person","name":"Rongye"},"publisher":{"@type":"Organization","name":"IC攻城狮的摸鱼小屋","logo":{"@type":"ImageObject","url":"https://rongyel.github.io/img/favicon.png"}},"description":"搭建一个能够运行tinyriscv项目的EDA环境。"}</script><link rel="canonical" href="https://rongyel.github.io/posts/f07a99ab.html"><link rel="icon" href="/img/favicon1.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon.png" alt="IC攻城狮的摸鱼小屋" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-23T12:12:01.000Z" title="2023/3/23 20:12:01">2023-03-23</time>发表</span><span class="level-item"><time dateTime="2023-10-31T14:58:11.347Z" title="2023/10/31 22:58:11">2023-10-31</time>更新</span><span class="level-item"> Rongye </span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span><span class="level-item">35 分钟读完 (大约5216个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">从零开始EDA环境搭建</h1><div class="content"><h1 id="Ubuntu18-04-系统安装"><a href="#Ubuntu18-04-系统安装" class="headerlink" title="Ubuntu18.04 系统安装"></a>Ubuntu18.04 系统安装</h1><p><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu-releases/18.04/">http://mirrors.aliyun.com/ubuntu-releases/18.04/</a></p>
+<p>阿里云镜像下载</p>
+<p>VMware配置安装后，启动后为英文。</p>
+<p>在更改语言前，先换源。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814139944-ee857d06-56b0-4d69-a57b-8b83a29c8aee.png"></p>
+<p>换源<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/61228593">https://zhuanlan.zhihu.com/p/61228593</a></p>
+<p>桌面右键打开terminal</p>
+<h2 id="首先备份源列表"><a href="#首先备份源列表" class="headerlink" title="首先备份源列表"></a>首先备份源列表</h2><p>sudo cp &#x2F;etc&#x2F;apt&#x2F;sources.list &#x2F;etc&#x2F;apt&#x2F;sources.list_backup  </p>
+<h2 id="打开sources-list文件"><a href="#打开sources-list文件" class="headerlink" title="打开sources.list文件"></a>打开sources.list文件</h2><p>sudo gedit &#x2F;etc&#x2F;apt&#x2F;sources.list  </p>
+<p>阿里源</p>
+<p>deb <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic main restricted universe multiverse</p>
+<p>deb <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic-security main restricted universe multiverse</p>
+<p>deb <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic-updates main restricted universe multiverse</p>
+<p>deb <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic-proposed main restricted universe multiverse</p>
+<p>deb <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic-backports main restricted universe multiverse</p>
+<p>deb-src <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic main restricted universe multiverse</p>
+<p>deb-src <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic-security main restricted universe multiverse</p>
+<p>deb-src <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic-updates main restricted universe multiverse</p>
+<p>deb-src <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic-proposed main restricted universe multiverse</p>
+<p>deb-src <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> bionic-backports main restricted universe multiverse<br>刷新列表<br>sudo apt-get update<br>sudo apt-get upgrade<br>sudo apt-get install build-essential</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642814400398-fd896e87-372c-4ce4-9177-d423c692c644.png"></p>
+<p>换源以后就可以去下载语言了。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829810760-93f15068-6b1c-47ee-af81-7b8843dd386f.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829829171-d855cfa3-ec50-4f4f-88b7-7b316a89a593.png"></p>
+<p>选择下载语言，找到Chinese</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642829848863-87d4e0c1-999e-4a29-abe9-3306b0d09240.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831202456-ca6153e9-4e95-4717-bb93-74f835a79310.png"></p>
+<p>更改以后重启。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831294171-c0bf3940-7faf-475b-a04e-e1fa9b64f4b9.png"></p>
+<p>重启以后提示更改文件夹名称，最好不做修改保持英文。</p>
+<p>系统不自带python2，补充安装</p>
+<p>sudo apt install python</p>
+<p>系统自带python3.6.9，应该够用，就不装先了。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831444058-7f51190d-48f7-4228-ab1e-88728e160c45.png"></p>
+<p>下面开始准备gvim</p>
+<hr>
+<h1 id="gvim基本安装"><a href="#gvim基本安装" class="headerlink" title="gvim基本安装"></a>gvim基本安装</h1><p>系统自带的vi会出现乱码问题，先卸载</p>
+<p>sudo apt-get remove vim-common</p>
+<p>重新安装，直接装vim-gtk3</p>
+<p>sudo apt install vim-gtk3</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642831663793-2cc405fc-702b-41a3-a5f5-37505f3bef45.png"></p>
+<p>基本可以使用了，接下来开始搞插件。</p>
+<p>安装git</p>
+<p>sudo apt install git</p>
+<p>接着首先安装vundle插件管理器</p>
+<p>参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/feiyuhuo/p/10274236.html">https://www.cnblogs.com/feiyuhuo/p/10274236.html</a></p>
+<p>1、先新建目录</p>
+<p>mkdir ~&#x2F;.vim&#x2F;bundle&#x2F;Vundle.vim</p>
+<p>2、git 克隆 Vundle 工程到本地</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/gmarik/Vundle.vim.git">https://github.com/gmarik/Vundle.vim.git</a> ~&#x2F;.vim&#x2F;bundle&#x2F;Vundle.vim</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832085505-4083f8f3-8875-4025-966d-288470b7b616.png"></p>
+<p>出现这个无法访问的提示……</p>
+<p>那只能将https修改为git</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832223302-cea5786f-ed22-44f5-99c2-4777876b68e8.png"></p>
+<p>已经准备好的.vimrc文件整个复制进去。【此时目录下应该没有，自己新建一个并命名为.vimrc，然后把下面的内容复制进去即可】</p>
+<p>启动gvim，此时会报错无所谓，因为插件还没安装。</p>
+<p>回车两下进入正常显示后，输入冒号:PluginInstall安装插件</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832306465-4bf0df99-b56b-4d08-af38-3a126c16b70c.png"></p>
+<p>暂时是只安装三个插件。其他先注释掉了，以后再装。</p>
+<p>完成以后重启gvim现在已经是比较好看的了。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832430900-461128d2-8ee0-494f-8780-741a212df340.png">在~&#x2F;.vim目录内，新建colors和syntax文件夹</p>
+<p>语法文件和色彩方案搭配效果如下</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850990398-f8ba9d61-5e90-4ca8-b9dc-354a42fe99ba.png"></p>
+<p>看verilog代码才会有效果。</p>
+<p>那么至此最基本的准备就完成了。</p>
+<p>先拍摄一个快照保存一下</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642832699123-4b90ce9e-6a38-4338-995d-5863b68cac4b.png"></p>
+<hr>
+<h1 id="tinyriscv环境搭建"><a href="#tinyriscv环境搭建" class="headerlink" title="tinyriscv环境搭建"></a>tinyriscv环境搭建</h1><p>那么目前是没有多余配置的，</p>
+<p>接下来先把tinyriscv的环境准备好。</p>
+<p>作者的gitee库</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/liangkangnan/tinyriscv/">https://gitee.com/liangkangnan/tinyriscv/</a></p>
+<p>在Downloads文件夹下下载iverilog</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/steveicarus/iverilog.git">https://github.com/steveicarus/iverilog.git</a></p>
+<p>cd iverilog</p>
+<p>切换到v11分支(必须用V11或以上的版本)</p>
+<p>git checkout v11-branch</p>
+<p>安装依赖</p>
+<p>sudo apt-get install autoconf gperf flex bison build-essential</p>
+<p>编译、安装iverilog和vvp</p>
+<p>sh autoconf.sh</p>
+<p>.&#x2F;configure</p>
+<p>sudo make&amp;make install</p>
+<p>然后准备python3软链接</p>
+<p>先删除原来的软链接，这个是连到python2的</p>
+<p>sudo rm &#x2F;usr&#x2F;bin&#x2F;python</p>
+<p>然后建立新的软链接</p>
+<p>sudo ln -s &#x2F;usr&#x2F;bin&#x2F;python3.6 &#x2F;usr&#x2F;bin&#x2F;python</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642833660190-54aff599-35c8-43df-bdf3-bea7950d7581.png"></p>
+<p>那么现在直接如数python会看到打开的是3.6.9了。exit（）退出，接着搞别的。</p>
+<p>安装gtkwave</p>
+<p>sudo apt-get install gtkwave</p>
+<p>下载gun工具链，百度网盘下载(链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/10uLZYf_cgtH94kZI_N6JhQ">https://pan.baidu.com/s/10uLZYf_cgtH94kZI_N6JhQ</a> 提取码：uk0w)</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642833876149-8e21b86d-b5f7-4248-a905-f7dbf72fd342.png"></p>
+<p>然后直接拖拽进去。</p>
+<p>右键可以直接解压</p>
+<p>接着克隆tinyriscv项目工程</p>
+<p>在Downloads目录下克隆</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://gitee.com/liangkangnan/tinyriscv.git">https://gitee.com/liangkangnan/tinyriscv.git</a></p>
+<p>主目录下新建个Project文件夹，将刚克隆的复制过来，之前的作为原始备份。</p>
+<p>之前下载的工具链复制到tinyriscv工程下的tools目录中</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834156631-494551b1-0033-4366-b518-fc1504af9137.png"></p>
+<p>修改tinyriscv&#x2F;tests&#x2F;example目录下的common.mk文件</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834214819-f9f6ca15-4a16-4d76-9a28-066b6393a01b.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834365801-df8a4199-25a1-4528-b16f-fcb2764bca81.png"></p>
+<p>把名称修改过来，保持和工具链名称前缀一致。</p>
+<p>:wq保存并退出</p>
+<p>下面开始进行测试</p>
+<hr>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834454930-eacfece9-ac6a-4dd9-9739-546d4a1df344.png"></p>
+<p>sim目录下启用终端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\sim_new_nowave.py ..\tests\isa\generated\rv32ui-p-add.bin inst.data</span><br></pre></td></tr></table></figure>
+
+<p>指令执行会报错，说没有这个文件或目录。</p>
+<p>把右下划线全部替换为左下划</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python ./sim_new_nowave.py ../tests/isa/generated/rv32ui-p-add.bin inst.data</span><br></pre></td></tr></table></figure>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834551371-8b3c1c95-90ee-4be8-82a1-580628f43fca.png"></p>
+<p>顺利运行得到结果。</p>
+<p>找到当前目录下的tinyriscv_soc_tb.vcd文件双击启动gtkwave查看</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834618117-d6d28b0a-e669-4c4a-84ec-31cc0a4cbcf9.png"></p>
+<p>基本使用没有问题。</p>
+<p>测试所有指令集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python ./test_all_isa.py</span><br></pre></td></tr></table></figure>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834674019-aed36f99-f880-4194-b719-df6b27ae984e.png"></p>
+<p>测试新指令集</p>
+<p>进入到sim&#x2F;compliance_test目录，执行以下命令：</p>
+<p>cd compliance_test</p>
+<p>python .&#x2F;compliance_test.py ..&#x2F;..&#x2F;tests&#x2F;riscv-compliance&#x2F;build_generated&#x2F;rv32i&#x2F;I-ADD-01.elf.bin inst.data</p>
+<p>得到PASS表明通过。</p>
+<p>接下来测试c文件编译</p>
+<p>进入到tests\example\simple目录，执行以下命令编译：</p>
+<p>make</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834785652-2f39f13f-116c-4099-b46e-211e6687115e.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834806309-107d1bcf-de09-4916-8a52-6101f7c461a0.png"></p>
+<p>在该目录下回生成.bin文件</p>
+<p>编译成功之后，进入到sim目录，执行以下命令开始测试：</p>
+<p>python .&#x2F;sim_new_nowave.py ..&#x2F;tests&#x2F;example&#x2F;simple&#x2F;simple.bin inst.data</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834850719-192e0499-95a3-43dd-92fb-8f313cee672d.png"></p>
+<p>通过，那么至此基本仿真已经没有问题了。</p>
+<p>下面测试FPGA移植。</p>
+<hr>
+<h1 id="FPGA移植准备"><a href="#FPGA移植准备" class="headerlink" title="FPGA移植准备"></a>FPGA移植准备</h1><p>移植需要准备vivado集成开发环境和FPGA，CMSIS-DAP调试器。</p>
+<p>我这里安装的是vivado2017.4和Digilent 的 ARTY A7 35T开发板</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642834940453-c8d30666-550c-49ea-b4fd-27c0bfb2cb30.png"></p>
+<p>安装vivado需要准备安装包和许可文件，请自行准备。</p>
+<p>此处不能拖拽进虚拟机，需要利用共享文件夹的方式。</p>
+<p>在虚拟机设置中，将USB兼容性先修改为USB 3.1</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835002193-d53301fb-1174-48ff-bb4e-79dcf7344567.png"></p>
+<p>切换到“选项”</p>
+<p>启用共享文件夹，不需要关机。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835036097-3d9262b6-367a-45fa-ac93-6281843f4a31.png"></p>
+<p>之后在根目录&#x2F;mnt&#x2F;hgfs&#x2F;就可以找到自己的共享文件夹了。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835123217-9287ebb2-edbf-409a-9dda-c1a00fa03573.png"></p>
+<p>进入安装包文件夹，</p>
+<p>赋予安装权限</p>
+<p>chmod +x xsetup</p>
+<p>执行命令</p>
+<p>.&#x2F;xsetup</p>
+<p>启动安装引导</p>
+<p>安装过程和windows下没有区别。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835235819-ac6f193c-cf9d-43b3-bebf-7a50ac1a2f18.png"></p>
+<p>安装路径要在&#x2F;home下，不然空间不足。此处建立了一个EDA_Tools目录供后续各种工具安装。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835266517-931a7777-e33d-4ab3-bffe-118db1c78114.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835316942-095f8bad-a398-4968-ae59-59bbab8702ee.png"></p>
+<p>安装末尾载入许可文件。</p>
+<p>在vivado&#x2F;2017.4目录下找到settings64.sh配置文件。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835757055-4ef639a0-69f4-47cf-b3ec-7ebe62b0a49a.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835867407-93b23c3f-fd30-4d96-8b85-1ae5a1d7f84b.png"></p>
+<p>编辑主目录配置文件</p>
+<p>vim ~&#x2F;.bashrc</p>
+<p>在末尾添加路径</p>
+<p>source &#x2F;home&#x2F;eda&#x2F;EDA_Tools&#x2F;Vivado&#x2F;2017.4&#x2F;settings64.sh</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835837664-9db24cbc-9e0b-4218-9c0d-e31b93c8cd36.png"></p>
+<p>然后重新加载环境配置</p>
+<p>source ~&#x2F;.bashrc</p>
+<p>至此应该就可以启动vivado了。</p>
+<p>vivado &amp;</p>
+<p>启动vivado</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835915355-08e896d7-4eea-43b6-a05d-e9165eb0b61c.png"></p>
+<p>顺利启动以后先关闭，处理一些剩余内容。</p>
+<p>先把xilinx的信息中心卸载掉。</p>
+<p>找到这个软件，打开。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835986079-5cd04ad3-816b-4138-ab5b-8600453b6edb.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642835999572-167196a3-213d-491f-b500-ad4e482ca46b.png"></p>
+<p>直接卸载就行。</p>
+<p>接着补充安装驱动，否则后续可能无法烧写板子。</p>
+<p>&#x2F;home&#x2F;eda&#x2F;EDA_Tools&#x2F;Vivado&#x2F;2017.4&#x2F;data&#x2F;xicom&#x2F;cable_drivers&#x2F;lin64&#x2F;install_script&#x2F;install_drivers</p>
+<p>在这个路径下，打开终端。</p>
+<p>安装驱动。</p>
+<p>sudo .&#x2F;install_drivers</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836126443-95a38a4d-0c06-47af-962c-e244cbcdb597.png"></p>
+<p>那么vivado也准备完毕以后，开始移植tinyriscv到FPGA上</p>
+<hr>
+<h1 id="FPGA移植工作"><a href="#FPGA移植工作" class="headerlink" title="FPGA移植工作"></a>FPGA移植工作</h1><p>新建工程</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836247989-d49e121b-351a-4f25-bc29-7257736724be.png"></p>
+<p>我的板子ARTY A7 35T</p>
+<p>器件属性选择xc7a35ticsg324-1l</p>
+<p>添加源文件</p>
+<p>将tinyriscv下整个RTL添加复制进来</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836322444-5034dc42-bcad-40b4-b776-dc6e7fc47a14.png"></p>
+<p>将tinyriscv下fpga&#x2F;constrs下的.xdc约束文件添加进来。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836388198-78492ac0-e820-46b5-8b9f-7ed749cea853.png"></p>
+<p>打开约束文件，根据自己的开发板进行修改。此处为我自己的约束。</p>
+<p>重点关注时钟，我是100M的时钟，等会还要用PLL分频。</p>
+<p>GPIO0,1。我分配给了一个LED和一个SW拨码开关。</p>
+<p>JTAG和UART使用调试器CMSIS-DAP的相应接口。</p>
+<p>都根据自己开发板的原理图来。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"># 时钟约束<span class="number">50</span>MHz(<span class="number">100</span>MHz)</span><br><span class="line"></span><br><span class="line">set_property -dict &#123; PACKAGE_PIN E3 IOSTANDARD LVCMOS33 &#125; [get_ports &#123;sys_clk&#125;];</span><br><span class="line"></span><br><span class="line">create_clock -add -name sys_clk_pin -period <span class="number">10</span><span class="variable">.00</span> [get_ports &#123;sys_clk&#125;];</span><br><span class="line"></span><br><span class="line"># 时钟引脚 E3</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports sys_clk]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN E3 [get_ports sys_clk]</span><br><span class="line"></span><br><span class="line"># 复位引脚 CK_RST/ C2</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports rst]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN C2 [get_ports rst]</span><br><span class="line"></span><br><span class="line"># 程序执行完毕指示引脚 LED3/ T10</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports over]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN T10 [get_ports over]</span><br><span class="line"></span><br><span class="line"># 程序执行成功指示引脚 LED2/ T9</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports succ]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN T9 [get_ports succ]</span><br><span class="line"></span><br><span class="line"># CPU停住指示引脚 LED1/ J5</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports halted_ind]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN J5 [get_ports halted_ind]</span><br><span class="line"></span><br><span class="line"># 串口下载使能引脚 SW3/ A10</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports uart_debug_pin]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN A10 [get_ports uart_debug_pin]</span><br><span class="line"></span><br><span class="line"># 串口发送引脚 / D4</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports uart_tx_pin]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN D4 [get_ports uart_tx_pin]</span><br><span class="line"></span><br><span class="line"># 串口接收引脚 / D3</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports uart_rx_pin]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN D3 [get_ports uart_rx_pin]</span><br><span class="line"></span><br><span class="line"># GPIO0引脚 LED0/ H5</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports &#123;gpio[<span class="number">0</span>]&#125;]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN H5 [get_ports &#123;gpio[<span class="number">0</span>]&#125;]</span><br><span class="line"></span><br><span class="line"># GPIO1引脚 SW0/ A8</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports &#123;gpio[<span class="number">1</span>]&#125;]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN A8 [get_ports &#123;gpio[<span class="number">1</span>]&#125;]</span><br><span class="line"></span><br><span class="line"># JTAG TCK引脚 JD9/ H2</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports jtag_TCK]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN H2 [get_ports jtag_TCK]</span><br><span class="line"></span><br><span class="line">#create_clock -name jtag_clk_pin -period <span class="number">300</span> [get_ports &#123;jtag_TCK&#125;];</span><br><span class="line"></span><br><span class="line">#屏蔽 外部时钟输入分配到普通的IO口</span><br><span class="line"></span><br><span class="line">set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets jtag_TCK]</span><br><span class="line"></span><br><span class="line"># JTAG TMS引脚 JD10/ G2</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports jtag_TMS]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN G2 [get_ports jtag_TMS]</span><br><span class="line"></span><br><span class="line"># JTAG TDI引脚 JD7/ E2</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports jtag_TDI]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN E2 [get_ports jtag_TDI]</span><br><span class="line"></span><br><span class="line"># JTAG TDO引脚 JD8/ D2</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports jtag_TDO]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN D2 [get_ports jtag_TDO]</span><br><span class="line"></span><br><span class="line"># SPI MISO引脚 CK_MISO/ G1</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports spi_miso]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN G1 [get_ports spi_miso]</span><br><span class="line"></span><br><span class="line"># SPI MOSI引脚 CK_MOSI/ H1</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports spi_mosi]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN H1 [get_ports spi_mosi]</span><br><span class="line"></span><br><span class="line"># SPI SS引脚 CK_SS/ C1</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports spi_ss]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN C1 [get_ports spi_ss]</span><br><span class="line"></span><br><span class="line"># SPI CLK引脚 CK_SCK/ F1</span><br><span class="line"></span><br><span class="line">set_property IOSTANDARD LVCMOS33 [get_ports spi_clk]</span><br><span class="line"></span><br><span class="line">set_property PACKAGE_PIN F1 [get_ports spi_clk]</span><br><span class="line"></span><br><span class="line">set_property BITSTREAM<span class="variable">.CONFIG</span><span class="variable">.SPI_BUSWIDTH</span> <span class="number">4</span> [current_design]</span><br><span class="line"></span><br><span class="line">set_property CONFIG_MODE SPIx4 [current_design]</span><br><span class="line"></span><br><span class="line">set_property BITSTREAM<span class="variable">.CONFIG</span><span class="variable">.CONFIGRATE</span> <span class="number">50</span> [current_design]</span><br></pre></td></tr></table></figure>
+<p>接下来添加锁相环PLL，</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836752195-29d99d2d-b451-4471-9d1a-7352238e5998.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836802184-98b9a839-c939-409f-8ca4-82dcc0802e0a.png"></p>
+<p>配置IP输出50M时钟</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836831887-fd0dfc2e-dec8-4f06-a631-fca3a414cedf.png"></p>
+<p>打开顶层文件，修改端口clk为sys_clk</p>
+<p>往下，在第一个always块前例化PLL</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836915497-ee469afe-1742-4dc4-a51c-3fe7d481ff74.png"></p>
+<p>记得补充声明clk，</p>
+<p>至此完成所有FPGA工程配置，生成比特流文件</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642836964664-86131e0d-5dbd-40c5-83e0-c61cd391fbcb.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837624498-7e7949de-1278-41ce-819c-63d7adc912e4.png"></p>
+<p>顺利生成比特流文件，连接开发板直接烧写。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837670858-0baf19e7-46b1-4f73-b501-d4aa97cad09b.png"></p>
+<p>烧写时可能需要重新定位一下，自己生成的bit文件。</p>
+<p>板子上的LED亮起，说明顺利烧写进去了，</p>
+<p>接下来进行JTAG调试。</p>
+<hr>
+<h1 id="FPGA运行调试"><a href="#FPGA运行调试" class="headerlink" title="FPGA运行调试"></a>FPGA运行调试</h1><p>调试需要使用到CMSIS-DAP，连好线，做好管脚约束才能使用。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837742180-cdcfaced-2eac-479e-be12-606d1f9e7f13.png"></p>
+<p>同时还需要上位机，作者提供的只有exe也就是windows下的软件。</p>
+<p>*<strong>注意，Linux下的openocd安装非常麻烦，我遇到了很多问题，虽然现在顺利安装并使用了。</strong></p>
+<p><strong>不介意的话后续工作可以直接在windows上进行，把一些文件直接拖到windows下使用即可。</strong></p>
+<p>在Ubuntu下直接安装上位机openocd</p>
+<p>sudo apt install openocd</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837844198-e40a3ae4-9e6a-46f8-a8b5-b1865ae8fe65.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642837948750-15e0920b-4f32-4629-9396-df892a8f11bf.png"></p>
+<p>在tools&#x2F;openocd目录下，我们需要使用到这个.cfg配置文件。</p>
+<p>openocd -f tinyriscv.cfg</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642838023430-1f5c289b-4a22-4221-8d45-17af4c3e22f4.png"></p>
+<p>提示不行，这是因为默认安装的openocd不支持CMSIS-DAP，</p>
+<p>所以我们还需要源码安装自己配置</p>
+<p>sudo apt remove openocd先卸载掉原本安装的</p>
+<p>进行源码安装，参考</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/daoshengtianxia/article/details/115038674">https://blog.csdn.net/daoshengtianxia/article/details/115038674</a></p>
+<p>在Downloads目录下克隆</p>
+<p>git clone git:&#x2F;&#x2F;github.com&#x2F;ntfreak&#x2F;openocd</p>
+<p>cd openocd&#x2F;</p>
+<p>安装依赖</p>
+<p>然后执行</p>
+<p>.&#x2F;bootstrap</p>
+<p>缺少了什么但又不清楚，补充安装了一大堆东西。</p>
+<p>sudo apt install debhelper findutils autotools-dev autoconf automake libtool pkg-config libltdl-dev</p>
+<p>重新执行</p>
+<p>.&#x2F;bootstrap</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642841698753-5575bf55-0b9a-4031-9468-4460a37c453a.png"></p>
+<p>缺少libusb-1.x，补充安装</p>
+<p>sudo apt install libusb-1.0</p>
+<p>再次configure</p>
+<p>这次应该是顺利配置了</p>
+<p>再补充下面这个</p>
+<p>.&#x2F;configure –enable-cmsis-dap –enable-jlink –enable-stlink –enable-ti-icdi</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642841849110-e2fadf15-b7d2-4645-b936-1db7b30e2afc.png"></p>
+<p>提示需要hidapi，</p>
+<p>sudo apt-get install libhidapi-dev</p>
+<p>其实是要补充安装这个libhidapi的库，然后再配置。注意一定要给权限。</p>
+<p>sudo .&#x2F;configure –enable-cmsis-dap</p>
+<p>配置成功一定要看到这个地方是yes的</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850188870-cbe6f9fb-8a8a-4b9c-bfe7-ebb2abd644e2.png"></p>
+<p>最后编译安装</p>
+<p>sudo make&amp;make install</p>
+<p>完成安装以后，回到tinyriscv&#x2F;tools&#x2F;openocd目录下</p>
+<p>openocd -f tinyriscv.cfg</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642843934150-06521622-27cb-4990-ae48-31be79b750f9.png"></p>
+<p>现在可以启用这个软件了，当然目前连接还是失败的，需要再做一些配置。</p>
+<p>此外，首先需要对.cfg文件中的一些内容做修改。</p>
+<p>根据上一张图，有提示说use”adapter speed”not’adapeter_khz’</p>
+<p>意思就是用前面那个不要用后面那个表述，</p>
+<p>打开.cfg就可以看到对应的内容了，改过来就行。</p>
+<p>然后还需要准备权限，参考<a target="_blank" rel="noopener" href="https://www.bbsmax.com/A/A2dm9B87de/">https://www.bbsmax.com/A/A2dm9B87de/</a></p>
+<p>用lsusb</p>
+<p>确认自己的调试器信息</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642844568496-0eb9bd3d-8f41-4e3d-8fde-451e4961b778.png"></p>
+<p>Bus 003 Device 008: ID <strong>0d28:0204</strong> NXP LPC1768</p>
+<p>需要增加一个rules文件，参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhengyangliu123/article/details/78232241">https://blog.csdn.net/zhengyangliu123/article/details/78232241</a></p>
+<p>进入前面克隆的openocd&#x2F;contrib 目录</p>
+<p>使用指令将 60-openocd.rules 文件复制入 &#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F; 目录下</p>
+<p>sudo cp 60-openocd.rules &#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F;</p>
+<p>然后，对文件做一些修改【此处存疑，可能不改也能用】</p>
+<p>sudo gvim &#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F;60-openocd.rules</p>
+<p>最下面的地方，改成跟我下图一样的。</p>
+<p>注意idVendor和idProduct要保持和上面看到的<strong>0d28:0204</strong>设备信息一致。</p>
+<p>保存以后重启电脑</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642850481531-9c985367-461a-4aac-8814-e9470b6efe83.png"></p>
+<p>回到之前的tinyriscv中的openocd文件夹，使用终端执行</p>
+<p>openocd -f tinyriscv.cfg</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642845563701-97b3bd7d-d83b-4217-95ac-84ecc9d44539.png"></p>
+<p>终于看到这个了，不容易啊</p>
+<p>*<strong>注意，这里存在未知问题。每次重启系统以后，最开始使用openocd会报错。需执行3次，才会识别并启用……</strong></p>
+<p><strong>原因不明，但每次都这样。只要启动成功，不关机就不会有这个问题。</strong></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849298195-291dbe76-f976-4ffc-9899-66345ac03da2.png"></p>
+<p>新开一个终端，看作者后续的操作。windows和linux在路径上有些不同</p>
+<p>然后打开另一个CMD窗口，执行以下命令来连接openocd，注意电脑要启用telnet host服务。</p>
+<p>telnet localhost 4444</p>
+<p>然后在这个CMD窗口下使用load_image命令将固件下载到FPGA，这里以freertos.bin文件为例，如下所示：</p>
+<p>load_image D:&#x2F;gitee&#x2F;open&#x2F;tinyriscv&#x2F;tests&#x2F;example&#x2F;FreeRTOS&#x2F;Demo&#x2F;tinyriscv_GCC&#x2F;freertos.bin 0x0 bin 0x0 0x1000000</p>
+<p>使用verify_image命令来校验是否下载成功，如下所示：</p>
+<p>verify_image D:&#x2F;gitee&#x2F;open&#x2F;tinyriscv&#x2F;tests&#x2F;example&#x2F;FreeRTOS&#x2F;Demo&#x2F;tinyriscv_GCC&#x2F;freertos.bin 0x0</p>
+<p>如果下载出错的话会有提示的，没有提示则说明下载成功。</p>
+<p>最后执行以下命令让程序跑起来：</p>
+<p>resume 0</p>
+<p>注意：每次下载程序前记得先执行halt命令停住CPU。；</p>
+<p>这里使用gpio进行验证</p>
+<p>在&#x2F;home&#x2F;eda&#x2F;Project&#x2F;tinyriscv&#x2F;tests&#x2F;example&#x2F;gpio路径下使用make编译生成bin文件</p>
+<p>在telnet窗口下使用下面命令烧写程序</p>
+<p>load_image &#x2F;home&#x2F;eda&#x2F;Project&#x2F;tinyriscv&#x2F;tests&#x2F;example&#x2F;gpio&#x2F;gpio.bin 0x0 bin 0x0 0x1000000</p>
+<p>verify_image &#x2F;home&#x2F;eda&#x2F;Project&#x2F;tinyriscv&#x2F;tests&#x2F;example&#x2F;gpio&#x2F;gpio.bin 0x0 bin 0x0</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642848549441-fd8d6505-7ab4-4923-a6e6-2efc77ef0d2d.png"></p>
+<p>如果看到这个，说明程序烧写成功了</p>
+<p>resume 0</p>
+<p>此时开发板已经可以正常使用，LED灯会随对应的那个开关亮灭。</p>
+<p>下面测试一下串口，</p>
+<p>先去把串口发送uart_tx的程序编译一下</p>
+<p>安装串口调试工具cutecom</p>
+<p>sudo apt-get install cutecom</p>
+<p>直接打开工具</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849032103-675596f5-f767-43b3-bd70-e9546f14ce6e.png"></p>
+<p>选这个ACM</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849045300-28590f80-c0da-4973-920f-f5b17112c5b3.png"></p>
+<p>OPEN以后会看到，连接的就是这个CMSIS-DAP调试器</p>
+<p>load_image &#x2F;home&#x2F;eda&#x2F;Project&#x2F;tinyriscv&#x2F;tests&#x2F;example&#x2F;uart_tx&#x2F;uart_tx.bin 0x0 bin 0x0 0x1000000</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849088312-75a6736b-e0c5-4498-84d0-e4f1e90ea30b.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-1642849150317-3b885dcb-0e75-4f58-b58d-1a5d4e89b46b.png"></p>
+<p>烧写进去并且resume以后，可以看到串口助手窗口打印了hello world。</p>
+<p>至此，整个tinyriscv的linux开发环境搭建完成，可以运行整个项目的所有内容。</p>
+<h1 id="其他补充"><a href="#其他补充" class="headerlink" title="其他补充"></a>其他补充</h1><p>输入su命令获取root权限时， 出现了</p>
+<p>authentication failure 的问题，即身份验证失败。</p>
+<p>需要进行下面操作：</p>
+<p>$ sudo passwd root</p>
+<p>Enter new UNIX password:</p>
+<p>&#x2F;&#x2F;此时输入你的密码</p>
+<p>Retype new UNIX password:</p>
+<p>&#x2F;&#x2F;再次输入，相同密码。</p>
+<p>passwd: password updated successfully</p>
+<p>此时再用su命令，就可以获取到root权限了。</p></div><div class="article-licensing box"><div class="licensing-title"><p>从零开始EDA环境搭建</p><p><a href="https://rongyel.github.io/posts/f07a99ab.html">https://rongyel.github.io/posts/f07a99ab.html</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Rongye</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-03-23</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-10-31</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%97IC/">数字IC</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/92a0ec66.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">折腾HEXO的快乐</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/e0051e00.html"><span class="level-item">MMU-TLB基础知识</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Ubuntu18-04-系统安装"><span class="level-left"><span class="level-item">Ubuntu18.04 系统安装</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#首先备份源列表"><span class="level-left"><span class="level-item">首先备份源列表</span></span></a></li><li><a class="level is-mobile" href="#打开sources-list文件"><span class="level-left"><span class="level-item">打开sources.list文件</span></span></a></li></ul></li><li><a class="level is-mobile" href="#gvim基本安装"><span class="level-left"><span class="level-item">gvim基本安装</span></span></a></li><li><a class="level is-mobile" href="#tinyriscv环境搭建"><span class="level-left"><span class="level-item">tinyriscv环境搭建</span></span></a></li><li><a class="level is-mobile" href="#FPGA移植准备"><span class="level-left"><span class="level-item">FPGA移植准备</span></span></a></li><li><a class="level is-mobile" href="#FPGA移植工作"><span class="level-left"><span class="level-item">FPGA移植工作</span></span></a></li><li><a class="level is-mobile" href="#FPGA运行调试"><span class="level-left"><span class="level-item">FPGA运行调试</span></span></a></li><li><a class="level is-mobile" href="#其他补充"><span class="level-left"><span class="level-item">其他补充</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-27T16:37:19.069Z">2024-06-28</time></p><p class="title"><a href="/posts/c97fc71d.html">为什么要用Markdown做笔记</a></p><p class="categories"><a href="/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/">心得随写</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-27T16:37:19.064Z">2024-06-28</time></p><p class="title"><a href="/posts/c1f4e46a.html">markdown笔记工具分析</a></p><p class="categories"><a href="/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/">心得随写</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-27T16:37:19.053Z">2024-06-28</time></p><p class="title"><a href="/posts/7c35c268.html">艾尔登法环DLC 一周体验</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-27T16:37:19.049Z">2024-06-28</time></p><p class="title"><a href="/posts/56a2756d.html">我的知识笔记流水思维殿堂</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-27T16:37:19.044Z">2024-06-28</time></p><p class="title"><a href="/posts/3b1a7464.html">《香格里拉边境》为什么让我兴奋</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon.png" alt="IC攻城狮的摸鱼小屋" height="28"></a><p class="is-size-7"><span>&copy; 2024 Rongye</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p><p class="is-size-7">© 2023</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
