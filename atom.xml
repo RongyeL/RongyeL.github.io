@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>IC攻城狮的摸鱼小屋</title>
+  <icon>https://rongyel.github.io/icon.png</icon>
+  <subtitle>To be a better IC engineer, maybe?</subtitle>
+  <link href="https://rongyel.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://rongyel.github.io/"/>
+  <updated>2023-10-31T14:25:44.300Z</updated>
+  <id>https://rongyel.github.io/</id>
+  
+  <author>
+    <name>Rong晔</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么要用Markdown做笔记</title>
+    <link href="https://rongyel.github.io/posts/c97fc71d.html"/>
+    <id>https://rongyel.github.io/posts/c97fc71d.html</id>
+    <published>2024-06-27T16:37:19.069Z</published>
+    <updated>2023-10-31T14:25:44.300Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;markdown有个说法，叫做让人可以专注于笔记内容上。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="心得随写" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/"/>
+    
+    
+    <category term="Markdown" scheme="https://rongyel.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown笔记工具分析</title>
+    <link href="https://rongyel.github.io/posts/c1f4e46a.html"/>
+    <id>https://rongyel.github.io/posts/c1f4e46a.html</id>
+    <published>2024-06-27T16:37:19.064Z</published>
+    <updated>2023-10-31T14:25:41.362Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录一下自己使用其他笔记工具的感受。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="心得随写" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E9%9A%8F%E5%86%99/"/>
+    
+    
+    <category term="Markdown" scheme="https://rongyel.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>艾尔登法环DLC 一周体验</title>
+    <link href="https://rongyel.github.io/posts/7c35c268.html"/>
+    <id>https://rongyel.github.io/posts/7c35c268.html</id>
+    <published>2024-06-27T16:37:19.053Z</published>
+    <updated>2024-06-27T16:32:42.676Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;DLC一上来，给了所有人一个下马威。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="兴趣档案" scheme="https://rongyel.github.io/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"/>
+    
+    <category term="游戏" scheme="https://rongyel.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的知识笔记流水思维殿堂</title>
+    <link href="https://rongyel.github.io/posts/56a2756d.html"/>
+    <id>https://rongyel.github.io/posts/56a2756d.html</id>
+    <published>2024-06-27T16:37:19.049Z</published>
+    <updated>2024-06-27T16:23:54.594Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Readwise+Obsidian+Hexo，&lt;br&gt;技术与生活的思维殿堂。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="折腾" scheme="https://rongyel.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《香格里拉边境》为什么让我兴奋</title>
+    <link href="https://rongyel.github.io/posts/3b1a7464.html"/>
+    <id>https://rongyel.github.io/posts/3b1a7464.html</id>
+    <published>2024-06-27T16:37:19.044Z</published>
+    <updated>2023-11-12T11:51:09.943Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;香格里拉边界荣升我十月最期待新番，着实拿捏了我对于虚拟网游的幻想，就像当年的刀剑一样。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="兴趣档案" scheme="https://rongyel.github.io/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"/>
+    
+  </entry>
+  
+</feed>
