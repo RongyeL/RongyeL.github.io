@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2023-10-31T14:25:44.300Z</updated>
+  <updated>2024-06-29T17:17:22.153Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>艾尔登法环DLC 一周体验</title>
+    <link href="https://rongyel.github.io/posts/7c35c268.html"/>
+    <id>https://rongyel.github.io/posts/7c35c268.html</id>
+    <published>2024-06-29T17:13:33.000Z</published>
+    <updated>2024-06-29T17:17:22.153Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;DLC一上来，给了所有人一个下马威。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="兴趣档案" scheme="https://rongyel.github.io/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"/>
+    
+    <category term="游戏" scheme="https://rongyel.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>养成游戏和肉鸽游戏的思考</title>
+    <link href="https://rongyel.github.io/posts/a9343b74.html"/>
+    <id>https://rongyel.github.io/posts/a9343b74.html</id>
+    <published>2024-06-29T16:45:51.397Z</published>
+    <updated>2024-06-29T17:12:36.718Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;养成类游戏的快乐，永远是初期。&lt;br&gt;肉鸽类游戏，爽的时候很爽，不爽的时候很不爽。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="兴趣档案" scheme="https://rongyel.github.io/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么要用Markdown做笔记</title>
@@ -55,27 +95,6 @@
   </entry>
   
   <entry>
-    <title>艾尔登法环DLC 一周体验</title>
-    <link href="https://rongyel.github.io/posts/7c35c268.html"/>
-    <id>https://rongyel.github.io/posts/7c35c268.html</id>
-    <published>2024-06-27T16:37:19.053Z</published>
-    <updated>2024-06-27T16:39:59.996Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;DLC一上来，给了所有人一个下马威。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="兴趣档案" scheme="https://rongyel.github.io/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"/>
-    
-    <category term="游戏" scheme="https://rongyel.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>我的知识笔记流水思维殿堂</title>
     <link href="https://rongyel.github.io/posts/56a2756d.html"/>
     <id>https://rongyel.github.io/posts/56a2756d.html</id>
@@ -91,25 +110,6 @@
     
     
     <category term="折腾" scheme="https://rongyel.github.io/tags/%E6%8A%98%E8%85%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《香格里拉边境》为什么让我兴奋</title>
-    <link href="https://rongyel.github.io/posts/3b1a7464.html"/>
-    <id>https://rongyel.github.io/posts/3b1a7464.html</id>
-    <published>2024-06-27T16:37:19.044Z</published>
-    <updated>2023-11-12T11:51:09.943Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;香格里拉边界荣升我十月最期待新番，着实拿捏了我对于虚拟网游的幻想，就像当年的刀剑一样。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="兴趣档案" scheme="https://rongyel.github.io/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"/>
     
   </entry>
   
@@ -192,6 +192,25 @@
     <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
     
     <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>香格里拉边境 为什么让我兴奋</title>
+    <link href="https://rongyel.github.io/posts/3b1a7464.html"/>
+    <id>https://rongyel.github.io/posts/3b1a7464.html</id>
+    <published>2023-10-27T14:42:57.554Z</published>
+    <updated>2024-06-29T17:12:23.741Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;香格里拉边界荣升我十月最期待新番，着实拿捏了我对于虚拟网游的幻想，就像当年的刀剑一样。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="兴趣档案" scheme="https://rongyel.github.io/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"/>
     
   </entry>
   
