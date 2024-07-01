@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>EASY_AXI：一个简单的例程，掌握AXI基本事务流程 - IC攻城狮的摸鱼小屋</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="IC攻城狮的摸鱼小屋"><meta name="msapplication-TileImage" content="/img/favicon1.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="IC攻城狮的摸鱼小屋"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="一个简单的例程，掌握AXI基本事务流程。"><meta property="og:type" content="blog"><meta property="og:title" content="EASY_AXI：一个简单的例程，掌握AXI基本事务流程"><meta property="og:url" content="https://rongyel.github.io/posts/35eaf17c.html"><meta property="og:site_name" content="IC攻城狮的摸鱼小屋"><meta property="og:description" content="一个简单的例程，掌握AXI基本事务流程。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175503.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175606.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175706.png"><meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101180321.png"><meta property="article:published_time" content="2023-03-23T12:12:01.000Z"><meta property="article:modified_time" content="2023-10-31T14:25:10.992Z"><meta property="article:author" content="Rongye"><meta property="article:tag" content="ARM"><meta property="article:tag" content="AXI"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175503.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://rongyel.github.io/posts/35eaf17c.html"},"headline":"EASY_AXI：一个简单的例程，掌握AXI基本事务流程","image":["https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175503.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175606.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175706.png","https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101180321.png"],"datePublished":"2023-03-23T12:12:01.000Z","dateModified":"2023-10-31T14:25:10.992Z","author":{"@type":"Person","name":"Rongye"},"publisher":{"@type":"Organization","name":"IC攻城狮的摸鱼小屋","logo":{"@type":"ImageObject","url":"https://rongyel.github.io/img/favicon.png"}},"description":"一个简单的例程，掌握AXI基本事务流程。"}</script><link rel="canonical" href="https://rongyel.github.io/posts/35eaf17c.html"><link rel="icon" href="/img/favicon1.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon.png" alt="IC攻城狮的摸鱼小屋" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-23T12:12:01.000Z" title="2023/3/23 20:12:01">2023-03-23</time>发表</span><span class="level-item"><time dateTime="2023-10-31T14:25:10.992Z" title="2023/10/31 22:25:10">2023-10-31</time>更新</span><span class="level-item"> Rongye </span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span><span class="level-item">2 分钟读完 (大约292个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">EASY_AXI：一个简单的例程，掌握AXI基本事务流程</h1><div class="content"><h1 id="相关文件"><a href="#相关文件" class="headerlink" title="相关文件"></a>相关文件</h1><table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>easy_axi.v</td>
+<td>顶层文件</td>
+</tr>
+<tr>
+<td>easy_axi_tb.v</td>
+<td>测试文件testbench</td>
+</tr>
+<tr>
+<td>m_axi.v</td>
+<td>axi master，事务发起者</td>
+</tr>
+<tr>
+<td>s_axi.v</td>
+<td>axi slave，事务接收者</td>
+</tr>
+<tr>
+<td>easy_axi.gtkw</td>
+<td>gtkwave波形配置</td>
+</tr>
+<tr>
+<td>Makefile</td>
+<td>执行脚本</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://github.com/RongyeL/easy_axi">GitHub - RongyeL/easy_axi: Learn the basics of AXI against the code and protocol</a></p>
+<h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ol>
+<li>确保开发环境，安装iverilog和gtkwave。</li>
+<li>终端下输入命令make</li>
+<li><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175503.png"></li>
+<li>运行后会自动打开gtkwave</li>
+<li>file-&gt;read save file，选择.gtkw文件，加载已调整好的波形配置。<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175606.png"></li>
+<li>可以直接看到当前设计案例的波形结果</li>
+<li><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101175706.png"></li>
+</ol>
+<h1 id="代码说明"><a href="#代码说明" class="headerlink" title="代码说明"></a>代码说明</h1><h2 id="easy-axi-tb-v"><a href="#easy-axi-tb-v" class="headerlink" title="easy_axi_tb.v"></a>easy_axi_tb.v</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230101180321.png"><br>按顺序执行所配置的事务。<br>当前无法在上一个事务结束前执行下一个事务，因此需要设置时间间隔。<br>必须先进行写事务，否则读出来的结果为x，因此slave的存储空间未进行初始化。</p></div><div class="article-licensing box"><div class="licensing-title"><p>EASY_AXI：一个简单的例程，掌握AXI基本事务流程</p><p><a href="https://rongyel.github.io/posts/35eaf17c.html">https://rongyel.github.io/posts/35eaf17c.html</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Rongye</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-03-23</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-10-31</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/ARM/">ARM</a><a class="link-muted mr-2" rel="tag" href="/tags/AXI/">AXI</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/fe51682c.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">AXI协议学习笔记</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/f07a99ab.html"><span class="level-item">从零开始EDA环境搭建</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#相关文件"><span class="level-left"><span class="level-item">相关文件</span></span></a></li><li><a class="level is-mobile" href="#操作步骤"><span class="level-left"><span class="level-item">操作步骤</span></span></a></li><li><a class="level is-mobile" href="#代码说明"><span class="level-left"><span class="level-item">代码说明</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#easy-axi-tb-v"><span class="level-left"><span class="level-item">easy_axi_tb.v</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-30T13:02:00.044Z">2024-06-30</time></p><p class="title"><a href="/posts/78320dbb.html">如何正确给文章打标签和归类</a></p><p class="categories"><a href="/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/">方法论</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-30T12:25:49.387Z">2024-06-30</time></p><p class="title"><a href="/posts/1da22451.html">至今为止我依旧认为，无职转生就是最好的异世界转生作品。</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-30T09:59:04.034Z">2024-06-30</time></p><p class="title"><a href="/posts/8cb2095e.html">Steamdeck Oled入手2个月体验</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-29T17:13:33.000Z">2024-06-30</time></p><p class="title"><a href="/posts/7c35c268.html">艾尔登法环DLC 一周体验</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-29T16:45:51.397Z">2024-06-30</time></p><p class="title"><a href="/posts/a9343b74.html">养成游戏和肉鸽游戏的思考</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon.png" alt="IC攻城狮的摸鱼小屋" height="28"></a><p class="is-size-7"><span>&copy; 2024 Rongye</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p><p class="is-size-7">© 2023</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
