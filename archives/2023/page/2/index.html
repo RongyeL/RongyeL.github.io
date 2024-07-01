@@ -1,79 +1,826 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>归档: 2023 - IC攻城狮的摸鱼小屋</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="IC攻城狮的摸鱼小屋"><meta name="msapplication-TileImage" content="/img/favicon1.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="IC攻城狮的摸鱼小屋"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="记录自己在IC领域的所学所想。"><meta property="og:type" content="blog"><meta property="og:title" content="IC攻城狮的摸鱼小屋"><meta property="og:url" content="https://rongyel.github.io/"><meta property="og:site_name" content="IC攻城狮的摸鱼小屋"><meta property="og:description" content="记录自己在IC领域的所学所想。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://rongyel.github.io/img/og_image.png"><meta property="article:author" content="Rong晔"><meta property="article:tag" content="ASIC"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://rongyel.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://RongyeL.github.io"},"headline":"IC攻城狮的摸鱼小屋","image":["https://rongyel.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Rong晔"},"publisher":{"@type":"Organization","name":"IC攻城狮的摸鱼小屋","logo":{"@type":"ImageObject","url":"https://rongyel.github.io/img/favicon.png"}},"description":"记录自己在IC领域的所学所想。"}</script><link rel="icon" href="/img/favicon1.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!DOCTYPE html>
+<html lang="en">
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Bloggy Theme ">
+	<meta name="keywords" content="The Best Recipes Theme You Can Find">
+    <meta name="author" content="AIR RAYA GROUP">
+    <link href='/img/favicon.png' type='image/x-icon' rel='shortcut icon'/>
+    <title>Bloggy Theme | The Best Recipes Theme You Can Find</title>
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+	
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0">
+	
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css" rel="stylesheet">
+	
+    <!-- Custom Fonts -->
+	
+<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+	
+	 
+<link rel="stylesheet" href="/css/custom.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon.png" alt="IC攻城狮的摸鱼小屋" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><h3 class="tag is-primary">2023</h3><div class="timeline"><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-23T12:12:01.000Z">2023-03-23</time></p><p class="title"><a href="/posts/fe51682c.html">AXI协议学习笔记</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-23T12:12:01.000Z">2023-03-23</time></p><p class="title"><a href="/posts/35eaf17c.html">EASY_AXI：一个简单的例程，掌握AXI基本事务流程</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-23T12:12:01.000Z">2023-03-23</time></p><p class="title"><a href="/posts/f07a99ab.html">从零开始EDA环境搭建</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-23T12:12:01.000Z">2023-03-23</time></p><p class="title"><a href="/posts/f60848c2.html">数字IC设计开发Gvim配置</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-23T12:12:00.000Z">2023-03-23</time></p><p class="title"><a href="/posts/a2a20659.html">20221203 富士X-T5，与生活</a></p><p class="categories"><a href="/categories/%E4%BA%AB%E5%8F%97%E7%94%9F%E6%B4%BB/">享受生活</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-23T12:12:00.000Z">2023-03-23</time></p><p class="title"><a href="/posts/a6a87a63.html">对ARM access flag和dirty state机制理解</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-23T12:12:00.000Z">2023-03-23</time></p><p class="title"><a href="/posts/115c5add.html">当前ARM只有64KB粒度页表支持52bit</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-23T12:12:00.000Z">2023-03-23</time></p><p class="title"><a href="/posts/418ca596.html">CHI l-credit的使用关注点</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-02-17T13:49:03.367Z">2023-02-17</time></p><p class="title"><a href="/posts/7522086e.html">20230217 群晖220+，开启我的折腾之旅</a></p><p class="categories"><a href="/categories/%E4%BA%AB%E5%8F%97%E7%94%9F%E6%B4%BB/">享受生活</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-01-16T14:43:00.000Z">2023-01-16</time></p><p class="title"><a href="/posts/4b0c4420.html">什么叫RAS中断</a></p><p class="categories"><a href="/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/">知识碎片</a></p></div></article></div></div></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/archives/2023/">上一页</a></div><div class="pagination-next is-invisible is-hidden-mobile"><a href="/archives/2023/page/3/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/archives/2023/">1</a></li><li><a class="pagination-link is-current" href="/archives/2023/page/2/">2</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.jpg" alt="Rong晔"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Rong晔</p><p class="is-size-6 is-block">坚持摸鱼的IC攻城狮</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Shenzhen, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">26</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">21</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://space.bilibili.com/3280670" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/RongyeL"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-30T13:02:00.044Z">2024-06-30</time></p><p class="title"><a href="/posts/78320dbb.html">如何正确给文章打标签和归类</a></p><p class="categories"><a href="/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/">方法论</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-30T12:25:49.387Z">2024-06-30</time></p><p class="title"><a href="/posts/1da22451.html">至今为止我依旧认为，无职转生就是最好的异世界转生作品。</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-30T09:59:04.034Z">2024-06-30</time></p><p class="title"><a href="/posts/8cb2095e.html">Steamdeck Oled入手2个月体验</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-29T17:13:33.000Z">2024-06-30</time></p><p class="title"><a href="/posts/7c35c268.html">艾尔登法环DLC 一周体验</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-29T16:45:51.397Z">2024-06-30</time></p><p class="title"><a href="/posts/a9343b74.html">养成游戏和肉鸽游戏的思考</a></p><p class="categories"><a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/">兴趣杂谈</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E4%BA%AB%E5%8F%97%E7%94%9F%E6%B4%BB/"><span class="level-start"><span class="level-item">享受生活</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"><span class="level-start"><span class="level-item">兴趣杂谈</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">学习笔记</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"><span class="level-start"><span class="level-item">心得体会</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/"><span class="level-start"><span class="level-item">方法论</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/"><span class="level-start"><span class="level-item">知识碎片</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/AMBA/"><span class="tag">AMBA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ARM/"><span class="tag">ARM</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AXI/"><span class="tag">AXI</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CHI/"><span class="tag">CHI</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GVim/"><span class="tag">GVim</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HEXO/"><span class="tag">HEXO</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MMU/"><span class="tag">MMU</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Markdown/"><span class="tag">Markdown</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E6%96%AD/"><span class="tag">中断</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"><span class="tag">兴趣档案</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"><span class="tag">内存管理</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A8%E6%BC%AB/"><span class="tag">动漫</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%A0%E7%89%A9/"><span class="tag">宠物</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A5%E5%85%B7/"><span class="tag">工具</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%98%E8%85%BE/"><span class="tag">折腾</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%91%84%E5%BD%B1/"><span class="tag">摄影</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%97IC/"><span class="tag">数字IC</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E7%A0%81/"><span class="tag">数码</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"><span class="tag">方法论</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B8%B8%E6%88%8F/"><span class="tag">游戏</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A1%B5%E8%A1%A8/"><span class="tag">页表</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2024/06/"><span class="level-start"><span class="level-item">六月 2024</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/05/"><span class="level-start"><span class="level-item">五月 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/11/"><span class="level-start"><span class="level-item">十一月 2023</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/10/"><span class="level-start"><span class="level-item">十月 2023</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/03/"><span class="level-start"><span class="level-item">三月 2023</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/02/"><span class="level-start"><span class="level-item">二月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/01/"><span class="level-start"><span class="level-item">一月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon.png" alt="IC攻城狮的摸鱼小屋" height="28"></a><p class="is-size-7"><span>&copy; 2024 Rong晔</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p><p class="is-size-7">© 2023</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+</head>
+
+
+<body class="boxed">
+	<div id="wrapper">
+		<div class="header-top">
+	<div class="brand">Bloggy Theme</div>
+		<div class="address-bar">The Best Recipes Theme You Can Find</div>
+</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="/">Bloggy Theme</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+					<li>
+                        <a href="#">Blog</a>
+                    </li>
+					<li>
+                        <a href="#">Pictures</a>
+                    </li>
+					<li>
+                        <a href="#">Privacy</a>
+                    </li>
+					<li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+		
+		<!-- Main content -->
+			         <section id="carousel">
+			<div class="row carousel-holder"><!-- row carousel-holder -->
+
+                    <div class="col-md-8"><!-- col-md-12 -->
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src='/img/salmon.jpg' alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src='/img/steak.jpg' alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src='/img/noodle.jpg' alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div><!-- col-md-12 -->
+					<div class="col-md-4>
+					<!--About Widget-->
+                        <aside id="about-widget">
+                           <div class="text-center widget-wrap">
+								<div class="profile">
+									<img class="img-circle  img-responsive" src='/img/profile.png' alt="foods">
+								
+									  <h5>Welcome to Bloggy Theme</h5>
+									  <p class="front">Bloggy Theme is one of best hexo themes on the market. It is beautifully designed for food bloggers. Grab now and make it yours.</p>
+										<ul class="list-inline bottom-social">
+											<li><a href="#">
+												<span class="fa-stack bottom fa-lg twitter">
+												  <i class="fa fa-circle fa-stack-2x"></i>
+												  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+												</span>
+												</a>
+											</li>
+											<li><a href="#"><span class="fa-stack bottom fa-lg fb">
+												  <i class="fa fa-circle fa-stack-2x"></i>
+												  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+												</span>
+												</a>
+											</li>
+											<li><a href="#"><span class="fa-stack bottom fa-lg instagram">
+												  <i class="fa fa-circle fa-stack-2x"></i>
+												  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+												</span>
+												</a>
+											</li>
+											<li><a href="#"><span class="fa-stack bottom fa-lg gp">
+												  <i class="fa fa-circle fa-stack-2x"></i>
+												  <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+												</span>
+												</a>
+											</li>
+											<li><a href="#"><span class="fa-stack bottom fa-lg pinterest">
+												  <i class="fa fa-circle fa-stack-2x"></i>
+												  <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+												</span>
+												</a>
+											</li>
+										</ul>
+								</div>
+                           </div>
+                           <div class="clearfix"></div>
+                        </aside>
+                        <!--/ About Widget-->
+						</div>
+
+                </div><!-- row carousel-holder -->
+         </section>
+
+					<!-- Main content -->
+		<section id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="front-ads">
+							<a href="https://graphicriver.net/?ref=webthemethemplates" target="_blank">
+							<img src="/img/graphicriver.jpg" class="img-responsive">
+						</div>
+						
+						  
+						  
+							
+							
+							  
+							  
+							  <section class="archives-wrap">
+								
+								<div class="archives">
+							
+					</div>
+					<div class="col-lg-6 blogpost">	
+					
+							<article id="post-IC攻城狮的摸鱼小屋/技术/AXI/AXI协议学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		
+		  <div class="article-header-category">
+			
+  
+    <h3 itemprop="name">
+      <a class="name-title" href="/posts/fe51682c.html">AXI协议学习笔记</a>
+    </h3>
+  
+
+			Posted on 
+  <time datetime="2023-03-23T12:12:01.000Z" itemprop="datePublished"> 2023-03-23</time><span class="name">
+
+
+ <i class="fa fa-user"></i> by Rongye</span>
+		  </div>
+		
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  
+			<p>AXI总线是当前最常用的总线协议，身为IC工程师，对AXI的掌握可以说是必须的。</p>
+			
+		  
+		</div>
+	</div>
+	  
+</article>
+
+						  
+							
+							
+					</div>
+					<div class="col-lg-6 blogpost">	
+					
+							<article id="post-IC攻城狮的摸鱼小屋/技术/AXI/EASY_AXI：一个简单的例程，掌握AXI基本事务流程" class="article article-type-post" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		
+		  <div class="article-header-category">
+			
+  
+    <h3 itemprop="name">
+      <a class="name-title" href="/posts/35eaf17c.html">EASY_AXI：一个简单的例程，掌握AXI基本事务流程</a>
+    </h3>
+  
+
+			Posted on 
+  <time datetime="2023-03-23T12:12:01.000Z" itemprop="datePublished"> 2023-03-23</time><span class="name">
+
+
+ <i class="fa fa-user"></i> by Rongye</span>
+		  </div>
+		
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  
+			<p>一个简单的例程，掌握AXI基本事务流程。</p>
+			
+		  
+		</div>
+	</div>
+	  
+</article>
+
+						  
+							
+							
+					</div>
+					<div class="col-lg-6 blogpost">	
+					
+							<article id="post-IC攻城狮的摸鱼小屋/技术/Tools/从零开始EDA环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		
+		  <div class="article-header-category">
+			
+  
+    <h3 itemprop="name">
+      <a class="name-title" href="/posts/f07a99ab.html">从零开始EDA环境搭建</a>
+    </h3>
+  
+
+			Posted on 
+  <time datetime="2023-03-23T12:12:01.000Z" itemprop="datePublished"> 2023-03-23</time><span class="name">
+
+
+ <i class="fa fa-user"></i> by Rongye</span>
+		  </div>
+		
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  
+			<p>搭建一个能够运行tinyriscv项目的EDA环境。</p>
+			
+		  
+		</div>
+	</div>
+	  
+</article>
+
+						  
+							
+							
+					</div>
+					<div class="col-lg-6 blogpost">	
+					
+							<article id="post-IC攻城狮的摸鱼小屋/技术/Tools/数字IC设计开发Gvim配置" class="article article-type-post" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		
+		  <div class="article-header-category">
+			
+  
+    <h3 itemprop="name">
+      <a class="name-title" href="/posts/f60848c2.html">数字IC设计开发Gvim配置</a>
+    </h3>
+  
+
+			Posted on 
+  <time datetime="2023-03-23T12:12:01.000Z" itemprop="datePublished"> 2023-03-23</time><span class="name">
+
+
+ <i class="fa fa-user"></i> by Rongye</span>
+		  </div>
+		
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  
+			<p>记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。</p>
+			
+		  
+		</div>
+	</div>
+	  
+</article>
+
+						  
+							
+							
+					</div>
+					<div class="col-lg-6 blogpost">	
+					
+							<article id="post-IC攻城狮的摸鱼小屋/兴趣/数码/20221203 富士X-T5，与生活" class="article article-type-post" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		
+		  <div class="article-header-category">
+			
+  
+    <h3 itemprop="name">
+      <a class="name-title" href="/posts/a2a20659.html">20221203 富士X-T5，与生活</a>
+    </h3>
+  
+
+			Posted on 
+  <time datetime="2023-03-23T12:12:00.000Z" itemprop="datePublished"> 2023-03-23</time><span class="name">
+
+
+ <i class="fa fa-user"></i> by Rongye</span>
+		  </div>
+		
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  
+			<ul>
+<li><input checked="" disabled="" type="checkbox"> 富士X-T5撰写</li>
+</ul>
+<p>截止今日，我总共拥有过两台相机，<br>一台是富士x100f，在2020年买的一台二手机。<br>另一台就是富士xt5，在2022年11月首发购买，陪伴至今，记录我生活的所需所想。</p>
+<p>富士是个很有趣的牌子。都说“底大一级压死人”，当其他品牌纷纷发力全画幅时，富士却只有中画幅和apsc两个产品线。要么特别大，要么比较小。<br>apsc也是被笑称残幅，然而富士却以一种all in的气势，投入到apsc的产品开发中，至今已经推出了n款产品。</p>
+<p>另外，富士的胶片色彩美学，也是比较为人称道的。富士作为曾经的胶片大场，积累了多年的色彩数据。根据历史积累，将胶片滤镜添加到了机身内部，可以直出获得后期才能拥有的色彩效果。<br>这一点真的广受好评。虽然有很多专业人士肯定是不太在乎这个的，但对于大多数普通人来说，去研究照片调色根本是不可能的事情，能够直接拍出好看的照片，才有使用相机的意义。</p>
+<h2 id="我与x100f"><a href="#我与x100f" class="headerlink" title="我与x100f"></a>我与x100f</h2><p>其实并没有那么长久的故事，毕竟我第一次真正拥有一台相机，还是在2022年，读研究生的时候。</p>
+<p>在此之前，我都是用的手机拍照，mate20pro。在某次看了同学相机的照片，与自己手机照片进行对比后，明显感觉到相机拍出来的真的更好看，更真实。因此萌生了购置一台相机的想法。</p>
+<p>于是，在某位学弟的蛊惑下，我买了一台二手x100f，旁轴相机。<br>买下来的最大理由，可能就是好看吧。<br>作为一名理工男，真的特别喜欢这种充满工业机械气息的数码产品。然后也看过许多富士的测评，胶片滤镜也是打动我的一点，因为我也没那么多时间投入在后期修照片上，这一点后续也证明了这个考量的正确性，并直接影响到下一台相机还是富士。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120231435.png" alt="image.png"></p>
+<p>富士x100f是台不可更换镜头的35mm定焦相机，而且是一台老机子了，换代产品xf100v有不少提升。<br><strong>但价格当然是我第一考虑要素，更好的图像处理器，更好的屏幕，更好看的滤镜，这些都含泪放弃了</strong></p>
+<p>相机不可更换镜头，我也少花一笔钱，多好。当时我也是抱着试试水的心态，初步涉足摄影领域，希望它能带来一些不一样的乐趣。而它，也完全没有辜负我的期待。</p>
+<p>x100f记录了我每一次出行，为给老婆拍了很多美美的照片，能让她满意，可以说是最大的肯定哈哈。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120231456.png" alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120231535.png" alt="image.png"></p>
+<p>拍照也给我带来了快乐，将生活中见到的好看的，有趣的，值得纪念的东西记录下来，真的很有趣。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120231642.png" alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120231621.png" alt="image.png"></p>
+<p>因此，我的第一台相机可以说是成功的。但在长时间使用后，还是会逐渐感受到它的不足。</p>
+<p>有比较关键的几个问题，<br>不可更换的定焦镜头，使得创作空间受到了一些限制。<br>100f是35mm的镜头，这个焦段被称为最适合人文摄影的镜头，因为它是最接近人眼的焦段。我当时想的也是，主要给妹子拍拍照，用这个刚好。<br>那问题也很清晰，就是如果不拍人文的话，就没那么方便了。<br>没有长焦，就拍不远，就很难拍动物。猫狗鸟这样的动物，你只要稍微靠的近一点它就跑了，所以非常难拍。而且100f的分辨率也不大，远距离拍了再裁切，画面损失的非常明显。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120231700.png" alt="image.png"></p>
+<p>没有短焦，就拍不近。想拍摄食物，模型之类的东西，很难对上焦，由于图像传感器的问题，还存在圣光之类的蜜汁问题。机身屏幕比较差，很多时候都会感觉屏幕里不好看，返到</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120231729.png" alt="image.png"></p>
+<p>所以，想要给相机更新一下的这个想法已经存在很久了。<br>当时看了很多相机的评测，最后还是决定继续呆在富士这个舒适圈中，看中了那个xs10，是台性价比极高的相机。然而它的溢价实在是太高了，它的官方价是<strong>7000</strong>，我写这篇文章的时候看了一眼，现在居然溢价到<strong>10000</strong>了都，这太离谱了……<br>而且买东西最好不要买第一代，所以我一直在等xs20，到时买个首发好了。<br>没想到一等等到现在，xs10没出，<br>xt5出了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231110233903.png" alt="image.png"></p>
+<h2 id="摄像旗舰x-t5"><a href="#摄像旗舰x-t5" class="headerlink" title="摄像旗舰x-t5"></a>摄像旗舰x-t5</h2><p>xt5一直以来都是富士的旗舰产品线，之前我也看过很多xt4的视频，很心动，但真的舍不得花上万块钱。</p>
+<p>现在工作以后，心动变成了一种咬咬牙就能够到的现实。<br><strong>要买就买最好，买完多用几年</strong>一直是我的购物哲学，所以虽然xt5真的很贵，但感觉它真的很好很适合我，而且，<br><strong>它真的很帅</strong><br>所以我直接抢首发预定了1680套机。</p>
+<p>机身更大更扎实，可更换镜头，更丰富的胶片滤镜，更高分辨率的传感器，更好的相机屏幕。<br>xt5全面弥补了之前X100F落后的地方，给我带来了更佳的拍摄体验。<br>心满意足。</p>
+<p>当然，东西虽然变好了，但摄影技术暂时没有特别大的提高。还是要多用用，提高自己的技术上限，才能挥发更多装备的能力。</p>
+<p>隔了大半年，继续补充一下X-T5的使用体验吧。</p>
+<p>首先，4000w像素的传感器确实非常不错，这给我的构图带来了很大很大的帮助。<br>使用定焦镜头的时候，有时没法捕捉某个距离，但是只要稳定的拍一张，回家再裁切一下，还是能获得满意的构图。甚至是意外之喜。</p>
+<p>其次，胶片滤镜还是非常方便，最常使用的就是CC滤镜。直出就可以非常的好看了。<br>不过最近尝试了一下自己机身调色，在CC的基础上进一步调整白平衡，色彩偏移，拍出来的效果更好了。直接暴打原本的CC。<br>今后还是要在现场，根据当时的摄影条件，做一下机内调整，这样直出得到的照片就已经很完美了，甚至后期用电脑调RAF格式还调不出那种感觉。。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120231144.png" alt="调色直出"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120231157.png" alt="RAW格式调色"></p>
+<p>最近换了一颗新的定焦镜头XT35F1.4<br>是老镜头了，3500入的……镜头真的是好贵啊，还好使用起来效果很棒，还是打出了它的身价<br>小巧、大光圈，用起来真舒服</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120232019.png" alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120232032.png" alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120232058.png" alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231120232114.png" alt="image.png"></p>
+
+		  
+		</div>
+	</div>
+	  
+</article>
+
+						  
+							
+							
+					</div>
+					<div class="col-lg-6 blogpost">	
+					
+							<article id="post-IC攻城狮的摸鱼小屋/技术/ARM/对ARM access flag和dirty state机制理解" class="article article-type-post" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		
+		  <div class="article-header-category">
+			
+  
+    <h3 itemprop="name">
+      <a class="name-title" href="/posts/a6a87a63.html">对ARM access flag和dirty state机制理解</a>
+    </h3>
+  
+
+			Posted on 
+  <time datetime="2023-03-23T12:12:00.000Z" itemprop="datePublished"> 2023-03-23</time><span class="name">
+
+
+ <i class="fa fa-user"></i> by Rongye</span>
+		  </div>
+		
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  
+			<p>ARM的access flag和dirty state机制用于进行页表的维护，经过一段时间的思考，现在总算是理清楚了。</p>
+			
+		  
+		</div>
+	</div>
+	  
+</article>
+
+						  
+							
+							
+					</div>
+					<div class="col-lg-6 blogpost">	
+					
+							<article id="post-IC攻城狮的摸鱼小屋/技术/ARM/当前ARM只有64KB粒度页表支持52bit" class="article article-type-post" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		
+		  <div class="article-header-category">
+			
+  
+    <h3 itemprop="name">
+      <a class="name-title" href="/posts/115c5add.html">当前ARM只有64KB粒度页表支持52bit</a>
+    </h3>
+  
+
+			Posted on 
+  <time datetime="2023-03-23T12:12:00.000Z" itemprop="datePublished"> 2023-03-23</time><span class="name">
+
+
+ <i class="fa fa-user"></i> by Rongye</span>
+		  </div>
+		
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  
+			<p>ARMv8.2架构支持到52bit了，但仅有64KB粒度的页表才支持<br>ARMv9架构则4k和16k翻译粒度也支持52bit，这里简单理解一下。</p>
+			
+		  
+		</div>
+	</div>
+	  
+</article>
+
+						  
+							
+							
+					</div>
+					<div class="col-lg-6 blogpost">	
+					
+							<article id="post-IC攻城狮的摸鱼小屋/技术/CHI/CHI l-credit的使用关注点" class="article article-type-post" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		
+		  <div class="article-header-category">
+			
+  
+    <h3 itemprop="name">
+      <a class="name-title" href="/posts/418ca596.html">CHI l-credit的使用关注点</a>
+    </h3>
+  
+
+			Posted on 
+  <time datetime="2023-03-23T12:12:00.000Z" itemprop="datePublished"> 2023-03-23</time><span class="name">
+
+
+ <i class="fa fa-user"></i> by Rongye</span>
+		  </div>
+		
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  
+			<p>CHI协议的LINK层credit握手机制是个很有意思的东西，实际使用的时候有些需要关注的地方。</p>
+			
+		  
+		</div>
+	</div>
+	  
+</article>
+
+						  
+							
+							
+					</div>
+					<div class="col-lg-6 blogpost">	
+					
+							<article id="post-IC攻城狮的摸鱼小屋/兴趣/数码/20230217 群晖220+，开启我的折腾之旅" class="article article-type-post" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		
+		  <div class="article-header-category">
+			
+  
+    <h3 itemprop="name">
+      <a class="name-title" href="/posts/7522086e.html">20230217 群晖220+，开启我的折腾之旅</a>
+    </h3>
+  
+
+			Posted on 
+  <time datetime="2023-02-17T13:49:03.367Z" itemprop="datePublished"> 2023-02-17</time><span class="name">
+
+
+ <i class="fa fa-user"></i> by Rong晔</span>
+		  </div>
+		
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  
+			<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230217214910.png" alt="image.png"><br><a target="_blank" rel="noopener" href="https://sspai.com/post/64089">第六期：扩展 NAS 之影音管理 - 少数派</a></p>
+<h1 id="plex"><a href="#plex" class="headerlink" title="plex"></a>plex</h1><p>总是遇到，无法保存你的修改，这个烦人的东西。</p>
+<p>突然想起来，昨天好像就是把服务器要先关掉……<br>重新安装一次，再进行配置，就正常了……我真的要气死。</p>
+<p>在套机中心先停用一次，然后重新启动，再进去配置媒体库就正常了。</p>
+<p>现在可以了<br>电视安装plex也遇到一些问题需要注意。<br>要安装ARM V7版本<br><a target="_blank" rel="noopener" href="http://niaowoclub.com/thread?topicId=2609">原来走adb安装plex就可以成功 还能点亮杜比视界 - 鸟窝社区</a></p>
+<p>(<a target="_blank" rel="noopener" href="https://forums.plex.tv/t/plex-for-android/29115/407">https://forums.plex.tv/t/plex-for-android/29115/407</a>)</p>
+<p>(<a target="_blank" rel="noopener" href="https://downloads.plex.tv/Kepler/kepler-armv7a-googlePlay-stdExo-8.26.2.29389-fdca424e.apk">https://downloads.plex.tv/Kepler/kepler-armv7a-googlePlay-stdExo-8.26.2.29389-fdca424e.apk</a>)</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230218023405.png" alt="image.png"><br>这个问题跟路由器有关，需要处理一下</p>
+<h2 id="基本套件"><a href="#基本套件" class="headerlink" title="基本套件"></a>基本套件</h2><p>传照片什么都可以，挺好用。<br>有个问题就是，华为云已经释放的照片，是么有办法同步的……<br>所以现在moments只同步了我手机的本地照片。</p>
+<p>话说加条内存才200块，下单了。</p>
+<h2 id="软路由"><a href="#软路由" class="headerlink" title="软路由"></a>软路由</h2><p>好像这个可以实现科学上网。研究一下<br>现在内存不足，等我内存条到了再说<br>配置了这个，启动虚拟机后，在这个链接下进行配置<br><a target="_blank" rel="noopener" href="http://192.168.3.150/">http://192.168.3.150/</a><br><a target="_blank" rel="noopener" href="https://www.mspace.cc/archives/776">5 分钟实现全屋科学上网 群晖 NAS 安装 Openwrt 旁路由教程-牧之笔记 - 世界不应有局限</a></p>
+<p><a target="_blank" rel="noopener" href="https://world.crisp.help/zh/article/openwrt-shadowsocksr-plus-1xcs6hf/">如何在 OpenWrt ShadowsocksR-Plus 上配置服务 | Help Center</a><br>配置成功了，看看效果</p>
+<p>如何使用看这个<a target="_blank" rel="noopener" href="https://sspai.com/post/59708">从听说到上手，人人都能看懂的旁路由入门指南 - 少数派</a></p>
+<p>这个地方描述的不是很清楚，</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230218210051.png" alt="image.png"><br>这里需要注意，IP地址要选择一个没有被占用的。<br>千万不要配成路由器的ip，192.168.3.1<br>需要配置完整才能生效</p>
+<p>配置完以后还需要调整一下防火墙，否则无法正常访问国内网站<br><a target="_blank" rel="noopener" href="https://wp.gxnas.com/10078.html">OpenWrt做旁路由时国外网站正常访问而打不开国内网站的解决方法 - GXNAS博客</a></p>
+<p>现在可以直接访问外网了……爽</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230218211700.png" alt="image.png"></p>
+<p>我瞎配NAS的静态IP，导致无法正常访问系统额，<br>还好有这个可以重新配置<br>重置大法好<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yihuyuanyuan/article/details/81080514">群晖中网络设置错误，导致无法搜寻群晖的IP_大象1999的博客-CSDN博客_群晖 经常分配不出ip</a></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230219093855.png" alt="image.png"><br>配置的时候NAS里应该这样填</p>
+<h2 id="自动下番"><a href="#自动下番" class="headerlink" title="自动下番"></a>自动下番</h2><p>基本可以实现，用rss自动下就可以了。可能会下到重复的番，需要手动调整一下。</p>
+<p>手动先追一些番，然后自动下载，虽然会一次性下很多，但只要完结撒花后再归档就好了。</p>
+<h2 id="plex-1"><a href="#plex-1" class="headerlink" title="plex"></a>plex</h2><p>搭建是很容易，但是维护实在是太麻烦了……<br>可能视频文件命名不正确，就没有办法正常的进行合集了。很烦。真的很烦</p>
+<h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230219182712.png" alt="image.png"><br>下载不成功，这里需要配置镜像<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012514495/article/details/126441861">群辉Docker 下载仓库镜像提示失败 解决办法_群晖docker无法下载镜像_李佑辰的博客-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/dcae38a3f978">群晖Docker安装tinyMediaManager - 简书</a><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230219184704.png" alt="image.png"><br>太难装了也<br><a target="_blank" rel="noopener" href="http://www.gebi1.com/thread-295644-2-1.html">群晖Docker里安装TinyMediaManager并开启中文支持(完美解决) - 第2页 - 黑白群晖 - 隔壁网</a><br>参考这个，需要处理一个字体下载的问题</p>
+<p><a target="_blank" rel="noopener" href="https://post.smzdm.com/p/ar0nq5dg/">群晖Docker：小白安装tmm刮削保姆级教程，修改host解决刮削不全 ，建立完美电影墙！_NAS存储_什么值得买</a></p>
+<p>这个更完整</p>
+
+		  
+		</div>
+	</div>
+	  
+</article>
+
+						  
+							
+							
+					</div>
+					<div class="col-lg-6 blogpost">	
+					
+							<article id="post-IC攻城狮的摸鱼小屋/技术/ARM/什么叫RAS中断" class="article article-type-post" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		
+		  <div class="article-header-category">
+			
+  
+    <h3 itemprop="name">
+      <a class="name-title" href="/posts/4b0c4420.html">什么叫RAS中断</a>
+    </h3>
+  
+
+			Posted on 
+  <time datetime="2023-01-16T14:43:00.000Z" itemprop="datePublished"> 2023-01-16</time><span class="name">
+
+
+ <i class="fa fa-user"></i> by Rongye</span>
+		  </div>
+		
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  
+			<p>ras中断是什么，听的很多但也不太清楚什么中断才能叫做ras中断。</p>
+			
+		  
+		</div>
+	</div>
+	  
+</article>
+
+						  
+						  
+							</div></section>
+						  
+						
+						
+						  <div class="pagination">
+							<a class="extend prev" rel="prev" href="/archives/2023/">Prev</a><a class="page-number" href="/archives/2023/">1</a><span class="page-number current">2</span>
+						  </div>
+						
+					</div>
+					<div class="col-lg-4">
+					
+							<h4 class="lead">Subscribe</h4>
+                            <p class="sidebar-p">Subscribe to receive updates and the latest posts about easy recipes. I won't spam.</p>
+                           <div class="newsletter newsletter-widget">
+								<form style="padding:3px;text-align: center; margin: 20px;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=Ibloggerca', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p style="text-align: left;">Enter your email address:</p>
+								<p><input type="text" style="width: 100%; display: block; height: 40px; font-size: 12px; background-color: #F8F8F8; padding-left: 10px; border: 1px solid #ccc;" name="email" placeholder="Email address..."/></p>
+								<input type="hidden" value="Ibloggerca" name="uri"/><input type="hidden" name="loc" value="en_US"/>
+								<input type="submit" value="Subscribe" style="width: 100%; display: block; background-color: #674a4f; color: white; border-color: #926870; padding-left: 10px; height: 40px; font-size: 20px; font-weight: bold;"/>
+								<p>Delivered by <a href="https://feedburner.google.com" target="_blank">FeedBurner</a></p>
+								</form>
+                           </div>
+						   
+							
+								
+							<h4 class="lead">Featured</h4>
+                           <div>
+                              <div class="media">
+                                 <div class="media-body"><a href="#"><img src="/assets/salad.jpg" class="img-responsive" alt="fried kwetiau"></a></div>
+                                 <div class="media-body"><a href="#"><img src="/assets/soup.jpg" class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src="/assets/cookies.jpg" class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src="/assets/cake.jpg" class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src="/assets/appetizer.jpg" class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src="/assets/pancake.jpg" class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src="/assets/lunch.jpg" class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src="/assets/fish.jpg" class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src="/assets/dinner.jpg" class="img-responsive" alt=""></a></div>
+                              </div>
+                           </div>
+						    <h4 class="lead">Advertisement</h4>
+								<a href="https://graphicriver.net/?ref=webthemethemplates" target="_blank">
+							<img src="/img/themeforest.jpg" class="img-responsive">
+                           <div class="clearfix"></div>
+						   
+						   <h4 class="lead">Advertisement</h4>
+                           	<a href="http://www.maplelearning.org" target="_blank">
+							<img src="/assets/ads.png" class="img-responsive">
+                           <div class="clearfix"></div>
+				
+					</div>
+				<div>
+			</div>
+		</section>
+
+	
+		
+		
+<!-- footer -->
+      <footer>
+         <div id="footer-wrapper" class="footer-wrapper">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="footer-title">
+                        <h2 class="footer-title">About Best Recipes</h2>
+						<p class="footer-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. Curabitur sed quam ac ipsum cursus pretium. Vivamus bibendum, nunc ac lobortis dictum, mi velit venenatis elit, at bibendum nulla libero vitae velit. Vivamus lacinia non odio et laoreet. Aliquam blandit imperdiet tristique. Ut ut dictum lacus, non venenatis est. Nulla condimentum ut massa at condimentum. Nulla dui turpis, lobortis ut massa sed, posuere consequat odio. Curabitur luctus ac nisi et interdum. Quisque elementum porttitor egestas.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                     <div class="category">
+                        <a href="#"><p>About us</p></a>
+                           <a href="#"><p>Contact us</p></a>
+                           <a href="#"><p>Privacy</p></a>
+                           <a href="#"><p>Terms of Use</p></a>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-xs-12 mb-sm-30 mb-xs-0">
+                     <div class="category">
+                        <!-- Contacts Widget -->
+
+                        <div class="links">
+                           <a href="#"><p>Appetizers</p></a>
+                           <a href="#"><p>Drinks</p></a>
+                           <a href="#"><p>Breakfast</p></a>
+                           <a href="#"><p>Lunch</p></a>
+                        </div>
+                        <!-- / Contacts Widget -->
+                     </div>
+                  </div>
+                  <div class="col-md-2 col-sm-6 col-xs-12">
+                     <div class="category">
+                        <div class="links">
+                           <a href="#"><p>Desserts</p></a>
+                           <a href="#"><p>Dinner</p></a>
+                           <a href="#"><p>Side Dishes</p></a>
+                           <a href="#"><p>Salads</p></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="category">
+							<div class="links">
+							   <a href="#"><p>Soups</p></a>
+							   <a href="#"><p>Snacks</p></a>
+							   <a href="#"><p>Cookies</p></a>
+							   <a href="#"><p>Cakes</p></a>
+							</div>
+						</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="copyrights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="black">Copyright &copy; Personal 2017</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="black">Supported by <a href="http://www.maplelearning.org" target="_blank">Maple Learning</a> with <i class="fa fa-heart" style="color:#DF0101;"></i> In Toronto, Canada. </p>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </footer>
+      <!-- /footer -->
+
+
+
+</script>
+
+    <!-- jQuery -->
+	
+<script src="/javascript/jquery.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+	
+<script src="/javascript/bootstrap.min.js"></script>
+
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+	
+	<!-- Scroll to Top Button -->
+	<button href="#top" id="backToTopBtn" class="btn btn-md scroll"><span class="glyphicon glyphicon-chevron-up"></span></button>
+	  <script>
+	  $('#backToTopBtn').click(function(){
+			$('html,body').animate({scrollTop:0},'slow');return false;
+		});
+   </script>
+      <script>
+   $(document).ready(function(){
+	
+	//Check to see if the window is top if not then display button
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scroll').fadeIn();
+		} else {
+			$('.scroll').fadeOut();
+		}
+	});
+	
+	//Click event to scroll to top
+	$('.scroll').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+	
+});
+   </script>
+
+
+
+
+
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+	</div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
