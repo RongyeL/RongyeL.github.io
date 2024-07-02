@@ -1,3 +1,4 @@
+https://rongyel.github.io/posts/da16531b.html
 https://rongyel.github.io/posts/7c35c268.html
 https://rongyel.github.io/posts/1da22451.html
 https://rongyel.github.io/posts/586db46b.html
@@ -52,6 +53,7 @@ https://rongyel.github.io/tags/CHI/
 https://rongyel.github.io/tags/GVim/
 https://rongyel.github.io/tags/AMBA/
 https://rongyel.github.io/tags/%E4%BA%BA%E7%94%9F/
+https://rongyel.github.io/tags/Obsidian/
 https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/
 https://rongyel.github.io/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/
 https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
@@ -60,3 +62,4 @@ https://rongyel.github.io/categories/%E4%BA%AB%E5%8F%97%E7%94%9F%E6%B4%BB/
 https://rongyel.github.io/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/
 https://rongyel.github.io/categories/%E5%BA%94%E7%94%A8/
 https://rongyel.github.io/categories/%E4%B8%AA%E4%BA%BA%E6%B5%85%E8%A7%81/
+https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/

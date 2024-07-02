@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-07-01T17:43:49.017Z</updated>
+  <updated>2024-07-02T14:47:31.608Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo直接发布Obsidian路径下的文章</title>
+    <link href="https://rongyel.github.io/posts/da16531b.html"/>
+    <id>https://rongyel.github.io/posts/da16531b.html</id>
+    <published>2024-07-02T14:37:56.469Z</published>
+    <updated>2024-07-02T14:47:31.608Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Obsidian撰写文章，还要复制到Hexo的_post路径下，才能部署，这个动作太麻烦了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+    
+    <category term="HEXO" scheme="https://rongyel.github.io/tags/HEXO/"/>
+    
+    <category term="Obsidian" scheme="https://rongyel.github.io/tags/Obsidian/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo Icarus主题文章栏如何调宽</title>
@@ -385,27 +406,6 @@
     
     
     <summary type="html">&lt;p&gt;AXI总线是当前最常用的总线协议，身为IC工程师，对AXI的掌握可以说是必须的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="AXI" scheme="https://rongyel.github.io/tags/AXI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EASY_AXI：一个简单的例程，掌握AXI基本事务流程</title>
-    <link href="https://rongyel.github.io/posts/35eaf17c.html"/>
-    <id>https://rongyel.github.io/posts/35eaf17c.html</id>
-    <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-31T14:25:10.992Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;一个简单的例程，掌握AXI基本事务流程。&lt;/p&gt;</summary>
     
     
     
