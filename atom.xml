@@ -297,6 +297,25 @@
   </entry>
   
   <entry>
+    <title>人的锚点</title>
+    <link href="https://rongyel.github.io/posts/586db46b.html"/>
+    <id>https://rongyel.github.io/posts/586db46b.html</id>
+    <published>2023-04-26T16:23:20.880Z</published>
+    <updated>2024-07-02T13:50:29.252Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;看黎明之剑这本小说的时候，提到了神明的锚点这么个设定。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="个人浅见" scheme="https://rongyel.github.io/categories/%E4%B8%AA%E4%BA%BA%E6%B5%85%E8%A7%81/"/>
+    
+    
+    <category term="人生" scheme="https://rongyel.github.io/tags/%E4%BA%BA%E7%94%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>markdown笔记工具分析</title>
     <link href="https://rongyel.github.io/posts/c1f4e46a.html"/>
     <id>https://rongyel.github.io/posts/c1f4e46a.html</id>
@@ -396,25 +415,6 @@
     <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
     
     <category term="AXI" scheme="https://rongyel.github.io/tags/AXI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始EDA环境搭建</title>
-    <link href="https://rongyel.github.io/posts/f07a99ab.html"/>
-    <id>https://rongyel.github.io/posts/f07a99ab.html</id>
-    <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2024-06-30T12:56:06.151Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;搭建一个能够运行tinyriscv项目的EDA环境。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
     
   </entry>
   
