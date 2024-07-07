@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-07-07T04:38:49.870Z</updated>
+  <updated>2024-07-07T07:28:33.931Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,11 +17,51 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何自动切换Obsidian Vim模式的中英文模式</title>
+    <link href="https://rongyel.github.io/posts/6042261.html"/>
+    <id>https://rongyel.github.io/posts/6042261.html</id>
+    <published>2024-07-07T07:09:16.420Z</published>
+    <updated>2024-07-07T07:28:33.931Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Obsidian的Vim模式使用，在中文输入下的体验有一个非常割裂的地方。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+    
+    <category term="GVim" scheme="https://rongyel.github.io/tags/GVim/"/>
+    
+    <category term="Obsidian" scheme="https://rongyel.github.io/tags/Obsidian/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何去掉快捷方式图标左下角的箭头</title>
+    <link href="https://rongyel.github.io/posts/bf695b9.html"/>
+    <id>https://rongyel.github.io/posts/bf695b9.html</id>
+    <published>2024-07-06T15:53:43.463Z</published>
+    <updated>2024-07-07T04:41:22.909Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;应用程序在桌面的快捷方式左下角总会有一个小箭头影响美观，很烦&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+    
+    <category term="WINDOWS" scheme="https://rongyel.github.io/tags/WINDOWS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>瞎搞导致无法用IP访问群晖NAS界面的处理方案</title>
     <link href="https://rongyel.github.io/posts/41143f4e.html"/>
     <id>https://rongyel.github.io/posts/41143f4e.html</id>
     <published>2024-07-06T15:53:43.288Z</published>
-    <updated>2024-07-07T04:38:49.870Z</updated>
+    <updated>2024-07-07T04:39:29.637Z</updated>
     
     
     <summary type="html">&lt;p&gt;瞎搞导致无法用IP访问群晖NAS界面的处理方案&lt;/p&gt;</summary>
@@ -375,44 +415,6 @@
     
     
     <category term="兴趣档案" scheme="https://rongyel.github.io/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>折腾HEXO的快乐</title>
-    <link href="https://rongyel.github.io/posts/92a0ec66.html"/>
-    <id>https://rongyel.github.io/posts/92a0ec66.html</id>
-    <published>2023-10-27T14:35:57.815Z</published>
-    <updated>2023-10-31T14:25:22.388Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;说实话，折腾这些笔记系统，博客系统，感觉像打游戏一样快乐。时隔多月再次捡起HEXO博客，重新搭建一番，并记录自己的搭建心得。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="HEXO" scheme="https://rongyel.github.io/tags/HEXO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>人的锚点</title>
-    <link href="https://rongyel.github.io/posts/586db46b.html"/>
-    <id>https://rongyel.github.io/posts/586db46b.html</id>
-    <published>2023-04-26T16:23:20.880Z</published>
-    <updated>2024-07-02T13:54:38.619Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;看黎明之剑这本小说的时候，提到了神明的锚点这么个设定。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="个人浅见" scheme="https://rongyel.github.io/categories/%E4%B8%AA%E4%BA%BA%E6%B5%85%E8%A7%81/"/>
-    
-    
-    <category term="人生" scheme="https://rongyel.github.io/tags/%E4%BA%BA%E7%94%9F/"/>
     
   </entry>
   
