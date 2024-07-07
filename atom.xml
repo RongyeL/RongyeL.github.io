@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-07-03T14:18:14.271Z</updated>
+  <updated>2024-07-07T04:38:49.870Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>瞎搞导致无法用IP访问群晖NAS界面的处理方案</title>
+    <link href="https://rongyel.github.io/posts/41143f4e.html"/>
+    <id>https://rongyel.github.io/posts/41143f4e.html</id>
+    <published>2024-07-06T15:53:43.288Z</published>
+    <updated>2024-07-07T04:38:49.870Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;瞎搞导致无法用IP访问群晖NAS界面的处理方案&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+    
+    <category term="NAS" scheme="https://rongyel.github.io/tags/NAS/"/>
+    
+    <category term="群晖" scheme="https://rongyel.github.io/tags/%E7%BE%A4%E6%99%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数字IC设计开发Gvim配置</title>
+    <link href="https://rongyel.github.io/posts/f60848c2.html"/>
+    <id>https://rongyel.github.io/posts/f60848c2.html</id>
+    <published>2024-07-06T15:53:35.059Z</published>
+    <updated>2024-06-30T12:38:41.498Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
+    
+    <category term="GVim" scheme="https://rongyel.github.io/tags/GVim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始EDA环境搭建</title>
+    <link href="https://rongyel.github.io/posts/f07a99ab.html"/>
+    <id>https://rongyel.github.io/posts/f07a99ab.html</id>
+    <published>2024-07-06T15:53:35.031Z</published>
+    <updated>2024-06-30T12:56:06.151Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;搭建一个能够运行tinyriscv项目的EDA环境。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo直接发布Obsidian路径下的文章</title>
@@ -352,67 +413,6 @@
     
     
     <category term="人生" scheme="https://rongyel.github.io/tags/%E4%BA%BA%E7%94%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdown笔记工具分析</title>
-    <link href="https://rongyel.github.io/posts/c1f4e46a.html"/>
-    <id>https://rongyel.github.io/posts/c1f4e46a.html</id>
-    <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2024-06-30T16:06:46.518Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;记录一下自己使用其他笔记工具的感受。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="心得体会" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
-    
-    
-    <category term="Markdown" scheme="https://rongyel.github.io/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么要用Markdown做笔记</title>
-    <link href="https://rongyel.github.io/posts/c97fc71d.html"/>
-    <id>https://rongyel.github.io/posts/c97fc71d.html</id>
-    <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2024-07-04T15:56:09.007Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;markdown有个说法，叫做让人可以专注于笔记内容上。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="心得体会" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
-    
-    
-    <category term="Markdown" scheme="https://rongyel.github.io/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MMU-TLB基础知识</title>
-    <link href="https://rongyel.github.io/posts/e0051e00.html"/>
-    <id>https://rongyel.github.io/posts/e0051e00.html</id>
-    <published>2023-03-23T12:12:01.000Z</published>
-    <updated>2023-10-31T14:25:19.305Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
-    
-    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
