@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-07-07T07:38:50.633Z</updated>
+  <updated>2024-07-13T14:57:25.388Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>架着高达的酸臭恋爱剧，高达SEED FREEDOM</title>
+    <link href="https://rongyel.github.io/posts/dfc69232.html"/>
+    <id>https://rongyel.github.io/posts/dfc69232.html</id>
+    <published>2024-07-13T14:28:11.142Z</published>
+    <updated>2024-07-13T14:57:25.388Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;被基拉和拉克丝的爱给……………………无语到了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="动漫" scheme="https://rongyel.github.io/categories/%E5%8A%A8%E6%BC%AB/"/>
+    
+    
+    <category term="动漫" scheme="https://rongyel.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
+    
+    <category term="电影" scheme="https://rongyel.github.io/tags/%E7%94%B5%E5%BD%B1/"/>
+    
+    <category term="高达" scheme="https://rongyel.github.io/tags/%E9%AB%98%E8%BE%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>如何自动切换Obsidian Vim模式的中英文模式</title>
@@ -78,235 +101,137 @@
   </entry>
   
   <entry>
-    <title>数字IC设计开发Gvim配置</title>
-    <link href="https://rongyel.github.io/posts/f60848c2.html"/>
-    <id>https://rongyel.github.io/posts/f60848c2.html</id>
-    <published>2024-07-06T15:53:35.059Z</published>
-    <updated>2024-06-30T12:38:41.498Z</updated>
+    <title></title>
+    <link href="https://rongyel.github.io/posts/0.html"/>
+    <id>https://rongyel.github.io/posts/0.html</id>
+    <published>2024-07-06T15:53:42.342Z</published>
+    <updated>2024-02-01T16:29:00.134Z</updated>
     
     
-    <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
-    
-    <category term="GVim" scheme="https://rongyel.github.io/tags/GVim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始EDA环境搭建</title>
-    <link href="https://rongyel.github.io/posts/f07a99ab.html"/>
-    <id>https://rongyel.github.io/posts/f07a99ab.html</id>
-    <published>2024-07-06T15:53:35.031Z</published>
-    <updated>2024-06-30T12:56:06.151Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;搭建一个能够运行tinyriscv项目的EDA环境。&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我真的服了&lt;br&gt;今天给他换了30缸，换了过滤。&lt;br&gt;它又很活跃，拼命游拼命爬。本来看它都失败了两次，安静下来了。&lt;br&gt;没想到，&lt;br&gt;突然发现厕所里有个黑黑的东西，仔细一看是鳄鳄。&lt;br&gt;他居然成功了，太佩服它了&lt;br&gt;&lt;img</summary>
+        
+      
     
     
     
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
     
   </entry>
   
   <entry>
-    <title>Hexo直接发布Obsidian路径下的文章</title>
-    <link href="https://rongyel.github.io/posts/da16531b.html"/>
-    <id>https://rongyel.github.io/posts/da16531b.html</id>
-    <published>2024-07-02T14:37:56.469Z</published>
-    <updated>2024-07-03T14:18:14.271Z</updated>
+    <title></title>
+    <link href="https://rongyel.github.io/posts/0.html"/>
+    <id>https://rongyel.github.io/posts/0.html</id>
+    <published>2024-07-06T15:53:42.307Z</published>
+    <updated>2024-01-28T02:37:44.927Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Obsidian撰写文章，还要复制到Hexo的_post路径下，才能部署，这个动作太麻烦了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    
-    
-    <category term="HEXO" scheme="https://rongyel.github.io/tags/HEXO/"/>
-    
-    <category term="Obsidian" scheme="https://rongyel.github.io/tags/Obsidian/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Icarus主题文章栏如何调宽</title>
-    <link href="https://rongyel.github.io/posts/39ae3fe6.html"/>
-    <id>https://rongyel.github.io/posts/39ae3fe6.html</id>
-    <published>2024-07-01T16:34:23.724Z</published>
-    <updated>2024-07-01T17:43:49.017Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Hexo Icarus主题文章栏设置为2栏以后，太窄了，显示内容较少，想提高一下页面利用率。&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;养龟日记&lt;br&gt;这一天，一只龟龟送到了我家。&lt;/p&gt;
+&lt;p&gt;小鳄龟，买这个品种就是看重它的皮实和凶悍。&lt;/p&gt;
+&lt;p&gt;看着是真凶，壳上头上都是带着刺的。&lt;/p&gt;
+&lt;p&gt;第一天，至少我确认它是活着的。我本来还很担心的，因为深圳突然降温了。&lt;br&gt;第二天更冷了，我下班赶回家，看</summary>
+        
+      
     
     
     
-    <category term="应用" scheme="https://rongyel.github.io/categories/%E5%BA%94%E7%94%A8/"/>
-    
-    
-    <category term="工具" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="HEXO" scheme="https://rongyel.github.io/tags/HEXO/"/>
     
   </entry>
   
   <entry>
-    <title>如何正确给文章打标签和归类</title>
-    <link href="https://rongyel.github.io/posts/78320dbb.html"/>
-    <id>https://rongyel.github.io/posts/78320dbb.html</id>
-    <published>2024-06-30T13:02:00.044Z</published>
-    <updated>2024-06-30T16:36:30.271Z</updated>
+    <title></title>
+    <link href="https://rongyel.github.io/posts/0.html"/>
+    <id>https://rongyel.github.io/posts/0.html</id>
+    <published>2024-07-06T15:53:42.280Z</published>
+    <updated>2023-11-21T16:49:16.316Z</updated>
     
     
-    <summary type="html">&lt;p&gt;写文章时的tag和categories到底应该怎么打，没想到成为了困扰我的一大问题，至今推翻重来了好几次。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="方法论" scheme="https://rongyel.github.io/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-    
-    <category term="方法论" scheme="https://rongyel.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>至今为止我依旧认为，无职转生就是最好的异世界转生作品。</title>
-    <link href="https://rongyel.github.io/posts/1da22451.html"/>
-    <id>https://rongyel.github.io/posts/1da22451.html</id>
-    <published>2024-06-30T12:25:49.387Z</published>
-    <updated>2024-07-02T14:07:24.388Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;鲁迪的人生旅程，就是无职的故事。&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;![[IMG_20231122_003917.jpg]]&lt;br&gt;只能每天熬夜偷偷画……&lt;br&gt;太不容易了，不过有一点意思了～&lt;br&gt;感觉这张还是表达了那种神韵哈哈哈‘&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
     
     
     
-    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="动漫" scheme="https://rongyel.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
     
   </entry>
   
   <entry>
-    <title>Steamdeck Oled入手2个月体验</title>
-    <link href="https://rongyel.github.io/posts/8cb2095e.html"/>
-    <id>https://rongyel.github.io/posts/8cb2095e.html</id>
-    <published>2024-06-30T09:59:04.034Z</published>
-    <updated>2024-06-30T12:37:32.263Z</updated>
+    <title></title>
+    <link href="https://rongyel.github.io/posts/0.html"/>
+    <id>https://rongyel.github.io/posts/0.html</id>
+    <published>2024-07-06T15:53:42.242Z</published>
+    <updated>2023-11-17T17:30:26.429Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Steamdeck Oled入手2个月体验&lt;br&gt;结论就是物有所值。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="数码" scheme="https://rongyel.github.io/tags/%E6%95%B0%E7%A0%81/"/>
-    
-    <category term="游戏" scheme="https://rongyel.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>艾尔登法环DLC 一周体验</title>
-    <link href="https://rongyel.github.io/posts/7c35c268.html"/>
-    <id>https://rongyel.github.io/posts/7c35c268.html</id>
-    <published>2024-06-29T17:13:33.000Z</published>
-    <updated>2024-07-05T16:15:46.122Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;DLC一上来，给了所有人一个下马威。&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;戴了一天上班，体验不错&lt;/p&gt;
+&lt;p&gt;镜片度数没搞错，观感和以前一样&lt;/p&gt;
+&lt;p&gt;有一点点夹头，右边头戴久了还是有一点不适，可能戴多几天眼镜就撑开了，问题不大&lt;/p&gt;
+&lt;p&gt;重量我感觉一下就适应了，不比我原本的重多少。&lt;/p&gt;
+&lt;p&gt;工位环境下，音量开最小我就能清楚听歌了</summary>
+        
+      
     
     
     
-    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="游戏" scheme="https://rongyel.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
   <entry>
-    <title>养成游戏和肉鸽游戏的思考</title>
-    <link href="https://rongyel.github.io/posts/a9343b74.html"/>
-    <id>https://rongyel.github.io/posts/a9343b74.html</id>
-    <published>2024-06-29T16:45:51.397Z</published>
-    <updated>2024-07-06T15:43:03.650Z</updated>
+    <title>20231113 XF35f1.4初战告捷</title>
+    <link href="https://rongyel.github.io/posts/72b54741.html"/>
+    <id>https://rongyel.github.io/posts/72b54741.html</id>
+    <published>2024-07-06T15:53:42.146Z</published>
+    <updated>2023-11-12T16:23:30.556Z</updated>
     
     
-    <summary type="html">&lt;p&gt;养成类游戏的快乐，永远是初期。&lt;br&gt;肉鸽类游戏，爽的时候很爽，不爽的时候很不爽。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="兴趣档案" scheme="https://rongyel.github.io/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我家小鳄龟の生长日记</title>
-    <link href="https://rongyel.github.io/posts/fe1733b9.html"/>
-    <id>https://rongyel.github.io/posts/fe1733b9.html</id>
-    <published>2024-05-15T11:51:18.000Z</published>
-    <updated>2024-06-30T12:46:17.317Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;现在背甲已经长到10cm了，厉害。&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天上午专门花了100打车来回去公司拿相机……&lt;br&gt;还好没有浪费，新的镜头很好的展现了它的实力。&lt;/p&gt;
+&lt;p&gt;在我长期调研后，选择了XF35f1.4，在双十一入手。&lt;br&gt;最重要的原因，还是它轻便。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
     
     
     
-    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    <category term="日志随记" scheme="https://rongyel.github.io/categories/%E6%97%A5%E5%BF%97%E9%9A%8F%E8%AE%B0/"/>
     
     
-    <category term="宠物" scheme="https://rongyel.github.io/tags/%E5%AE%A0%E7%89%A9/"/>
+    <category term="摄影" scheme="https://rongyel.github.io/tags/%E6%91%84%E5%BD%B1/"/>
     
   </entry>
   
   <entry>
-    <title>再次挑战calibre安装</title>
-    <link href="https://rongyel.github.io/posts/84c884af.html"/>
-    <id>https://rongyel.github.io/posts/84c884af.html</id>
-    <published>2024-01-26T16:46:09.862Z</published>
-    <updated>2024-07-04T16:09:28.858Z</updated>
+    <title>20231029 AUTOBAGUMI安装记录</title>
+    <link href="https://rongyel.github.io/posts/49a50291.html"/>
+    <id>https://rongyel.github.io/posts/49a50291.html</id>
+    <published>2024-07-06T15:53:41.986Z</published>
+    <updated>2023-11-03T16:25:41.263Z</updated>
     
     
-    <summary type="html">&lt;p&gt;重新挑战在群晖安装Calibre&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具仓" scheme="https://rongyel.github.io/categories/%E5%B7%A5%E5%85%B7%E4%BB%93/"/>
-    
-    
-    <category term="工具" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的知识笔记流水思维殿堂</title>
-    <link href="https://rongyel.github.io/posts/56a2756d.html"/>
-    <id>https://rongyel.github.io/posts/56a2756d.html</id>
-    <published>2023-11-10T12:59:30.000Z</published>
-    <updated>2024-06-30T16:07:25.148Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Readwise+Obsidian+Hexo，&lt;br&gt;技术与生活的思维殿堂。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;AutoBangumi：自动追番，解放双手&lt;/p&gt;</summary>
     
     
     
-    <category term="心得体会" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
+    <category term="日志随记" scheme="https://rongyel.github.io/categories/%E6%97%A5%E5%BF%97%E9%9A%8F%E8%AE%B0/"/>
     
     
     <category term="折腾" scheme="https://rongyel.github.io/tags/%E6%8A%98%E8%85%BE/"/>
@@ -314,107 +239,266 @@
   </entry>
   
   <entry>
-    <title>Readwise文献剪藏有用吗</title>
-    <link href="https://rongyel.github.io/posts/22e0203a.html"/>
-    <id>https://rongyel.github.io/posts/22e0203a.html</id>
-    <published>2023-11-07T13:56:58.000Z</published>
-    <updated>2024-06-30T16:17:23.560Z</updated>
+    <title></title>
+    <link href="https://rongyel.github.io/posts/0.html"/>
+    <id>https://rongyel.github.io/posts/0.html</id>
+    <published>2024-07-06T15:53:41.981Z</published>
+    <updated>2023-11-16T15:18:40.204Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Readwise Reader，构建笔记系统的最后一环，稍后读+剪藏+RSS。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="心得体会" scheme="https://rongyel.github.io/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
-    
-    
-    <category term="工具" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="方法论" scheme="https://rongyel.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CHI flitpend是干嘛的</title>
-    <link href="https://rongyel.github.io/posts/b6eda8db.html"/>
-    <id>https://rongyel.github.io/posts/b6eda8db.html</id>
-    <published>2023-11-03T16:32:49.443Z</published>
-    <updated>2023-11-03T16:34:52.700Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/%E7%AB%AF%E5%8D%88-%E7%BE%8A%E6%AF%9B%E6%AF%A11.jpg&quot;</summary>
+        
+      
     
     
     
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="CHI" scheme="https://rongyel.github.io/tags/CHI/"/>
-    
-    <category term="AMBA" scheme="https://rongyel.github.io/tags/AMBA/"/>
     
   </entry>
   
   <entry>
-    <title>ARM memory属性的理解</title>
-    <link href="https://rongyel.github.io/posts/2957f6bf.html"/>
-    <id>https://rongyel.github.io/posts/2957f6bf.html</id>
-    <published>2023-10-31T14:19:04.920Z</published>
-    <updated>2024-06-30T12:54:59.587Z</updated>
+    <title>20230129 迷糊轻小说闭站</title>
+    <link href="https://rongyel.github.io/posts/6d8532b4.html"/>
+    <id>https://rongyel.github.io/posts/6d8532b4.html</id>
+    <published>2024-07-06T15:53:41.885Z</published>
+    <updated>2023-11-03T16:23:48.139Z</updated>
     
     
-    <summary type="html">&lt;p&gt;在看ARM的各种技术手册中，会多次看到对于memory属性的描述，诸如Cacheable、Allocate、Device nRnE等等。本文主要以CHI中的MemAttr、SnpAttr域段，展开对memory属性的学习。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对Stage1页表属性attrindex理解</title>
-    <link href="https://rongyel.github.io/posts/d429f5fd.html"/>
-    <id>https://rongyel.github.io/posts/d429f5fd.html</id>
-    <published>2023-10-30T16:18:44.126Z</published>
-    <updated>2023-10-31T14:25:31.512Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;stage1的页表最低位属性用的是AttrIndex，而在stage2的页表属性用的是MemAttr。&lt;br&gt;这样设计的原因可能是为了减少无效化操作。&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天是值得难过的一天……&lt;br&gt;没有想到，迷糊轻小说在今天正式闭站了……&lt;br&gt;我都没有注意到这个事情，昨天还开心的看着《孤狼不要太爱我》&lt;br&gt;今天看完第四卷，想看看番外的时候，发现已经不能接入服务器了……&lt;br&gt;我也用了有5年了，&lt;br&gt;可惜，这么好用的一个轻小说阅读软</summary>
+        
+      
     
     
     
-    <category term="学习笔记" scheme="https://rongyel.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="日志随记" scheme="https://rongyel.github.io/categories/%E6%97%A5%E5%BF%97%E9%9A%8F%E8%AE%B0/"/>
     
     
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    <category term="生活" scheme="https://rongyel.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
-    <title>香格里拉边境 为什么让我兴奋</title>
-    <link href="https://rongyel.github.io/posts/3b1a7464.html"/>
-    <id>https://rongyel.github.io/posts/3b1a7464.html</id>
-    <published>2023-10-27T14:42:57.554Z</published>
-    <updated>2024-06-29T17:12:23.741Z</updated>
+    <title>心心念念FUJI X-T5</title>
+    <link href="https://rongyel.github.io/posts/547fc1d9.html"/>
+    <id>https://rongyel.github.io/posts/547fc1d9.html</id>
+    <published>2024-07-06T15:53:41.503Z</published>
+    <updated>2023-11-02T14:39:58.220Z</updated>
     
     
-    <summary type="html">&lt;p&gt;香格里拉边界荣升我十月最期待新番，着实拿捏了我对于虚拟网游的幻想，就像当年的刀剑一样。&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2022.11.24&lt;/p&gt;
+&lt;p&gt;一直忍着没有更新自己的相机，&lt;/p&gt;
+&lt;p&gt;本来想着是买xs-20的，但没想到20还没出，X-T5先出了&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;现在有钱咯，可以花得起这个极致消费了……&lt;/p&gt;
+&lt;p&gt;咬咬牙，直接买了x-t5</summary>
+        
+      
     
     
     
-    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    <category term="日志" scheme="https://rongyel.github.io/categories/%E6%97%A5%E5%BF%97/"/>
     
     
-    <category term="兴趣档案" scheme="https://rongyel.github.io/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/"/>
+    <category term="日志" scheme="https://rongyel.github.io/tags/%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>被迫加班过后</title>
+    <link href="https://rongyel.github.io/posts/f34a4859.html"/>
+    <id>https://rongyel.github.io/posts/f34a4859.html</id>
+    <published>2024-07-06T15:53:41.428Z</published>
+    <updated>2023-11-02T14:42:57.105Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;才会更加珍惜能够正常下班的日子。&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;以后如果可以早一点下班就早点下班吧，&lt;/p&gt;
+&lt;p&gt;看这情况今后会经常遇到不得不继续加班的情况的。&lt;/p&gt;
+&lt;p&gt;哎，周六，同事们基本都在岗。&lt;/p&gt;
+&lt;p&gt;真烦……&lt;/p&gt;
+&lt;p&gt;虽然是自己选择的，但真的遇</summary>
+        
+      
+    
+    
+    
+    <category term="日志随记" scheme="https://rongyel.github.io/categories/%E6%97%A5%E5%BF%97%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="工作" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20220621 柳依是猫，我是树</title>
+    <link href="https://rongyel.github.io/posts/72530020.html"/>
+    <id>https://rongyel.github.io/posts/72530020.html</id>
+    <published>2024-07-06T15:53:41.320Z</published>
+    <updated>2024-06-30T12:34:50.890Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;如果柳依是猫的话，那我应该是什么动物呢？&lt;/p&gt;
+&lt;p&gt;经过思考，我发现，我不该是动物……&lt;br&gt;我应该是棵树，不咋动，很快乐。&lt;br&gt;慢悠悠地摇摆着。&lt;/p&gt;
+&lt;p&gt;树的阴影下，可能躺着一只懒猫猫&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="日志随记" scheme="https://rongyel.github.io/categories/%E6%97%A5%E5%BF%97%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="人生" scheme="https://rongyel.github.io/tags/%E4%BA%BA%E7%94%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20220611 离开七年的地方</title>
+    <link href="https://rongyel.github.io/posts/291df1c3.html"/>
+    <id>https://rongyel.github.io/posts/291df1c3.html</id>
+    <published>2024-07-06T15:53:41.304Z</published>
+    <updated>2023-11-02T14:52:31.892Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;即将离开，一切就绪。&lt;/p&gt;
+&lt;p&gt;有种，很奇怪的感觉。&lt;/p&gt;
+&lt;p&gt;突然意识到，这个我呆了七年的学校，有可能不会再回来了。&lt;br&gt;我明晚开始，将不再走这么一段路了，&lt;br&gt;有可能，再也不会进这个校园了……&lt;/p&gt;
+&lt;p&gt;不是悲伤，而是奇怪。&lt;/p&gt;
+&lt;p&gt;挺突然的也，就</summary>
+        
+      
+    
+    
+    
+    <category term="日志随记" scheme="https://rongyel.github.io/categories/%E6%97%A5%E5%BF%97%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="人生" scheme="https://rongyel.github.io/tags/%E4%BA%BA%E7%94%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20211018 幻13帅啊</title>
+    <link href="https://rongyel.github.io/posts/e501538.html"/>
+    <id>https://rongyel.github.io/posts/e501538.html</id>
+    <published>2024-07-06T15:53:41.148Z</published>
+    <updated>2023-11-02T14:38:15.309Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;幻13可以说是集结了我所有对笔记本的需求了，也是经过长期的摸索得到的答案。&lt;br&gt;轻便，幻13本体只有1.3kg，算是最轻的那种笔记本了。&lt;br&gt;具备一定的性能，之前用战x还是不太行，只有核显无法满足我剪辑视频以及修图的要求，&lt;br&gt;幻13有RX3050ti，基本是够用的了</summary>
+        
+      
+    
+    
+    
+    <category term="日志随记" scheme="https://rongyel.github.io/categories/%E6%97%A5%E5%BF%97%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="数码" scheme="https://rongyel.github.io/tags/%E6%95%B0%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一台ITX装机体验</title>
+    <link href="https://rongyel.github.io/posts/1b94a8e1.html"/>
+    <id>https://rongyel.github.io/posts/1b94a8e1.html</id>
+    <published>2024-07-06T15:53:41.081Z</published>
+    <updated>2023-11-02T14:37:01.163Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;时间：2021.06.24&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="日志随记" scheme="https://rongyel.github.io/categories/%E6%97%A5%E5%BF%97%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="折腾" scheme="https://rongyel.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="数码" scheme="https://rongyel.github.io/tags/%E6%95%B0%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://rongyel.github.io/posts/0.html"/>
+    <id>https://rongyel.github.io/posts/0.html</id>
+    <published>2024-07-06T15:53:35.854Z</published>
+    <updated>2023-02-14T15:05:41.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;[[当别人愿意和你交流时，你应该真诚地和他交流，你的内心不能过于敏感，认为别人言语里的词汇就是特指对你的侮辱。]]&lt;/p&gt;
+&lt;p&gt;说的就是美丽国，真的很有意思的国家。&lt;/p&gt;
+&lt;p&gt;从我这样的中国人角度看来，&lt;br&gt;现在美丽国完全就是群魔乱舞，&lt;br&gt;各式各样的主义人士在彰</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://rongyel.github.io/posts/0.html"/>
+    <id>https://rongyel.github.io/posts/0.html</id>
+    <published>2024-07-06T15:53:35.849Z</published>
+    <updated>2023-02-14T15:05:37.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;现在互联网可以说是，乌烟瘴气。&lt;br&gt;这不是由于互联网本身问题导致的，&lt;br&gt;而是由人类的固有属性导致的。&lt;/p&gt;
+&lt;p&gt;现在在互联网发声的大多数人，&lt;br&gt;抨击社会抨击国家抨击世界的，&lt;br&gt;很多都是过的不那么如意的人。&lt;/p&gt;
+&lt;p&gt;很简单，一个人如果过的好，他为什么要</summary>
+        
+      
+    
+    
+    
     
   </entry>
   
