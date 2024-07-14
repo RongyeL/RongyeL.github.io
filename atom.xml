@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-07-13T15:31:12.159Z</updated>
+  <updated>2024-07-14T11:43:48.552Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>虚拟内存的意义</title>
+    <link href="https://rongyel.github.io/posts/ada5d828.html"/>
+    <id>https://rongyel.github.io/posts/ada5d828.html</id>
+    <published>2024-07-14T11:38:11.860Z</published>
+    <updated>2024-07-14T11:43:48.552Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;为什么要建立“虚拟“内存来欺骗软件？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>架着高达的酸臭恋爱剧，高达SEED FREEDOM</title>
@@ -44,7 +65,7 @@
     <link href="https://rongyel.github.io/posts/6042261.html"/>
     <id>https://rongyel.github.io/posts/6042261.html</id>
     <published>2024-07-07T07:09:16.420Z</published>
-    <updated>2024-07-14T03:23:49.270Z</updated>
+    <updated>2024-07-14T11:24:14.853Z</updated>
     
     
     <summary type="html">&lt;p&gt;Obsidian的Vim模式使用，在中文输入下的体验有一个非常割裂的地方。&lt;/p&gt;</summary>
@@ -295,6 +316,29 @@
   </entry>
   
   <entry>
+    <title></title>
+    <link href="https://rongyel.github.io/posts/0.html"/>
+    <id>https://rongyel.github.io/posts/0.html</id>
+    <published>2024-07-06T15:53:35.640Z</published>
+    <updated>2024-07-13T14:58:19.143Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;1.工作肯定是做不完的，不仅做不完，还会不停突然的冒出来。此时要做的就是排好优先级，然后集中注意力一个个完成即可。&lt;/p&gt;
+&lt;p&gt;2.就算是老员工，也有很多不懂的东西。所以遇到问题，也需要自己沉下心来研究。只有这样才能获得成长，光靠问只能快速应付交付工作。&lt;/p&gt;
+&lt;p&gt;3</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hexo Icarus主题文章栏如何调宽</title>
     <link href="https://rongyel.github.io/posts/39ae3fe6.html"/>
     <id>https://rongyel.github.io/posts/39ae3fe6.html</id>
@@ -371,48 +415,6 @@
     <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
     
     <category term="GVim" scheme="https://rongyel.github.io/tags/GVim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始EDA环境搭建</title>
-    <link href="https://rongyel.github.io/posts/f07a99ab.html"/>
-    <id>https://rongyel.github.io/posts/f07a99ab.html</id>
-    <published>2024-07-06T15:53:35.031Z</published>
-    <updated>2024-07-14T03:21:20.775Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;搭建一个能够运行tinyriscv项目的EDA环境。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
-    
-    <category term="Linux" scheme="https://rongyel.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CHI l-credit的使用关注点</title>
-    <link href="https://rongyel.github.io/posts/418ca596.html"/>
-    <id>https://rongyel.github.io/posts/418ca596.html</id>
-    <published>2024-07-06T15:53:35.011Z</published>
-    <updated>2024-07-14T03:21:59.364Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;CHI协议的LINK层credit握手机制是个很有意思的东西，实际使用的时候有些需要关注的地方。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="CHI" scheme="https://rongyel.github.io/tags/CHI/"/>
     
   </entry>
   
