@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-07-14T11:43:48.552Z</updated>
+  <updated>2024-07-21T15:05:51.728Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,11 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>怎么在filelist文件中添加include文件路径</title>
+    <link href="https://rongyel.github.io/posts/ef002491.html"/>
+    <id>https://rongyel.github.io/posts/ef002491.html</id>
+    <published>2024-07-21T15:02:03.889Z</published>
+    <updated>2024-07-21T15:05:51.728Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;明明filelist里有被include文件，为什么编译的时候吃不上？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Verilog" scheme="https://rongyel.github.io/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>未命名</title>
+    <link href="https://rongyel.github.io/posts/3c47b44b.html"/>
+    <id>https://rongyel.github.io/posts/3c47b44b.html</id>
+    <published>2024-07-20T08:57:04.293Z</published>
+    <updated>2024-07-20T08:59:46.401Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="EDA" scheme="https://rongyel.github.io/categories/EDA/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>虚拟内存的意义</title>
     <link href="https://rongyel.github.io/posts/ada5d828.html"/>
     <id>https://rongyel.github.io/posts/ada5d828.html</id>
     <published>2024-07-14T11:38:11.860Z</published>
-    <updated>2024-07-14T11:43:48.552Z</updated>
+    <updated>2024-07-14T11:46:28.790Z</updated>
     
     
     <summary type="html">&lt;p&gt;为什么要建立“虚拟“内存来欺骗软件？&lt;/p&gt;</summary>
@@ -375,46 +411,6 @@
     
     
     <category term="方法论" scheme="https://rongyel.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何正确给文章打标签和归类</title>
-    <link href="https://rongyel.github.io/posts/78320dbb.html"/>
-    <id>https://rongyel.github.io/posts/78320dbb.html</id>
-    <published>2024-07-06T15:53:35.086Z</published>
-    <updated>2024-07-14T03:20:43.313Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;写文章时的tag和categories到底应该怎么打，没想到成为了困扰我的一大问题，至今推翻重来了好几次。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="方法学论" scheme="https://rongyel.github.io/categories/%E6%96%B9%E6%B3%95%E5%AD%A6%E8%AE%BA/"/>
-    
-    
-    <category term="方法论" scheme="https://rongyel.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数字IC设计开发Gvim配置</title>
-    <link href="https://rongyel.github.io/posts/f60848c2.html"/>
-    <id>https://rongyel.github.io/posts/f60848c2.html</id>
-    <published>2024-07-06T15:53:35.059Z</published>
-    <updated>2024-07-14T03:21:29.378Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;记录自己使用的gvim配置文件，包含基础配置及插件功能配置。支持代码补全、代码片段、语法检查、自动例化等IC攻城狮必备coding功能。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
-    
-    <category term="GVim" scheme="https://rongyel.github.io/tags/GVim/"/>
     
   </entry>
   
