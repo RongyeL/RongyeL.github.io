@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-07-21T15:06:23.827Z</updated>
+  <updated>2024-07-27T17:28:23.446Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,69 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HISOC大纲</title>
+    <link href="https://rongyel.github.io/posts/2f586756.html"/>
+    <id>https://rongyel.github.io/posts/2f586756.html</id>
+    <published>2024-07-27T17:23:15.877Z</published>
+    <updated>2024-07-27T17:28:23.446Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录HISOC系列视频要讲些什么&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="HISOC" scheme="https://rongyel.github.io/categories/HISOC/"/>
+    
+    
+    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
+    
+    <category term="数字设计" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通关表单管理寄存器、数据结构</title>
+    <link href="https://rongyel.github.io/posts/4d06d986.html"/>
+    <id>https://rongyel.github.io/posts/4d06d986.html</id>
+    <published>2024-07-25T12:22:52.694Z</published>
+    <updated>2024-07-25T12:24:09.427Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="HISOC" scheme="https://rongyel.github.io/categories/HISOC/"/>
+    
+    
+    <category term="数字设计" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="RTL" scheme="https://rongyel.github.io/tags/RTL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个基本的读写寄存器CBB设计</title>
+    <link href="https://rongyel.github.io/posts/f123e3c2.html"/>
+    <id>https://rongyel.github.io/posts/f123e3c2.html</id>
+    <published>2024-07-25T12:20:57.265Z</published>
+    <updated>2024-07-25T12:23:29.233Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="HISOC" scheme="https://rongyel.github.io/categories/HISOC/"/>
+    
+    
+    <category term="数字设计" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="RTL" scheme="https://rongyel.github.io/tags/RTL/"/>
+    
+  </entry>
   
   <entry>
     <title>怎么在filelist文件中添加include文件路径</title>
@@ -348,69 +411,6 @@
     
     
     <category term="数码" scheme="https://rongyel.github.io/tags/%E6%95%B0%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://rongyel.github.io/posts/0.html"/>
-    <id>https://rongyel.github.io/posts/0.html</id>
-    <published>2024-07-06T15:53:35.640Z</published>
-    <updated>2024-07-13T14:58:19.143Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.工作肯定是做不完的，不仅做不完，还会不停突然的冒出来。此时要做的就是排好优先级，然后集中注意力一个个完成即可。&lt;/p&gt;
-&lt;p&gt;2.就算是老员工，也有很多不懂的东西。所以遇到问题，也需要自己沉下心来研究。只有这样才能获得成长，光靠问只能快速应付交付工作。&lt;/p&gt;
-&lt;p&gt;3</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Icarus主题文章栏如何调宽</title>
-    <link href="https://rongyel.github.io/posts/39ae3fe6.html"/>
-    <id>https://rongyel.github.io/posts/39ae3fe6.html</id>
-    <published>2024-07-06T15:53:35.135Z</published>
-    <updated>2024-07-14T03:24:00.176Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Hexo Icarus主题文章栏设置为2栏以后，太窄了，显示内容较少，想提高一下页面利用率。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    
-    
-    <category term="工具" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="HEXO" scheme="https://rongyel.github.io/tags/HEXO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的知识笔记流水思维殿堂</title>
-    <link href="https://rongyel.github.io/posts/56a2756d.html"/>
-    <id>https://rongyel.github.io/posts/56a2756d.html</id>
-    <published>2024-07-06T15:53:35.103Z</published>
-    <updated>2024-07-07T14:18:50.151Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Readwise+Obsidian+Hexo，&lt;br&gt;技术与生活的思维殿堂。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="方法学论" scheme="https://rongyel.github.io/categories/%E6%96%B9%E6%B3%95%E5%AD%A6%E8%AE%BA/"/>
-    
-    
-    <category term="方法论" scheme="https://rongyel.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
   </entry>
   
