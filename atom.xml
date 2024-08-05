@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-07-27T17:31:33.176Z</updated>
+  <updated>2024-07-28T15:12:22.030Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>未命名</title>
+    <link href="https://rongyel.github.io/posts/3c47b44b.html"/>
+    <id>https://rongyel.github.io/posts/3c47b44b.html</id>
+    <published>2024-07-28T08:43:44.900Z</published>
+    <updated>2024-07-28T15:12:22.030Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;使用python处理excel文件报错&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+    
+    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
+    
+    <category term="Python" scheme="https://rongyel.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HISOC大纲</title>
     <link href="https://rongyel.github.io/posts/2f586756.html"/>
     <id>https://rongyel.github.io/posts/2f586756.html</id>
     <published>2024-07-27T17:23:15.877Z</published>
-    <updated>2024-07-27T17:31:33.176Z</updated>
+    <updated>2024-08-05T16:11:08.993Z</updated>
     
     
     <summary type="html">&lt;p&gt;记录HISOC系列视频要讲些什么&lt;/p&gt;</summary>
@@ -392,27 +413,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Icarus主题文章栏如何调宽</title>
-    <link href="https://rongyel.github.io/posts/39ae3fe6.html"/>
-    <id>https://rongyel.github.io/posts/39ae3fe6.html</id>
-    <published>2024-07-06T15:53:35.135Z</published>
-    <updated>2024-07-14T03:24:00.176Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Hexo Icarus主题文章栏设置为2栏以后，太窄了，显示内容较少，想提高一下页面利用率。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    
-    
-    <category term="工具" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="HEXO" scheme="https://rongyel.github.io/tags/HEXO/"/>
     
   </entry>
   
