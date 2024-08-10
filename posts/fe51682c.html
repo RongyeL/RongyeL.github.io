@@ -40,6 +40,8 @@
 <meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/AXI.png">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>AXI协议学习笔记 - IC攻城狮的摸鱼小屋</title>
 
@@ -79,7 +81,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"rongyel.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"rongyel.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -92,9 +94,9 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
 </head>
 
 
@@ -108,7 +110,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>IC攻城狮的摸鱼小屋</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -204,7 +206,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -287,7 +289,7 @@
               <div class="markdown-body">
                 
                 <p>ARM官方手册：<a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/ihi0022/hc/?lang=en">AMBA AXI and ACE Protocol Specification</a></p>
-<h2 id="全景图"><a href="#全景图" class="headerlink" title="全景图"></a>全景图</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/AXI.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="全景图"><a href="#全景图" class="headerlink" title="全景图"></a>全景图</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/AXI.png"></p>
 <h2 id="什么是AXI"><a href="#什么是AXI" class="headerlink" title="什么是AXI"></a>什么是AXI</h2><hr>
 <p>AXI（Advance eXtensible interface）是一种总线协议，该协议是ARM公司提出的AMBA(Advanced Micocontroller Bus Architecture)协议中重要部分，是一种面向高性能、高带宽、低延迟的片内总线。<br>当前，SoC中绝大多数对性能有需求的模块都会使用到AXI。</p>
 <h2 id="为什么要选择AXI"><a href="#为什么要选择AXI" class="headerlink" title="为什么要选择AXI"></a>为什么要选择AXI</h2><hr>
@@ -303,13 +305,13 @@
 <h2 id="AXI和AHB的区别"><a href="#AXI和AHB的区别" class="headerlink" title="AXI和AHB的区别"></a>AXI和AHB的区别</h2><hr>
 <p>参考文献：<a target="_blank" rel="noopener" href="https://aijishu.com/a/1060000000229903">AMBA AHB协议和AXI协议有什么区别？ - 极术社区 - 连接开发者与智能计算生态</a></p>
 <h2 id="AXI的架构"><a href="#AXI的架构" class="headerlink" title="AXI的架构"></a>AXI的架构</h2><hr>
-<h3 id="传输通道"><a href="#传输通道" class="headerlink" title="传输通道"></a>传输通道</h3><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20221224101617.png" srcset="/img/loading.gif" lazyload><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20221224101626.png" srcset="/img/loading.gif" lazyload><br>AXI具有五个数据通道，各通道之间是并行的，相当于独立的五条总线。<br>每条通道都具有固定的方向。</p>
+<h3 id="传输通道"><a href="#传输通道" class="headerlink" title="传输通道"></a>传输通道</h3><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20221224101617.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20221224101626.png"><br>AXI具有五个数据通道，各通道之间是并行的，相当于独立的五条总线。<br>每条通道都具有固定的方向。</p>
 <p>读操作包括AR读地址（命令）和R读数据通道，<br>写操作包括AW写地址（命令）、W写数据、B写响应通道。</p>
 <p>AR/AW不仅仅包含地址信息，还包含控制，所以应该视为命令通道。</p>
 <p>读数据通道传输数据和读应答，读应答指示每拍数据的状况。<br>写数据通道和写应答通道分离，写应答指示每burst数据的状况。</p>
 <p>由于AXI各通道都是单向传输的，且各通道之间相位分离，没有复杂的时序握手关系。这种特性使得各通道可以随意插入任意级数寄存器（stage），即打拍，来保证时序收敛。</p>
 <h3 id="写响应通道独立的原因"><a href="#写响应通道独立的原因" class="headerlink" title="写响应通道独立的原因"></a>写响应通道独立的原因</h3><p>核心原因：写响应数据流向和写数据数据流向是相反的。</p>
-<h3 id="互联结构"><a href="#互联结构" class="headerlink" title="互联结构"></a>互联结构</h3><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20221224103510.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="互联结构"><a href="#互联结构" class="headerlink" title="互联结构"></a>互联结构</h3><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20221224103510.png"></p>
 <p>AXI协议严格来讲是一个点对点的主从接口协议，当多个外设需要互联时，需要加入一个AXI Interconnect模块，也就是AXI互联矩阵，作用是提供一个或多个AXI主设备连接到一个或多个AXI从设备时得一种交换机制。</p>
 <h2 id="AXI端口信息"><a href="#AXI端口信息" class="headerlink" title="AXI端口信息"></a>AXI端口信息</h2><hr>
 <h3 id="GLOBE全局信号"><a href="#GLOBE全局信号" class="headerlink" title="GLOBE全局信号"></a>GLOBE全局信号</h3><table>
@@ -379,7 +381,7 @@
 <h2 id="基本读写事务"><a href="#基本读写事务" class="headerlink" title="基本读写事务"></a>基本读写事务</h2><hr>
 <h3 id="握手机制"><a href="#握手机制" class="headerlink" title="握手机制"></a>握手机制</h3><p>在握手机制中，通信双份分别扮演发送方和接收方，两者的操作并不相同。<br>通常会设计AXI Master 和 SLV两种端口。</p>
 <p>发送方置高VALID信号表示发送方已经将数据、地址或控制信息就绪，并保持于信息总线上。接收方置高READY信号表示接收方已经做好接收的准备。</p>
-<p>READY可以早于或晚于VALID，也可以依赖VALID；<br>VALID可以早于或晚于READY，但不可以依赖READY，防止死锁。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20221224104810.png" srcset="/img/loading.gif" lazyload></p>
+<p>READY可以早于或晚于VALID，也可以依赖VALID；<br>VALID可以早于或晚于READY，但不可以依赖READY，防止死锁。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20221224104810.png"></p>
 <p>所谓双向流控机制，指的时发送方通过置起VALID信号控制发送的时机与速度，接收方也可以通过READY信号的置起与否控制接收的速度。发送方拥有传输的主动权，但接收方在不具备接收能力时，也能够置低信号停止传输，反压发送方。</p>
 <p>协议规定，在这种情况下，VALID信号一旦置起就不能置低，直到完成握手，至少传输一周期数据。</p>
 <p>置起VALID信号必须是完全主动与独立的过程，否则就可能出现死锁。</p>
@@ -626,6 +628,32 @@
     </div>
   
   
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
   
 </div>
 
@@ -655,7 +683,9 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
   
 
 
@@ -755,6 +785,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

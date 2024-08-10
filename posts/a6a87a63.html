@@ -44,6 +44,8 @@
 <meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224110917.png">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>对ARM access flag和dirty state机制理解 - IC攻城狮的摸鱼小屋</title>
 
@@ -83,7 +85,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"rongyel.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"rongyel.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -96,9 +98,9 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
 </head>
 
 
@@ -112,7 +114,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>IC攻城狮的摸鱼小屋</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -208,7 +210,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -292,16 +294,16 @@
                 
                 <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>官方ARM 架构手册：<a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/ddi0487/ha/?lang=en">Arm Architecture Reference Manual for A-profile architecture</a>H.a版本<br>从D5.4.7小结开始</p>
 <h1 id="The-Access-flag"><a href="#The-Access-flag" class="headerlink" title="The Access flag"></a>The Access flag</h1><p>ARM的access flag和dirty state机制用于进行页表的维护，其中的Access flag其实挺好理解的，就是最后的Page中有个AF域段，如果是0，在被访问以后就更新为1。<br>但dirty state我一直理解都不太好，Page中只有一个DBM（Dirty Bit Modifier）域段，这个域段的是怎样用的，一直没看明白。</p>
-<p>经过一段时间的思考，现在总算是理清楚了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224110917.png" srcset="/img/loading.gif" lazyload><br>Access flag指示内存页是否被访问过。<br>AF域段被设置为0后，首次被访问时会被修改为1。</p>
-<h1 id="The-dirty-state"><a href="#The-dirty-state" class="headerlink" title="The dirty state"></a>The dirty state</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224111054.png" srcset="/img/loading.gif" lazyload><br>dirty state指示是否修改了内存页或内存段。<br>dirty state可以由硬件管理，如 D5-4863 页HTTU所述<br>dirty state信息使用访问权限位 AP[2] 和 S2AP[1] 以及 DBM 位进行编码。</p>
-<h1 id="Page的域段"><a href="#Page的域段" class="headerlink" title="Page的域段"></a>Page的域段</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112636.png" srcset="/img/loading.gif" lazyload><br>这里补充一下AF、AP、S2AP、DBM这几个域段的概念。<br>在page的属性域段中，</p>
-<h2 id="AF就是access-flag"><a href="#AF就是access-flag" class="headerlink" title="AF就是access flag"></a>AF就是access flag</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112741.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="AP是访问权限"><a href="#AP是访问权限" class="headerlink" title="AP是访问权限"></a>AP是访问权限</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112755.png" srcset="/img/loading.gif" lazyload><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112830.png" srcset="/img/loading.gif" lazyload></p>
+<p>经过一段时间的思考，现在总算是理清楚了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224110917.png"><br>Access flag指示内存页是否被访问过。<br>AF域段被设置为0后，首次被访问时会被修改为1。</p>
+<h1 id="The-dirty-state"><a href="#The-dirty-state" class="headerlink" title="The dirty state"></a>The dirty state</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224111054.png"><br>dirty state指示是否修改了内存页或内存段。<br>dirty state可以由硬件管理，如 D5-4863 页HTTU所述<br>dirty state信息使用访问权限位 AP[2] 和 S2AP[1] 以及 DBM 位进行编码。</p>
+<h1 id="Page的域段"><a href="#Page的域段" class="headerlink" title="Page的域段"></a>Page的域段</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112636.png"><br>这里补充一下AF、AP、S2AP、DBM这几个域段的概念。<br>在page的属性域段中，</p>
+<h2 id="AF就是access-flag"><a href="#AF就是access-flag" class="headerlink" title="AF就是access flag"></a>AF就是access flag</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112741.png"></p>
+<h2 id="AP是访问权限"><a href="#AP是访问权限" class="headerlink" title="AP是访问权限"></a>AP是访问权限</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112755.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224112830.png"></p>
 <h2 id="S2AP和AP是一样的"><a href="#S2AP和AP是一样的" class="headerlink" title="S2AP和AP是一样的"></a>S2AP和AP是一样的</h2><p>只是S2AP是stage2翻译的时候获得页的域段。<br>stage2翻译就是IPA-&gt;PA的翻译阶段，这里不过多展开描述。</p>
-<h2 id="DBM-Dirty修改位"><a href="#DBM-Dirty修改位" class="headerlink" title="DBM Dirty修改位"></a>DBM Dirty修改位</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224113009.png" srcset="/img/loading.gif" lazyload><br>这个东西看起来很抽象，后面再展开表述它的使用</p>
-<h1 id="软件管理Access-flag"><a href="#软件管理Access-flag" class="headerlink" title="软件管理Access flag"></a>软件管理Access flag</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224111310.png" srcset="/img/loading.gif" lazyload><br>Armv8.0 要求软件管理访问标志。这意味着，每当尝试将访问标志的值为 0 的转换表描述符条目读入 TLB 时，都会生成访问标志错误。<br>访问标志机制期望，当发生访问标志错误时，软件会在导致故障的转换表条目中将访问标志重置为 1。这可以防止下次访问内存位置时发生故障。访问标志设置为 0 的条目永远不会保留在 TLB 中，这意味着软件在设置标志后不必从 TLB 刷新条目。</p>
+<h2 id="DBM-Dirty修改位"><a href="#DBM-Dirty修改位" class="headerlink" title="DBM Dirty修改位"></a>DBM Dirty修改位</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224113009.png"><br>这个东西看起来很抽象，后面再展开表述它的使用</p>
+<h1 id="软件管理Access-flag"><a href="#软件管理Access-flag" class="headerlink" title="软件管理Access flag"></a>软件管理Access flag</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224111310.png"><br>Armv8.0 要求软件管理访问标志。这意味着，每当尝试将访问标志的值为 0 的转换表描述符条目读入 TLB 时，都会生成访问标志错误。<br>访问标志机制期望，当发生访问标志错误时，软件会在导致故障的转换表条目中将访问标志重置为 1。这可以防止下次访问内存位置时发生故障。访问标志设置为 0 的条目永远不会保留在 TLB 中，这意味着软件在设置标志后不必从 TLB 刷新条目。</p>
 <p>这里稍微表述了一下，ARM V8.0是只支持通过软件来管理access flag的。<br>当访问到AF为0的页时，就会产生一个fault错误告诉软件，软件去修改Page的AF为1，然后再次访问就正常了。<br>显然，这里上报fault，软件再去改写AF，其实是要耗费软件的精力的。这就很麻烦。</p>
-<h1 id="硬件管理Access-flag-和Dirty-state"><a href="#硬件管理Access-flag-和Dirty-state" class="headerlink" title="硬件管理Access flag 和Dirty state"></a>硬件管理Access flag 和Dirty state</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224111619.png" srcset="/img/loading.gif" lazyload><br>从ARM V8.1开始，支持硬件管理了，也就是HTTU(Hardware Translation Table Update)。</p>
+<h1 id="硬件管理Access-flag-和Dirty-state"><a href="#硬件管理Access-flag-和Dirty-state" class="headerlink" title="硬件管理Access flag 和Dirty state"></a>硬件管理Access flag 和Dirty state</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221224111619.png"><br>从ARM V8.1开始，支持硬件管理了，也就是HTTU(Hardware Translation Table Update)。</p>
 <p>简单来说，就是硬件可以直接去修改AF域段，这里的硬件指的应该是MMU/SMMU，在PTW获取最后一级Page的时候，如果发现AF是0，那就直接自己完成读写原子操作，将page的AF改为1，而无需上报Fault给软件。</p>
 <p>而Dirty state的维护就体现的比较拐弯抹角了。它是同时使用DBM、AP/S2AP这一组域段来表示是否为Dirty的。</p>
 <p>首先，软件会把页的访问权限设置为“不可写”。<br>这里的“不可写”其实区分为“真的不可写”和“为了判断dirty state，暂时不可写”两种情况。<br>这两种情况体现在DBM这个域段上：<br>如果为0，那就是“真的不可写”<br>如果为1，那就是“为了判断dirty state，暂时不可写”</p>
@@ -515,6 +517,32 @@
     </div>
   
   
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
   
 </div>
 
@@ -544,7 +572,9 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
   
 
 
@@ -644,6 +674,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

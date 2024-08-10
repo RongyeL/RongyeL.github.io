@@ -38,6 +38,8 @@
 <meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112231021.png">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>CHI l-credit的使用关注点 - IC攻城狮的摸鱼小屋</title>
 
@@ -77,7 +79,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"rongyel.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"rongyel.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -90,9 +92,9 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
 </head>
 
 
@@ -106,7 +108,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>IC攻城狮的摸鱼小屋</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -202,7 +204,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -285,9 +287,9 @@
               <div class="markdown-body">
                 
                 <h2 id="握手差异"><a href="#握手差异" class="headerlink" title="握手差异"></a>握手差异</h2><p>CHI和AXI的一个很大不同，<br>就在于握手机制。</p>
-<p>AXI协议中使用的是valid-ready握手的方式，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112231021.png" srcset="/img/loading.gif" lazyload></p>
-<p>CHI协议中则设计了一套credit机制进行握手。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112230920.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="credit握手"><a href="#credit握手" class="headerlink" title="credit握手"></a>credit握手</h2><p>credit由rx发出，tx接收。<br>tx每拥有一个credit，就可以向rx发送一笔数据，即一次flitv。<br>rx每收到一个flitv，就再发出一个credit给tx。<br>每个通道（REQ/SNP/RSP/DATA）都有独立的credit。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112231157.png" srcset="/img/loading.gif" lazyload></p>
+<p>AXI协议中使用的是valid-ready握手的方式，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112231021.png"></p>
+<p>CHI协议中则设计了一套credit机制进行握手。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112230920.png"></p>
+<h2 id="credit握手"><a href="#credit握手" class="headerlink" title="credit握手"></a>credit握手</h2><p>credit由rx发出，tx接收。<br>tx每拥有一个credit，就可以向rx发送一笔数据，即一次flitv。<br>rx每收到一个flitv，就再发出一个credit给tx。<br>每个通道（REQ/SNP/RSP/DATA）都有独立的credit。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112231157.png"></p>
 <p>credit和valid-ready的一个最大区别，就在于：<br>valid-ready握手是必须握完一个事务才能握下一个，<br>credit握手则是，我可以一次性给你发很多个credit，你慢慢发事务。</p>
 <p>给credit的含义就是，你可以发，而我必须接收，<br>所以rx内的buffer深度必须大于等于credit数量，<br>不然就会丢包。</p>
 <h2 id="接口流水"><a href="#接口流水" class="headerlink" title="接口流水"></a>接口流水</h2><p>两个节点之间，假定路径上有4拍延迟，<br>那么需要4个credit，就可以保证流水。</p>
@@ -503,6 +505,32 @@
     </div>
   
   
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
   
 </div>
 
@@ -532,7 +560,9 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
   
 
 
@@ -632,6 +662,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
