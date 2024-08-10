@@ -116,29 +116,6 @@
   </entry>
   
   <entry>
-    <title>架着高达的酸臭恋爱剧，高达SEED FREEDOM</title>
-    <link href="https://rongyel.github.io/posts/dfc69232.html"/>
-    <id>https://rongyel.github.io/posts/dfc69232.html</id>
-    <published>2024-07-13T14:28:11.142Z</published>
-    <updated>2024-08-10T07:52:12.306Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;被基拉和拉克丝的爱给……………………无语到了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="动漫" scheme="https://rongyel.github.io/categories/%E5%8A%A8%E6%BC%AB/"/>
-    
-    
-    <category term="动漫" scheme="https://rongyel.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
-    
-    <category term="电影" scheme="https://rongyel.github.io/tags/%E7%94%B5%E5%BD%B1/"/>
-    
-    <category term="高达" scheme="https://rongyel.github.io/tags/%E9%AB%98%E8%BE%BE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>如何自动切换Obsidian Vim模式的中英文模式</title>
     <link href="https://rongyel.github.io/posts/6042261.html"/>
     <id>https://rongyel.github.io/posts/6042261.html</id>
@@ -413,6 +390,27 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo直接发布Obsidian路径下的文章</title>
+    <link href="https://rongyel.github.io/posts/da16531b.html"/>
+    <id>https://rongyel.github.io/posts/da16531b.html</id>
+    <published>2024-07-06T15:53:35.155Z</published>
+    <updated>2024-07-03T14:18:14.271Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Obsidian撰写文章，还要复制到Hexo的_post路径下，才能部署，这个动作太麻烦了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+    
+    <category term="HEXO" scheme="https://rongyel.github.io/tags/HEXO/"/>
+    
+    <category term="Obsidian" scheme="https://rongyel.github.io/tags/Obsidian/"/>
     
   </entry>
   
