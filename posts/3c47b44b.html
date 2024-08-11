@@ -19,17 +19,17 @@
   <meta name="author" content="Rongye">
   <meta name="keywords" content="ASIC">
   
-    <meta name="description" content="摘要">
+    <meta name="description" content="简单记录使用过程中遇到的问题及解决方案">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VCS+VERDI使用手册">
 <meta property="og:url" content="https://rongyel.github.io/posts/3c47b44b.html">
 <meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
-<meta property="og:description" content="摘要">
+<meta property="og:description" content="简单记录使用过程中遇到的问题及解决方案">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-20T08:57:04.293Z">
-<meta property="article:modified_time" content="2024-08-05T16:35:46.299Z">
+<meta property="article:modified_time" content="2024-08-11T08:07:11.071Z">
 <meta property="article:author" content="Rong晔">
-<meta property="article:tag" content="ASIC">
+<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -87,9 +87,9 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
 </head>
 
 
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          66 字
+          92 字
         
       </span>
     
@@ -291,16 +291,17 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>摘要</p>
+<p>简单记录使用过程中遇到的问题及解决方案</p>
 </blockquote>
-<p>文首描述</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><hr>
+<p>基本编译和仿真工具，VCS+VERDI</p>
 <h1 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h1><hr>
-<h2 id="编译时提示缺少系统函数-fsdbDumpvars"><a href="#编译时提示缺少系统函数-fsdbDumpvars" class="headerlink" title="编译时提示缺少系统函数$fsdbDumpvars"></a>编译时提示缺少系统函数$fsdbDumpvars</h2><p><a href="%E5%85%B3%E4%BA%8EfsdbDumpvarsfsdbDumpfile%20Undefined%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95_undefined%20system%20task%20call%20to%20'$fsdbdumpvars'.-CSDN%E5%8D%9A%E5%AE%A2%201.md">关于fsdbDumpvarsfsdbDumpfile Undefined的问题解决办法_undefined system task call to ‘$fsdbdumpvars’.-CSDN博客 1</a></p>
-<blockquote>
+<h2 id="编译时提示缺少系统函数-fsdbDumpvars-1"><a href="#编译时提示缺少系统函数-fsdbDumpvars-1" class="headerlink" title="编译时提示缺少系统函数$fsdbDumpvars[1]"></a>编译时提示缺少系统函数$fsdbDumpvars<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[关于fsdbDumpvarsfsdbDumpfile Undefined的问题解决办法_undefined system task call to '$fsdbdumpvars'.-CSDN博客 1](关于fsdbDumpvarsfsdbDumpfile%20Undefined的问题解决办法_undefined%20system%20task%20call%20to%20'$fsdbdumpvars'.-CSDN博客%201.md)">[1]</span></a></sup></h2><blockquote>
 <p>需要增加下面的Verdi编译文件：</p>
 <p>&nbsp;-P ${VERDI_HOME}/share/PLI/VCS/LINUX64/novas.tab ${VERDI_HOME}/share/PLI/VCS/LINUX64/pli.a</p>
 </blockquote>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><hr>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="%E5%85%B3%E4%BA%8EfsdbDumpvarsfsdbDumpfile%20Undefined%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95_undefined%20system%20task%20call%20to%20'$fsdbdumpvars'.-CSDN%E5%8D%9A%E5%AE%A2%201.md">关于fsdbDumpvarsfsdbDumpfile Undefined的问题解决办法_undefined system task call to ‘$fsdbdumpvars’.-CSDN博客 1</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -318,7 +319,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/EDA/" class="category-chain-item">EDA</a>
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="category-chain-item">技术笔记</a>
   
   
 
@@ -329,6 +330,13 @@
 
     </div>
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%B7%A5%E5%85%B7/" class="print-no-link">#工具</a>
+      
+    </div>
   
 </div>
 

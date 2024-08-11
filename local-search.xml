@@ -112,15 +112,21 @@
     <link href="/posts/3c47b44b.html"/>
     <url>/posts/3c47b44b.html</url>
     
-    <content type="html"><![CDATA[<blockquote><p>摘要</p></blockquote><p>文首描述</p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><hr><h1 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h1><hr><h2 id="编译时提示缺少系统函数-fsdbDumpvars"><a href="#编译时提示缺少系统函数-fsdbDumpvars" class="headerlink" title="编译时提示缺少系统函数$fsdbDumpvars"></a>编译时提示缺少系统函数$fsdbDumpvars</h2><p><a href="%E5%85%B3%E4%BA%8EfsdbDumpvarsfsdbDumpfile%20Undefined%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95_undefined%20system%20task%20call%20to%20'$fsdbdumpvars'.-CSDN%E5%8D%9A%E5%AE%A2%201.md">关于fsdbDumpvarsfsdbDumpfile Undefined的问题解决办法_undefined system task call to ‘$fsdbdumpvars’.-CSDN博客 1</a></p><blockquote><p>需要增加下面的Verdi编译文件：</p><p>&nbsp;-P ${VERDI_HOME}/share/PLI/VCS/LINUX64/novas.tab ${VERDI_HOME}/share/PLI/VCS/LINUX64/pli.a</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>简单记录使用过程中遇到的问题及解决方案</p></blockquote><p>基本编译和仿真工具，VCS+VERDI</p><h1 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h1><hr><h2 id="编译时提示缺少系统函数-fsdbDumpvars-1"><a href="#编译时提示缺少系统函数-fsdbDumpvars-1" class="headerlink" title="编译时提示缺少系统函数$fsdbDumpvars[1]"></a>编译时提示缺少系统函数$fsdbDumpvars<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[关于fsdbDumpvarsfsdbDumpfile Undefined的问题解决办法_undefined system task call to '$fsdbdumpvars'.-CSDN博客 1](关于fsdbDumpvarsfsdbDumpfile%20Undefined的问题解决办法_undefined%20system%20task%20call%20to%20'$fsdbdumpvars'.-CSDN博客%201.md)">[1]</span></a></sup></h2><blockquote><p>需要增加下面的Verdi编译文件：</p><p>&nbsp;-P ${VERDI_HOME}/share/PLI/VCS/LINUX64/novas.tab ${VERDI_HOME}/share/PLI/VCS/LINUX64/pli.a</p></blockquote><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><hr><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="%E5%85%B3%E4%BA%8EfsdbDumpvarsfsdbDumpfile%20Undefined%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95_undefined%20system%20task%20call%20to%20'$fsdbdumpvars'.-CSDN%E5%8D%9A%E5%AE%A2%201.md">关于fsdbDumpvarsfsdbDumpfile Undefined的问题解决办法_undefined system task call to ‘$fsdbdumpvars’.-CSDN博客 1</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
     
     <categories>
       
-      <category>EDA</category>
+      <category>技术笔记</category>
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>工具</tag>
+      
+    </tags>
     
   </entry>
   
