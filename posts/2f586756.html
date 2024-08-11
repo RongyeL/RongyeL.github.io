@@ -27,10 +27,12 @@
 <meta property="og:description" content="记录HISOC系列视频要讲些什么">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240730003810.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240811201423.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240811201643.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240728231244.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240728231312.png">
 <meta property="article:published_time" content="2024-08-06T15:24:36.000Z">
-<meta property="article:modified_time" content="2024-08-10T07:51:57.086Z">
+<meta property="article:modified_time" content="2024-08-11T16:20:22.968Z">
 <meta property="article:author" content="Rong晔">
 <meta property="article:tag" content="数字IC">
 <meta property="article:tag" content="数字设计">
@@ -233,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          734 字
+          1k 字
         
       </span>
     
@@ -244,7 +246,7 @@
         
         
         
-          7 分钟
+          9 分钟
         
       </span>
     
@@ -306,6 +308,8 @@
 <h2 id="EXU设计"><a href="#EXU设计" class="headerlink" title="EXU设计"></a>EXU设计</h2><p>此处需要把MEM和WB也在这个阶段实现。<br>当前MEM如果想要做成AXI接口访存的方式，还需要考虑读写之间的保序。此处需要确保顺序执行，否则应该也会出错。</p>
 <h2 id="寄存器堆设计"><a href="#寄存器堆设计" class="headerlink" title="寄存器堆设计"></a>寄存器堆设计</h2><p>表单管理，脚本生成标准的读写逻辑。<br>需要同时出两个寄存器读接口，后续可以考虑再加一个外部apb访问的读接口。</p>
 <p>需要注意，寄存器读输出直接拉到idu模块，因为这其实属于译码的一部分。操作符和操作数都应该在idu阶段获得，同时传递给exu阶段。</p>
+<h2 id="一些指令"><a href="#一些指令" class="headerlink" title="一些指令"></a>一些指令</h2><p>JARL已经调通，主要就是jump的拦截需要做好。<br>LB指令没有看到PASS，因为中间出现了x态<br>SH指令没有pass，原因也是因为中间出现了X态。如图，写入的是byte，读出来是halfword。这样其实高位还是x。而比较的时候如果有X，输出的结果就是x。结果会出现branch跳转判断为X……<br>LB.SB等指令没法调通，原因在于mem默认是X态，然后它的测试用例感觉有问题。当我通过SB写入了一个Byte的数据后，用LH读出来？这当然存在一部分X态数据啦。然后让我去做比对，这比对的结果就是X。。。。所以LB/SB这类指令都是假pass。不过没关系，从波形上分析行为是符合预期的。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240811201423.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>解决方法是使用严格的Verilog语法，用===，或者!==在alu计算的时候使用。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240811201643.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>此处得修改一下，ALU必须增加一个比对的命令。就用抑或逻辑来做吧。</p>
 <hr>
 <h1 id="AXI设计"><a href="#AXI设计" class="headerlink" title="AXI设计"></a>AXI设计</h1><h2 id="AXI-MST-RD，AXI-SLV-RD控制逻辑"><a href="#AXI-MST-RD，AXI-SLV-RD控制逻辑" class="headerlink" title="AXI MST RD，AXI SLV RD控制逻辑"></a>AXI MST RD，AXI SLV RD控制逻辑</h2><h3 id="多OST的实现"><a href="#多OST的实现" class="headerlink" title="多OST的实现"></a>多OST的实现</h3><p>通过for循环设计多ost深度buff<br>这里还需要修改，指针不要做成跟fifo一样递增的。还是要做成可以随意调度位置的方式。<br>当前先实现顺序执行的，必须保序的模式。</p>
 <h2 id="AXI-MST-WR，AXI-SLV-WR控制逻辑"><a href="#AXI-MST-WR，AXI-SLV-WR控制逻辑" class="headerlink" title="AXI MST WR，AXI SLV WR控制逻辑"></a>AXI MST WR，AXI SLV WR控制逻辑</h2><h2 id="AXI-Interconnected-逻辑"><a href="#AXI-Interconnected-逻辑" class="headerlink" title="AXI Interconnected 逻辑"></a>AXI Interconnected 逻辑</h2><hr>
