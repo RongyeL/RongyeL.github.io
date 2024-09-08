@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rongyel.github.io/posts/b4a0abff.html</loc>
+    
+    <lastmod>2024-09-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/posts/d3739db2.html</loc>
+    
+    <lastmod>2024-09-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rongyel.github.io/posts/d3739db2.html</loc>
     
     <lastmod>2024-09-08</lastmod>
@@ -41,15 +59,6 @@
     <loc>https://rongyel.github.io/posts/dfc69232.html</loc>
     
     <lastmod>2024-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rongyel.github.io/posts/b4a0abff.html</loc>
-    
-    <lastmod>2024-08-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
