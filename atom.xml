@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-09-08T10:48:55.679Z</updated>
+  <updated>2024-09-07T13:39:02.575Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,25 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>鱼龟混养实验日记</title>
-    <link href="https://rongyel.github.io/posts/d3739db2.html"/>
-    <id>https://rongyel.github.io/posts/d3739db2.html</id>
-    <published>2024-09-08T10:48:54.000Z</published>
-    <updated>2024-09-08T10:48:55.679Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;作为一个没有养过鱼的人，在养了鳄龟以后还想混养鱼……做了很多尝试&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="宠物" scheme="https://rongyel.github.io/tags/%E5%AE%A0%E7%89%A9/"/>
-    
-  </entry>
   
   <entry>
     <title>广州长隆野生动物园一日动物看爽</title>
@@ -97,7 +78,7 @@
     <link href="https://rongyel.github.io/posts/d3739db2.html"/>
     <id>https://rongyel.github.io/posts/d3739db2.html</id>
     <published>2024-08-16T16:32:37.540Z</published>
-    <updated>2024-09-08T10:40:57.536Z</updated>
+    <updated>2024-09-08T15:54:12.898Z</updated>
     
     
     <summary type="html">&lt;p&gt;作为一个没有养过鱼的人，在养了鳄龟以后还想混养鱼……做了很多尝试&lt;/p&gt;</summary>
@@ -116,7 +97,7 @@
     <link href="https://rongyel.github.io/posts/b4a0abff.html"/>
     <id>https://rongyel.github.io/posts/b4a0abff.html</id>
     <published>2024-08-12T15:40:08.685Z</published>
-    <updated>2024-09-08T12:54:19.387Z</updated>
+    <updated>2024-09-17T03:14:16.500Z</updated>
     
     
     <summary type="html">&lt;p&gt;老八真可爱&lt;/p&gt;</summary>
@@ -407,6 +388,27 @@
     
     
     <category term="摄影" scheme="https://rongyel.github.io/tags/%E6%91%84%E5%BD%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AUTOBAGUMI安装记录</title>
+    <link href="https://rongyel.github.io/posts/49a50291.html"/>
+    <id>https://rongyel.github.io/posts/49a50291.html</id>
+    <published>2024-07-06T15:53:41.986Z</published>
+    <updated>2024-07-14T03:22:50.431Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;AutoBangumi：自动追番，解放双手&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+    
+    <category term="NAS" scheme="https://rongyel.github.io/tags/NAS/"/>
+    
+    <category term="动漫" scheme="https://rongyel.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
     
   </entry>
   
