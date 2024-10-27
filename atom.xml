@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-10-13T08:33:15.246Z</updated>
+  <updated>2024-10-27T12:39:24.419Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,28 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>未命名</title>
-    <link href="https://rongyel.github.io/posts/3c47b44b.html"/>
-    <id>https://rongyel.github.io/posts/3c47b44b.html</id>
-    <published>2024-10-13T04:00:12.844Z</published>
-    <updated>2024-10-13T08:33:15.246Z</updated>
+    <title>为了C.C.的笑颜，这剧场版也值得一看 —— 复活的鲁路修</title>
+    <link href="https://rongyel.github.io/posts/7bfaa02b.html"/>
+    <id>https://rongyel.github.io/posts/7bfaa02b.html</id>
+    <published>2024-10-27T12:31:22.660Z</published>
+    <updated>2024-10-27T12:39:24.419Z</updated>
     
     
-    <summary type="html">&lt;p&gt;摘要  &lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;太好了，是幸福的结局。  &lt;/p&gt;</summary>
     
     
     
-    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
     
+    
+    <category term="动漫" scheme="https://rongyel.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
     
   </entry>
   
   <entry>
-    <title>未命名</title>
+    <title>群晖NAS删除文件但空间没释放</title>
     <link href="https://rongyel.github.io/posts/3c47b44b.html"/>
     <id>https://rongyel.github.io/posts/3c47b44b.html</id>
     <published>2024-10-11T17:24:43.025Z</published>
-    <updated>2024-10-11T17:36:25.410Z</updated>
+    <updated>2024-10-27T12:29:57.633Z</updated>
     
     
     <summary type="html">&lt;p&gt;摘要  &lt;/p&gt;</summary>
@@ -47,6 +49,10 @@
     
     <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
+    
+    <category term="NAS" scheme="https://rongyel.github.io/tags/NAS/"/>
+    
+    <category term="数码" scheme="https://rongyel.github.io/tags/%E6%95%B0%E7%A0%81/"/>
     
   </entry>
   
@@ -55,7 +61,7 @@
     <link href="https://rongyel.github.io/posts/8c870f28.html"/>
     <id>https://rongyel.github.io/posts/8c870f28.html</id>
     <published>2024-10-11T12:58:43.211Z</published>
-    <updated>2024-10-13T10:13:05.470Z</updated>
+    <updated>2024-10-13T12:25:19.735Z</updated>
     
     
     <summary type="html">&lt;p&gt;NAS已经用了一年了，很明确使用需求了。&lt;br&gt;感觉220+太卡了，而且两盘位用起来很不爽。&lt;br&gt;二手入了几乎全新的923+，快速迁移一下&lt;/p&gt;</summary>
