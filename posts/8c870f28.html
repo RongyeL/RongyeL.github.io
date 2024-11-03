@@ -33,13 +33,13 @@
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241011211058.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241011211124.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241011211158.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013010330.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013010342.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013004028.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013004053.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013004104.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013004124.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013004220.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013010330.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013010342.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013165044.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013165305.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013165324.png">
@@ -48,7 +48,7 @@
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013170551.png">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013170842.png">
 <meta property="article:published_time" content="2024-10-11T12:58:43.211Z">
-<meta property="article:modified_time" content="2024-10-13T12:25:19.735Z">
+<meta property="article:modified_time" content="2024-11-03T06:55:27.291Z">
 <meta property="article:author" content="Rong晔">
 <meta property="article:tag" content="NAS">
 <meta property="article:tag" content="群晖">
@@ -252,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          589 字
+          736 字
         
       </span>
     
@@ -263,7 +263,7 @@
         
         
         
-          5 分钟
+          7 分钟
         
       </span>
     
@@ -315,28 +315,28 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>记录一下迁移记录 </p>
+<p>NAS已经用了一年了，很明确使用需求了。<br>感觉220+太卡了，而且两盘位用起来很不爽。<br>二手入了几乎全新的923+，快速迁移一下 </p>
 </blockquote>
 <p>群晖自带的迁移很失败……最后还是靠文件同步的方式软迁移了。  </p>
-<h1 id="新NAS安装"><a href="#新NAS安装" class="headerlink" title="新NAS安装"></a>新NAS安装</h1><p>简单装上了准备好的16g内存条以及16T的机械硬盘。当前就装了一个盘。<br>选择basic，以后不搞raid了，多少有点浪费。</p>
-<h1 id="迁移步骤"><a href="#迁移步骤" class="headerlink" title="迁移步骤"></a>迁移步骤</h1><p>通过Migration Assistant^1套件完成，只需要在迁移目的地，也就是新NAS上安装即可。</p>
+<h1 id="新NAS磁盘准备"><a href="#新NAS磁盘准备" class="headerlink" title="新NAS磁盘准备"></a>新NAS磁盘准备</h1><p>简单装上了准备好的16g内存条以及16T的机械硬盘。当前就装了一个盘。<br>选择basic，大磁盘以后不搞raid了，多少有点浪费。<br>然后等迁移完成以后，将原来的两个8T再挪过来做RAID1，高级安全需求的数据定期备份到这里面。<br>空置一个槽，等以后有闲钱了再补个16T的。</p>
+<h1 id="Migration-Assistant迁移【失败】"><a href="#Migration-Assistant迁移【失败】" class="headerlink" title="Migration Assistant迁移【失败】"></a>Migration Assistant迁移【失败】</h1><p>通过Migration Assistant^1套件完成，只需要在迁移目的地，也就是新NAS上安装即可。</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241011210244.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>迁移过程种提示，新设备的共享文件夹必须删掉<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241011210328.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <p>通过控制面板删除的时候提示，先关掉这个home目录功能<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241011210411.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>什么鬼翻译<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241011210850.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>部分套件不兼容，没关系，EMBY好像不兼容<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241011211058.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>靠，21个小时。今天可以结束了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241011211124.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241011211158.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <p>唉，明天见。</p>
 <p>彻底失败。无法迁移，原因不明。<br>该方法放弃</p>
-<h1 id="铠侠SSD做存储池"><a href="#铠侠SSD做存储池" class="headerlink" title="铠侠SSD做存储池"></a>铠侠SSD做存储池</h1><p>买了一条2T的铠侠SSD，群晖官方那个天然支持做存储盘的SSD真的是天价……</p>
+<h1 id="drive同步的方式，来迁移数据……【成功】"><a href="#drive同步的方式，来迁移数据……【成功】" class="headerlink" title="drive同步的方式，来迁移数据……【成功】"></a>drive同步的方式，来迁移数据……【成功】</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013010330.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013010342.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这个同步比较稳定，在原有NAS完成正常工作的情况下，同步内容。<br>虽然比较慢，最后应该是花了3~4天的时间，全部数据迁移了过来，约6T的内容。</p>
+<h1 id="铠侠SSD做存储池"><a href="#铠侠SSD做存储池" class="headerlink" title="铠侠SSD做存储池"></a>铠侠SSD做存储池</h1><p>买了一条2T的铠侠SSD，群晖官方那个天然支持做存储盘的SSD真的是天价……<br>虽然官方说是不支持的，但其实很好处理。</p>
 <p>参考网上的攻略，一步步走非常顺利的就完成了设置^2<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013004028.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013004053.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013004104.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <p>重启后，这里就检测到可用池了。之前只能作为缓存的选项</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013004124.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013004220.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>选择重组回复</p>
-<h1 id="选择使用drive同步的方式，来迁移数据……"><a href="#选择使用drive同步的方式，来迁移数据……" class="headerlink" title="选择使用drive同步的方式，来迁移数据……"></a>选择使用drive同步的方式，来迁移数据……</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013010330.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013010342.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这个同步比较稳定，在原有NAS完成正常工作的情况下，同步内容。</p>
 <h1 id="重新安装Autogabumi"><a href="#重新安装Autogabumi" class="headerlink" title="重新安装Autogabumi"></a>重新安装Autogabumi</h1><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013165044.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>在root下执行一个命令就可以完成安装^3</p>
 <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013165305.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>不过这个教程写的不明不白的，其实需要先建config和data文件夹<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013165324.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这样才是正常的已经启动好了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013165358.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>安装非常顺利，直接就成功了。</p>
 <h1 id="矿神套件安装"><a href="#矿神套件安装" class="headerlink" title="矿神套件安装"></a>矿神套件安装</h1><p>套件中心-设置，添加源即可<br>矿神套件链接 <code>https://imnks.com/1780.html</code></p>
 <h1 id="qBitorrent安装"><a href="#qBitorrent安装" class="headerlink" title="qBitorrent安装"></a>qBitorrent安装</h1><p>这次试试最新的5.0版本。<br>矿神套件可以安装<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013170247.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>界面好看了一点，像这个时代的界面<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013170551.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>最关键，把代理设置好。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20241013170842.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>关联autobangumi后，随便收集了一个rss试试，很成功，直接就能用了。爽！！！</p>
-<h1 id="剩余待办"><a href="#剩余待办" class="headerlink" title="剩余待办"></a>剩余待办</h1><p>还剩下照片的备份。然后图书管理。其他的都不需要了。</p>
+<h1 id="剩余待办"><a href="#剩余待办" class="headerlink" title="剩余待办"></a>剩余待办</h1><p>NAS照片的备份。<br>然后图书管理。其他的都不需要了。</p>
 <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://kb.synology.cn/zh-cn/DSM/tutorial/How_to_migrate_between_Synology_NAS_DSM_6_0_Migration_Asst">如何通过 Migration Assistant（DSM 6.0 及以上版本）在 Synology NAS 之间迁移数据？ - Synology 知识中心</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://post.smzdm.com/p/axzz4n5d/?sort_tab=hot/">活用群晖nvme硬盘——将nvme硬盘设置成存储池_固态硬盘_什么值得买</a>
 <a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.autobangumi.org/deploy/quick-start.html">快速开始 | AutoBangumi</a>
