@@ -1,3 +1,5 @@
+https://rongyel.github.io/posts/721ee34d.html
+https://rongyel.github.io/posts/15462f01.html
 https://rongyel.github.io/posts/9620b963.html
 https://rongyel.github.io/posts/d3739db2.html
 https://rongyel.github.io/posts/8c870f28.html
@@ -94,6 +96,8 @@ https://rongyel.github.io/tags/CHI/
 https://rongyel.github.io/tags/AMBA/
 https://rongyel.github.io/tags/Verilog/
 https://rongyel.github.io/tags/HISOC/
+https://rongyel.github.io/tags/%E4%B8%89%E6%98%9F/
+https://rongyel.github.io/tags/%E6%89%8B%E6%9C%BA/
 https://rongyel.github.io/categories/%E6%96%B9%E6%B3%95%E5%AD%A6%E8%AE%BA/
 https://rongyel.github.io/categories/HISOC/
 https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/
