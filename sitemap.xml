@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://rongyel.github.io/posts/a52603f1.html</loc>
+    <loc>https://rongyel.github.io/posts/4899ec2f.html</loc>
     
     <lastmod>2024-11-14</lastmod>
     
@@ -822,6 +822,13 @@
   
   <url>
     <loc>https://rongyel.github.io/tags/%E6%89%8B%E6%9C%BA/</loc>
+    <lastmod>2024-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rongyel.github.io/tags/%E5%B7%A5%E4%BD%9C/</loc>
     <lastmod>2024-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
