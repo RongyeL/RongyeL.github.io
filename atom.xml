@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2024-11-14T16:26:07.077Z</updated>
+  <updated>2024-12-21T15:24:35.028Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的2024各平台年度游戏总结</title>
+    <link href="https://rongyel.github.io/posts/bf5415af.html"/>
+    <id>https://rongyel.github.io/posts/bf5415af.html</id>
+    <published>2024-12-21T15:24:34.000Z</published>
+    <updated>2024-12-21T15:24:35.028Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要  &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="游戏" scheme="https://rongyel.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的2024各平台年度游戏总结</title>
+    <link href="https://rongyel.github.io/posts/bf5415af.html"/>
+    <id>https://rongyel.github.io/posts/bf5415af.html</id>
+    <published>2024-12-21T15:08:21.101Z</published>
+    <updated>2024-12-21T15:53:01.425Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Switch玩了52小时。PS5玩了316小时。Steam玩了245小时。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="游戏" scheme="https://rongyel.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>记录对于工作的理解和改进</title>
@@ -377,46 +413,6 @@
     <category term="Obsidian" scheme="https://rongyel.github.io/tags/Obsidian/"/>
     
     <category term="GVim" scheme="https://rongyel.github.io/tags/GVim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何去掉快捷方式图标左下角的箭头</title>
-    <link href="https://rongyel.github.io/posts/bf695b9.html"/>
-    <id>https://rongyel.github.io/posts/bf695b9.html</id>
-    <published>2024-07-06T15:53:43.463Z</published>
-    <updated>2024-07-07T07:33:43.519Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;应用程序在桌面的快捷方式左下角总会有一个小箭头影响美观，很烦&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    
-    
-    <category term="WINDOWS" scheme="https://rongyel.github.io/tags/WINDOWS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>瞎搞导致无法用IP访问群晖NAS界面的处理方案</title>
-    <link href="https://rongyel.github.io/posts/41143f4e.html"/>
-    <id>https://rongyel.github.io/posts/41143f4e.html</id>
-    <published>2024-07-06T15:53:43.288Z</published>
-    <updated>2024-08-05T16:37:07.502Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;瞎搞导致无法用IP访问群晖NAS界面的处理方案&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="解决方案" scheme="https://rongyel.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    
-    
-    <category term="NAS" scheme="https://rongyel.github.io/tags/NAS/"/>
-    
-    <category term="群晖" scheme="https://rongyel.github.io/tags/%E7%BE%A4%E6%99%96/"/>
     
   </entry>
   
