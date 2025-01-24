@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-01-19T16:14:58.386Z</updated>
+  <updated>2025-01-23T15:42:46.649Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -20,8 +20,37 @@
     <title>养一只红腿象龟以前，我需要做好哪些准备</title>
     <link href="https://rongyel.github.io/posts/f32ec8c.html"/>
     <id>https://rongyel.github.io/posts/f32ec8c.html</id>
+    <published>2025-01-23T15:42:46.000Z</published>
+    <updated>2025-01-23T15:42:46.649Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;写在开头&quot;&gt;&lt;a href=&quot;#写在开头&quot; class=&quot;headerlink&quot; title=&quot;写在开头&quot;&gt;&lt;/a&gt;写在开头&lt;/h1&gt;&lt;h2 id=&quot;它是你的宠物，还是观赏物？&quot;&gt;&lt;a href=&quot;#它是你的宠物，还是观赏物？&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="宠物" scheme="https://rongyel.github.io/tags/%E5%AE%A0%E7%89%A9/"/>
+    
+    <category term="爬宠" scheme="https://rongyel.github.io/tags/%E7%88%AC%E5%AE%A0/"/>
+    
+    <category term="陆龟" scheme="https://rongyel.github.io/tags/%E9%99%86%E9%BE%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>养一只红腿象龟以前，我需要做好哪些准备</title>
+    <link href="https://rongyel.github.io/posts/f32ec8c.html"/>
+    <id>https://rongyel.github.io/posts/f32ec8c.html</id>
     <published>2025-01-06T14:23:27.808Z</published>
-    <updated>2025-01-19T16:14:58.386Z</updated>
+    <updated>2025-01-24T15:11:07.243Z</updated>
     
     
       
@@ -63,6 +92,25 @@
     <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
     
     <category term="HISOC" scheme="https://rongyel.github.io/tags/HISOC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>好看可爱又能吃的老八，谁不喜欢呢？——《败犬女主太多了！》</title>
+    <link href="https://rongyel.github.io/posts/b4a0abff.html"/>
+    <id>https://rongyel.github.io/posts/b4a0abff.html</id>
+    <published>2024-08-12T15:40:08.685Z</published>
+    <updated>2025-01-20T14:57:10.576Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;老八真可爱&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="动漫" scheme="https://rongyel.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
     
   </entry>
   
@@ -401,44 +449,6 @@
     <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
     
     <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>折腾HEXO的快乐</title>
-    <link href="https://rongyel.github.io/posts/92a0ec66.html"/>
-    <id>https://rongyel.github.io/posts/92a0ec66.html</id>
-    <published>2024-07-06T15:53:34.696Z</published>
-    <updated>2024-07-07T14:17:07.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;说实话，折腾这些笔记系统，博客系统，感觉像打游戏一样快乐。时隔多月再次捡起HEXO博客，重新搭建一番，并记录自己的搭建心得。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具套件" scheme="https://rongyel.github.io/categories/%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6/"/>
-    
-    
-    <category term="HEXO" scheme="https://rongyel.github.io/tags/HEXO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>再次挑战calibre安装</title>
-    <link href="https://rongyel.github.io/posts/84c884af.html"/>
-    <id>https://rongyel.github.io/posts/84c884af.html</id>
-    <published>2024-07-06T15:53:34.681Z</published>
-    <updated>2024-07-07T14:17:03.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;重新挑战在群晖安装Calibre&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具套件" scheme="https://rongyel.github.io/categories/%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6/"/>
-    
-    
-    <category term="工具" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   

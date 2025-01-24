@@ -19,24 +19,36 @@
   <meta name="author" content="Rongye">
   <meta name="keywords" content="ASIC">
   
-    <meta name="description" content="简单记录使用过程中遇到的问题及解决方案">
+    <meta name="description" content="香格里拉边界荣升我十月最期待新番，着实拿捏了我对于虚拟网游的幻想，就像当年的刀剑一样。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VCS+VERDI使用手册">
-<meta property="og:url" content="https://rongyel.github.io/posts/3c47b44b.html">
+<meta property="og:title" content="香格里拉边境 为什么让我兴奋">
+<meta property="og:url" content="https://rongyel.github.io/posts/3b1a7464.html">
 <meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
-<meta property="og:description" content="简单记录使用过程中遇到的问题及解决方案">
+<meta property="og:description" content="香格里拉边界荣升我十月最期待新番，着实拿捏了我对于虚拟网游的幻想，就像当年的刀剑一样。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-20T08:57:04.293Z">
-<meta property="article:modified_time" content="2024-08-12T16:15:05.501Z">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230710215416.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230806171854.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231028235238.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231028235301.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231840.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016232056.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231023234734.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231650.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231949.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/DSCF2416.jpg">
+<meta property="article:published_time" content="2024-07-06T15:53:34.428Z">
+<meta property="article:modified_time" content="2024-08-11T07:47:27.000Z">
 <meta property="article:author" content="Rong晔">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="动漫">
+<meta property="article:tag" content="游戏">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230710215416.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>VCS+VERDI使用手册 - IC攻城狮的摸鱼小屋</title>
+  <title>香格里拉边境 为什么让我兴奋 - IC攻城狮的摸鱼小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,7 +217,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">VCS+VERDI使用手册</span>
+            <span id="subtitle">香格里拉边境 为什么让我兴奋</span>
           
         </div>
 
@@ -216,8 +228,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-20 16:57" pubdate>
-          2024年7月20日 下午
+        <time datetime="2024-07-06 23:53" pubdate>
+          2024年7月6日 晚上
         </time>
       </span>
     
@@ -228,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          92 字
+          815 字
         
       </span>
     
@@ -239,7 +251,7 @@
         
         
         
-          1 分钟
+          7 分钟
         
       </span>
     
@@ -285,23 +297,25 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">VCS+VERDI使用手册</h1>
+            <h1 id="seo-header">香格里拉边境 为什么让我兴奋</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>简单记录使用过程中遇到的问题及解决方案</p>
-</blockquote>
-<p>基本编译和仿真工具，VCS+VERDI</p>
-<h1 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h1><hr>
-<h2 id="编译时提示缺少系统函数-fsdbDumpvars-1"><a href="#编译时提示缺少系统函数-fsdbDumpvars-1" class="headerlink" title="编译时提示缺少系统函数$fsdbDumpvars[1]"></a>编译时提示缺少系统函数$fsdbDumpvars<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[关于fsdbDumpvarsfsdbDumpfile Undefined的问题解决办法_undefined system task call to '$fsdbdumpvars'.-CSDN博客 1](关于fsdbDumpvarsfsdbDumpfile%20Undefined的问题解决办法_undefined%20system%20task%20call%20to%20'$fsdbdumpvars'.-CSDN博客%201.md)">[1]</span></a></sup></h2><blockquote>
-<p>需要增加下面的Verdi编译文件：</p>
-<p>&nbsp;-P ${VERDI_HOME}/share/PLI/VCS/LINUX64/novas.tab ${VERDI_HOME}/share/PLI/VCS/LINUX64/pli.a</p>
-</blockquote>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><hr>
-<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="%E5%85%B3%E4%BA%8EfsdbDumpvarsfsdbDumpfile%20Undefined%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95_undefined%20system%20task%20call%20to%20'$fsdbdumpvars'.-CSDN%E5%8D%9A%E5%AE%A2%201.md">关于fsdbDumpvarsfsdbDumpfile Undefined的问题解决办法_undefined system task call to ‘$fsdbdumpvars’.-CSDN博客 1</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                <h2 id="游戏，是我生活的一个重要旋律。"><a href="#游戏，是我生活的一个重要旋律。" class="headerlink" title="游戏，是我生活的一个重要旋律。"></a>游戏，是我生活的一个重要旋律。</h2><p>从小学一年级开始，我就在楼上大哥哥的指导下，玩上了冒险岛这个网游，至今我都偶尔会上线玩一玩。当然，国内游戏环境实在太差了……这就是另外的话题了暂且跳过。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230710215416.png" srcset="/img/loading.gif" lazyload></p>
+<p>总之，网游这个东西我玩了很多年了，特别是角色扮演游戏MMO，在网络中，扮演一个非现实的角色和其他玩家一起冒险，打怪，看NPC的故事，会给我带来极大的快乐~</p>
+<p>冒险岛、龙之谷、剑灵、最终幻想14、激战2、魔兽世界、艾尔之光、彩虹岛、黑色沙漠……人生二十来年，也是辗转过多个异世界了呢。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230806171854.png" srcset="/img/loading.gif" lazyload></p>
+<p>所以游戏类的网文，也一直都是我的心头好。经典的《网游之纵横天下》、《网游之贼行天下》、《全职高手》、《网游之近战法师》、《惊悚乐园》……一个游戏网络世界，可能就是最对我胃口的世界设定。这几本书我都重看了不知道多少遍了……</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231028235238.png" srcset="/img/loading.gif" lazyload></p>
+<p>那么在动漫里，相关的也不少了其实。尤其是在《刀剑神域》的带领下，虚拟现实游戏类的动漫漫画轻小说作品那是层出不穷，《OVERLORD》至今还是我最喜欢的动漫/轻小说之一。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231028235301.png" srcset="/img/loading.gif" lazyload></p>
+<p>就是要这种大型角色扮演！MMO的网游！丰富的世界观，精细的职业技能，精彩的剧情，广阔的探险空间~太对我胃口了。而《香格里拉边境》，就是我时隔多年看到的新的网游动漫。</p>
+<h2 id="香格里拉的冒险"><a href="#香格里拉的冒险" class="headerlink" title="香格里拉的冒险"></a>香格里拉的冒险</h2><p>动漫全称：<a target="_blank" rel="noopener" href="https://www.themoviedb.org/tv/205050">香格里拉边境～粪作猎人向神作游戏发起挑战～</a><br>男主是一个「粪作猎人」，喜欢玩各种粪作游戏，挑战不合理还能得到极大的快感。在通关了某部粪作后，为了换换口味，男主这次向神作「香格里拉边境」发起了进攻，在游戏的过程中，遇见了许多奇特的冒险。</p>
+<p>撰写本文的时候已经看到第四集了，真的一跃成为我最期待的2023年10月新番。</p>
+<p>男主是那种操作类玩家，追求极致的输出，脆皮，刀尖添血的那种。动漫也很好的制作出了精彩的打斗，使用完美格挡和巨型boss鏖战的打戏可谓是前三集的巅峰剧情。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231840.png" srcset="/img/loading.gif" lazyload><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016232056.png" srcset="/img/loading.gif" lazyload><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231023234734.png" srcset="/img/loading.gif" lazyload><br>剧情中出现的boss也很有魄力，其他玩家角色绘制的也很好看，最重要的是，那种游戏氛围塑造的特别好。<br>角色加点的分析、装备的选择、独特剧情的展开，看的我是真的过瘾！<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231650.png" srcset="/img/loading.gif" lazyload><br>还有这只兔兔，太可爱了~<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231949.png" srcset="/img/loading.gif" lazyload></p>
+<p>看游戏题材的动漫和小说，其实也就是想通过“玩”以外的方式，享受到游戏的乐趣，而《香格里拉边境》它做到了。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/DSCF2416.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>该动漫其实是有原作漫画的，在日本旅游的时候刚好看到过它的超大海报，可见其原作实力充足，我觉得动漫是真的可以好好期待下去，期待下周的播出。</p>
                 
               </div>
             
@@ -319,7 +333,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="category-chain-item">技术笔记</a>
+  <a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/" class="category-chain-item">兴趣杂谈</a>
   
   
 
@@ -334,7 +348,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%B7%A5%E5%85%B7/" class="print-no-link">#工具</a>
+        <a href="/tags/%E5%8A%A8%E6%BC%AB/" class="print-no-link">#动漫</a>
+      
+        <a href="/tags/%E6%B8%B8%E6%88%8F/" class="print-no-link">#游戏</a>
       
     </div>
   
@@ -346,8 +362,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>VCS+VERDI使用手册</div>
-      <div>https://rongyel.github.io/posts/3c47b44b.html</div>
+      <div>香格里拉边境 为什么让我兴奋</div>
+      <div>https://rongyel.github.io/posts/3b1a7464.html</div>
     </div>
     <div class="license-meta">
       
@@ -359,7 +375,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月20日</div>
+          <div>2024年7月6日</div>
         </div>
       
       
@@ -391,9 +407,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/b4a0abff.html" title="好看可爱又能吃的老八，谁不喜欢呢？——《败犬女主太多了！》">
+                      <a href="/posts/c1f4e46a.html" title="markdown笔记工具分析">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">好看可爱又能吃的老八，谁不喜欢呢？——《败犬女主太多了！》</span>
+                        <span class="hidden-mobile">markdown笔记工具分析</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -401,8 +417,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/ada5d828.html" title="虚拟内存的意义">
-                        <span class="hidden-mobile">虚拟内存的意义</span>
+                      <a href="/posts/1da22451.html" title="至今为止我依旧认为，无职转生就是最好的异世界转生作品。">
+                        <span class="hidden-mobile">至今为止我依旧认为，无职转生就是最好的异世界转生作品。</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
