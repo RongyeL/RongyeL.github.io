@@ -1,0 +1,1061 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon1.png">
+  <link rel="icon" href="/img/favicon1.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Rongye">
+  <meta name="keywords" content="ASIC">
+  
+    <meta name="description" content="EasyAXI系列视频的大纲，基于Deepseek生成。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EASY AXI系列视频大纲">
+<meta property="og:url" content="https://rongyel.github.io/posts/b96a2201.html">
+<meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
+<meta property="og:description" content="EasyAXI系列视频的大纲，基于Deepseek生成。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-03T15:09:58.285Z">
+<meta property="article:modified_time" content="2025-02-03T15:17:40.999Z">
+<meta property="article:author" content="Rong晔">
+<meta property="article:tag" content="数字IC">
+<meta property="article:tag" content="AXI">
+<meta property="article:tag" content="ARM">
+<meta property="article:tag" content="AMBA">
+<meta property="article:tag" content="Verilog">
+<meta property="article:tag" content="EasyAXI">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>EASY AXI系列视频大纲 - IC攻城狮的摸鱼小屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"rongyel.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>IC攻城狮的摸鱼小屋</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">EASY AXI系列视频大纲</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-02-03 23:09" pubdate>
+          2025年2月3日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">EASY AXI系列视频大纲</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>EasyAXI系列视频的大纲，基于Deepseek生成。</p>
+</blockquote>
+<h1 id="第一期：AXI-总线协议概述"><a href="#第一期：AXI-总线协议概述" class="headerlink" title="第一期：AXI 总线协议概述"></a><strong>第一期：AXI 总线协议概述</strong></h1><p><strong>目标：</strong> 让观众了解 AXI 总线协议的基本概念、特点和应用场景。<br><strong>大纲：</strong></p>
+<ol>
+<li><p><strong>AXI 总线协议简介</strong></p>
+<ul>
+<li><p>AXI 的全称（Advanced eXtensible Interface）</p>
+</li>
+<li><p>AXI 的发展历史（AMBA 协议族的一部分）</p>
+</li>
+<li><p>AXI 的应用场景（SoC 设计、高性能计算等）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>AXI 的特点</strong></p>
+<ul>
+<li><p>高性能、高带宽</p>
+</li>
+<li><p>支持乱序传输、原子操作</p>
+</li>
+<li><p>多通道独立传输机制</p>
+</li>
+</ul>
+</li>
+<li><p><strong>AXI 的架构</strong></p>
+<ul>
+<li><p>主设备（Master）和从设备（Slave）的概念</p>
+</li>
+<li><p>五个独立通道（读地址、写地址、写数据、读数据、写响应）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>AXI 与其他总线协议的对比</strong></p>
+<ul>
+<li><p>AXI vs AHB（高性能特性）</p>
+</li>
+<li><p>AXI vs APB（低功耗特性）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>AXI 的信号组成</strong></p>
+<ul>
+<li><p>全局信号（ACLK、ARESETn）</p>
+</li>
+<li><p>通道信号概述（AW、AR、W、R、B）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>总结与预告</strong></p>
+<ul>
+<li><p>本期内容回顾</p>
+</li>
+<li><p>下期预告：AXI 读写事务</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="第二期：AXI-读写事务"><a href="#第二期：AXI-读写事务" class="headerlink" title="第二期：AXI 读写事务"></a><strong>第二期：AXI 读写事务</strong></h1><p><strong>目标：</strong> 详细讲解 AXI 读写事务的流程和信号时序。<br><strong>大纲：</strong></p>
+<ol>
+<li><p><strong>AXI 事务的基本概念</strong></p>
+<ul>
+<li><p>事务（Transaction）的定义</p>
+</li>
+<li><p>读事务 vs 写事务</p>
+</li>
+</ul>
+</li>
+<li><p><strong>AXI 写事务流程</strong></p>
+<ul>
+<li><p>写地址通道（AW）信号时序</p>
+</li>
+<li><p>写数据通道（W）信号时序</p>
+</li>
+<li><p>写响应通道（B）信号时序</p>
+</li>
+</ul>
+</li>
+<li><p><strong>AXI 读事务流程</strong></p>
+<ul>
+<li><p>读地址通道（AR）信号时序</p>
+</li>
+<li><p>读数据通道（R）信号时序</p>
+</li>
+</ul>
+</li>
+<li><p><strong>AXI 突发传输机制</strong></p>
+<ul>
+<li><p>突发传输的概念（Burst Transfer）</p>
+</li>
+<li><p>突发长度（Burst Length）和突发类型（Burst Type）</p>
+</li>
+<li><p>地址计算方式</p>
+</li>
+</ul>
+</li>
+<li><p><strong>数据传输大小与字节 lane</strong></p>
+<ul>
+<li><p>数据宽度（Data Width）的概念</p>
+</li>
+<li><p>字节 lane 的作用与对齐方式</p>
+</li>
+</ul>
+</li>
+<li><p><strong>实例演示</strong></p>
+<ul>
+<li>通过波形图演示 AXI 读写事务的实现过程</li>
+</ul>
+</li>
+<li><p><strong>总结与预告</strong></p>
+<ul>
+<li><p>本期内容回顾</p>
+</li>
+<li><p>下期预告：AXI 通道功能（上）</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="第三期：AXI-通道功能（上）"><a href="#第三期：AXI-通道功能（上）" class="headerlink" title="第三期：AXI 通道功能（上）"></a><strong>第三期：AXI 通道功能（上）</strong></h1><p><strong>目标：</strong> 详细讲解 AXI 地址通道和写数据通道的功能与信号时序。<br><strong>大纲：</strong></p>
+<ol>
+<li><p><strong>AXI 通道概述</strong></p>
+<ul>
+<li><p>五个通道的功能与作用</p>
+</li>
+<li><p>通道之间的独立性</p>
+</li>
+</ul>
+</li>
+<li><p><strong>写地址通道（AW）</strong></p>
+<ul>
+<li><p>信号组成（AWADDR、AWLEN、AWSIZE 等）</p>
+</li>
+<li><p>信号时序与握手机制（VALID/READY）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>读地址通道（AR）</strong></p>
+<ul>
+<li><p>信号组成（ARADDR、ARLEN、ARSIZE 等）</p>
+</li>
+<li><p>信号时序与握手机制</p>
+</li>
+</ul>
+</li>
+<li><p><strong>写数据通道（W）</strong></p>
+<ul>
+<li><p>信号组成（WDATA、WSTRB、WLAST 等）</p>
+</li>
+<li><p>信号时序与握手机制</p>
+</li>
+</ul>
+</li>
+<li><p><strong>实例演示</strong></p>
+<ul>
+<li>通过波形图演示地址通道和写数据通道的配合工作</li>
+</ul>
+</li>
+<li><p><strong>总结与预告</strong></p>
+<ul>
+<li><p>本期内容回顾</p>
+</li>
+<li><p>下期预告：AXI 通道功能（下）</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="第四期：AXI-通道功能（下）"><a href="#第四期：AXI-通道功能（下）" class="headerlink" title="第四期：AXI 通道功能（下）"></a><strong>第四期：AXI 通道功能（下）</strong></h1><p><strong>目标：</strong> 详细讲解 AXI 读数据通道和响应通道的功能与信号时序。<br><strong>大纲：</strong></p>
+<ol>
+<li><p><strong>读数据通道（R）</strong></p>
+<ul>
+<li><p>信号组成（RDATA、RRESP、RLAST 等）</p>
+</li>
+<li><p>信号时序与握手机制</p>
+</li>
+</ul>
+</li>
+<li><p><strong>写响应通道（B）</strong></p>
+<ul>
+<li><p>信号组成（BRESP）</p>
+</li>
+<li><p>信号时序与握手机制</p>
+</li>
+</ul>
+</li>
+<li><p><strong>通道协同工作</strong></p>
+<ul>
+<li><p>读写事务中五个通道的配合</p>
+</li>
+<li><p>乱序传输的实现机制</p>
+</li>
+</ul>
+</li>
+<li><p><strong>实例演示</strong></p>
+<ul>
+<li>通过波形图演示五个通道的协同工作</li>
+</ul>
+</li>
+<li><p><strong>总结与预告</strong></p>
+<ul>
+<li><p>本期内容回顾</p>
+</li>
+<li><p>下期预告：AXI 事务属性</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="第五期：AXI-事务属性"><a href="#第五期：AXI-事务属性" class="headerlink" title="第五期：AXI 事务属性"></a><strong>第五期：AXI 事务属性</strong></h1><p><strong>目标：</strong> 讲解 AXI 事务属性的概念、分类和应用。<br><strong>大纲：</strong></p>
+<ol>
+<li><p><strong>事务属性的概念</strong></p>
+<ul>
+<li>事务属性的作用（控制传输行为）</li>
+</ul>
+</li>
+<li><p><strong>事务属性的分类</strong></p>
+<ul>
+<li><p>缓存属性（Cacheability）</p>
+</li>
+<li><p>保护属性（Protection）</p>
+</li>
+<li><p>内存类型属性（Memory Type）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>事务属性的应用</strong></p>
+<ul>
+<li>如何通过事务属性优化系统性能</li>
+</ul>
+</li>
+<li><p><strong>实例演示</strong></p>
+<ul>
+<li>通过代码演示事务属性的设置和使用</li>
+</ul>
+</li>
+<li><p><strong>总结与预告</strong></p>
+<ul>
+<li><p>本期内容回顾</p>
+</li>
+<li><p>下期预告：AXI 原子操作</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="第六期：AXI-原子操作"><a href="#第六期：AXI-原子操作" class="headerlink" title="第六期：AXI 原子操作"></a><strong>第六期：AXI 原子操作</strong></h1><p><strong>目标：</strong> 讲解 AXI 原子操作的概念、类型和应用场景。<br><strong>大纲：</strong></p>
+<ol>
+<li><p><strong>原子操作的概念</strong></p>
+<ul>
+<li>原子操作的定义与作用</li>
+</ul>
+</li>
+<li><p><strong>原子操作的类型</strong></p>
+<ul>
+<li><p>独占访问（Exclusive Access）</p>
+</li>
+<li><p>锁定访问（Locked Access）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>原子操作的应用场景</strong></p>
+<ul>
+<li>多核系统中的数据一致性</li>
+</ul>
+</li>
+<li><p><strong>实例演示</strong></p>
+<ul>
+<li>通过波形图演示原子操作的实现过程</li>
+</ul>
+</li>
+<li><p><strong>总结与预告</strong></p>
+<ul>
+<li><p>本期内容回顾</p>
+</li>
+<li><p>下期预告：AXI 乱序传输</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="第七期：AXI-乱序传输"><a href="#第七期：AXI-乱序传输" class="headerlink" title="第七期：AXI 乱序传输"></a><strong>第七期：AXI 乱序传输</strong></h1><p><strong>目标：</strong> 讲解 AXI 乱序传输的概念、机制和优势。<br><strong>大纲：</strong></p>
+<ol>
+<li><p><strong>乱序传输的概念</strong></p>
+<ul>
+<li>乱序传输的定义与作用</li>
+</ul>
+</li>
+<li><p><strong>乱序传输的实现机制</strong></p>
+<ul>
+<li><p>ID 信号的作用</p>
+</li>
+<li><p>事务顺序的管理</p>
+</li>
+</ul>
+</li>
+<li><p><strong>乱序传输的优势</strong></p>
+<ul>
+<li>提高系统性能</li>
+</ul>
+</li>
+<li><p><strong>实例演示</strong></p>
+<ul>
+<li>通过波形图演示乱序传输的实现过程</li>
+</ul>
+</li>
+<li><p><strong>总结与预告</strong></p>
+<ul>
+<li><p>本期内容回顾</p>
+</li>
+<li><p>下期预告：AXI 实战应用</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="第八期：AXI-实战应用"><a href="#第八期：AXI-实战应用" class="headerlink" title="第八期：AXI 实战应用"></a><strong>第八期：AXI 实战应用</strong></h1><p><strong>目标：</strong> 通过实例演示 AXI 在实际项目中的应用。<br><strong>大纲：</strong></p>
+<ol>
+<li><p><strong>AXI 在 SoC 设计中的应用</strong></p>
+<ul>
+<li>AXI 作为片上总线的作用</li>
+</ul>
+</li>
+<li><p><strong>AXI 连接 IP 核的实例</strong></p>
+<ul>
+<li>如何连接处理器、存储器和外设</li>
+</ul>
+</li>
+<li><p><strong>搭建简单 SoC 系统</strong></p>
+<ul>
+<li>使用 AXI 连接多个模块</li>
+</ul>
+</li>
+<li><p><strong>实例演示</strong></p>
+<ul>
+<li>通过仿真工具演示 AXI 系统的运行</li>
+</ul>
+</li>
+<li><p><strong>总结与结束语</strong></p>
+<ul>
+<li><p>系列内容回顾</p>
+</li>
+<li><p>鼓励观众深入学习 AXI 协议</p>
+</li>
+</ul>
+</li>
+</ol>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/EasyAXI%E7%B3%BB%E5%88%97/" class="category-chain-item">EasyAXI系列</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%B0%E5%AD%97IC/" class="print-no-link">#数字IC</a>
+      
+        <a href="/tags/AXI/" class="print-no-link">#AXI</a>
+      
+        <a href="/tags/ARM/" class="print-no-link">#ARM</a>
+      
+        <a href="/tags/AMBA/" class="print-no-link">#AMBA</a>
+      
+        <a href="/tags/Verilog/" class="print-no-link">#Verilog</a>
+      
+        <a href="/tags/EasyAXI/" class="print-no-link">#EasyAXI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>EASY AXI系列视频大纲</div>
+      <div>https://rongyel.github.io/posts/b96a2201.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Rongye</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年2月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+  
+  
+    <article id="comments">
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"yxU2T5rz8PlfrGZTFbIWlVPr-gzGzoHsz","appKey":"Cgutgrh3GMVacKZ0TKHkXINN","path":"window.location.pathname","placeholder":"留言仅限讨论，禁止广告等行为","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <a href="https://rongyel.top/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i>RSS</a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
