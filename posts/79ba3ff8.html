@@ -19,25 +19,29 @@
   <meta name="author" content="Rongye">
   <meta name="keywords" content="ASIC">
   
-    <meta name="description" content="SOC那么多模块，感觉网上根本找不到多少RTL代码，都是些基本概念的介绍，没啥意思。不如自己写着玩。">
+    <meta name="description" content="开场白（30 秒）大家好，欢迎来到 AXI 总线协议教学视频的第一期！我是Rong晔，今天我们将用 10 分钟快速掌握 AXI 协议的核心——握手机制。握手机制通过 VALID 和 READY 信号确保数据可靠传输，是理解 AXI 协议的基础。让我们直接进入正题！  1. AXI 握手机制简介（1 分钟）握手机制是 AXI 协议中用于控制数据传输的机制。它通过两个信号实现：    VALID：由发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HISOC开发进度">
-<meta property="og:url" content="https://rongyel.github.io/posts/55e29e16.html">
+<meta property="og:title" content="EasyAXI 第1期 - AXI 握手机制">
+<meta property="og:url" content="https://rongyel.github.io/posts/79ba3ff8.html">
 <meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
-<meta property="og:description" content="SOC那么多模块，感觉网上根本找不到多少RTL代码，都是些基本概念的介绍，没啥意思。不如自己写着玩。">
+<meta property="og:description" content="开场白（30 秒）大家好，欢迎来到 AXI 总线协议教学视频的第一期！我是Rong晔，今天我们将用 10 分钟快速掌握 AXI 协议的核心——握手机制。握手机制通过 VALID 和 READY 信号确保数据可靠传输，是理解 AXI 协议的基础。让我们直接进入正题！  1. AXI 握手机制简介（1 分钟）握手机制是 AXI 协议中用于控制数据传输的机制。它通过两个信号实现：    VALID：由发">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-18T14:46:30.751Z">
-<meta property="article:modified_time" content="2025-01-24T15:35:30.841Z">
+<meta property="article:published_time" content="2025-02-04T14:43:13.539Z">
+<meta property="article:modified_time" content="2025-02-04T14:48:53.912Z">
 <meta property="article:author" content="Rong晔">
 <meta property="article:tag" content="数字IC">
-<meta property="article:tag" content="HISOC">
+<meta property="article:tag" content="AXI">
+<meta property="article:tag" content="ARM">
+<meta property="article:tag" content="AMBA">
+<meta property="article:tag" content="Verilog">
+<meta property="article:tag" content="EasyAXI">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>HISOC开发进度 - IC攻城狮的摸鱼小屋</title>
+  <title>EasyAXI 第1期 - AXI 握手机制 - IC攻城狮的摸鱼小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/HISOC%E5%B0%81%E9%9D%A2.jpeg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">HISOC开发进度</span>
+            <span id="subtitle">EasyAXI 第1期 - AXI 握手机制</span>
           
         </div>
 
@@ -217,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-18 22:46" pubdate>
-          2024年8月18日 晚上
+        <time datetime="2025-02-04 22:43" pubdate>
+          2025年2月4日 晚上
         </time>
       </span>
     
@@ -229,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          255 字
+          781 字
         
       </span>
     
@@ -240,7 +244,7 @@
         
         
         
-          3 分钟
+          7 分钟
         
       </span>
     
@@ -286,79 +290,90 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">HISOC开发进度</h1>
+            <h1 id="seo-header">EasyAXI 第1期 - AXI 握手机制</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>SOC那么多模块，感觉网上根本找不到多少RTL代码，都是些基本概念的介绍，没啥意思。不如自己写着玩。</p>
-</blockquote>
-<p>每天进展一点点 。<br>写写代码，也是一种游戏。</p>
-<h1 id="CPU-RVSEED"><a href="#CPU-RVSEED" class="headerlink" title="CPU-RVSEED"></a>CPU-RVSEED</h1><ul>
-<li><input checked="" disabled="" type="checkbox"> 单周期设计<ul>
-<li><input checked="" disabled="" type="checkbox"> 全指令测试PASS ✅2024-07-20</li>
+                <h4 id="开场白（30-秒）"><a href="#开场白（30-秒）" class="headerlink" title="开场白（30 秒）"></a><strong>开场白（30 秒）</strong></h4><p>大家好，欢迎来到 AXI 总线协议教学视频的第一期！我是Rong晔，今天我们将用 10 分钟快速掌握 AXI 协议的核心——<strong>握手机制</strong>。<br>握手机制通过 VALID 和 READY 信号确保数据可靠传输，是理解 AXI 协议的基础。让我们直接进入正题！</p>
+<hr>
+<h4 id="1-AXI-握手机制简介（1-分钟）"><a href="#1-AXI-握手机制简介（1-分钟）" class="headerlink" title="1. AXI 握手机制简介（1 分钟）"></a><strong>1. AXI 握手机制简介（1 分钟）</strong></h4><p>握手机制是 AXI 协议中用于控制数据传输的机制。它通过两个信号实现：  </p>
+<ul>
+<li><strong>VALID</strong>：由发送方驱动，表示数据已准备好。  </li>
+<li><strong>READY</strong>：由接收方驱动，表示可以接收数据。<br>握手机制解决了发送方和接收方速度不一致的问题，确保数据传输的可靠性。</li>
+</ul>
+<hr>
+<h4 id="2-VALID-和-READY-信号的作用（2-分钟）"><a href="#2-VALID-和-READY-信号的作用（2-分钟）" class="headerlink" title="2. VALID 和 READY 信号的作用（2 分钟）"></a><strong>2. VALID 和 READY 信号的作用（2 分钟）</strong></h4><ul>
+<li><p><strong>VALID 信号</strong>  </p>
+<ul>
+<li>发送方驱动，高电平时表示数据或地址已准备好。  </li>
+<li>必须保持高电平，直到数据传输完成。</li>
 </ul>
 </li>
-<li><input checked="" disabled="" type="checkbox"> INST_MEM总线访问<ul>
-<li><input checked="" disabled="" type="checkbox"> AXI RD接口访问 ✅2024-07-26</li>
-<li><input checked="" disabled="" type="checkbox"> Buff吸收延迟 ✅2024-08-01</li>
-</ul>
-</li>
-<li><input disabled="" type="checkbox"> 五级流水线设计<ul>
-<li><input checked="" disabled="" type="checkbox"> IFU ✅2024-08-11</li>
-<li><input checked="" disabled="" type="checkbox"> IDU ✅2024-08-13</li>
-<li><input checked="" disabled="" type="checkbox"> EXU ✅2024-08-18</li>
-<li><input disabled="" type="checkbox"> MEM<ul>
-<li><input disabled="" type="checkbox"> 寄存器写回数据冒险：Forwarding</li>
-</ul>
-</li>
-<li><input disabled="" type="checkbox"> WB</li>
-</ul>
-</li>
-<li><input disabled="" type="checkbox"> DATA_MEM总线访问<ul>
-<li><input disabled="" type="checkbox"> AXI RD接口访问</li>
-<li><input disabled="" type="checkbox"> AXI WR接口访问</li>
+<li><p><strong>READY 信号</strong>  </p>
+<ul>
+<li>接收方驱动，高电平时表示可以接收数据。  </li>
+<li>可以在 VALID 之前或之后拉高。</li>
 </ul>
 </li>
 </ul>
-<h1 id="总线-AXI"><a href="#总线-AXI" class="headerlink" title="总线-AXI"></a>总线-AXI</h1><ul>
-<li><input disabled="" type="checkbox"> AXI MST、SLV RD接口<ul>
-<li><input checked="" disabled="" type="checkbox"> 基本控制逻辑 ✅2024-07-24</li>
-<li><input checked="" disabled="" type="checkbox"> 多OST  ✅2024-08-02</li>
-<li><input disabled="" type="checkbox"> 同ID保序</li>
+<p>只有当 VALID 和 READY 同时为高时，数据才会传输。</p>
+<hr>
+<h4 id="3-握手机制的工作流程（4-分钟）"><a href="#3-握手机制的工作流程（4-分钟）" class="headerlink" title="3. 握手机制的工作流程（4 分钟）"></a><strong>3. 握手机制的工作流程（4 分钟）</strong></h4><p>握手机制的工作流程可以分为以下几个步骤：<br>6. <strong>发送方准备数据</strong>  </p>
+<ul>
+<li>发送方将数据或地址放置在总线上，并拉高 VALID 信号。</li>
+</ul>
+<ol start="7">
+<li><p><strong>接收方响应</strong>  </p>
+<ul>
+<li>接收方在准备好接收数据时，拉高 READY 信号。</li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"> AXI MST、SLV WR接口<ul>
-<li><input disabled="" type="checkbox"> 多OST</li>
-<li><input disabled="" type="checkbox"> 同ID保序</li>
+<li><p><strong>数据传输</strong>  </p>
+<ul>
+<li>当 VALID 和 READY 同时为高时，数据从发送方传输到接收方。</li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"> AXI INTERCONNECT</li>
-</ul>
-<h1 id="总线-APB"><a href="#总线-APB" class="headerlink" title="总线-APB"></a>总线-APB</h1><h1 id="总线-AHB"><a href="#总线-AHB" class="headerlink" title="总线-AHB"></a>总线-AHB</h1><h1 id="总线-CHI"><a href="#总线-CHI" class="headerlink" title="总线-CHI"></a>总线-CHI</h1><ul>
-<li><input disabled="" type="checkbox"> credit机制</li>
-</ul>
-<h1 id="基础模块-CBB-（Common-Building-Blocks）"><a href="#基础模块-CBB-（Common-Building-Blocks）" class="headerlink" title="基础模块-CBB （Common Building Blocks）"></a>基础模块-CBB （Common Building Blocks）</h1><ul>
-<li><input checked="" disabled="" type="checkbox"> RW寄存器<ul>
-<li><input checked="" disabled="" type="checkbox"> 基本功能 ✅2024-08-04</li>
-<li><input checked="" disabled="" type="checkbox"> 读写同拍处理 ✅2024-08-18</li>
+<li><p><strong>完成握手</strong>  </p>
+<ul>
+<li>数据传输完成后，VALID 和 READY 信号可以拉低，准备下一次传输。</li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"> 同步FIFO<ul>
-<li><input checked="" disabled="" type="checkbox"> 基本功能 ✅2024-08-02</li>
+</ol>
+<p><strong>关键点：</strong>  </p>
+<ul>
+<li>VALID 和 READY 信号的拉高顺序可以灵活变化。  </li>
+<li>数据传输只在 VALID 和 READY 同时为高时发生。</li>
+</ul>
+<hr>
+<h4 id="4-实例演示（2-分钟）"><a href="#4-实例演示（2-分钟）" class="headerlink" title="4. 实例演示（2 分钟）"></a><strong>4. 实例演示（2 分钟）</strong></h4><p>让我们通过波形图快速看一个例子：<br>（插入简化波形图，展示以下场景）  </p>
+<ul>
+<li><strong>场景 1：VALID 先拉高，READY 后拉高</strong>  <ul>
+<li>发送方先准备好，接收方稍后响应，数据传输成功。</li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"> 异步FIFO<ul>
-<li><input disabled="" type="checkbox"> 基本功能</li>
+<li><strong>场景 2：VALID 和 READY 同时拉高</strong>  <ul>
+<li>双方同时准备好，数据传输立即完成。</li>
 </ul>
 </li>
 </ul>
-<h1 id="开发环境-EDA"><a href="#开发环境-EDA" class="headerlink" title="开发环境-EDA"></a>开发环境-EDA</h1><ul>
-<li><input checked="" disabled="" type="checkbox"> VERDI+VCS ✅2024-07-22</li>
-<li><input checked="" disabled="" type="checkbox"> EXCEL表单管理数据结构，脚本生成宏定义文件 ✅2024-07-25</li>
-<li><input checked="" disabled="" type="checkbox"> EXCEL表单管理寄存器堆，脚本生成regs RTL ✅2024-08-09</li>
+<p>通过波形图，可以直观地理解握手机制的工作过程。</p>
+<hr>
+<h4 id="5-总结与预告（1-分钟）"><a href="#5-总结与预告（1-分钟）" class="headerlink" title="5. 总结与预告（1 分钟）"></a><strong>5. 总结与预告（1 分钟）</strong></h4><p>总结一下：  </p>
+<ul>
+<li>握手机制通过 VALID 和 READY 信号确保数据传输的可靠性。  </li>
+<li>数据传输发生在 VALID 和 READY 同时为高的时刻。</li>
 </ul>
+<p>下期我们将深入探讨 <strong>AXI 读写事务</strong>，包括突发传输和地址计算等内容。如果你有任何问题，欢迎在评论区留言！  </p>
+<p>感谢观看，我们下期再见！</p>
+<hr>
+<h3 id="调整后说明"><a href="#调整后说明" class="headerlink" title="调整后说明"></a><strong>调整后说明</strong></h3><ul>
+<li><strong>去掉时序关系：</strong> 将重点放在握手机制的工作流程上，更直观易懂。  </li>
+<li><strong>简化实例演示：</strong> 只展示两个典型场景，突出重点。  </li>
+<li><strong>语言更精炼：</strong> 每部分内容控制在目标时间内，确保视频时长不超过 10 分钟。</li>
+</ul>
+<p>希望这份调整后的大纲和文案能满足你的需求！如果需要进一步调整，请随时告诉我。</p>
+
                 
               </div>
             
@@ -376,7 +391,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/HISOC/" class="category-chain-item">HISOC</a>
+  <a href="/categories/EasyAXI%E7%B3%BB%E5%88%97/" class="category-chain-item">EasyAXI系列</a>
   
   
 
@@ -393,7 +408,15 @@
       
         <a href="/tags/%E6%95%B0%E5%AD%97IC/" class="print-no-link">#数字IC</a>
       
-        <a href="/tags/HISOC/" class="print-no-link">#HISOC</a>
+        <a href="/tags/AXI/" class="print-no-link">#AXI</a>
+      
+        <a href="/tags/ARM/" class="print-no-link">#ARM</a>
+      
+        <a href="/tags/AMBA/" class="print-no-link">#AMBA</a>
+      
+        <a href="/tags/Verilog/" class="print-no-link">#Verilog</a>
+      
+        <a href="/tags/EasyAXI/" class="print-no-link">#EasyAXI</a>
       
     </div>
   
@@ -405,8 +428,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>HISOC开发进度</div>
-      <div>https://rongyel.github.io/posts/55e29e16.html</div>
+      <div>EasyAXI 第1期 - AXI 握手机制</div>
+      <div>https://rongyel.github.io/posts/79ba3ff8.html</div>
     </div>
     <div class="license-meta">
       
@@ -418,7 +441,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月18日</div>
+          <div>2025年2月4日</div>
         </div>
       
       
