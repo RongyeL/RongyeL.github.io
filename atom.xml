@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-01-24T15:11:07.243Z</updated>
+  <updated>2025-02-11T16:06:48.407Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EasyAXI 第0期 - 序言</title>
+    <link href="https://rongyel.github.io/posts/4c805fb1.html"/>
+    <id>https://rongyel.github.io/posts/4c805fb1.html</id>
+    <published>2025-02-11T15:10:31.872Z</published>
+    <updated>2025-02-11T16:06:48.407Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大家好，我是Rong晔。&lt;/p&gt;
+&lt;p&gt;很久不见，从今天起我正式回归，继续为大家带来数字IC相关的视频内容。&lt;br&gt;工作之后，我的更新停滞了很长一段时间，主要是因为工作本身占据了大量精力，闲暇时还要兼顾家庭、宠物和游戏（笑），于是视频创作就被搁置了。&lt;/p&gt;
+&lt;p&gt;这次回归</summary>
+        
+      
+    
+    
+    
+    <category term="EasyAXI系列" scheme="https://rongyel.github.io/categories/EasyAXI%E7%B3%BB%E5%88%97/"/>
+    
+    
+    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
+    
+    <category term="AXI" scheme="https://rongyel.github.io/tags/AXI/"/>
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="AMBA" scheme="https://rongyel.github.io/tags/AMBA/"/>
+    
+    <category term="Verilog" scheme="https://rongyel.github.io/tags/Verilog/"/>
+    
+    <category term="EasyAXI" scheme="https://rongyel.github.io/tags/EasyAXI/"/>
+    
+  </entry>
   
   <entry>
     <title>养一只红腿象龟以前，我需要做好哪些准备</title>
@@ -418,25 +455,6 @@
     
     
     <category term="工具" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么要用Markdown做笔记</title>
-    <link href="https://rongyel.github.io/posts/c97fc71d.html"/>
-    <id>https://rongyel.github.io/posts/c97fc71d.html</id>
-    <published>2024-07-06T15:53:34.664Z</published>
-    <updated>2024-07-07T14:16:59.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;markdown有个说法，叫做让人可以专注于笔记内容上。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具套件" scheme="https://rongyel.github.io/categories/%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6/"/>
-    
-    
-    <category term="Markdown" scheme="https://rongyel.github.io/tags/Markdown/"/>
     
   </entry>
   
