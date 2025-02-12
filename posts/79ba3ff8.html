@@ -19,20 +19,19 @@
   <meta name="author" content="Rongye">
   <meta name="keywords" content="ASIC">
   
-    <meta name="description" content="开场白（30 秒）大家好，欢迎来到 AXI 总线协议教学视频的第一期！我是Rong晔，今天我们将用 10 分钟快速掌握 AXI 协议的核心——握手机制。握手机制通过 VALID 和 READY 信号确保数据可靠传输，是理解 AXI 协议的基础。让我们直接进入正题！  1. AXI 握手机制简介（1 分钟）握手机制是 AXI 协议中用于控制数据传输的机制。它通过两个信号实现：    VALID：由发">
+    <meta name="description" content="大家好，我是Rong晔。今天作为系列正式的第一期视频，先准备一下基本开发环境。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EasyAXI 第1期 - AXI 握手机制">
+<meta property="og:title" content="EasyAXI 第1期 - 开发环境准备">
 <meta property="og:url" content="https://rongyel.github.io/posts/79ba3ff8.html">
 <meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
-<meta property="og:description" content="开场白（30 秒）大家好，欢迎来到 AXI 总线协议教学视频的第一期！我是Rong晔，今天我们将用 10 分钟快速掌握 AXI 协议的核心——握手机制。握手机制通过 VALID 和 READY 信号确保数据可靠传输，是理解 AXI 协议的基础。让我们直接进入正题！  1. AXI 握手机制简介（1 分钟）握手机制是 AXI 协议中用于控制数据传输的机制。它通过两个信号实现：    VALID：由发">
+<meta property="og:description" content="大家好，我是Rong晔。今天作为系列正式的第一期视频，先准备一下基本开发环境。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-02-04T14:43:13.539Z">
-<meta property="article:modified_time" content="2025-02-04T14:51:30.754Z">
+<meta property="article:modified_time" content="2025-02-12T14:27:29.052Z">
 <meta property="article:author" content="Rong晔">
 <meta property="article:tag" content="数字IC">
 <meta property="article:tag" content="AXI">
 <meta property="article:tag" content="ARM">
-<meta property="article:tag" content="AMBA">
 <meta property="article:tag" content="Verilog">
 <meta property="article:tag" content="EasyAXI">
 <meta name="twitter:card" content="summary_large_image">
@@ -41,7 +40,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>EasyAXI 第1期 - AXI 握手机制 - IC攻城狮的摸鱼小屋</title>
+  <title>EasyAXI 第1期 - 开发环境准备 - IC攻城狮的摸鱼小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,13 +203,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%E5%B0%81%E9%9D%A2.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">EasyAXI 第1期 - AXI 握手机制</span>
+            <span id="subtitle">EasyAXI 第1期 - 开发环境准备</span>
           
         </div>
 
@@ -233,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          666 字
+          520 字
         
       </span>
     
@@ -244,7 +243,7 @@
         
         
         
-          6 分钟
+          5 分钟
         
       </span>
     
@@ -290,83 +289,36 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">EasyAXI 第1期 - AXI 握手机制</h1>
+            <h1 id="seo-header">EasyAXI 第1期 - 开发环境准备</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="开场白（30-秒）"><a href="#开场白（30-秒）" class="headerlink" title="开场白（30 秒）"></a><strong>开场白（30 秒）</strong></h1><p>大家好，欢迎来到 AXI 总线协议教学视频的第一期！我是Rong晔，今天我们将用 10 分钟快速掌握 AXI 协议的核心——<strong>握手机制</strong>。<br>握手机制通过 VALID 和 READY 信号确保数据可靠传输，是理解 AXI 协议的基础。让我们直接进入正题！</p>
-<hr>
-<h1 id="1-AXI-握手机制简介（1-分钟）"><a href="#1-AXI-握手机制简介（1-分钟）" class="headerlink" title="1. AXI 握手机制简介（1 分钟）"></a><strong>1. AXI 握手机制简介（1 分钟）</strong></h1><p>握手机制是 AXI 协议中用于控制数据传输的机制。它通过两个信号实现：  </p>
-<ul>
-<li><strong>VALID</strong>：由发送方驱动，表示数据已准备好。  </li>
-<li><strong>READY</strong>：由接收方驱动，表示可以接收数据。<br>握手机制解决了发送方和接收方速度不一致的问题，确保数据传输的可靠性。</li>
-</ul>
-<hr>
-<h1 id="2-VALID-和-READY-信号的作用（2-分钟）"><a href="#2-VALID-和-READY-信号的作用（2-分钟）" class="headerlink" title="2. VALID 和 READY 信号的作用（2 分钟）"></a><strong>2. VALID 和 READY 信号的作用（2 分钟）</strong></h1><ul>
-<li><p><strong>VALID 信号</strong>  </p>
-<ul>
-<li>发送方驱动，高电平时表示数据或地址已准备好。  </li>
-<li>必须保持高电平，直到数据传输完成。</li>
+                <h1 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h1><p>本系列视频是基于VCS+VERDI的开发环境进行演示的，本质上就是进行RTL的编译和仿真。<br>所以不使用VCS+VERDI也没关系，也可以用iverilog+GTKWave，甚至直接使用Vivado当环境也完全没有问题滴。<br>大家可以根据自己的情况来。<br>代码的编辑用的是Gvim，这个大家也看自己喜欢用啥就用啥，本质不过是文本罢了。</p>
+<h1 id="代码获取"><a href="#代码获取" class="headerlink" title="代码获取"></a>代码获取</h1><p>本系列视频会提供Github和百度网盘两种方式获取代码，代码均按照视频的集数准备好，直接跑就可以看波形了。</p>
+<h1 id="环境测试"><a href="#环境测试" class="headerlink" title="环境测试"></a>环境测试</h1><p>开发环境就绪，代码获取完成，那就跑一下最简单的仿真看看是否能用了。</p>
+<p>VCS+VERDI的执行步骤如下：</p>
+<ol>
+<li>进入S01E01路径，<code>source script/project.sh</code> 更新一下环境变量<ul>
+<li>这里主要是为了将S01E01这个路径设为根目录，因为每一期视频的路径都不一样，如果不确定好根目录，编译的时候就会吃不到对应的文件。</li>
 </ul>
 </li>
-<li><p><strong>READY 信号</strong>  </p>
-<ul>
-<li>接收方驱动，高电平时表示可以接收数据。  </li>
-<li>可以在 VALID 之前或之后拉高。</li>
+<li>每期视频的工程文件基本都是<code>rtl、script、verification</code>三个路径。<ul>
+<li>rtl放verilog代码</li>
+<li>script放一些常用脚本</li>
+<li>verification是验证仿真环境</li>
 </ul>
 </li>
-</ul>
-<p>只有当 VALID 和 READY 同时为高时，数据才会传输。</p>
-<hr>
-<h1 id="3-握手机制的工作流程（4-分钟）"><a href="#3-握手机制的工作流程（4-分钟）" class="headerlink" title="3. 握手机制的工作流程（4 分钟）"></a><strong>3. 握手机制的工作流程（4 分钟）</strong></h1><p>握手机制的工作流程可以分为以下几个步骤：<br>6. <strong>发送方准备数据</strong>  </p>
-<ul>
-<li>发送方将数据或地址放置在总线上，并拉高 VALID 信号。</li>
-</ul>
-<ol start="7">
-<li><p><strong>接收方响应</strong>  </p>
-<ul>
-<li>接收方在准备好接收数据时，拉高 READY 信号。</li>
+<li>可以简单看一眼<code>rtl</code>，现在只有一个<code>easyaxi.v</code>，里面放的是个空顶层module。</li>
+<li>然后直接去<code>verification/sim</code>路径下，里面只放了一个简单的Makefile文件。<ul>
+<li>执行<code>make compile</code>进行编译</li>
+<li>执行<code>make run</code>进行编译+仿真</li>
+<li>执行<code>make verdi&amp;</code>打开Verdi工具读取编译后的工程文件</li>
 </ul>
 </li>
-<li><p><strong>数据传输</strong>  </p>
-<ul>
-<li>当 VALID 和 READY 同时为高时，数据从发送方传输到接收方。</li>
-</ul>
-</li>
-<li><p><strong>完成握手</strong>  </p>
-<ul>
-<li>数据传输完成后，VALID 和 READY 信号可以拉低，准备下一次传输。</li>
-</ul>
-</li>
+<li>仿真如果能run完不报错，环境基本就没问题了。最后打开verdi看下是否正常就行啦。</li>
 </ol>
-<p><strong>关键点：</strong>  </p>
-<ul>
-<li>VALID 和 READY 信号的拉高顺序可以灵活变化。  </li>
-<li>数据传输只在 VALID 和 READY 同时为高时发生。</li>
-</ul>
-<hr>
-<h1 id="4-实例演示（2-分钟）"><a href="#4-实例演示（2-分钟）" class="headerlink" title="4. 实例演示（2 分钟）"></a><strong>4. 实例演示（2 分钟）</strong></h1><p>让我们通过波形图快速看一个例子：<br>（插入简化波形图，展示以下场景）  </p>
-<ul>
-<li><strong>场景 1：VALID 先拉高，READY 后拉高</strong>  <ul>
-<li>发送方先准备好，接收方稍后响应，数据传输成功。</li>
-</ul>
-</li>
-<li><strong>场景 2：VALID 和 READY 同时拉高</strong>  <ul>
-<li>双方同时准备好，数据传输立即完成。</li>
-</ul>
-</li>
-</ul>
-<p>通过波形图，可以直观地理解握手机制的工作过程。</p>
-<hr>
-<h1 id="5-总结与预告（1-分钟）"><a href="#5-总结与预告（1-分钟）" class="headerlink" title="5. 总结与预告（1 分钟）"></a><strong>5. 总结与预告（1 分钟）</strong></h1><p>总结一下：  </p>
-<ul>
-<li>握手机制通过 VALID 和 READY 信号确保数据传输的可靠性。  </li>
-<li>数据传输发生在 VALID 和 READY 同时为高的时刻。</li>
-</ul>
-<p>下期我们将深入探讨 <strong>AXI 读写事务</strong>，包括突发传输和地址计算等内容。如果你有任何问题，欢迎在评论区留言！  </p>
-<p>感谢观看，我们下期再见！</p>
-
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本期主要是把基本的开发环境对齐一下。如果能把我的代码编起来说明环境就可以了。<br>用vivado直接跑也是可以的，我这边就不演示了。<br>下期视频开始正式进入AXI总线的学习，将会讲解AXI最基本的行为，握手机制。</p>
                 
               </div>
             
@@ -405,8 +357,6 @@
       
         <a href="/tags/ARM/" class="print-no-link">#ARM</a>
       
-        <a href="/tags/AMBA/" class="print-no-link">#AMBA</a>
-      
         <a href="/tags/Verilog/" class="print-no-link">#Verilog</a>
       
         <a href="/tags/EasyAXI/" class="print-no-link">#EasyAXI</a>
@@ -421,7 +371,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>EasyAXI 第1期 - AXI 握手机制</div>
+      <div>EasyAXI 第1期 - 开发环境准备</div>
       <div>https://rongyel.github.io/posts/79ba3ff8.html</div>
     </div>
     <div class="license-meta">
@@ -461,6 +411,29 @@
 
 
 
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/4c805fb1.html" title="EasyAXI 第0期 - 序言">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">EasyAXI 第0期 - 序言</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/f32ec8c.html" title="养一只红腿象龟以前，我需要做好哪些准备">
+                        <span class="hidden-mobile">养一只红腿象龟以前，我需要做好哪些准备</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
