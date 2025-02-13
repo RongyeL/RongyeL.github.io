@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>EasyAXI 第2期 - AXI 握手机制</title>
+    <link href="/posts/f5f06c5.html"/>
+    <url>/posts/f5f06c5.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h1><p>本系列视频是基于VCS+VERDI的开发环境进行演示的，本质上就是进行RTL的编译和仿真。<br>所以不使用VCS+VERDI也没关系，也可以用iverilog+GTKWave，甚至直接使用Vivado当环境也完全没有问题滴。<br>大家可以根据自己的情况来。<br>代码的编辑用的是Gvim，这个大家也看自己喜欢用啥就用啥，本质不过是文本罢了。</p><h1 id="代码获取"><a href="#代码获取" class="headerlink" title="代码获取"></a>代码获取</h1><p>本系列视频会提供Github和百度网盘两种方式获取代码，代码均按照视频的集数准备好，直接跑就可以看波形了。</p><h1 id="环境测试"><a href="#环境测试" class="headerlink" title="环境测试"></a>环境测试</h1><p>开发环境就绪，代码获取完成，那就跑一下最简单的仿真看看是否能用了。</p><p>VCS+VERDI的执行步骤如下：</p><ol><li>进入S01E01路径，<code>source script/project.sh</code> 更新一下环境变量<ul><li>这里主要是为了将S01E01这个路径设为根目录，因为每一期视频的路径都不一样，如果不确定好根目录，编译的时候就会吃不到对应的文件。</li></ul></li><li>每期视频的工程文件基本都是<code>rtl、script、verification</code>三个路径。<ul><li>rtl放verilog代码</li><li>script放一些常用脚本</li><li>verification是验证仿真环境</li></ul></li><li>可以简单看一眼<code>rtl</code>，现在只有一个<code>easyaxi.v</code>，里面放的是个空顶层module。</li><li>然后直接去<code>verification/sim</code>路径下，里面只放了一个简单的Makefile文件。<ul><li>执行<code>make compile</code>进行编译</li><li>执行<code>make run</code>进行编译+仿真</li><li>执行<code>make verdi&amp;</code>打开Verdi工具读取编译后的工程文件</li></ul></li><li>仿真如果能run完不报错，环境基本就没问题了。最后打开verdi看下是否正常就行啦。</li></ol><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本期主要是把基本的开发环境对齐一下。如果能把我的代码编起来说明环境就可以了。<br>用vivado直接跑也是可以的，我这边就不演示了。<br>下期视频开始正式进入AXI总线的学习，将会讲解AXI最基本的行为，握手机制。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>EasyAXI系列</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数字IC</tag>
+      
+      <tag>AXI</tag>
+      
+      <tag>ARM</tag>
+      
+      <tag>Verilog</tag>
+      
+      <tag>EasyAXI</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>EasyAXI 第0期 - 序言</title>
     <link href="/posts/4c805fb1.html"/>
     <url>/posts/4c805fb1.html</url>
@@ -41,7 +74,7 @@
     <link href="/posts/79ba3ff8.html"/>
     <url>/posts/79ba3ff8.html</url>
     
-    <content type="html"><![CDATA[<h1 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h1><p>本系列视频是基于VCS+VERDI的开发环境进行演示的，本质上就是进行RTL的编译和仿真。<br>所以不使用VCS+VERDI也没关系，也可以用iverilog+GTKWave，甚至直接使用Vivado当环境也完全没有问题滴。<br>大家可以根据自己的情况来。<br>代码的编辑用的是Gvim，这个大家也看自己喜欢用啥就用啥，本质不过是文本罢了。</p><h1 id="代码获取"><a href="#代码获取" class="headerlink" title="代码获取"></a>代码获取</h1><p>本系列视频会提供Github和百度网盘两种方式获取代码，代码均按照视频的集数准备好，直接跑就可以看波形了。</p><h1 id="环境测试"><a href="#环境测试" class="headerlink" title="环境测试"></a>环境测试</h1><p>开发环境就绪，代码获取完成，那就跑一下最简单的仿真看看是否能用了。</p><p>VCS+VERDI的执行步骤如下：</p><ol><li>进入S01E01路径，<code>source script/project.sh</code> 更新一下环境变量<ul><li>这里主要是为了将S01E01这个路径设为根目录，因为每一期视频的路径都不一样，如果不确定好根目录，编译的时候就会吃不到对应的文件。</li></ul></li><li>每期视频的工程文件基本都是<code>rtl、script、verification</code>三个路径。<ul><li>rtl放verilog代码</li><li>script放一些常用脚本</li><li>verification是验证仿真环境</li></ul></li><li>可以简单看一眼<code>rtl</code>，现在只有一个<code>easyaxi.v</code>，里面放的是个空顶层module。</li><li>然后直接去<code>verification/sim</code>路径下，里面只放了一个简单的Makefile文件。<ul><li>执行<code>make compile</code>进行编译</li><li>执行<code>make run</code>进行编译+仿真</li><li>执行<code>make verdi&amp;</code>打开Verdi工具读取编译后的工程文件</li></ul></li><li>仿真如果能run完不报错，环境基本就没问题了。最后打开verdi看下是否正常就行啦。</li></ol><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本期主要是把基本的开发环境对齐一下。如果能把我的代码编起来说明环境就可以了。<br>用vivado直接跑也是可以的，我这边就不演示了。<br>下期视频开始正式进入AXI总线的学习，将会讲解AXI最基本的行为，握手机制。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h1><p>本系列视频是基于VCS+VERDI的开发环境进行演示的，主要是进行RTL的编译和仿真。不过，大家不一定非要使用VCS+VERDI，也可以用iverilog+GTKWave，或者直接使用Vivado作为开发环境，都是完全没问题的。大家可以根据自己的实际情况选择工具。代码编辑使用的是Gvim，当然你也可以选择自己喜欢的编辑器，本质上都是文本编辑工具而已。</p><h1 id="代码获取"><a href="#代码获取" class="headerlink" title="代码获取"></a>代码获取</h1><p>本系列视频的代码会通过Github和百度网盘两种方式提供，代码已经按照视频的集数整理好了，下载后可以直接运行并查看波形。</p><h1 id="环境测试"><a href="#环境测试" class="headerlink" title="环境测试"></a>环境测试</h1><p>开发环境准备好后，接下来可以跑一个最简单的仿真，测试一下环境是否正常。</p><p>以下是使用VCS+VERDI的执行步骤：</p><ol><li><p>进入S01E01路径，执行&nbsp;<code>source script/project.sh</code>&nbsp;来更新环境变量。</p><ul><li>这里主要是将S01E01路径设置为根目录，因为每期视频的路径可能不同，如果不设置好根目录，编译时可能会找不到对应的文件。</li></ul></li><li><p>每期视频的工程文件基本都包含三个路径：<code>rtl</code>、<code>script</code>&nbsp;和&nbsp;<code>verification</code>。</p><ul><li><code>rtl</code>&nbsp;存放Verilog代码        </li><li><code>script</code>&nbsp;存放一些常用脚本        </li><li><code>verification</code>&nbsp;是验证仿真环境</li></ul></li><li><p>可以简单看一下&nbsp;<code>rtl</code>&nbsp;目录，目前只有一个&nbsp;<code>easyaxi.v</code>&nbsp;文件，里面是一个空的顶层module。</p></li><li><p>接下来进入&nbsp;<code>verification/sim</code>&nbsp;路径，里面只有一个简单的Makefile文件。    </p><ul><li>执行&nbsp;<code>make compile</code>&nbsp;进行编译        </li><li>执行&nbsp;<code>make run</code>&nbsp;进行编译和仿真        </li><li>执行&nbsp;<code>make verdi&amp;</code>&nbsp;打开Verdi工具并加载编译后的工程文件</li></ul></li><li><p>如果仿真能够顺利完成且没有报错，说明环境基本没问题。最后打开Verdi，确认波形显示正常即可。</p></li></ol><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本期内容主要是对齐基本的开发环境。如果大家能够成功编译并运行我的代码，说明环境已经配置好了。使用Vivado直接运行也是可以的，我这里就不额外演示了。</p><p>下期视频我们将正式进入AXI总线的学习，讲解AXI最基本的行为——握手机制。我们下期再见！</p>]]></content>
     
     
     <categories>
