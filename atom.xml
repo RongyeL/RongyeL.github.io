@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-02-15T16:27:38.927Z</updated>
+  <updated>2025-02-16T06:53:52.386Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>熬着，活下去</title>
-    <link href="https://rongyel.github.io/posts/30cfaa1c.html"/>
-    <id>https://rongyel.github.io/posts/30cfaa1c.html</id>
-    <published>2025-02-15T02:30:03.000Z</published>
-    <updated>2025-02-15T16:27:38.927Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;别看这个标题挺吓人，不是的，我没有任何轻生的想法。&lt;/p&gt;
-&lt;p&gt;我其实跟柳依说过，我很重视自己的生命，&lt;br&gt;我觉得，活着，是唯一目标。&lt;br&gt;只有活着，我的故事才会延续下去，&lt;br&gt;只有活着，我才能见到更多事情。&lt;br&gt;只要活着，事情就会继续发展下去，&lt;br&gt;会遇到意外</summary>
-        
-      
-    
-    
-    
-    <category term="思维殿堂" scheme="https://rongyel.github.io/categories/%E6%80%9D%E7%BB%B4%E6%AE%BF%E5%A0%82/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>EasyAXI 第2期 - AXI 握手机制</title>
@@ -454,21 +430,42 @@
   </entry>
   
   <entry>
-    <title>折腾HEXO的快乐</title>
-    <link href="https://rongyel.github.io/posts/92a0ec66.html"/>
-    <id>https://rongyel.github.io/posts/92a0ec66.html</id>
-    <published>2024-07-06T15:53:34.696Z</published>
-    <updated>2025-02-16T06:53:15.734Z</updated>
+    <title>为什么要用Markdown做笔记</title>
+    <link href="https://rongyel.github.io/posts/c97fc71d.html"/>
+    <id>https://rongyel.github.io/posts/c97fc71d.html</id>
+    <published>2024-07-06T15:53:34.664Z</published>
+    <updated>2025-02-16T06:53:11.237Z</updated>
     
     
-    <summary type="html">&lt;p&gt;说实话，折腾这些笔记系统，博客系统，感觉像打游戏一样快乐。时隔多月再次捡起HEXO博客，重新搭建一番，并记录自己的搭建心得。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;markdown有个说法，叫做让人可以专注于笔记内容上。&lt;/p&gt;</summary>
     
     
     
     <category term="工具套件" scheme="https://rongyel.github.io/categories/%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6/"/>
     
     
-    <category term="HEXO" scheme="https://rongyel.github.io/tags/HEXO/"/>
+    <category term="Markdown" scheme="https://rongyel.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Readwise文献剪藏有用吗</title>
+    <link href="https://rongyel.github.io/posts/22e0203a.html"/>
+    <id>https://rongyel.github.io/posts/22e0203a.html</id>
+    <published>2024-07-06T15:53:34.653Z</published>
+    <updated>2025-02-16T06:53:24.596Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Readwise Reader，构建笔记系统的最后一环，稍后读+剪藏+RSS。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="工具套件" scheme="https://rongyel.github.io/categories/%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6/"/>
+    
+    
+    <category term="方法论" scheme="https://rongyel.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+    <category term="工具" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
