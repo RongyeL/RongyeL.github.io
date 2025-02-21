@@ -27,7 +27,7 @@
 <meta property="og:description" content="大家好，我是Rong晔。今天来讲讲AXI协议的核心——握手机制。 快速理解AXI接口包含五个通道，每个通道的数据传输都是通过握手机制完成的。握手，顾名思义，是两个角色之间的交互动作。在AXI协议中，交互的两个设备分别具有“主从”身份：请求的发起方是Master，接收方是Slave。数据传输的控制正是通过握手机制实现的，具体由两个关键信号完成：  VALID：由发送方驱动，表示数据、地址或控制信息已">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-02-13T13:30:02.218Z">
-<meta property="article:modified_time" content="2025-02-21T15:40:36.668Z">
+<meta property="article:modified_time" content="2025-02-21T15:46:27.416Z">
 <meta property="article:author" content="Rong晔">
 <meta property="article:tag" content="数字IC">
 <meta property="article:tag" content="AXI">
@@ -232,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          806 字
+          808 字
         
       </span>
     
@@ -316,7 +316,7 @@
 <li><strong>过程</strong>：发送方先准备好数据（VALID拉高），接收方稍后响应（READY拉高），数据传输完成。</li>
 <li><strong>特点</strong>：这种场景下，接收方需要根据发送方的数据内容决定是否拉高READY。</li>
 </ul>
-<p>当接收方对数据有特定条件时，READY信号的拉高需要根据发送方的数据内容判断。例如：某个从设备只能接收地址在0x00<del>0xA范围内的读请求。此时，从设备拉高READY的前提是VALID有效期间，ADDR信号的值必须在0x00</del>0xA范围内。</p>
+<p>当接收方对数据有特定条件时，READY信号的拉高需要根据发送方的数据内容判断。例如：某个从设备只能接收地址在0x00 ~ 0xA范围内的读请求。此时，从设备拉高READY的前提是VALID有效期间，ADDR信号的值必须在0x00 ~ 0xA范围内。</p>
 <p>模式 1 会比模式 2早两拍完成握手，因此对于性能会有一定收益。<br>模式2 必须确保valid的拉高不依赖ready，否则会出现挂死。这本身也是协议的规范。<br>并非设计上的优劣问题，而是实际应用中的约束所致。</p>
 <hr>
 <h1 id="遗留问题"><a href="#遗留问题" class="headerlink" title="遗留问题"></a>遗留问题</h1><p>留下两个思考题：</p>
