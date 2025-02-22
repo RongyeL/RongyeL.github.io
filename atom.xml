@@ -105,6 +105,33 @@
   </entry>
   
   <entry>
+    <title>EasyAXI 系列视频大纲</title>
+    <link href="https://rongyel.github.io/posts/b96a2201.html"/>
+    <id>https://rongyel.github.io/posts/b96a2201.html</id>
+    <published>2025-02-03T15:09:58.285Z</published>
+    <updated>2025-02-22T16:28:44.569Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt; EasyAXI系列视频的大纲&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
+    
+    <category term="AXI" scheme="https://rongyel.github.io/tags/AXI/"/>
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="Verilog" scheme="https://rongyel.github.io/tags/Verilog/"/>
+    
+    <category term="EasyAXI" scheme="https://rongyel.github.io/tags/EasyAXI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>养一只红腿象龟以前，我需要做好哪些准备</title>
     <link href="https://rongyel.github.io/posts/f32ec8c.html"/>
     <id>https://rongyel.github.io/posts/f32ec8c.html</id>
@@ -445,27 +472,6 @@
     
     
     <category term="Markdown" scheme="https://rongyel.github.io/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Readwise文献剪藏有用吗</title>
-    <link href="https://rongyel.github.io/posts/22e0203a.html"/>
-    <id>https://rongyel.github.io/posts/22e0203a.html</id>
-    <published>2024-07-06T15:53:34.653Z</published>
-    <updated>2025-02-16T06:53:24.596Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Readwise Reader，构建笔记系统的最后一环，稍后读+剪藏+RSS。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具套件" scheme="https://rongyel.github.io/categories/%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6/"/>
-    
-    
-    <category term="方法论" scheme="https://rongyel.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-    <category term="工具" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
