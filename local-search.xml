@@ -130,39 +130,6 @@
   
   
   <entry>
-    <title>EasyAXI 系列视频大纲</title>
-    <link href="/posts/b96a2201.html"/>
-    <url>/posts/b96a2201.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="EasyAXI大纲"><a href="#EasyAXI大纲" class="headerlink" title="EasyAXI大纲"></a>EasyAXI大纲</h1><h2 id="第零期-序言"><a href="#第零期-序言" class="headerlink" title="第零期 序言"></a>第零期 序言</h2><p>作为回归的第一期视频，简单阐述下回归的原因，以及接下来这个系列视频的考量。</p><h2 id="第一期-开发环境准备"><a href="#第一期-开发环境准备" class="headerlink" title="第一期 开发环境准备"></a>第一期 开发环境准备</h2><p>整个系列视频需要结合代码波形来理解，因此开发环境需要简单对齐一下。<br>本期视频演示如何基于我Github仓的代码直接运行仿真看到结果，说明环境已经就绪。</p><h2 id="第二期-AXI-握手机制"><a href="#第二期-AXI-握手机制" class="headerlink" title="第二期 AXI 握手机制"></a>第二期 AXI 握手机制</h2><p>基本的信号传输机制，是一切的基础。<br>本期视频不需要考虑其他的信号端口，只理解什么叫Valid &amp; Ready 握手。</p><h2 id="第三期-AXI-协议架构"><a href="#第三期-AXI-协议架构" class="headerlink" title="第三期 AXI 协议架构"></a>第三期 AXI 协议架构</h2><p>AXI 协议的一大特点在于多通道架构，将读或写的地址、数据和控制信号分离到独立的通道中。<br>本期视频以读事务为例，实现AR,R通道之间的依赖描述。</p><h2 id="第三期-AXI-Burst传输"><a href="#第三期-AXI-Burst传输" class="headerlink" title="第三期 AXI Burst传输"></a>第三期 AXI Burst传输</h2><p>AXI 协议的一大特点是Burst数据传输。一笔请求可以传输多笔数据。<br>本期视频以读事务为例，实现读事物的Burst传输行为描述，重点说明BURST、SIZE、LEN、LAST信号的含义。<br>注：实现最常用的INCR类型。FIX和WRAP只作介绍。</p><h2 id="第四期-AXI-Outstanding能力"><a href="#第四期-AXI-Outstanding能力" class="headerlink" title="第四期 AXI Outstanding能力"></a>第四期 AXI Outstanding能力</h2><p>AXI 协议的一大特点是Outstanding传输。Outstanding 是指主设备可以同时发起多个未完成的事务，而无需等待前一个事务的响应。<br>本期视频以读事务为例，实现读请求的Outstanding能力行为描述，弱化说明ARID信号的含义。<br>注：本期视频暂不考虑同ID保序的问题。</p><h2 id="第五期-AXI-Order机制"><a href="#第五期-AXI-Order机制" class="headerlink" title="第五期 AXI Order机制"></a>第五期 AXI Order机制</h2><p>AXI 协议的一大特点是ID保序机制。在支持Outstanding的情况下，存在请求乱序返回的情况。同ID的请求要求按顺序返回响应（响应保序），不同ID间无要求。<br>本期视频以读事务为例，实现读请求的在Outstanding场景下，实现AXID的保序，重点说明ARID信号的含义。</p><h2 id="第六期-AXI-基本通路实现"><a href="#第六期-AXI-基本通路实现" class="headerlink" title="第六期 AXI 基本通路实现"></a>第六期 AXI 基本通路实现</h2><p>AXI 协议基本的特性前几期视频已经讲述完毕了，现在AXI已经算会用了。<br>本期视频将写事务也补充开发。相较于读操作，写需要关注W通道没有ID，必须按请求顺序下发，以及B通道的特殊性。</p><h2 id="第七期-暂不实现的AXI特性说明"><a href="#第七期-暂不实现的AXI特性说明" class="headerlink" title="第七期 暂不实现的AXI特性说明"></a>第七期 暂不实现的AXI特性说明</h2><p>前几期视频已经将AXI基本的通路搭建完毕了。剩下的一些特性暂不实现，主要是没有使用场景。包括：</p><ul><li>AXCACHE 事务属性</li><li>AXI LOCK 原子访问<br>注：只介绍，不实现。</li></ul><h2 id="第八期-AXI-接口IP设计"><a href="#第八期-AXI-接口IP设计" class="headerlink" title="第八期 AXI 接口IP设计"></a>第八期 AXI 接口IP设计</h2><p>AXI 协议基本的特性前几期视频已经讲述完毕了，现在可以开发一个具备AXI协议接口的IP了。<br>本期视频设计一个计数器作为Master，设计一个RAM作为Slave。它们之间的交互行为如下：</p><ol><li>计数器不断地发写请求，将自己当前的计数值写到RAM中；</li><li>RAM只要非满就会接收并返回OKAY，否则返回SLVERR，同时置起FULL的状态；</li><li>计数器收到SLVERR后暂停计数和写RAM行为；</li><li>计数器发一次读请求，读取RAM的空满状态寄存器；确认FULL的状态置起后，发一个写清操作清空RAM。</li><li>计数器再发一次读请求，读取RAM的空满状态寄存器；确认FULL的状态释放后，继续写入自己的计数值。若还是FULL，则视为异常，用例结束。<br>【修改一下，计数器作为slv ip比较好。master就是个伪核处理器，读计数值来发出写清。】</li></ol><h2 id="第九期-AXI-SOC总线设计"><a href="#第九期-AXI-SOC总线设计" class="headerlink" title="第九期 AXI SOC总线设计"></a>第九期 AXI SOC总线设计</h2><p>AXI 协议支持多主设备（Multi-Master）和多从设备（Multi-Slave）的架构。<br>总线根据地址信息进行路由，上一期</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>技术笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>数字IC</tag>
-      
-      <tag>AXI</tag>
-      
-      <tag>ARM</tag>
-      
-      <tag>Verilog</tag>
-      
-      <tag>EasyAXI</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>养一只红腿象龟以前，我需要做好哪些准备</title>
     <link href="/posts/f32ec8c.html"/>
     <url>/posts/f32ec8c.html</url>
