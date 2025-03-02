@@ -19,20 +19,22 @@
   <meta name="author" content="Rongye">
   <meta name="keywords" content="ASIC">
   
-    <meta name="description" content="大家好，我是Rong晔。今天来讲讲AXI协议的核心——握手机制。  协议文档AMBA AXI and ACE Protocol Specification Version F.b ARM 官方文档：https:&#x2F;&#x2F;developer.arm.com&#x2F;documentation&#x2F;ihi0022&#x2F;fb&#x2F;?lang&#x3D;en注意，这不是最新版的文档，版本号为F.b。因为我讲的是AXI4协议，所以这个版本足够">
+    <meta name="description" content="大家好，我是Rong晔。今天来讲讲AXI协议的核心——握手机制。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EasyAXI 第2期 - AXI 握手机制">
 <meta property="og:url" content="https://rongyel.github.io/posts/f5f06c5.html">
 <meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
-<meta property="og:description" content="大家好，我是Rong晔。今天来讲讲AXI协议的核心——握手机制。  协议文档AMBA AXI and ACE Protocol Specification Version F.b ARM 官方文档：https:&#x2F;&#x2F;developer.arm.com&#x2F;documentation&#x2F;ihi0022&#x2F;fb&#x2F;?lang&#x3D;en注意，这不是最新版的文档，版本号为F.b。因为我讲的是AXI4协议，所以这个版本足够">
+<meta property="og:description" content="大家好，我是Rong晔。今天来讲讲AXI协议的核心——握手机制。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20AXI%E6%8F%A1%E6%89%8B%E6%9C%BA%E5%88%B6.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250302221543.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250302221637.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250302221618.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250302221610.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%872.PNG">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%873.PNG">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%874.PNG">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%875.PNG">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%876.PNG">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%877.PNG">
 <meta property="article:published_time" content="2025-02-13T13:30:02.218Z">
-<meta property="article:modified_time" content="2025-03-02T14:17:50.162Z">
+<meta property="article:modified_time" content="2025-03-02T14:54:03.681Z">
 <meta property="article:author" content="Rong晔">
 <meta property="article:tag" content="数字IC">
 <meta property="article:tag" content="AXI">
@@ -238,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          909 字
+          883 字
         
       </span>
     
@@ -300,10 +302,9 @@
             
               <div class="markdown-body">
                 
-                <p>大家好，我是Rong晔。今天来讲讲AXI协议的核心——<strong>握手机制</strong>。</p>
-<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20AXI%E6%8F%A1%E6%89%8B%E6%9C%BA%E5%88%B6.png" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 AXI握手机制.png"></p>
+                <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20AXI%E6%8F%A1%E6%89%8B%E6%9C%BA%E5%88%B6.png" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 封面"></p>
 <h1 id="协议文档"><a href="#协议文档" class="headerlink" title="协议文档"></a>协议文档</h1><p><a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/ihi0022/fb/?lang=en">AMBA AXI and ACE Protocol Specification Version F.b</a></p>
-<p>ARM 官方文档：<a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/ihi0022/fb/?lang=en">https://developer.arm.com/documentation/ihi0022/fb/?lang=en</a><br>注意，这不是最新版的文档，版本号为F.b。<br>因为我讲的是AXI4协议，所以这个版本足够了。</p>
+<p>ARM 官方文档：<a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/ihi0022/fb/?lang=en">https://developer.arm.com/documentation/ihi0022/fb/?lang=en</a><br>注意，这不是最新版的文档，版本号为F.b。<br>因为我讲的是AXI4协议，所以这个版本足够了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%872.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 协议文档"></p>
 <p>我不会按协议顺序讲，而是讲到什么再去看协议。<br>协议手册是一种工具，在需要的时候知道去哪里查阅即可，并不需要背下来，也不可能背下来。</p>
 <h1 id="快速理解"><a href="#快速理解" class="headerlink" title="快速理解"></a>快速理解</h1><p>AXI接口包含五个通道，每个通道的<strong>数据传输</strong>都是通过握手机制完成的。</p>
 <p>握手，顾名思义，是两个角色之间的交互动作。在AXI协议中，交互的两个设备分别具有“主从”身份：请求的发起方是Master，接收方是Slave。数据传输的控制正是通过握手机制实现的，具体由两个关键信号完成：</p>
@@ -313,19 +314,17 @@
 <li><p><strong>READY</strong>：由接收方驱动，表示接收方可以接收数据。READY信号可以在VALID之前或之后拉高。</p>
 </li>
 </ul>
-<p>握手机制有效解决了发送方和接收方速度不一致的问题，确保了数据传输的可靠性。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250302221543.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
-<p>当VALID和READY同时为高时，握手成功，数据在这一拍完成传输。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250302221637.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
-<p>【手绘演示】</p>
+<p>握手机制有效解决了发送方和接收方速度不一致的问题，确保了数据传输的可靠性。</p>
+<p>当VALID和READY同时为高时，握手成功，数据在这一拍完成传输。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%873.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 快速理解 握手"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%874.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 快速理解 意义"></p>
 <hr>
-<h1 id="实机演示"><a href="#实机演示" class="headerlink" title="实机演示"></a>实机演示</h1><p>接下来，我以AR（地址读请求）通道为例，演示握手机制如何实现地址信息的传输。以下是两种常见的握手行为场景：</p>
-<h2 id="模式-1：READY-提前拉高，VALID-后拉高"><a href="#模式-1：READY-提前拉高，VALID-后拉高" class="headerlink" title="模式 1：READY 提前拉高，VALID 后拉高"></a>模式 1：READY 提前拉高，VALID 后拉高</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250302221618.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
-<ul>
+<h1 id="实机演示"><a href="#实机演示" class="headerlink" title="实机演示"></a>实机演示</h1><p>接下来，我以AR（地址读请求）通道为例，演示握手机制如何实现地址信息的传输。以下是两种常见的握手行为场景：<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%875.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 实机演示"></p>
+<h2 id="模式-1：READY-提前拉高，VALID-后拉高"><a href="#模式-1：READY-提前拉高，VALID-后拉高" class="headerlink" title="模式 1：READY 提前拉高，VALID 后拉高"></a>模式 1：READY 提前拉高，VALID 后拉高</h2><ul>
 <li><strong>过程</strong>：接收方提前准备好接收数据（READY拉高），发送方一旦准备好（VALID拉高），数据传输立即完成。</li>
 <li><strong>特点</strong>：这种场景下，接收方无需等待发送方的数据内容，只要自身有接收能力即可提前拉高READY。</li>
 </ul>
 <p>当接收方确保自己能够接收任何数据时，可以提前拉高READY。</p>
-<h2 id="模式-2：VALID-先拉高，READY-后拉高"><a href="#模式-2：VALID-先拉高，READY-后拉高" class="headerlink" title="模式 2：VALID 先拉高，READY 后拉高"></a>模式 2：VALID 先拉高，READY 后拉高</h2><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250302221610.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
-<ul>
+<h2 id="模式-2：VALID-先拉高，READY-后拉高"><a href="#模式-2：VALID-先拉高，READY-后拉高" class="headerlink" title="模式 2：VALID 先拉高，READY 后拉高"></a>模式 2：VALID 先拉高，READY 后拉高</h2><ul>
 <li><strong>过程</strong>：发送方先准备好数据（VALID拉高），接收方稍后响应（READY拉高），数据传输完成。</li>
 <li><strong>特点</strong>：这种场景下，接收方需要根据发送方的数据内容决定是否拉高READY。</li>
 </ul>
@@ -341,11 +340,11 @@
 </li>
 <li><p><strong>VALID信号拉高后，数据是否可以再发生变化？</strong></p>
 <ul>
-<li>如果在握手成功前数据发生变化，可能会导致什么问题？在什么场景下会出现这种情况？</li>
+<li>如果在握手成功前数据发生变化，可能会导致什么问题？在什么场景下会出现这种情况？<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%876.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 遗留问题"></li>
 </ul>
 </li>
 </ol>
-
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%877.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 幻灯片7.PNG"></p>
                 
               </div>
             
