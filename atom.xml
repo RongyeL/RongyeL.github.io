@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-03-03T16:01:04.930Z</updated>
+  <updated>2025-03-03T16:09:30.619Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rongyel.github.io/posts/ffadf7ba.html"/>
     <id>https://rongyel.github.io/posts/ffadf7ba.html</id>
     <published>2025-03-03T15:46:02.542Z</published>
-    <updated>2025-03-03T16:01:04.930Z</updated>
+    <updated>2025-03-03T16:09:30.619Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;CRC校验&lt;/strong&gt;（Cyclic Redundancy Check，循环冗余校验）是一种广泛应用于数字通信和数据存储领域的&lt;strong&gt;错误检测技术&lt;/strong&gt;，用于验证数据在传输或存储过程中是否发生错误（如比特翻转、数据丢失等）。&lt;/p&gt;</summary>
