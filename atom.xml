@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-02-25T14:17:43.015Z</updated>
+  <updated>2025-03-03T16:01:04.930Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>什么是CRC校验</title>
+    <link href="https://rongyel.github.io/posts/ffadf7ba.html"/>
+    <id>https://rongyel.github.io/posts/ffadf7ba.html</id>
+    <published>2025-03-03T15:46:02.542Z</published>
+    <updated>2025-03-03T16:01:04.930Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;CRC校验&lt;/strong&gt;（Cyclic Redundancy Check，循环冗余校验）是一种广泛应用于数字通信和数据存储领域的&lt;strong&gt;错误检测技术&lt;/strong&gt;，用于验证数据在传输或存储过程中是否发生错误（如比特翻转、数据丢失等）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="算法" scheme="https://rongyel.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="功能安全" scheme="https://rongyel.github.io/tags/%E5%8A%9F%E8%83%BD%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>我的2024各平台年度游戏总结</title>
@@ -440,25 +461,6 @@
     <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
     
     <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么要用Markdown做笔记</title>
-    <link href="https://rongyel.github.io/posts/c97fc71d.html"/>
-    <id>https://rongyel.github.io/posts/c97fc71d.html</id>
-    <published>2024-07-06T15:53:34.664Z</published>
-    <updated>2025-02-16T06:53:11.237Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;markdown有个说法，叫做让人可以专注于笔记内容上。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具套件" scheme="https://rongyel.github.io/categories/%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6/"/>
-    
-    
-    <category term="Markdown" scheme="https://rongyel.github.io/tags/Markdown/"/>
     
   </entry>
   
