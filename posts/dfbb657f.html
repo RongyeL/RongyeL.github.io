@@ -19,24 +19,34 @@
   <meta name="author" content="Rongye">
   <meta name="keywords" content="ASIC">
   
-    <meta name="description" content="记录一下自己使用其他笔记工具的感受。">
+    <meta name="description" content="大家好，我是Rong晔。今天直接来实现AXI读事务的设计。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="markdown笔记工具分析">
-<meta property="og:url" content="https://rongyel.github.io/posts/c1f4e46a.html">
+<meta property="og:title" content="EasyAXI 第3期 - AXI 读事务初步实现">
+<meta property="og:url" content="https://rongyel.github.io/posts/dfbb657f.html">
 <meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
-<meta property="og:description" content="记录一下自己使用其他笔记工具的感受。">
+<meta property="og:description" content="大家好，我是Rong晔。今天直接来实现AXI读事务的设计。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-06T15:53:34.627Z">
-<meta property="article:modified_time" content="2025-02-16T06:53:22.551Z">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20AXI%E6%8F%A1%E6%89%8B%E6%9C%BA%E5%88%B6.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%874.PNG">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%875.PNG">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%876.PNG">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%877.PNG">
+<meta property="article:published_time" content="2025-03-17T12:24:35.165Z">
+<meta property="article:modified_time" content="2025-03-17T12:30:58.429Z">
 <meta property="article:author" content="Rong晔">
-<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="数字IC">
+<meta property="article:tag" content="AXI">
+<meta property="article:tag" content="ARM">
+<meta property="article:tag" content="Verilog">
+<meta property="article:tag" content="EasyAXI">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20AXI%E6%8F%A1%E6%89%8B%E6%9C%BA%E5%88%B6.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>markdown笔记工具分析 - IC攻城狮的摸鱼小屋</title>
+  <title>EasyAXI 第3期 - AXI 读事务初步实现 - IC攻城狮的摸鱼小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,13 +209,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20AXI%E6%8F%A1%E6%89%8B%E6%9C%BA%E5%88%B6.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">markdown笔记工具分析</span>
+            <span id="subtitle">EasyAXI 第3期 - AXI 读事务初步实现</span>
           
         </div>
 
@@ -216,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-06 23:53" pubdate>
-          2024年7月6日 晚上
+        <time datetime="2025-03-17 20:24" pubdate>
+          2025年3月17日 晚上
         </time>
       </span>
     
@@ -228,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          430 字
+          551 字
         
       </span>
     
@@ -239,7 +249,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -285,19 +295,42 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">markdown笔记工具分析</h1>
+            <h1 id="seo-header">EasyAXI 第3期 - AXI 读事务初步实现</h1>
             
             
               <div class="markdown-body">
                 
-                <p>兜兜转转选择了使用obsidian作为自己的markdown笔记工具。记录一下自己使用其他笔记工具的感受。</p>
-<h1 id="typora"><a href="#typora" class="headerlink" title="typora"></a>typora</h1><p>能很好的完成markdown的编写工作，但缺少文件管理能力。<br>没有标签页。没有其他功能。</p>
-<h1 id="思源"><a href="#思源" class="headerlink" title="思源"></a>思源</h1><p>支持markdown编辑，但数据格式其实是sy这样的私有格式。<br>每一段都有链接能力，粒度太小，其实我用不上。<br>加载速度较慢。<br>导出markdown还算方便，可以整个笔记本导出。</p>
-<h1 id="语雀"><a href="#语雀" class="headerlink" title="语雀"></a>语雀</h1><p>建议不要使用它进行编辑。只作为发布平台。<br>真的，绑架用户是最垃圾的行为。<br>导出便捷性极差，不能整个知识库导出。<br>文章只能一篇一篇导出。<br>我清楚的记得，早期的语雀是可以整个知识库一起导出的，<br>而且导出的格式有很多种，包括word，pdf，markdown等等。<br>我才放心使用的，没想到后面更新后把这些都嘎掉了。<br>现在知识库导出只能导出私有格式，<br>文章导出除了私有格式只有markdown，<br>真的，很，讨厌你们这样的行为。</p>
-<p>迁移成本高，说到底就是绑架用户，<br>网页端体验不佳，切换页面加载很不舒服。<br>不能离线使用。</p>
-<h1 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h1><p>比较全面的工具。<br>官方同步功能价格昂贵，<br>还好有remote save这样的插件可以实现同步功能，<br>我个人结合OneDrive使用十分方便，<br>移动端和PC端同步数据方便。<br>数据就是markdown，备份方便。</p>
-<p>缺点：在公司不敢用。</p>
-<h1 id="VSCODE-office-view扩展"><a href="#VSCODE-office-view扩展" class="headerlink" title="VSCODE+office view扩展"></a>VSCODE+office view扩展</h1><p>不得已的选择，不过比typora文件管理方便一些。</p>
+                <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20AXI%E6%8F%A1%E6%89%8B%E6%9C%BA%E5%88%B6.png" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 封面"></p>
+<h1 id="快速理解"><a href="#快速理解" class="headerlink" title="快速理解"></a>快速理解</h1><p>AXI接口包含五个通道，其中，读请求AR通道和读数据R通道，两个方向的传输共同实现了读事务。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%874.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 快速理解 意义"></p>
+<hr>
+<h1 id="实机演示"><a href="#实机演示" class="headerlink" title="实机演示"></a>实机演示</h1><p>接下来，我以AR（地址读请求）通道为例，演示握手机制如何实现地址信息的传输。以下是两种常见的握手行为场景：<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%875.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 实机演示"></p>
+<h2 id="模式-1：READY-提前拉高，VALID-后拉高"><a href="#模式-1：READY-提前拉高，VALID-后拉高" class="headerlink" title="模式 1：READY 提前拉高，VALID 后拉高"></a>模式 1：READY 提前拉高，VALID 后拉高</h2><ul>
+<li><strong>过程</strong>：接收方提前准备好接收数据（READY拉高），发送方一旦准备好（VALID拉高），数据传输立即完成。</li>
+<li><strong>特点</strong>：这种场景下，接收方无需等待发送方的数据内容，只要自身有接收能力即可提前拉高READY。</li>
+</ul>
+<p>当接收方确保自己能够接收任何数据时，可以提前拉高READY。</p>
+<h2 id="模式-2：VALID-先拉高，READY-后拉高"><a href="#模式-2：VALID-先拉高，READY-后拉高" class="headerlink" title="模式 2：VALID 先拉高，READY 后拉高"></a>模式 2：VALID 先拉高，READY 后拉高</h2><ul>
+<li><strong>过程</strong>：发送方先准备好数据（VALID拉高），接收方稍后响应（READY拉高），数据传输完成。</li>
+<li><strong>特点</strong>：这种场景下，接收方需要根据发送方的数据内容决定是否拉高READY。</li>
+</ul>
+<p>当接收方对数据有特定条件时，READY信号的拉高需要根据发送方的数据内容判断。例如：某个从设备只能接收地址在0x00 ~ 0xA范围内的读请求。此时，从设备拉高READY的前提是VALID有效期间，ADDR信号的值必须在0x00 ~ 0xA范围内。</p>
+<p>模式1会比模式2早两拍完成握手，因此对于性能会有一定收益。<br>模式2必须确保valid的拉高不依赖ready，否则会出现挂死。这本身也是协议的规范。<br>并非设计上的优劣问题，而是实际应用中的约束所致。</p>
+<hr>
+<h1 id="遗留问题"><a href="#遗留问题" class="headerlink" title="遗留问题"></a>遗留问题</h1><p>留下两个思考题：</p>
+<ol>
+<li><p><strong>协议为什么要求VALID拉高后必须保持高电平？</strong></p>
+<ul>
+<li>如果在握手成功前VALID信号撤离，可能会导致什么问题？在什么场景下会出现这种情况？</li>
+</ul>
+</li>
+<li><p><strong>VALID信号拉高后，数据是否可以再发生变化？</strong></p>
+<ul>
+<li>如果在握手成功前数据发生变化，可能会导致什么问题？在什么场景下会出现这种情况？<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%876.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 遗留问题"></li>
+</ul>
+</li>
+</ol>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%877.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 幻灯片7.PNG"></p>
                 
               </div>
             
@@ -315,7 +348,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6/" class="category-chain-item">工具套件</a>
+  <a href="/categories/EasyAXI%E7%B3%BB%E5%88%97/" class="category-chain-item">EasyAXI系列</a>
   
   
 
@@ -330,7 +363,15 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Markdown/" class="print-no-link">#Markdown</a>
+        <a href="/tags/%E6%95%B0%E5%AD%97IC/" class="print-no-link">#数字IC</a>
+      
+        <a href="/tags/AXI/" class="print-no-link">#AXI</a>
+      
+        <a href="/tags/ARM/" class="print-no-link">#ARM</a>
+      
+        <a href="/tags/Verilog/" class="print-no-link">#Verilog</a>
+      
+        <a href="/tags/EasyAXI/" class="print-no-link">#EasyAXI</a>
       
     </div>
   
@@ -342,8 +383,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>markdown笔记工具分析</div>
-      <div>https://rongyel.github.io/posts/c1f4e46a.html</div>
+      <div>EasyAXI 第3期 - AXI 读事务初步实现</div>
+      <div>https://rongyel.github.io/posts/dfbb657f.html</div>
     </div>
     <div class="license-meta">
       
@@ -355,7 +396,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月6日</div>
+          <div>2025年3月17日</div>
         </div>
       
       
@@ -387,9 +428,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/22e0203a.html" title="Readwise文献剪藏有用吗">
+                      <a href="/posts/5fd70d3a.html" title="我家红腿的居住环境如何？">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Readwise文献剪藏有用吗</span>
+                        <span class="hidden-mobile">我家红腿的居住环境如何？</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -397,8 +438,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/3b1a7464.html" title="香格里拉边境 为什么让我兴奋">
-                        <span class="hidden-mobile">香格里拉边境 为什么让我兴奋</span>
+                      <a href="/posts/ffadf7ba.html" title="什么是CRC校验">
+                        <span class="hidden-mobile">什么是CRC校验</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
