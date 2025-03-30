@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-03-27T16:24:16.845Z</updated>
+  <updated>2025-03-04T15:05:49.078Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>EasyAXI 第3期 - AXI 读事务初步实现</title>
-    <link href="https://rongyel.github.io/posts/dfbb657f.html"/>
-    <id>https://rongyel.github.io/posts/dfbb657f.html</id>
-    <published>2025-03-17T12:24:35.165Z</published>
-    <updated>2025-03-27T16:24:16.845Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;大家好，我是Rong晔。今天直接来实现AXI读事务的设计。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="EasyAXI系列" scheme="https://rongyel.github.io/categories/EasyAXI%E7%B3%BB%E5%88%97/"/>
-    
-    
-    <category term="数字IC" scheme="https://rongyel.github.io/tags/%E6%95%B0%E5%AD%97IC/"/>
-    
-    <category term="AXI" scheme="https://rongyel.github.io/tags/AXI/"/>
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="Verilog" scheme="https://rongyel.github.io/tags/Verilog/"/>
-    
-    <category term="EasyAXI" scheme="https://rongyel.github.io/tags/EasyAXI/"/>
-    
-  </entry>
   
   <entry>
     <title>什么是CRC校验</title>
@@ -465,6 +438,27 @@
     <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
     
     <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ARM memory属性的理解</title>
+    <link href="https://rongyel.github.io/posts/2957f6bf.html"/>
+    <id>https://rongyel.github.io/posts/2957f6bf.html</id>
+    <published>2024-07-06T15:53:34.734Z</published>
+    <updated>2025-02-16T06:52:41.488Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在看ARM的各种技术手册中，会多次看到对于memory属性的描述，诸如Cacheable、Allocate、Device nRnE等等。本文主要以CHI中的MemAttr、SnpAttr域段，展开对memory属性的学习。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
     
   </entry>
   
