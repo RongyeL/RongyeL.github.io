@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-03-27T16:23:46.971Z</updated>
+  <updated>2025-03-27T16:24:16.845Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -17,37 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我家红腿的居住环境如何？</title>
-    <link href="https://rongyel.github.io/posts/5fd70d3a.html"/>
-    <id>https://rongyel.github.io/posts/5fd70d3a.html</id>
-    <published>2025-03-27T15:32:23.686Z</published>
-    <updated>2025-03-27T16:23:46.971Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;物种名&quot;&gt;&lt;a href=&quot;#物种名&quot; class=&quot;headerlink&quot; title=&quot;物种名&quot;&gt;&lt;/a&gt;物种名&lt;/h1&gt;&lt;p&gt;红腿陆龟&lt;/p&gt;
-&lt;h1 id=&quot;环境尺寸&quot;&gt;&lt;a href=&quot;#环境尺寸&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="兴趣杂谈" scheme="https://rongyel.github.io/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="宠物" scheme="https://rongyel.github.io/tags/%E5%AE%A0%E7%89%A9/"/>
-    
-  </entry>
-  
-  <entry>
     <title>EasyAXI 第3期 - AXI 读事务初步实现</title>
     <link href="https://rongyel.github.io/posts/dfbb657f.html"/>
     <id>https://rongyel.github.io/posts/dfbb657f.html</id>
     <published>2025-03-17T12:24:35.165Z</published>
-    <updated>2025-03-17T12:30:58.429Z</updated>
+    <updated>2025-03-27T16:24:16.845Z</updated>
     
     
     <summary type="html">&lt;p&gt;大家好，我是Rong晔。今天直接来实现AXI读事务的设计。&lt;/p&gt;</summary>
@@ -371,7 +345,7 @@
     <link href="https://rongyel.github.io/posts/b6eda8db.html"/>
     <id>https://rongyel.github.io/posts/b6eda8db.html</id>
     <published>2024-07-06T15:53:34.956Z</published>
-    <updated>2025-03-24T15:22:45.596Z</updated>
+    <updated>2025-03-27T16:24:16.840Z</updated>
     
     
     <summary type="html">&lt;p&gt;定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……&lt;/p&gt;</summary>
@@ -468,6 +442,29 @@
     <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
     
     <category term="中断" scheme="https://rongyel.github.io/tags/%E4%B8%AD%E6%96%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MMU-TLB基础知识</title>
+    <link href="https://rongyel.github.io/posts/e0051e00.html"/>
+    <id>https://rongyel.github.io/posts/e0051e00.html</id>
+    <published>2024-07-06T15:53:34.759Z</published>
+    <updated>2025-02-16T06:52:43.266Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;SMMU（System Memory Management Unit，系统内存管理单元）可以认为是 MMU 的衍生，在开始 SMMU 的协议学习之前，先掌握 MMU 的相关基础知识。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
+    
+    <category term="MMU" scheme="https://rongyel.github.io/tags/MMU/"/>
+    
+    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
