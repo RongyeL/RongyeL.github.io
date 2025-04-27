@@ -16,39 +16,31 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Rongye">
+  <meta name="author" content="Rong晔">
   <meta name="keywords" content="ASIC">
   
-    <meta name="description" content="香格里拉边界荣升我十月最期待新番，着实拿捏了我对于虚拟网游的幻想，就像当年的刀剑一样。">
+    <meta name="description" content="Repair的意义Memory占芯片大块的面积，如果出现坏的单元，直接算废片那也太浪费了。因此现在芯片为了追求良率，会在最开始设计的时候就加入repair的功能。本质就是增加冗余逻辑，以便在出现问题的时候可以用来替换掉坏的部分，就是一种面积换良率的方案。 Repair的形式常见的有Row repair、Column repair直观理解，就是整行、整列用redundancy逻辑替换掉。 Repai">
 <meta property="og:type" content="article">
-<meta property="og:title" content="香格里拉边境 为什么让我兴奋">
-<meta property="og:url" content="https://rongyel.github.io/posts/3b1a7464.html">
+<meta property="og:title" content="什么是Memory Repair">
+<meta property="og:url" content="https://rongyel.github.io/posts/c3914d5e.html">
 <meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
-<meta property="og:description" content="香格里拉边界荣升我十月最期待新番，着实拿捏了我对于虚拟网游的幻想，就像当年的刀剑一样。">
+<meta property="og:description" content="Repair的意义Memory占芯片大块的面积，如果出现坏的单元，直接算废片那也太浪费了。因此现在芯片为了追求良率，会在最开始设计的时候就加入repair的功能。本质就是增加冗余逻辑，以便在出现问题的时候可以用来替换掉坏的部分，就是一种面积换良率的方案。 Repair的形式常见的有Row repair、Column repair直观理解，就是整行、整列用redundancy逻辑替换掉。 Repai">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230710215416.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230806171854.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231028235238.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231028235301.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231840.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016232056.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231023234734.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231650.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231949.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/DSCF2416.jpg">
-<meta property="article:published_time" content="2024-07-06T15:53:34.428Z">
-<meta property="article:modified_time" content="2025-04-22T16:02:05.682Z">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250427225659.png">
+<meta property="article:published_time" content="2025-04-22T16:13:29.956Z">
+<meta property="article:modified_time" content="2025-04-27T14:57:11.350Z">
 <meta property="article:author" content="Rong晔">
-<meta property="article:tag" content="动漫">
-<meta property="article:tag" content="游戏">
+<meta property="article:tag" content="数字IC">
+<meta property="article:tag" content="ASIC">
+<meta property="article:tag" content="Memory">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230710215416.png">
+<meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250427225659.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>香格里拉边境 为什么让我兴奋 - IC攻城狮的摸鱼小屋</title>
+  <title>什么是Memory Repair - IC攻城狮的摸鱼小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -217,7 +209,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">香格里拉边境 为什么让我兴奋</span>
+            <span id="subtitle">什么是Memory Repair</span>
           
         </div>
 
@@ -228,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-06 23:53" pubdate>
-          2024年7月6日 晚上
+        <time datetime="2025-04-23 00:13" pubdate>
+          2025年4月23日 凌晨
         </time>
       </span>
     
@@ -240,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          815 字
+          494 字
         
       </span>
     
@@ -251,7 +243,7 @@
         
         
         
-          7 分钟
+          5 分钟
         
       </span>
     
@@ -297,25 +289,32 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">香格里拉边境 为什么让我兴奋</h1>
+            <h1 id="seo-header">什么是Memory Repair</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="游戏，是我生活的一个重要旋律。"><a href="#游戏，是我生活的一个重要旋律。" class="headerlink" title="游戏，是我生活的一个重要旋律。"></a>游戏，是我生活的一个重要旋律。</h2><p>从小学一年级开始，我就在楼上大哥哥的指导下，玩上了冒险岛这个网游，至今我都偶尔会上线玩一玩。当然，国内游戏环境实在太差了……这就是另外的话题了暂且跳过。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230710215416.png" srcset="/img/loading.gif" lazyload></p>
-<p>总之，网游这个东西我玩了很多年了，特别是角色扮演游戏MMO，在网络中，扮演一个非现实的角色和其他玩家一起冒险，打怪，看NPC的故事，会给我带来极大的快乐~</p>
-<p>冒险岛、龙之谷、剑灵、最终幻想14、激战2、魔兽世界、艾尔之光、彩虹岛、黑色沙漠……人生二十来年，也是辗转过多个异世界了呢。</p>
-<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230806171854.png" srcset="/img/loading.gif" lazyload></p>
-<p>所以游戏类的网文，也一直都是我的心头好。经典的《网游之纵横天下》、《网游之贼行天下》、《全职高手》、《网游之近战法师》、《惊悚乐园》……一个游戏网络世界，可能就是最对我胃口的世界设定。这几本书我都重看了不知道多少遍了……</p>
-<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231028235238.png" srcset="/img/loading.gif" lazyload></p>
-<p>那么在动漫里，相关的也不少了其实。尤其是在《刀剑神域》的带领下，虚拟现实游戏类的动漫漫画轻小说作品那是层出不穷，《OVERLORD》至今还是我最喜欢的动漫/轻小说之一。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231028235301.png" srcset="/img/loading.gif" lazyload></p>
-<p>就是要这种大型角色扮演！MMO的网游！丰富的世界观，精细的职业技能，精彩的剧情，广阔的探险空间~太对我胃口了。而《香格里拉边境》，就是我时隔多年看到的新的网游动漫。</p>
-<h2 id="香格里拉的冒险"><a href="#香格里拉的冒险" class="headerlink" title="香格里拉的冒险"></a>香格里拉的冒险</h2><p>动漫全称：<a target="_blank" rel="noopener" href="https://www.themoviedb.org/tv/205050">香格里拉边境～粪作猎人向神作游戏发起挑战～</a><br>男主是一个「粪作猎人」，喜欢玩各种粪作游戏，挑战不合理还能得到极大的快感。在通关了某部粪作后，为了换换口味，男主这次向神作「香格里拉边境」发起了进攻，在游戏的过程中，遇见了许多奇特的冒险。</p>
-<p>撰写本文的时候已经看到第四集了，真的一跃成为我最期待的2023年10月新番。</p>
-<p>男主是那种操作类玩家，追求极致的输出，脆皮，刀尖添血的那种。动漫也很好的制作出了精彩的打斗，使用完美格挡和巨型boss鏖战的打戏可谓是前三集的巅峰剧情。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231840.png" srcset="/img/loading.gif" lazyload><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016232056.png" srcset="/img/loading.gif" lazyload><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231023234734.png" srcset="/img/loading.gif" lazyload><br>剧情中出现的boss也很有魄力，其他玩家角色绘制的也很好看，最重要的是，那种游戏氛围塑造的特别好。<br>角色加点的分析、装备的选择、独特剧情的展开，看的我是真的过瘾！<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231650.png" srcset="/img/loading.gif" lazyload><br>还有这只兔兔，太可爱了~<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20231016231949.png" srcset="/img/loading.gif" lazyload></p>
-<p>看游戏题材的动漫和小说，其实也就是想通过“玩”以外的方式，享受到游戏的乐趣，而《香格里拉边境》它做到了。</p>
-<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/DSCF2416.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>该动漫其实是有原作漫画的，在日本旅游的时候刚好看到过它的超大海报，可见其原作实力充足，我觉得动漫是真的可以好好期待下去，期待下周的播出。</p>
+                <h1 id="Repair的意义"><a href="#Repair的意义" class="headerlink" title="Repair的意义"></a>Repair的意义</h1><p>Memory占芯片大块的面积，如果出现坏的单元，直接算废片那也太浪费了。<br>因此现在芯片为了追求良率，会在最开始设计的时候就加入repair的功能。<br>本质就是增加冗余逻辑，以便在出现问题的时候可以用来替换掉坏的部分，就是一种面积换良率的方案。</p>
+<h1 id="Repair的形式"><a href="#Repair的形式" class="headerlink" title="Repair的形式"></a>Repair的形式</h1><p>常见的有Row repair、Column repair<br>直观理解，就是整行、整列用redundancy逻辑替换掉。</p>
+<h1 id="Repair的类型"><a href="#Repair的类型" class="headerlink" title="Repair的类型"></a>Repair的类型</h1><p>通常分为Soft repair和Hard repair。<br>此处引用：<a target="_blank" rel="noopener" href="https://xueqiu.com/1958668676/299336870?md5__1038=1e761e013c-jiyiaI5sOgpOux4IRIVssVpBLsN3p4sjIu1JbqA5AIcKdSHbIsTB30COHc3H=0i+Tgs=6=Id0ystIqWIFu=GnIG=pRI6=x0IygZdITIxtD=OIryIHmzIOQIXSsiIR=5C=IAdsrIq1PsDT=IGIGgDJis9u=solV6omnpoIp6RIA6Vdc6=Inyn+juirbuWmfn=I">Tessent&nbsp;Memory&nbsp;Repair的介绍</a></p>
+<blockquote>
+<p>hard reapir：memory的修复信息存储在fuse里面，启动时修复信息加载到要修复的memory中</p>
+<p>soft repair：修复信息必须每次启动时，重新加载或者重新计算修复信息，如果修复信息存储在外部，可以使用BISR chain，或者重新执行redundancy analysi以及BIRA-BISR data transfer加载修复信息，使用soft repair会增加启动时间以及电路控制的复杂性，但优点是节省efuse的使用</p>
+</blockquote>
+<h1 id="MBIST、MBIRA和MBISR"><a href="#MBIST、MBIRA和MBISR" class="headerlink" title="MBIST、MBIRA和MBISR"></a>MBIST、MBIRA和MBISR</h1><h2 id="Memory-BIST-Built-in-Self-Test"><a href="#Memory-BIST-Built-in-Self-Test" class="headerlink" title="Memory BIST(Built-in Self-Test)"></a>Memory BIST(Built-in Self-Test)</h2><p>是一种DFX技术，说白了就是在芯片中专门设计一段逻辑，用来检测Memory。<br>通常会进行如下测试：</p>
+<ul>
+<li>March算法：遍历所有地址（如March C-检测 stuck-at/transition faults）</li>
+<li>Checkerboard测试：交替写入0/1检测相邻单元干扰</li>
+<li>地址解码测试：验证地址线完整性</li>
+</ul>
+<h2 id="Memory-BIRA-Built-in-Redundancy-Analysis"><a href="#Memory-BIRA-Built-in-Redundancy-Analysis" class="headerlink" title="Memory BIRA(Built-in Redundancy-Analysis)"></a>Memory BIRA(Built-in Redundancy-Analysis)</h2><p>就是一种冗余资源分析的机制，分析哪些资源可以修复发现的故障。</p>
+<h2 id="Memory-BISR-Built-In-Self-Repair"><a href="#Memory-BISR-Built-In-Self-Repair" class="headerlink" title="Memory BISR(Built-In Self-Repair)"></a>Memory BISR(Built-In Self-Repair)</h2><p>就是指上面讲到的自修复机制，通过预留冗余资源以实现修复。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250427225659.png" srcset="/img/loading.gif" lazyload alt="Optimal Method for Test and Repair Memories Using Redundancy Mechanism for SoC"></p>
+<h1 id="Repair的流程"><a href="#Repair的流程" class="headerlink" title="Repair的流程"></a>Repair的流程</h1><ol>
+<li>当然是先自检，即走MBIST流程，获取故障信息。可以是上电自检，也可以是周期性自检。</li>
+<li>然后开始分析，BIRA来评估评估冗余资源余量以及修复方案。</li>
+<li>分析完得到修复配置，可以通过efuse(electronic FUSE)来烧写。</li>
+</ol>
+
                 
               </div>
             
@@ -333,7 +332,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%85%B4%E8%B6%A3%E6%9D%82%E8%B0%88/" class="category-chain-item">兴趣杂谈</a>
+  <a href="/categories/ASIC/" class="category-chain-item">ASIC</a>
   
   
 
@@ -348,9 +347,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%8A%A8%E6%BC%AB/" class="print-no-link">#动漫</a>
+        <a href="/tags/%E6%95%B0%E5%AD%97IC/" class="print-no-link">#数字IC</a>
       
-        <a href="/tags/%E6%B8%B8%E6%88%8F/" class="print-no-link">#游戏</a>
+        <a href="/tags/ASIC/" class="print-no-link">#ASIC</a>
+      
+        <a href="/tags/Memory/" class="print-no-link">#Memory</a>
       
     </div>
   
@@ -362,20 +363,20 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>香格里拉边境 为什么让我兴奋</div>
-      <div>https://rongyel.github.io/posts/3b1a7464.html</div>
+      <div>什么是Memory Repair</div>
+      <div>https://rongyel.github.io/posts/c3914d5e.html</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>Rongye</div>
+          <div>Rong晔</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月6日</div>
+          <div>2025年4月23日</div>
         </div>
       
       
@@ -407,18 +408,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/c1f4e46a.html" title="markdown笔记工具分析">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">markdown笔记工具分析</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/1da22451.html" title="至今为止我依旧认为，无职转生就是最好的异世界转生作品。">
-                        <span class="hidden-mobile">至今为止我依旧认为，无职转生就是最好的异世界转生作品。</span>
+                      <a href="/posts/d56a9866.html" title="我即“公司”，让自己的各个“部门”制定2025年度计划">
+                        <span class="hidden-mobile">我即“公司”，让自己的各个“部门”制定2025年度计划</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
