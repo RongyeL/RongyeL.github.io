@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-04-27T14:57:40.462Z</updated>
+  <updated>2025-05-10T07:18:41.890Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2025 五一 巴厘岛</title>
+    <link href="https://rongyel.github.io/posts/a1ad8d3c.html"/>
+    <id>https://rongyel.github.io/posts/a1ad8d3c.html</id>
+    <published>2025-05-04T16:14:24.000Z</published>
+    <updated>2025-05-10T07:18:41.890Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一天-在途&quot;&gt;&lt;a href=&quot;#第一天-在途&quot; class=&quot;headerlink&quot; title=&quot;第一天 在途&quot;&gt;&lt;/a&gt;第一天</summary>
+        
+      
+    
+    
+    
+    <category term="世界巡礼" scheme="https://rongyel.github.io/categories/%E4%B8%96%E7%95%8C%E5%B7%A1%E7%A4%BC/"/>
+    
+    
+    <category term="巴厘岛" scheme="https://rongyel.github.io/tags/%E5%B7%B4%E5%8E%98%E5%B2%9B/"/>
+    
+    <category term="度假" scheme="https://rongyel.github.io/tags/%E5%BA%A6%E5%81%87/"/>
+    
+    <category term="海滩" scheme="https://rongyel.github.io/tags/%E6%B5%B7%E6%BB%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>什么是Memory Repair</title>
@@ -129,7 +158,7 @@
     <link href="https://rongyel.github.io/posts/bf5415af.html"/>
     <id>https://rongyel.github.io/posts/bf5415af.html</id>
     <published>2025-02-15T02:30:04.000Z</published>
-    <updated>2025-02-25T14:17:43.015Z</updated>
+    <updated>2025-05-10T03:50:20.915Z</updated>
     
     
     <summary type="html">&lt;p&gt;今年还是玩到不少好游戏的，很开心。&lt;/p&gt;</summary>
@@ -460,27 +489,6 @@
     <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
     
     <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对ARM access flag和dirty state机制理解</title>
-    <link href="https://rongyel.github.io/posts/a6a87a63.html"/>
-    <id>https://rongyel.github.io/posts/a6a87a63.html</id>
-    <published>2024-07-06T15:53:34.809Z</published>
-    <updated>2025-02-16T06:52:34.055Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;ARM的access flag和dirty state机制用于进行页表的维护，经过一段时间的思考，现在总算是理清楚了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="页表" scheme="https://rongyel.github.io/tags/%E9%A1%B5%E8%A1%A8/"/>
     
   </entry>
   
