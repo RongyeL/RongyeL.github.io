@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-05-10T07:18:41.890Z</updated>
+  <updated>2025-05-10T07:19:20.705Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rongyel.github.io/posts/a1ad8d3c.html"/>
     <id>https://rongyel.github.io/posts/a1ad8d3c.html</id>
     <published>2025-05-04T16:14:24.000Z</published>
-    <updated>2025-05-10T07:18:41.890Z</updated>
+    <updated>2025-05-10T07:19:20.705Z</updated>
     
     
       
@@ -42,6 +42,29 @@
     <category term="度假" scheme="https://rongyel.github.io/tags/%E5%BA%A6%E5%81%87/"/>
     
     <category term="海滩" scheme="https://rongyel.github.io/tags/%E6%B5%B7%E6%BB%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>聊聊手账对于我工作和生活的意义</title>
+    <link href="https://rongyel.github.io/posts/883d5474.html"/>
+    <id>https://rongyel.github.io/posts/883d5474.html</id>
+    <published>2025-04-28T16:42:47.159Z</published>
+    <updated>2025-05-10T07:26:54.726Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;不需要all-in-one&quot;&gt;&lt;a href=&quot;#不需要all-in-one&quot; class=&quot;headerlink&quot; title=&quot;不需要all in one&quot;&gt;&lt;/a&gt;不需要all in</summary>
+        
+      
+    
+    
+    
+    <category term="方法学论" scheme="https://rongyel.github.io/categories/%E6%96%B9%E6%B3%95%E5%AD%A6%E8%AE%BA/"/>
+    
     
   </entry>
   
@@ -459,27 +482,6 @@
     
     
     <summary type="html">&lt;p&gt;ARMv8.2架构支持到52bit了，但仅有64KB粒度的页表才支持&lt;br&gt;ARMv9架构则4k和16k翻译粒度也支持52bit，这里简单理解一下。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对Stage1页表属性attrindex理解</title>
-    <link href="https://rongyel.github.io/posts/d429f5fd.html"/>
-    <id>https://rongyel.github.io/posts/d429f5fd.html</id>
-    <published>2024-07-06T15:53:34.840Z</published>
-    <updated>2025-02-16T06:52:36.046Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;stage1的页表最低位属性用的是AttrIndex，而在stage2的页表属性用的是MemAttr。&lt;br&gt;这样设计的原因可能是为了减少无效化操作。&lt;/p&gt;</summary>
     
     
     
