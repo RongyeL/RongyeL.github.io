@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>Obsidian PARA改造思路</title>
+    <link href="/posts/b0a35424.html"/>
+    <url>/posts/b0a35424.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="对于当前Obsidian笔记的PARA改造思路"><a href="#对于当前Obsidian笔记的PARA改造思路" class="headerlink" title="对于当前Obsidian笔记的PARA改造思路"></a>对于当前Obsidian笔记的PARA改造思路</h1><h2 id="记忆阵列"><a href="#记忆阵列" class="headerlink" title="记忆阵列"></a>记忆阵列</h2><p>存放的还是日记、周记、年记。<br>目前日记好说，周记和年记做的不是很好，没有执行起来。<br>是否能类似项目的方式去管理？这个待定。</p><h2 id="思维殿堂"><a href="#思维殿堂" class="headerlink" title="思维殿堂"></a>思维殿堂</h2><p>作为我思想的存放处，不需要做项目、领域的概念。<br>每一篇笔记都是零散的也没有关系？<br>此处还是可以考究的，如果是正在进行某些技术的学习，或者课题的研究，是否还是需要建立领域去维系？<br>这个也待定。</p><h2 id="兴趣档案"><a href="#兴趣档案" class="headerlink" title="兴趣档案"></a>兴趣档案</h2><p>每一篇档案，就是一篇领域笔记。<br>每一篇档案承载的是一件事物的信息，对于这件事物如果有正在进行的工作，那么就建立项目。</p><h2 id="文献仓库"><a href="#文献仓库" class="headerlink" title="文献仓库"></a>文献仓库</h2><p>全部为剪藏文献，包括一些文章、语录。作为资源调用即可。</p><h2 id="创作空间"><a href="#创作空间" class="headerlink" title="创作空间"></a>创作空间</h2><p>以某个系列来建立领域，比如：<br>EasyAXI系列视频、怪物猎人模型重涂、喵&amp;汪的日常~ 绘画</p><p>在对这个系列的某次具体工作建立项目，比如：<br>EasyAXI 第五期 AXI Outstanding特性实现、灭尽龙历战王重涂、喵&amp;汪 日本旅游篇等等</p><h2 id="认真生活"><a href="#认真生活" class="headerlink" title="认真生活"></a>认真生活</h2><p>一件需要长期管理的活动作为领域笔记<br>如：小红的成长记录，而某一件具体的工作作为项目，如：2025年Q3 小红背甲、体重月度测量</p><p>如：我的舒适小屋作为领域笔记，桌面整改计划作为项目。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>方法学论</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Obsidian</tag>
+      
+      <tag>笔记</tag>
+      
+      <tag>PARA</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2025 五一 巴厘岛</title>
     <link href="/posts/a1ad8d3c.html"/>
     <url>/posts/a1ad8d3c.html</url>
@@ -185,105 +214,6 @@
       <tag>游戏</tag>
       
       <tag>年度总结</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>EasyAXI 第2期 - AXI 握手机制</title>
-    <link href="/posts/f5f06c5.html"/>
-    <url>/posts/f5f06c5.html</url>
-    
-    <content type="html"><![CDATA[<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20AXI%E6%8F%A1%E6%89%8B%E6%9C%BA%E5%88%B6.png" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 封面"></p><h1 id="协议文档"><a href="#协议文档" class="headerlink" title="协议文档"></a>协议文档</h1><p><a href="https://developer.arm.com/documentation/ihi0022/fb/?lang=en">AMBA AXI and ACE Protocol Specification Version F.b</a></p><p>ARM 官方文档：<a href="https://developer.arm.com/documentation/ihi0022/fb/?lang=en">https://developer.arm.com/documentation/ihi0022/fb/?lang=en</a><br>注意，这不是最新版的文档，版本号为F.b。<br>因为我讲的是AXI4协议，所以这个版本足够了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%872.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 协议文档"></p><p>我不会按协议顺序讲，而是讲到什么再去看协议。<br>协议手册是一种工具，在需要的时候知道去哪里查阅即可，并不需要背下来，也不可能背下来。</p><h1 id="快速理解"><a href="#快速理解" class="headerlink" title="快速理解"></a>快速理解</h1><p>AXI接口包含五个通道，每个通道的<strong>数据传输</strong>都是通过握手机制完成的。</p><p>握手，顾名思义，是两个角色之间的交互动作。在AXI协议中，交互的两个设备分别具有“主从”身份：请求的发起方是Master，接收方是Slave。数据传输的控制正是通过握手机制实现的，具体由两个关键信号完成：</p><ul><li><p><strong>VALID</strong>：由发送方驱动，表示数据、地址或控制信息已经准备就绪，并且相关信号（如数据信号、地址信号）已经稳定。<strong>VALID信号必须保持高电平，直到数据传输完成。</strong></p></li><li><p><strong>READY</strong>：由接收方驱动，表示接收方可以接收数据。READY信号可以在VALID之前或之后拉高。</p></li></ul><p>握手机制有效解决了发送方和接收方速度不一致的问题，确保了数据传输的可靠性。</p><p>当VALID和READY同时为高时，握手成功，数据在这一拍完成传输。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%873.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 快速理解 握手"></p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%874.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 快速理解 意义"></p><hr><h1 id="实机演示"><a href="#实机演示" class="headerlink" title="实机演示"></a>实机演示</h1><p>接下来，我以AR（地址读请求）通道为例，演示握手机制如何实现地址信息的传输。以下是两种常见的握手行为场景：<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%875.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 实机演示"></p><h2 id="模式-1：READY-提前拉高，VALID-后拉高"><a href="#模式-1：READY-提前拉高，VALID-后拉高" class="headerlink" title="模式 1：READY 提前拉高，VALID 后拉高"></a>模式 1：READY 提前拉高，VALID 后拉高</h2><ul><li><strong>过程</strong>：接收方提前准备好接收数据（READY拉高），发送方一旦准备好（VALID拉高），数据传输立即完成。</li><li><strong>特点</strong>：这种场景下，接收方无需等待发送方的数据内容，只要自身有接收能力即可提前拉高READY。</li></ul><p>当接收方确保自己能够接收任何数据时，可以提前拉高READY。</p><h2 id="模式-2：VALID-先拉高，READY-后拉高"><a href="#模式-2：VALID-先拉高，READY-后拉高" class="headerlink" title="模式 2：VALID 先拉高，READY 后拉高"></a>模式 2：VALID 先拉高，READY 后拉高</h2><ul><li><strong>过程</strong>：发送方先准备好数据（VALID拉高），接收方稍后响应（READY拉高），数据传输完成。</li><li><strong>特点</strong>：这种场景下，接收方需要根据发送方的数据内容决定是否拉高READY。</li></ul><p>当接收方对数据有特定条件时，READY信号的拉高需要根据发送方的数据内容判断。例如：某个从设备只能接收地址在0x00 ~ 0xA范围内的读请求。此时，从设备拉高READY的前提是VALID有效期间，ADDR信号的值必须在0x00 ~ 0xA范围内。</p><p>模式1会比模式2早两拍完成握手，因此对于性能会有一定收益。<br>模式2必须确保valid的拉高不依赖ready，否则会出现挂死。这本身也是协议的规范。<br>并非设计上的优劣问题，而是实际应用中的约束所致。</p><hr><h1 id="遗留问题"><a href="#遗留问题" class="headerlink" title="遗留问题"></a>遗留问题</h1><p>留下两个思考题：</p><ol><li><p><strong>协议为什么要求VALID拉高后必须保持高电平？</strong></p><ul><li>如果在握手成功前VALID信号撤离，可能会导致什么问题？在什么场景下会出现这种情况？</li></ul></li><li><p><strong>VALID信号拉高后，数据是否可以再发生变化？</strong></p><ul><li>如果在握手成功前数据发生变化，可能会导致什么问题？在什么场景下会出现这种情况？<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%876.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 遗留问题"></li></ul></li></ol><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC2%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%877.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第2期 幻灯片7.PNG"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>EasyAXI系列</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>数字IC</tag>
-      
-      <tag>AXI</tag>
-      
-      <tag>ARM</tag>
-      
-      <tag>Verilog</tag>
-      
-      <tag>EasyAXI</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>EasyAXI 第0期 - 序言</title>
-    <link href="/posts/4c805fb1.html"/>
-    <url>/posts/4c805fb1.html</url>
-    
-    <content type="html"><![CDATA[<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC0%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%871.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第0期 封面"></p><p>工作之后，我的更新停滞了很长一段时间，主要是因为工作本身占据了大量精力，闲暇时还要兼顾家庭、宠物和游戏（笑），于是视频创作就被搁置了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC0%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%872.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第0期 为什么停更"></p><p>这次回归的原因其实很简单。某天，我在某书上偶然看到有人推荐我的视频作为数字IC学习的参考资料。那一刻，我真的很感慨——没想到学生时代制作的内容，至今仍然对大家有帮助。更让我意外的是，这个账号在我停更后，粉丝数量还在持续增长。看着这两万多位关注者，我觉得如果不继续创作，实在有些辜负大家的期待。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC0%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%873.PNG" srcset="/img/loading.gif" lazyload alt="还有脸回来？"></p><p>所以，我决定回来了。其实从年前开始，我就已经在准备新的视频内容了。</p><p>如今，IC设计的热潮已经逐渐退去，但依然有不少朋友在坚持学习、准备进入这个行业。我想，你们一定是真正热爱这个领域的吧？对我来说，制作视频也是一种乐趣，所以接下来我会以更轻松的心态去创作。不过，周更不太现实，月更有难度，更新频率估计比较随性，还请大家多多包涵。</p><p>未来的视频内容还是会以初学者为主要对象，毕竟我自认还没有能力去讲解过于深奥的内容。<br>可能大多数观众对数字芯片设计还处于入门阶段，抑或是已经学习了一些理论知识，但还缺乏实际开发的经验。<br>而作为回归后的第一个系列，我打算和大家聊聊SOC设计中绕不开的一个重要知识点——AXI总线协议。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC0%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%874.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第0期 为什么选择讲AXI"></p><p>为什么选择讲AXI？</p><p>首先，AXI协议在行业内的应用非常广泛。在现代SOC设计中，稍微追求性能的IP几乎都会采用AXI接口，工作中必然会频繁接触。不仅如此，FPGA开发中也大量使用AXI，因此无论你是学习数字IC还是FPGA，这套视频都能帮助你快速理解AXI的核心概念。</p><p>其次，目前B站上关于AXI总线开发的视频并不多，而且大部分内容仅限于知识点的讲解，或者只是在FPGA中调用现成的IP进行演示。真正手把手教你理解AXI协议并将其转化为代码实现的教程少之又少。看完这些视频后，如果让你自己动手实现一个AXI模块，可能还是会感到无从下手。</p><p>因此，我希望能通过这系列视频，带大家深入理解AXI协议的本质。芯片设计和Verilog编程的核心，其实就是描述硬件的行为逻辑。看完这套视频后，你应该会对AXI的基本行为特性有更清晰的认识，未来在工作中无论是调用IP还是自己实现新的IP，都能更加得心应手。</p><p>然后在这个过程中，可能还会穿插一些小的知识点，比如代码设计规范啊，异步处理设计，甚至是一些开发效率工具等等，让大家逐渐走进芯片设计的领域。</p><p>新视频的内容已经准备得差不多了，应该很快就能和大家见面。感谢大家的耐心等待和支持，我们下期再见！</p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC0%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%875.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第0期 尾页"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>EasyAXI系列</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>数字IC</tag>
-      
-      <tag>AXI</tag>
-      
-      <tag>ARM</tag>
-      
-      <tag>Verilog</tag>
-      
-      <tag>EasyAXI</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>EasyAXI 第1期 - 开发环境准备</title>
-    <link href="/posts/79ba3ff8.html"/>
-    <url>/posts/79ba3ff8.html</url>
-    
-    <content type="html"><![CDATA[<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%871.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 封面"></p><h1 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h1><p>本系列视频是基于VCS+VERDI的开发环境进行演示的，主要是进行RTL的编译和仿真。不过，大家不一定非要使用VCS+VERDI，也可以用iverilog+GTKWave，或者直接使用Vivado作为开发环境，都是完全没问题的。大家可以根据自己的实际情况选择工具。代码编辑使用的是Gvim，当然你也可以选择自己喜欢的编辑器，本质上都是文本编辑工具而已。</p><p><strong>“工具只是手段，理解原理才是核心！”</strong></p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%872.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 选择开发工具"></p><h1 id="代码获取"><a href="#代码获取" class="headerlink" title="代码获取"></a>代码获取</h1><p>本系列视频的代码会通过Github和百度网盘两种方式提供，代码已经按照视频的集数整理好了，下载后可以直接运行并查看波形。<br><code>https://github.com/RongyeL/EasyAXI</code></p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%873.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 获取代码"></p><h1 id="环境测试"><a href="#环境测试" class="headerlink" title="环境测试"></a>环境测试</h1><p>开发环境准备好后，接下来可以跑一个最简单的仿真，测试一下环境是否正常。</p><p>以下是使用VCS+VERDI的执行步骤：</p><ol><li><p>进入S01E01路径，执行&nbsp;<code>source script/project.sh</code>&nbsp;来更新环境变量。</p><ul><li>这里主要是将S01E01路径设置为根目录，因为每期视频的路径可能不同，如果不设置好根目录，编译时可能会找不到对应的文件。</li></ul></li><li><p>每期视频的工程文件基本都包含三个路径：<code>rtl</code>、<code>script</code>&nbsp;和&nbsp;<code>verification</code>。</p><ul><li><code>rtl</code>&nbsp;存放Verilog代码        </li><li><code>script</code>&nbsp;存放一些常用脚本        </li><li><code>verification</code>&nbsp;是验证仿真环境</li></ul></li><li><p>可以简单看一下&nbsp;<code>rtl</code>&nbsp;目录，目前只有一个&nbsp;<code>easyaxi.v</code>&nbsp;文件，里面是一个空的顶层module。</p></li><li><p>接下来进入&nbsp;<code>verification/sim</code>&nbsp;路径，里面只有一个简单的Makefile文件。    </p><ul><li>执行&nbsp;<code>make compile</code>&nbsp;进行编译        </li><li>执行&nbsp;<code>make run</code>&nbsp;进行编译和仿真        </li><li>执行&nbsp;<code>make verdi&amp;</code>&nbsp;打开Verdi工具并加载编译后的工程文件</li></ul></li><li><p>如果仿真能够顺利完成且没有报错，说明环境基本没问题。最后打开Verdi，确认波形显示正常即可。</p></li></ol><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%874.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 测试开发环境"></p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%875.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 测试仿真结果"></p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本期内容主要是对齐基本的开发环境。如果大家能够成功编译并运行我的代码，说明环境已经配置好了。使用Vivado直接运行也是可以的，我这里就不额外演示了。</p><p>下期视频我们将正式进入AXI总线的学习，讲解AXI最基本的行为——握手机制。我们下期再见！</p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%876.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 尾页"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>EasyAXI系列</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>数字IC</tag>
-      
-      <tag>AXI</tag>
-      
-      <tag>ARM</tag>
-      
-      <tag>Verilog</tag>
-      
-      <tag>EasyAXI</tag>
       
     </tags>
     

@@ -16,38 +16,29 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Rongye">
+  <meta name="author" content="Rong晔">
   <meta name="keywords" content="ASIC">
   
-    <meta name="description" content="大家好，我是Rong晔。今天作为系列正式的第一期视频，先准备一下基本开发环境。">
+    <meta name="description" content="对于当前Obsidian笔记的PARA改造思路记忆阵列存放的还是日记、周记、年记。目前日记好说，周记和年记做的不是很好，没有执行起来。是否能类似项目的方式去管理？这个待定。 思维殿堂作为我思想的存放处，不需要做项目、领域的概念。每一篇笔记都是零散的也没有关系？此处还是可以考究的，如果是正在进行某些技术的学习，或者课题的研究，是否还是需要建立领域去维系？这个也待定。 兴趣档案每一篇档案，就是一篇领域">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EasyAXI 第1期 - 开发环境准备">
-<meta property="og:url" content="https://rongyel.github.io/posts/79ba3ff8.html">
+<meta property="og:title" content="Obsidian PARA改造思路">
+<meta property="og:url" content="https://rongyel.github.io/posts/b0a35424.html">
 <meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
-<meta property="og:description" content="大家好，我是Rong晔。今天作为系列正式的第一期视频，先准备一下基本开发环境。">
+<meta property="og:description" content="对于当前Obsidian笔记的PARA改造思路记忆阵列存放的还是日记、周记、年记。目前日记好说，周记和年记做的不是很好，没有执行起来。是否能类似项目的方式去管理？这个待定。 思维殿堂作为我思想的存放处，不需要做项目、领域的概念。每一篇笔记都是零散的也没有关系？此处还是可以考究的，如果是正在进行某些技术的学习，或者课题的研究，是否还是需要建立领域去维系？这个也待定。 兴趣档案每一篇档案，就是一篇领域">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%871.PNG">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%872.PNG">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%873.PNG">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%874.PNG">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%875.PNG">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%876.PNG">
-<meta property="article:published_time" content="2025-02-04T14:43:13.539Z">
-<meta property="article:modified_time" content="2025-02-27T15:40:47.725Z">
+<meta property="article:published_time" content="2025-05-20T14:43:24.451Z">
+<meta property="article:modified_time" content="2025-05-20T15:03:07.182Z">
 <meta property="article:author" content="Rong晔">
-<meta property="article:tag" content="数字IC">
-<meta property="article:tag" content="AXI">
-<meta property="article:tag" content="ARM">
-<meta property="article:tag" content="Verilog">
-<meta property="article:tag" content="EasyAXI">
+<meta property="article:tag" content="Obsidian">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="PARA">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%871.PNG">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>EasyAXI 第1期 - 开发环境准备 - IC攻城狮的摸鱼小屋</title>
+  <title>Obsidian PARA改造思路 - IC攻城狮的摸鱼小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,13 +201,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%871.PNG') no-repeat center center; background-size: cover;">
+     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">EasyAXI 第1期 - 开发环境准备</span>
+            <span id="subtitle">Obsidian PARA改造思路</span>
           
         </div>
 
@@ -227,8 +218,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-02-04 22:43" pubdate>
-          2025年2月4日 晚上
+        <time datetime="2025-05-20 22:43" pubdate>
+          2025年5月20日 晚上
         </time>
       </span>
     
@@ -239,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          615 字
+          397 字
         
       </span>
     
@@ -250,7 +241,7 @@
         
         
         
-          6 分钟
+          4 分钟
         
       </span>
     
@@ -296,49 +287,20 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">EasyAXI 第1期 - 开发环境准备</h1>
+            <h1 id="seo-header">Obsidian PARA改造思路</h1>
             
             
               <div class="markdown-body">
                 
-                <p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%871.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 封面"></p>
-<h1 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h1><p>本系列视频是基于VCS+VERDI的开发环境进行演示的，主要是进行RTL的编译和仿真。不过，大家不一定非要使用VCS+VERDI，也可以用iverilog+GTKWave，或者直接使用Vivado作为开发环境，都是完全没问题的。大家可以根据自己的实际情况选择工具。代码编辑使用的是Gvim，当然你也可以选择自己喜欢的编辑器，本质上都是文本编辑工具而已。</p>
-<p><strong>“工具只是手段，理解原理才是核心！”</strong></p>
-<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%872.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 选择开发工具"></p>
-<h1 id="代码获取"><a href="#代码获取" class="headerlink" title="代码获取"></a>代码获取</h1><p>本系列视频的代码会通过Github和百度网盘两种方式提供，代码已经按照视频的集数整理好了，下载后可以直接运行并查看波形。<br><code>https://github.com/RongyeL/EasyAXI</code></p>
-<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%873.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 获取代码"></p>
-<h1 id="环境测试"><a href="#环境测试" class="headerlink" title="环境测试"></a>环境测试</h1><p>开发环境准备好后，接下来可以跑一个最简单的仿真，测试一下环境是否正常。</p>
-<p>以下是使用VCS+VERDI的执行步骤：</p>
-<ol>
-<li><p>进入S01E01路径，执行&nbsp;<code>source script/project.sh</code>&nbsp;来更新环境变量。</p>
-<ul>
-<li>这里主要是将S01E01路径设置为根目录，因为每期视频的路径可能不同，如果不设置好根目录，编译时可能会找不到对应的文件。</li>
-</ul>
-</li>
-<li><p>每期视频的工程文件基本都包含三个路径：<code>rtl</code>、<code>script</code>&nbsp;和&nbsp;<code>verification</code>。</p>
-<ul>
-<li><code>rtl</code>&nbsp;存放Verilog代码        </li>
-<li><code>script</code>&nbsp;存放一些常用脚本        </li>
-<li><code>verification</code>&nbsp;是验证仿真环境</li>
-</ul>
-</li>
-<li><p>可以简单看一下&nbsp;<code>rtl</code>&nbsp;目录，目前只有一个&nbsp;<code>easyaxi.v</code>&nbsp;文件，里面是一个空的顶层module。</p>
-</li>
-<li><p>接下来进入&nbsp;<code>verification/sim</code>&nbsp;路径，里面只有一个简单的Makefile文件。    </p>
-<ul>
-<li>执行&nbsp;<code>make compile</code>&nbsp;进行编译        </li>
-<li>执行&nbsp;<code>make run</code>&nbsp;进行编译和仿真        </li>
-<li>执行&nbsp;<code>make verdi&amp;</code>&nbsp;打开Verdi工具并加载编译后的工程文件</li>
-</ul>
-</li>
-<li><p>如果仿真能够顺利完成且没有报错，说明环境基本没问题。最后打开Verdi，确认波形显示正常即可。</p>
-</li>
-</ol>
-<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%874.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 测试开发环境"></p>
-<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%875.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 测试仿真结果"></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本期内容主要是对齐基本的开发环境。如果大家能够成功编译并运行我的代码，说明环境已经配置好了。使用Vivado直接运行也是可以的，我这里就不额外演示了。</p>
-<p>下期视频我们将正式进入AXI总线的学习，讲解AXI最基本的行为——握手机制。我们下期再见！</p>
-<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/EasyAXI%20%E7%AC%AC1%E6%9C%9F%20%E5%B9%BB%E7%81%AF%E7%89%876.PNG" srcset="/img/loading.gif" lazyload alt="EasyAXI 第1期 尾页"></p>
+                <h1 id="对于当前Obsidian笔记的PARA改造思路"><a href="#对于当前Obsidian笔记的PARA改造思路" class="headerlink" title="对于当前Obsidian笔记的PARA改造思路"></a>对于当前Obsidian笔记的PARA改造思路</h1><h2 id="记忆阵列"><a href="#记忆阵列" class="headerlink" title="记忆阵列"></a>记忆阵列</h2><p>存放的还是日记、周记、年记。<br>目前日记好说，周记和年记做的不是很好，没有执行起来。<br>是否能类似项目的方式去管理？这个待定。</p>
+<h2 id="思维殿堂"><a href="#思维殿堂" class="headerlink" title="思维殿堂"></a>思维殿堂</h2><p>作为我思想的存放处，不需要做项目、领域的概念。<br>每一篇笔记都是零散的也没有关系？<br>此处还是可以考究的，如果是正在进行某些技术的学习，或者课题的研究，是否还是需要建立领域去维系？<br>这个也待定。</p>
+<h2 id="兴趣档案"><a href="#兴趣档案" class="headerlink" title="兴趣档案"></a>兴趣档案</h2><p>每一篇档案，就是一篇领域笔记。<br>每一篇档案承载的是一件事物的信息，对于这件事物如果有正在进行的工作，那么就建立项目。</p>
+<h2 id="文献仓库"><a href="#文献仓库" class="headerlink" title="文献仓库"></a>文献仓库</h2><p>全部为剪藏文献，包括一些文章、语录。作为资源调用即可。</p>
+<h2 id="创作空间"><a href="#创作空间" class="headerlink" title="创作空间"></a>创作空间</h2><p>以某个系列来建立领域，比如：<br>EasyAXI系列视频、怪物猎人模型重涂、喵&amp;汪的日常~ 绘画</p>
+<p>在对这个系列的某次具体工作建立项目，比如：<br>EasyAXI 第五期 AXI Outstanding特性实现、灭尽龙历战王重涂、喵&amp;汪 日本旅游篇等等</p>
+<h2 id="认真生活"><a href="#认真生活" class="headerlink" title="认真生活"></a>认真生活</h2><p>一件需要长期管理的活动作为领域笔记<br>如：小红的成长记录，而某一件具体的工作作为项目，如：2025年Q3 小红背甲、体重月度测量</p>
+<p>如：我的舒适小屋作为领域笔记，桌面整改计划作为项目。</p>
+
                 
               </div>
             
@@ -356,7 +318,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/EasyAXI%E7%B3%BB%E5%88%97/" class="category-chain-item">EasyAXI系列</a>
+  <a href="/categories/%E6%96%B9%E6%B3%95%E5%AD%A6%E8%AE%BA/" class="category-chain-item">方法学论</a>
   
   
 
@@ -371,15 +333,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%95%B0%E5%AD%97IC/" class="print-no-link">#数字IC</a>
+        <a href="/tags/Obsidian/" class="print-no-link">#Obsidian</a>
       
-        <a href="/tags/AXI/" class="print-no-link">#AXI</a>
+        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
       
-        <a href="/tags/ARM/" class="print-no-link">#ARM</a>
-      
-        <a href="/tags/Verilog/" class="print-no-link">#Verilog</a>
-      
-        <a href="/tags/EasyAXI/" class="print-no-link">#EasyAXI</a>
+        <a href="/tags/PARA/" class="print-no-link">#PARA</a>
       
     </div>
   
@@ -391,20 +349,20 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>EasyAXI 第1期 - 开发环境准备</div>
-      <div>https://rongyel.github.io/posts/79ba3ff8.html</div>
+      <div>Obsidian PARA改造思路</div>
+      <div>https://rongyel.github.io/posts/b0a35424.html</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>Rongye</div>
+          <div>Rong晔</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年2月4日</div>
+          <div>2025年5月20日</div>
         </div>
       
       
@@ -436,18 +394,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/4c805fb1.html" title="EasyAXI 第0期 - 序言">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">EasyAXI 第0期 - 序言</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/f32ec8c.html" title="养一只红腿象龟以前，我需要做好哪些准备">
-                        <span class="hidden-mobile">养一只红腿象龟以前，我需要做好哪些准备</span>
+                      <a href="/posts/a1ad8d3c.html" title="2025 五一 巴厘岛">
+                        <span class="hidden-mobile">2025 五一 巴厘岛</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
