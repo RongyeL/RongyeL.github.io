@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-05-10T07:19:20.705Z</updated>
+  <updated>2025-06-21T01:38:21.824Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,6 +15,104 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>要以什么粒度规划自己的工作？</title>
+    <link href="https://rongyel.github.io/posts/d875bafd.html"/>
+    <id>https://rongyel.github.io/posts/d875bafd.html</id>
+    <published>2025-06-21T01:32:54.076Z</published>
+    <updated>2025-06-21T01:38:21.824Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;要以什么粒度规划自己的工作？&lt;/p&gt;
+&lt;p&gt;其实，我们每一天过的是很快的。&lt;br&gt;只有少数任务需要限定在某个具体的时间段，这类属于及时任务。&lt;br&gt;而大部分工作，能在当天完成，就已经可以了。&lt;/p&gt;
+&lt;p&gt;因此，我的任务以天为粒度规划，如果需要立马完成，将优先级调到最高，并</summary>
+        
+      
+    
+    
+    
+    <category term="闪念胶囊" scheme="https://rongyel.github.io/categories/%E9%97%AA%E5%BF%B5%E8%83%B6%E5%9B%8A/"/>
+    
+    
+    <category term="方法论" scheme="https://rongyel.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+    <category term="笔记" scheme="https://rongyel.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>决定购房的核心要素整理</title>
+    <link href="https://rongyel.github.io/posts/72e64147.html"/>
+    <id>https://rongyel.github.io/posts/72e64147.html</id>
+    <published>2025-06-18T15:57:32.567Z</published>
+    <updated>2025-06-22T07:13:33.487Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近看房看的有点多，心乱了。稍微花时间理顺了一下自己的核心需求，以及购房的逻辑。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="购房笔记" scheme="https://rongyel.github.io/categories/%E8%B4%AD%E6%88%BF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="买房" scheme="https://rongyel.github.io/tags/%E4%B9%B0%E6%88%BF/"/>
+    
+    <category term="深圳" scheme="https://rongyel.github.io/tags/%E6%B7%B1%E5%9C%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>哪些笔记应该做PARA化？</title>
+    <link href="https://rongyel.github.io/posts/d8e09664.html"/>
+    <id>https://rongyel.github.io/posts/d8e09664.html</id>
+    <published>2025-05-25T13:46:16.674Z</published>
+    <updated>2025-06-17T16:27:02.700Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;PARA是一个好的方法学，但不代表适用任何笔记内容。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="基于PARA法的任务管理架构实现" scheme="https://rongyel.github.io/categories/%E5%9F%BA%E4%BA%8EPARA%E6%B3%95%E7%9A%84%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E6%9E%B6%E6%9E%84%E5%AE%9E%E7%8E%B0/"/>
+    
+    
+    <category term="方法论" scheme="https://rongyel.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+    <category term="Obsidian" scheme="https://rongyel.github.io/tags/Obsidian/"/>
+    
+    <category term="笔记" scheme="https://rongyel.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="PARA" scheme="https://rongyel.github.io/tags/PARA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Obsidian PARA改造思路</title>
+    <link href="https://rongyel.github.io/posts/b0a35424.html"/>
+    <id>https://rongyel.github.io/posts/b0a35424.html</id>
+    <published>2025-05-20T14:43:24.451Z</published>
+    <updated>2025-06-17T16:27:02.422Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Obsidian 用了三百多天了，还在持续改进中。目前还是能感受到PARA的意义的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="方法学论" scheme="https://rongyel.github.io/categories/%E6%96%B9%E6%B3%95%E5%AD%A6%E8%AE%BA/"/>
+    
+    
+    <category term="Obsidian" scheme="https://rongyel.github.io/tags/Obsidian/"/>
+    
+    <category term="笔记" scheme="https://rongyel.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="PARA" scheme="https://rongyel.github.io/tags/PARA/"/>
+    
+  </entry>
   
   <entry>
     <title>2025 五一 巴厘岛</title>
@@ -376,7 +474,7 @@
     <link href="https://rongyel.github.io/posts/b6eda8db.html"/>
     <id>https://rongyel.github.io/posts/b6eda8db.html</id>
     <published>2024-07-06T15:53:34.956Z</published>
-    <updated>2025-03-27T16:24:16.840Z</updated>
+    <updated>2025-05-30T14:02:37.431Z</updated>
     
     
     <summary type="html">&lt;p&gt;定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……&lt;/p&gt;</summary>
@@ -390,89 +488,7 @@
     
     <category term="AMBA" scheme="https://rongyel.github.io/tags/AMBA/"/>
     
-  </entry>
-  
-  <entry>
-    <title>当前ARM只有64KB粒度页表支持52bit</title>
-    <link href="https://rongyel.github.io/posts/115c5add.html"/>
-    <id>https://rongyel.github.io/posts/115c5add.html</id>
-    <published>2024-07-06T15:53:34.865Z</published>
-    <updated>2025-02-16T06:52:32.370Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;ARMv8.2架构支持到52bit了，但仅有64KB粒度的页表才支持&lt;br&gt;ARMv9架构则4k和16k翻译粒度也支持52bit，这里简单理解一下。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对Stage1页表属性attrindex理解</title>
-    <link href="https://rongyel.github.io/posts/d429f5fd.html"/>
-    <id>https://rongyel.github.io/posts/d429f5fd.html</id>
-    <published>2024-07-06T15:53:34.840Z</published>
-    <updated>2025-02-16T06:52:36.046Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;stage1的页表最低位属性用的是AttrIndex，而在stage2的页表属性用的是MemAttr。&lt;br&gt;这样设计的原因可能是为了减少无效化操作。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="内存管理" scheme="https://rongyel.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对ARM access flag和dirty state机制理解</title>
-    <link href="https://rongyel.github.io/posts/a6a87a63.html"/>
-    <id>https://rongyel.github.io/posts/a6a87a63.html</id>
-    <published>2024-07-06T15:53:34.809Z</published>
-    <updated>2025-02-16T06:52:34.055Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;ARM的access flag和dirty state机制用于进行页表的维护，经过一段时间的思考，现在总算是理清楚了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="页表" scheme="https://rongyel.github.io/tags/%E9%A1%B5%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么叫RAS中断</title>
-    <link href="https://rongyel.github.io/posts/4b0c4420.html"/>
-    <id>https://rongyel.github.io/posts/4b0c4420.html</id>
-    <published>2024-07-06T15:53:34.782Z</published>
-    <updated>2025-02-16T06:52:38.166Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;ras中断是什么，听的很多但也不太清楚什么中断才能叫做ras中断。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://rongyel.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ARM" scheme="https://rongyel.github.io/tags/ARM/"/>
-    
-    <category term="中断" scheme="https://rongyel.github.io/tags/%E4%B8%AD%E6%96%AD/"/>
+    <category term="知识分享" scheme="https://rongyel.github.io/tags/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   

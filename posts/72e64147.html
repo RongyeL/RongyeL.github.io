@@ -19,29 +19,25 @@
   <meta name="author" content="Rong晔">
   <meta name="keywords" content="ASIC">
   
-    <meta name="description" content="定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……">
+    <meta name="description" content="最近看房看的有点多，心乱了。稍微花时间理顺了一下自己的核心需求，以及购房的逻辑。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CHI flitpend是干嘛的">
-<meta property="og:url" content="https://rongyel.github.io/posts/b6eda8db.html">
+<meta property="og:title" content="决定购房的核心要素整理">
+<meta property="og:url" content="https://rongyel.github.io/posts/72e64147.html">
 <meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
-<meta property="og:description" content="定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……">
+<meta property="og:description" content="最近看房看的有点多，心乱了。稍微花时间理顺了一下自己的核心需求，以及购房的逻辑。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109223107.png">
-<meta property="article:published_time" content="2024-07-06T15:53:34.956Z">
-<meta property="article:modified_time" content="2025-05-30T14:02:37.431Z">
+<meta property="article:published_time" content="2025-06-18T15:57:32.567Z">
+<meta property="article:modified_time" content="2025-06-22T07:13:33.487Z">
 <meta property="article:author" content="Rong晔">
-<meta property="article:tag" content="CHI">
-<meta property="article:tag" content="AMBA">
-<meta property="article:tag" content="知识分享">
+<meta property="article:tag" content="买房">
+<meta property="article:tag" content="深圳">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>CHI flitpend是干嘛的 - IC攻城狮的摸鱼小屋</title>
+  <title>决定购房的核心要素整理 - IC攻城狮的摸鱼小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +206,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">CHI flitpend是干嘛的</span>
+            <span id="subtitle">决定购房的核心要素整理</span>
           
         </div>
 
@@ -221,8 +217,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-06 23:53" pubdate>
-          2024年7月6日 晚上
+        <time datetime="2025-06-18 23:57" pubdate>
+          2025年6月18日 晚上
         </time>
       </span>
     
@@ -233,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          337 字
+          225 字
         
       </span>
     
@@ -244,7 +240,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -290,18 +286,58 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">CHI flitpend是干嘛的</h1>
+            <h1 id="seo-header">决定购房的核心要素整理</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>ARM官方手册：<a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/ihi0050/ec/?lang=en">AMBA 5 CHI Architecture Specification</a>&nbsp;<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/483365845">CHI协议链路层 - 知乎</a></p>
-<h2 id="FLITPEND协议描述"><a href="#FLITPEND协议描述" class="headerlink" title="FLITPEND协议描述"></a>FLITPEND协议描述</h2><p>CHI协议链路层的一个信号<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png" srcset="/img/loading.gif" lazyload></p>
-<p>之前看协议的时候有点忽略了这个东西 这个PEND信号是什么含义，可能字面上不太好理解。 它其实就是个时钟门控信号</p>
-<p>FLITPEND信号预测接下来会有一笔有效的flit传输。 可以用来开启时钟 正常来讲，FLITPEND需要比FLITV快一个时钟， 也就是在FLITPEND有效的下一拍发来数据， 所以该信号就是一笔预测信号，帮助SLV开启时钟的。<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109223107.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2><p>这次定位问题就是在这个地方， 使用了pend，但是发过来的pend不准。 本来FLITPEND需要比FLITV早一拍到， 但可能由于multicycle的原因，导致慢了一点点， FLITPEND没有在早一拍的时钟上升沿到达， FLITPEND和FLITV同拍了， 这会导致时钟门控打开的晚了，</p>
-<p>从时序图可以看到， FLITV和FLIT才是应该同拍的信号， 时钟门控打开的晚了， 导致在某个模块中，同拍输入FLITV和FLIT， 在下一个时钟变成了错拍的情况： FLITV过了一拍，FLIT过了一拍才输出。</p>
-<p>FLITV和FLIT错拍了， 后续所有采集都会采错，就，导致系统挂死了。</p>
+                <h1 id="决定购房的核心要素整理"><a href="#决定购房的核心要素整理" class="headerlink" title="决定购房的核心要素整理"></a>决定购房的核心要素整理</h1><p>相关项目：<a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E8%88%92%E9%80%82%E7%9A%84%E5%AE%B6/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%B4%AD%E6%88%BF%E8%AE%A1%E5%88%92.md">第一次购房计划</a></p>
+<h2 id="必须满足"><a href="#必须满足" class="headerlink" title="必须满足"></a>必须满足</h2><p><strong>安静</strong></p>
+<ul>
+<li>换房的根因</li>
+<li>不接受任何噪音要素</li>
+</ul>
+<p><strong>交通</strong></p>
+<ul>
+<li>近地铁，便于通勤</li>
+<li>不偏远，去哪都不方便也烦心</li>
+</ul>
+<p><strong>空间</strong></p>
+<ul>
+<li>三房起，85㎡+</li>
+<li>充足的空间，相处有距离，心情也舒畅</li>
+<li>仅黄埔雅苑可以放宽要求</li>
+</ul>
+<p><strong>小区</strong></p>
+<ul>
+<li>必须是花园小区</li>
+<li>有绿化、能散步、更安全</li>
+<li>老式小区不如不要</li>
+</ul>
+<p><strong>装修</strong></p>
+<ul>
+<li>精装修或者硬装好</li>
+<li>既然买二手，就希望能拎包入住</li>
+<li>注：浴室、厨房可放宽，可以考虑改造</li>
+</ul>
+<h2 id="加分项"><a href="#加分项" class="headerlink" title="加分项"></a>加分项</h2><p><strong>价格</strong></p>
+<ul>
+<li>极限750W</li>
+<li>记住，每省10W，购车的预算就多10W，性价比更高</li>
+</ul>
+<p><strong>朝向</strong></p>
+<ul>
+<li>东南、正南、正东最佳，朝北不行</li>
+</ul>
+<p><strong>学位</strong></p>
+<ul>
+<li>未来可能有用</li>
+<li>为了保值</li>
+</ul>
+<p><strong>车位</strong></p>
+<ul>
+<li>充裕的车位也减少一件烦心事</li>
+</ul>
                 
               </div>
             
@@ -319,7 +355,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="category-chain-item">技术笔记</a>
+  <a href="/categories/%E8%B4%AD%E6%88%BF%E7%AC%94%E8%AE%B0/" class="category-chain-item">购房笔记</a>
   
   
 
@@ -334,11 +370,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/CHI/" class="print-no-link">#CHI</a>
+        <a href="/tags/%E4%B9%B0%E6%88%BF/" class="print-no-link">#买房</a>
       
-        <a href="/tags/AMBA/" class="print-no-link">#AMBA</a>
-      
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/" class="print-no-link">#知识分享</a>
+        <a href="/tags/%E6%B7%B1%E5%9C%B3/" class="print-no-link">#深圳</a>
       
     </div>
   
@@ -350,8 +384,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CHI flitpend是干嘛的</div>
-      <div>https://rongyel.github.io/posts/b6eda8db.html</div>
+      <div>决定购房的核心要素整理</div>
+      <div>https://rongyel.github.io/posts/72e64147.html</div>
     </div>
     <div class="license-meta">
       
@@ -363,7 +397,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月6日</div>
+          <div>2025年6月18日</div>
         </div>
       
       
@@ -395,9 +429,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/418ca596.html" title="CHI l-credit的使用关注点">
+                      <a href="/posts/d875bafd.html" title="要以什么粒度规划自己的工作？">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CHI l-credit的使用关注点</span>
+                        <span class="hidden-mobile">要以什么粒度规划自己的工作？</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -405,8 +439,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/115c5add.html" title="当前ARM只有64KB粒度页表支持52bit">
-                        <span class="hidden-mobile">当前ARM只有64KB粒度页表支持52bit</span>
+                      <a href="/posts/d8e09664.html" title="哪些笔记应该做PARA化？">
+                        <span class="hidden-mobile">哪些笔记应该做PARA化？</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

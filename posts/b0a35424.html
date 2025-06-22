@@ -19,29 +19,26 @@
   <meta name="author" content="Rong晔">
   <meta name="keywords" content="ASIC">
   
-    <meta name="description" content="定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……">
+    <meta name="description" content="Obsidian 用了三百多天了，还在持续改进中。目前还是能感受到PARA的意义的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CHI flitpend是干嘛的">
-<meta property="og:url" content="https://rongyel.github.io/posts/b6eda8db.html">
+<meta property="og:title" content="Obsidian PARA改造思路">
+<meta property="og:url" content="https://rongyel.github.io/posts/b0a35424.html">
 <meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
-<meta property="og:description" content="定位一个挂死问题，追波形追了一个下午，最后发现是这个FLITPEND导致的……">
+<meta property="og:description" content="Obsidian 用了三百多天了，还在持续改进中。目前还是能感受到PARA的意义的。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png">
-<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109223107.png">
-<meta property="article:published_time" content="2024-07-06T15:53:34.956Z">
-<meta property="article:modified_time" content="2025-05-30T14:02:37.431Z">
+<meta property="article:published_time" content="2025-05-20T14:43:24.451Z">
+<meta property="article:modified_time" content="2025-06-17T16:27:02.422Z">
 <meta property="article:author" content="Rong晔">
-<meta property="article:tag" content="CHI">
-<meta property="article:tag" content="AMBA">
-<meta property="article:tag" content="知识分享">
+<meta property="article:tag" content="Obsidian">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="PARA">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>CHI flitpend是干嘛的 - IC攻城狮的摸鱼小屋</title>
+  <title>Obsidian PARA改造思路 - IC攻城狮的摸鱼小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +207,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">CHI flitpend是干嘛的</span>
+            <span id="subtitle">Obsidian PARA改造思路</span>
           
         </div>
 
@@ -221,8 +218,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-06 23:53" pubdate>
-          2024年7月6日 晚上
+        <time datetime="2025-05-20 22:43" pubdate>
+          2025年5月20日 晚上
         </time>
       </span>
     
@@ -233,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          337 字
+          414 字
         
       </span>
     
@@ -244,7 +241,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -290,18 +287,20 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">CHI flitpend是干嘛的</h1>
+            <h1 id="seo-header">Obsidian PARA改造思路</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>ARM官方手册：<a target="_blank" rel="noopener" href="https://developer.arm.com/documentation/ihi0050/ec/?lang=en">AMBA 5 CHI Architecture Specification</a>&nbsp;<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/483365845">CHI协议链路层 - 知乎</a></p>
-<h2 id="FLITPEND协议描述"><a href="#FLITPEND协议描述" class="headerlink" title="FLITPEND协议描述"></a>FLITPEND协议描述</h2><p>CHI协议链路层的一个信号<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png" srcset="/img/loading.gif" lazyload></p>
-<p>之前看协议的时候有点忽略了这个东西 这个PEND信号是什么含义，可能字面上不太好理解。 它其实就是个时钟门控信号</p>
-<p>FLITPEND信号预测接下来会有一笔有效的flit传输。 可以用来开启时钟 正常来讲，FLITPEND需要比FLITV快一个时钟， 也就是在FLITPEND有效的下一拍发来数据， 所以该信号就是一笔预测信号，帮助SLV开启时钟的。<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109223107.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2><p>这次定位问题就是在这个地方， 使用了pend，但是发过来的pend不准。 本来FLITPEND需要比FLITV早一拍到， 但可能由于multicycle的原因，导致慢了一点点， FLITPEND没有在早一拍的时钟上升沿到达， FLITPEND和FLITV同拍了， 这会导致时钟门控打开的晚了，</p>
-<p>从时序图可以看到， FLITV和FLIT才是应该同拍的信号， 时钟门控打开的晚了， 导致在某个模块中，同拍输入FLITV和FLIT， 在下一个时钟变成了错拍的情况： FLITV过了一拍，FLIT过了一拍才输出。</p>
-<p>FLITV和FLIT错拍了， 后续所有采集都会采错，就，导致系统挂死了。</p>
+                <h1 id="对于当前Obsidian笔记的PARA改造思路"><a href="#对于当前Obsidian笔记的PARA改造思路" class="headerlink" title="对于当前Obsidian笔记的PARA改造思路"></a>对于当前Obsidian笔记的PARA改造思路</h1><p>相关项目：<a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E7%AC%94%E8%AE%B0%E4%BA%BA%E7%94%9F/%E5%9F%BA%E4%BA%8EPARA%E6%B3%95%E7%9A%84%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E6%9E%B6%E6%9E%84%E5%AE%9E%E7%8E%B0.md">基于PARA法的任务管理架构实现</a></p>
+<h2 id="记忆阵列"><a href="#记忆阵列" class="headerlink" title="记忆阵列"></a>记忆阵列</h2><p>存放的还是日记、周记、年记。<br>目前日记好说，周记和年记做的不是很好，没有执行起来。<br>是否能类似项目的方式去管理？这个待定。</p>
+<h2 id="思维殿堂"><a href="#思维殿堂" class="headerlink" title="思维殿堂"></a>思维殿堂</h2><p>作为我思想的存放处，不需要做项目、领域的概念。<br>每一篇笔记都是零散的也没有关系？<br>此处还是可以考究的，如果是正在进行某些技术的学习，或者课题的研究，是否还是需要建立领域去维系？<br>这个也待定。</p>
+<h2 id="兴趣档案"><a href="#兴趣档案" class="headerlink" title="兴趣档案"></a>兴趣档案</h2><p>每一篇档案，就是一篇领域笔记。<br>每一篇档案承载的是一件事物的信息，对于这件事物如果有正在进行的工作，那么就建立项目。</p>
+<h2 id="文献仓库"><a href="#文献仓库" class="headerlink" title="文献仓库"></a>文献仓库</h2><p>全部为剪藏文献，包括一些文章、语录。作为资源调用即可。</p>
+<h2 id="创作空间"><a href="#创作空间" class="headerlink" title="创作空间"></a>创作空间</h2><p>以某个系列来建立领域，比如：<br>EasyAXI系列视频、怪物猎人模型重涂、喵&amp;汪的日常~ 绘画</p>
+<p>在对这个系列的某次具体工作建立项目，比如：<br>EasyAXI 第五期 AXI Outstanding特性实现、灭尽龙历战王重涂、喵&amp;汪 日本旅游篇等等</p>
+<h2 id="认真生活"><a href="#认真生活" class="headerlink" title="认真生活"></a>认真生活</h2><p>一件需要长期管理的活动作为领域笔记<br>如：小红的成长记录，而某一件具体的工作作为项目，如：2025年Q3 小红背甲、体重月度测量</p>
+<p>如：我的舒适小屋作为领域笔记，桌面整改计划作为项目。</p>
                 
               </div>
             
@@ -319,7 +318,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="category-chain-item">技术笔记</a>
+  <a href="/categories/%E6%96%B9%E6%B3%95%E5%AD%A6%E8%AE%BA/" class="category-chain-item">方法学论</a>
   
   
 
@@ -334,11 +333,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/CHI/" class="print-no-link">#CHI</a>
+        <a href="/tags/Obsidian/" class="print-no-link">#Obsidian</a>
       
-        <a href="/tags/AMBA/" class="print-no-link">#AMBA</a>
+        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
       
-        <a href="/tags/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/" class="print-no-link">#知识分享</a>
+        <a href="/tags/PARA/" class="print-no-link">#PARA</a>
       
     </div>
   
@@ -350,8 +349,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CHI flitpend是干嘛的</div>
-      <div>https://rongyel.github.io/posts/b6eda8db.html</div>
+      <div>Obsidian PARA改造思路</div>
+      <div>https://rongyel.github.io/posts/b0a35424.html</div>
     </div>
     <div class="license-meta">
       
@@ -363,7 +362,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月6日</div>
+          <div>2025年5月20日</div>
         </div>
       
       
@@ -395,9 +394,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/418ca596.html" title="CHI l-credit的使用关注点">
+                      <a href="/posts/d8e09664.html" title="哪些笔记应该做PARA化？">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CHI l-credit的使用关注点</span>
+                        <span class="hidden-mobile">哪些笔记应该做PARA化？</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -405,8 +404,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/115c5add.html" title="当前ARM只有64KB粒度页表支持52bit">
-                        <span class="hidden-mobile">当前ARM只有64KB粒度页表支持52bit</span>
+                      <a href="/posts/a1ad8d3c.html" title="2025 五一 巴厘岛">
+                        <span class="hidden-mobile">2025 五一 巴厘岛</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
