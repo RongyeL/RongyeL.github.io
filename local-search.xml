@@ -713,9 +713,69 @@
     
     <tags>
       
+      <tag>家有小红</tag>
+      
       <tag>宠物</tag>
       
-      <tag>家有小红</tag>
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Obsidian PARA改造思路</title>
+    <link href="/posts/b0a35424.html"/>
+    <url>/posts/b0a35424.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="对于当前Obsidian笔记的PARA改造思路"><a href="#对于当前Obsidian笔记的PARA改造思路" class="headerlink" title="对于当前Obsidian笔记的PARA改造思路"></a>对于当前Obsidian笔记的PARA改造思路</h1><p>相关项目：<a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E7%AC%94%E8%AE%B0%E4%BA%BA%E7%94%9F/%E5%9F%BA%E4%BA%8EPARA%E6%B3%95%E7%9A%84%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E6%9E%B6%E6%9E%84%E5%AE%9E%E7%8E%B0.md">基于PARA法的任务管理架构实现</a></p><h2 id="记忆阵列"><a href="#记忆阵列" class="headerlink" title="记忆阵列"></a>记忆阵列</h2><p>存放的还是日记、周记、年记。<br>目前日记好说，周记和年记做的不是很好，没有执行起来。<br>是否能类似项目的方式去管理？这个待定。</p><h2 id="思维殿堂"><a href="#思维殿堂" class="headerlink" title="思维殿堂"></a>思维殿堂</h2><p>作为我思想的存放处，不需要做项目、领域的概念。<br>每一篇笔记都是零散的也没有关系？<br>此处还是可以考究的，如果是正在进行某些技术的学习，或者课题的研究，是否还是需要建立领域去维系？<br>这个也待定。</p><h2 id="兴趣档案"><a href="#兴趣档案" class="headerlink" title="兴趣档案"></a>兴趣档案</h2><p>每一篇档案，就是一篇领域笔记。<br>每一篇档案承载的是一件事物的信息，对于这件事物如果有正在进行的工作，那么就建立项目。</p><h2 id="文献仓库"><a href="#文献仓库" class="headerlink" title="文献仓库"></a>文献仓库</h2><p>全部为剪藏文献，包括一些文章、语录。作为资源调用即可。</p><h2 id="创作空间"><a href="#创作空间" class="headerlink" title="创作空间"></a>创作空间</h2><p>以某个系列来建立领域，比如：<br>EasyAXI系列视频、怪物猎人模型重涂、喵&amp;汪的日常~ 绘画</p><p>在对这个系列的某次具体工作建立项目，比如：<br>EasyAXI 第五期 AXI Outstanding特性实现、灭尽龙历战王重涂、喵&amp;汪 日本旅游篇等等</p><h2 id="认真生活"><a href="#认真生活" class="headerlink" title="认真生活"></a>认真生活</h2><p>一件需要长期管理的活动作为领域笔记<br>如：小红的成长记录，而某一件具体的工作作为项目，如：2025年Q3 小红背甲、体重月度测量</p><p>如：我的舒适小屋作为领域笔记，桌面整改计划作为项目。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>方法学论</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>笔记</tag>
+      
+      <tag>PARA</tag>
+      
+      <tag>Obsidian</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>哪些笔记应该做PARA化？</title>
+    <link href="/posts/d8e09664.html"/>
+    <url>/posts/d8e09664.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="哪些笔记应该做PARA化？"><a href="#哪些笔记应该做PARA化？" class="headerlink" title="哪些笔记应该做PARA化？"></a>哪些笔记应该做PARA化？</h1><p>相关项目：<a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E7%AC%94%E8%AE%B0%E4%BA%BA%E7%94%9F/%E5%9F%BA%E4%BA%8EPARA%E6%B3%95%E7%9A%84%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E6%9E%B6%E6%9E%84%E5%AE%9E%E7%8E%B0.md">基于PARA法的任务管理架构实现</a></p><h2 id="1-任务型笔记"><a href="#1-任务型笔记" class="headerlink" title="1. 任务型笔记"></a>1. 任务型笔记</h2><ul><li>有明确的达成目标，有目的性获得某种结果。如，完成视频创作，制作生日礼物等。</li><li>倾向于行动导向</li><li>需要较长时间推进完成</li><li>可以分解为多项具体行为</li><li>有明确的完成时间，至少是计划完成时间</li><li>进度可以跟踪</li></ul><p>这其实是在分析适合做Project的笔记，有了项目，那就有相应的领域。</p><h2 id="2-学习型笔记"><a href="#2-学习型笔记" class="headerlink" title="2. 学习型笔记"></a>2. 学习型笔记</h2><ul><li>有明确的领域，如数字芯片设计</li><li>需要长时间推进完成；</li><li>可以分散成多个项目推进领域扩张，如AXI、CHI、Cache……等一系列学习内容，均可独立项目</li></ul><h2 id="3-兴趣型笔记"><a href="#3-兴趣型笔记" class="headerlink" title="3. 兴趣型笔记"></a>3. 兴趣型笔记</h2><ul><li>有明确的领域，如动漫、游戏</li><li>长期关注，长期维护，可谓永无止境。比如会一直看新的动漫、玩新的游戏</li></ul><h2 id="4-资源型笔记"><a href="#4-资源型笔记" class="headerlink" title="4. 资源型笔记"></a>4. 资源型笔记</h2><ul><li>具备参考价值，如各种文献</li><li>灵感库，收集的创意、思维的发散点</li><li>查询的资料，通常因为项目推进而发现，存档后链接到项目</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>方法学论</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PARA</tag>
+      
+      <tag>Obsidian</tag>
+      
+      <tag>方法论</tag>
+      
+      <tag>笔记人生</tag>
       
     </tags>
     
@@ -729,6 +789,31 @@
     <url>/posts/b4a0abff.html</url>
     
     <content type="html"><![CDATA[<p>八奈见杏菜，人称老八，她实在是太青春太可爱了，值得我专门写篇文来记录她的可爱！</p><h1 id="伟大的A-1-Pictures献上了逆天的制作力"><a href="#伟大的A-1-Pictures献上了逆天的制作力" class="headerlink" title="伟大的A-1 Pictures献上了逆天的制作力"></a>伟大的<a href="https://zh.wikipedia.org/wiki/A-1_Pictures">A-1 Pictures</a>献上了逆天的制作力</h1><p>想必有不少人跟我一样，看第一集的时候被这段制作给震撼到了。<br>盛夏的蓝天白云，可爱的少女站在天台护栏边<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240812234835.png" srcset="/img/loading.gif" lazyload alt="电影滤镜般的朦胧感"></p><p>她湛蓝的长发随风飘动，不知是在看向何人<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240812235020.png" srcset="/img/loading.gif" lazyload alt="特意去掉了描边线条的绘图"></p><p>抬首间，看到她宝石般的眼眸<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240812235332.png" srcset="/img/loading.gif" lazyload alt="极致的神态描绘"></p><p>她意识到你的到来，回首，挥挥手<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240812235510.png" srcset="/img/loading.gif" lazyload alt="脸上依旧挂着淡淡的悲伤"></p><p>几句交谈，不经意间悲伤涌上心头，已是泪满流<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240812235628.png" srcset="/img/loading.gif" lazyload alt="泪花飞溅如珍珠"></p><p>无法抑制的情感，无法抑制的泪。一段恋情的结束，也可能是另一端恋情的开端<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240812235821.png" srcset="/img/loading.gif" lazyload alt="宝石变得黯淡无光"></p><p>蓝天，白云，盛夏，天台上的男女高中生。</p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240812235944.png" srcset="/img/loading.gif" lazyload alt="青春，无需多言"></p><h1 id="活力的笑容是治愈人心得良药"><a href="#活力的笑容是治愈人心得良药" class="headerlink" title="活力的笑容是治愈人心得良药"></a>活力的笑容是治愈人心得良药</h1><p>欠男主钱然后给他做饭，这种契约简直就是过一辈子的</p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240813235925.png" srcset="/img/loading.gif" lazyload alt="奸商的笑容"></p><p>俏皮可爱就是不太聪明<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814000116.png" srcset="/img/loading.gif" lazyload alt="小机灵鬼的笑容"></p><p>世界上只有青梅竹马和狐狸精，至理名言出现<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814000159.png" srcset="/img/loading.gif" lazyload alt="看狐狸精的笑容（？）"></p><p>为了安慰好伙伴，不惜搭上自己的胃，海吃湖喝，然后继续欠男主钱<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814000348.png" srcset="/img/loading.gif" lazyload alt="胃口好的笑容（？？）"></p><p>看你这得意的样子，真是太让人喜欢了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814000504.png" srcset="/img/loading.gif" lazyload alt="欠钱的笑容（？？？！）"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814000545.png" srcset="/img/loading.gif" lazyload alt="还怪漂亮的这个笨蛋"></p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240908205233.png" srcset="/img/loading.gif" lazyload alt="得意的小表情哈哈"></p><h1 id="能吃还有好身材的谁不爱呢？"><a href="#能吃还有好身材的谁不爱呢？" class="headerlink" title="能吃还有好身材的谁不爱呢？"></a>能吃还有好身材的谁不爱呢？</h1><p>这腿<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814000758.png" srcset="/img/loading.gif" lazyload alt="意义明确的镜头"></p><p>这战袍<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814000843.png" srcset="/img/loading.gif" lazyload alt="蓝色系真的很爱"></p><p>这笑容<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814000939.png" srcset="/img/loading.gif" lazyload alt="awsl"></p><p>这小肚腩<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814001024.png" srcset="/img/loading.gif" lazyload alt="深渊啊"></p><p>这一拳，定终身<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814001154.png" srcset="/img/loading.gif" lazyload alt="吃着炒面真香啊，饿了"></p><h1 id="不失小心机的动作撩人心弦"><a href="#不失小心机的动作撩人心弦" class="headerlink" title="不失小心机的动作撩人心弦"></a>不失小心机的动作撩人心弦</h1><p>爱了爱了，上大分<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814001417.png" srcset="/img/loading.gif" lazyload alt="跟老八的互动太棒了"></p><p>这笑容说真的，守护一辈子<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814001446.png" srcset="/img/loading.gif" lazyload alt="蓝宝石的眼睛看着你"></p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240814001502.png" srcset="/img/loading.gif" lazyload alt="宠溺的眼神，宠溺的笑"></p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240908204823.png" srcset="/img/loading.gif" lazyload alt="男主这不可置信的样子笑死了"></p><h1 id="陪伴是最长情的告白"><a href="#陪伴是最长情的告白" class="headerlink" title="陪伴是最长情的告白"></a>陪伴是最长情的告白</h1><p>本番最长的陪伴，毫无疑问就是老八啊<br>希望最后能修成正果<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240908205036.png" srcset="/img/loading.gif" lazyload alt="这一眼，已经陷进去了"></p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240908205329.png" srcset="/img/loading.gif" lazyload alt="上啊！！！她怂了！！"></p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240908205359.png" srcset="/img/loading.gif" lazyload alt="她慌了她慌了！快A她"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>兴趣杂谈</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>动漫</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>至今为止我依旧认为，无职转生就是最好的异世界转生作品。</title>
+    <link href="/posts/1da22451.html"/>
+    <url>/posts/1da22451.html</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>鲁迪的人生旅程，就是无职的故事。</p></blockquote><p>绝大多数的异世界动漫，不过是寻找了一个舞台，一个剑与魔法的西幻舞台，讲述一段快乐的故事。<br>而无职转生才是真正的”现实太失败、太痛苦。幸运的是，身亡后意外穿越异世界，这一次我要好好重新过自己的人生。“的异世界转身题材作品。  </p><h1 id="认真的对待生死"><a href="#认真的对待生死" class="headerlink" title="认真的对待生死"></a><strong>认真的对待生死</strong></h1><hr><p>父亲为了救自己，死了。<br>母亲解救出来，但是痴呆了。<br>普通的作品，哪里会去认真刻画这些，还刻画的那么动人，那么的撕心裂肺。画面中无声的沉寂，死寂，看的我心一抽一抽的。也很难受。<br>鲁迪再次陷入了绝望，虽然鲁迪从某种意义上讲，不是他们真正的孩子。<br>但毫无疑问，保罗和赛妮丝是鲁迪的父母。<br>本集标题《双亲》，更是无声地点名了联系。<br>很多异世界穿越的作品，对双亲的刻画几乎没有，可以说就是工具人。<br>无职不仅有，还描述的很不错。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701221427.png" srcset="/img/loading.gif" lazyload alt="ED画面中，那份简单的爱"></p><p>至第二季结束，父亲保罗的刻画毫无疑问，已经准确且完善了。接下来也不再有他的故事，已经化为一抔尘土。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701221127.png" srcset="/img/loading.gif" lazyload alt="保罗最后还是笑着离去的"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701221245.png" srcset="/img/loading.gif" lazyload alt="绝望的"></p><p>而母亲赛妮丝，其实除了第一季开头一段外，描述的也不是那么丰富。但是看过小说的我知道，后面的剧情中，赛妮丝虽然痴呆了，但那种亲人间的情感一直存在，刻画的其实很生动，敬请期待后续剧情的发展。</p><h1 id="认真的对待感情"><a href="#认真的对待感情" class="headerlink" title="认真的对待感情"></a><strong>认真的对待感情</strong></h1><hr><p>第二季第24话，鲁迪背负着父亲的死、洛琪希的爱回到了自己的家，回来见自己的妻子、妹妹们。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701215117.png" srcset="/img/loading.gif" lazyload alt="死寂的情绪，通过灰暗的画面表达"></p><p>他认真的传递了悲伤，认真的向着自己的爱人交代、恳求同意取洛琪希为妻。他是真的成长了，没有回避现实的残酷和尴尬，而是背负着这一切，面对他们，好好的向前生活着。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701215230.png" srcset="/img/loading.gif" lazyload alt="认真准备和希露菲交代的鲁迪"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701215321.png" srcset="/img/loading.gif" lazyload alt="已经察觉但也认真面对的希露菲"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701215436.png" srcset="/img/loading.gif" lazyload alt="虽然觉得自己很无耻，但还是希望能被认可这段爱的洛琪希"></p><p>事情很顺利（这里我就忽略妹妹的情绪），希露菲第一时间就接受了洛琪希。虽然从现代人的眼光来看，这是开后宫，是一夫多妻，是应该被批判。后面还有爱丽丝呢，到时候就是三个老婆了，值得批判！<br>但我一直认为在这种异世界、中世纪风的剑与魔法世界，完全没有必要把现代人的制度强加上去。<br>我看这类作品，批不批判这个后宫，只看这段感情讲的怎么样。<br>如果是那种龙傲天题材，收后宫那哪里有什么感情基础，只要男主有实力，自动会有一对妹子贴上来。<br>而无职转生不一样，我认为鲁迪娶三个老婆，是因为他真的有三段真挚的爱情。且鲁迪为了她们都是付出了性命去珍惜的。</p><p><strong>他值得这份爱，这是我的观点。</strong></p><h1 id="认真的，在这个世界活着"><a href="#认真的，在这个世界活着" class="headerlink" title="认真的，在这个世界活着"></a><strong>认真的，在这个世界活着</strong></h1><hr><p>很多很多的异世界作品，我觉得看的很轻松的原因就是，他们根本就是来玩的。他们只是把异世界当作一个游戏去看待。<br>当然，由于很多异世界作品就是看个爽，什么系统一大堆，这能不让人觉得是游戏才怪咧。</p><p>而无职，鲁迪，是真的来到了这个世界。但他真正在这个世界活着，其实是第二季最后一集了。<br>在这一集中，他的第一个孩子，出生了。自己的血肉降生在世上的那一刻，他才真正与这个世界有了强烈的联系。他是切切实实的，是这个世界的人了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701215917.png" srcset="/img/loading.gif" lazyload alt="人妻感爆棚的希露菲"></p><p>另外就是，鲁迪在保罗墓前喝酒说的话，以及这一话的标题《继承》。<br>鲁迪不再带着前世的记忆，用看陌生人的眼光，看待这个世界了。<br>他真正的，会努力，在这个世界活得更好。珍惜一起他应该珍惜的失误<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701220110.png" srcset="/img/loading.gif" lazyload alt="承认自己的不成熟，是成熟的前兆"></p><p>后面这段风吹动了鲁迪，仿佛保罗在身后拍了拍他的肩膀，说“那就都交给你了”</p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701220216.png" srcset="/img/loading.gif" lazyload alt="保罗在身后拍了拍他的肩膀，说“那就都交给你了”"></p><h1 id="何时我才能看到转折点四"><a href="#何时我才能看到转折点四" class="headerlink" title="何时我才能看到转折点四"></a><strong>何时我才能看到转折点四</strong></h1><hr><p>第三季也已经宣布制作，很开心~期待  </p>]]></content>
     
     
     <categories>
@@ -768,31 +853,6 @@
       <tag>动漫</tag>
       
       <tag>游戏</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>至今为止我依旧认为，无职转生就是最好的异世界转生作品。</title>
-    <link href="/posts/1da22451.html"/>
-    <url>/posts/1da22451.html</url>
-    
-    <content type="html"><![CDATA[<blockquote><p>鲁迪的人生旅程，就是无职的故事。</p></blockquote><p>绝大多数的异世界动漫，不过是寻找了一个舞台，一个剑与魔法的西幻舞台，讲述一段快乐的故事。<br>而无职转生才是真正的”现实太失败、太痛苦。幸运的是，身亡后意外穿越异世界，这一次我要好好重新过自己的人生。“的异世界转身题材作品。  </p><h1 id="认真的对待生死"><a href="#认真的对待生死" class="headerlink" title="认真的对待生死"></a><strong>认真的对待生死</strong></h1><hr><p>父亲为了救自己，死了。<br>母亲解救出来，但是痴呆了。<br>普通的作品，哪里会去认真刻画这些，还刻画的那么动人，那么的撕心裂肺。画面中无声的沉寂，死寂，看的我心一抽一抽的。也很难受。<br>鲁迪再次陷入了绝望，虽然鲁迪从某种意义上讲，不是他们真正的孩子。<br>但毫无疑问，保罗和赛妮丝是鲁迪的父母。<br>本集标题《双亲》，更是无声地点名了联系。<br>很多异世界穿越的作品，对双亲的刻画几乎没有，可以说就是工具人。<br>无职不仅有，还描述的很不错。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701221427.png" srcset="/img/loading.gif" lazyload alt="ED画面中，那份简单的爱"></p><p>至第二季结束，父亲保罗的刻画毫无疑问，已经准确且完善了。接下来也不再有他的故事，已经化为一抔尘土。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701221127.png" srcset="/img/loading.gif" lazyload alt="保罗最后还是笑着离去的"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701221245.png" srcset="/img/loading.gif" lazyload alt="绝望的"></p><p>而母亲赛妮丝，其实除了第一季开头一段外，描述的也不是那么丰富。但是看过小说的我知道，后面的剧情中，赛妮丝虽然痴呆了，但那种亲人间的情感一直存在，刻画的其实很生动，敬请期待后续剧情的发展。</p><h1 id="认真的对待感情"><a href="#认真的对待感情" class="headerlink" title="认真的对待感情"></a><strong>认真的对待感情</strong></h1><hr><p>第二季第24话，鲁迪背负着父亲的死、洛琪希的爱回到了自己的家，回来见自己的妻子、妹妹们。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701215117.png" srcset="/img/loading.gif" lazyload alt="死寂的情绪，通过灰暗的画面表达"></p><p>他认真的传递了悲伤，认真的向着自己的爱人交代、恳求同意取洛琪希为妻。他是真的成长了，没有回避现实的残酷和尴尬，而是背负着这一切，面对他们，好好的向前生活着。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701215230.png" srcset="/img/loading.gif" lazyload alt="认真准备和希露菲交代的鲁迪"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701215321.png" srcset="/img/loading.gif" lazyload alt="已经察觉但也认真面对的希露菲"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701215436.png" srcset="/img/loading.gif" lazyload alt="虽然觉得自己很无耻，但还是希望能被认可这段爱的洛琪希"></p><p>事情很顺利（这里我就忽略妹妹的情绪），希露菲第一时间就接受了洛琪希。虽然从现代人的眼光来看，这是开后宫，是一夫多妻，是应该被批判。后面还有爱丽丝呢，到时候就是三个老婆了，值得批判！<br>但我一直认为在这种异世界、中世纪风的剑与魔法世界，完全没有必要把现代人的制度强加上去。<br>我看这类作品，批不批判这个后宫，只看这段感情讲的怎么样。<br>如果是那种龙傲天题材，收后宫那哪里有什么感情基础，只要男主有实力，自动会有一对妹子贴上来。<br>而无职转生不一样，我认为鲁迪娶三个老婆，是因为他真的有三段真挚的爱情。且鲁迪为了她们都是付出了性命去珍惜的。</p><p><strong>他值得这份爱，这是我的观点。</strong></p><h1 id="认真的，在这个世界活着"><a href="#认真的，在这个世界活着" class="headerlink" title="认真的，在这个世界活着"></a><strong>认真的，在这个世界活着</strong></h1><hr><p>很多很多的异世界作品，我觉得看的很轻松的原因就是，他们根本就是来玩的。他们只是把异世界当作一个游戏去看待。<br>当然，由于很多异世界作品就是看个爽，什么系统一大堆，这能不让人觉得是游戏才怪咧。</p><p>而无职，鲁迪，是真的来到了这个世界。但他真正在这个世界活着，其实是第二季最后一集了。<br>在这一集中，他的第一个孩子，出生了。自己的血肉降生在世上的那一刻，他才真正与这个世界有了强烈的联系。他是切切实实的，是这个世界的人了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701215917.png" srcset="/img/loading.gif" lazyload alt="人妻感爆棚的希露菲"></p><p>另外就是，鲁迪在保罗墓前喝酒说的话，以及这一话的标题《继承》。<br>鲁迪不再带着前世的记忆，用看陌生人的眼光，看待这个世界了。<br>他真正的，会努力，在这个世界活得更好。珍惜一起他应该珍惜的失误<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701220110.png" srcset="/img/loading.gif" lazyload alt="承认自己的不成熟，是成熟的前兆"></p><p>后面这段风吹动了鲁迪，仿佛保罗在身后拍了拍他的肩膀，说“那就都交给你了”</p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20240701220216.png" srcset="/img/loading.gif" lazyload alt="保罗在身后拍了拍他的肩膀，说“那就都交给你了”"></p><h1 id="何时我才能看到转折点四"><a href="#何时我才能看到转折点四" class="headerlink" title="何时我才能看到转折点四"></a><strong>何时我才能看到转折点四</strong></h1><hr><p>第三季也已经宣布制作，很开心~期待  </p>]]></content>
-    
-    
-    <categories>
-      
-      <category>兴趣杂谈</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>动漫</tag>
       
     </tags>
     
@@ -944,6 +1004,33 @@
   
   
   <entry>
+    <title>对Stage1页表属性attrindex理解</title>
+    <link href="/posts/d429f5fd.html"/>
+    <url>/posts/d429f5fd.html</url>
+    
+    <content type="html"><![CDATA[<p>在看ARM VMSAv8的时候，注意到一个有意思的地方。<br>最后获取到page或者block的时候，属性域段中，<br>stage1的页表最低位属性用的是AttrIndex，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231054.png" srcset="/img/loading.gif" lazyload><br>而在stage2的页表属性用的是MemAttr<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231311.png" srcset="/img/loading.gif" lazyload></p><p>这两者主要是什么区别呢，也不是很难理解，<br>像下面这个，4bit的MenAttr直接就表示memory类型，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231427.png" srcset="/img/loading.gif" lazyload><br>高2bit用来区分Device和normal memory的类型。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231505.png" srcset="/img/loading.gif" lazyload><br>低2bit用来具体细分是什么device或normal memory类型。</p><p>这里就不展开讲了。</p><p>重点是上面的stage1 页表，attrindex的使用，它并不是单独就能表示属性的<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231651.png" srcset="/img/loading.gif" lazyload><br>这个index索引，指的是对MAIR（Memory Attribute Indirection Register）这个寄存器内部进行索引。<br>MAIR根据不同异常级别有好几个，但其实内部都是一样的，<br>从图上就可以看出，一个64bit的MAIR寄存器中有8个Attr，每8bit为一个Attr。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105232001.png" srcset="/img/loading.gif" lazyload><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105232010.png" srcset="/img/loading.gif" lazyload><br>至于这8bit是如何进一步表示属性的，这里也不展开说了，具体可以看架构手册D13.2.97</p><p>通过stage1 page中的attrindex属性域段，加上MAIR寄存器中配置的Attr，才能够表示一个地址空间的属性。这样可以理解，但重点在于为什么要这样做。</p><p>减少无效化操作，就是这种设计的核心意义。</p><p>如果想要改变属性，就需要改页表的话，修改页表后必须发出无效化命令到各个tlb中进行无效化，<br>而进行无效化的代价其实是很大的。<br>那为了减少无效化操作，就尽可能不要修改页表，</p><p>这里使用attrindex，索引寄存器中配置的属性信息，这意味着如果想要修改属性，仅仅需要修改寄存器值就好了，软件修改寄存器的代价那就比较小了。</p><p>至于为什么只有stage1 的页表是这样设计的，还没想太明白。可能终究这样也是需要付出寄存器的代价的，而stage2翻译（虚拟化，IPA-&gt;PA）的需求比较小，所以就直接把MemAttr放到页表的属性域段中吧。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ARM</tag>
+      
+      <tag>内存管理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MMU-TLB基础知识</title>
     <link href="/posts/e0051e00.html"/>
     <url>/posts/e0051e00.html</url>
@@ -963,33 +1050,6 @@
       <tag>ARM</tag>
       
       <tag>MMU</tag>
-      
-      <tag>内存管理</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>对Stage1页表属性attrindex理解</title>
-    <link href="/posts/d429f5fd.html"/>
-    <url>/posts/d429f5fd.html</url>
-    
-    <content type="html"><![CDATA[<p>在看ARM VMSAv8的时候，注意到一个有意思的地方。<br>最后获取到page或者block的时候，属性域段中，<br>stage1的页表最低位属性用的是AttrIndex，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231054.png" srcset="/img/loading.gif" lazyload><br>而在stage2的页表属性用的是MemAttr<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231311.png" srcset="/img/loading.gif" lazyload></p><p>这两者主要是什么区别呢，也不是很难理解，<br>像下面这个，4bit的MenAttr直接就表示memory类型，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231427.png" srcset="/img/loading.gif" lazyload><br>高2bit用来区分Device和normal memory的类型。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231505.png" srcset="/img/loading.gif" lazyload><br>低2bit用来具体细分是什么device或normal memory类型。</p><p>这里就不展开讲了。</p><p>重点是上面的stage1 页表，attrindex的使用，它并不是单独就能表示属性的<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105231651.png" srcset="/img/loading.gif" lazyload><br>这个index索引，指的是对MAIR（Memory Attribute Indirection Register）这个寄存器内部进行索引。<br>MAIR根据不同异常级别有好几个，但其实内部都是一样的，<br>从图上就可以看出，一个64bit的MAIR寄存器中有8个Attr，每8bit为一个Attr。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105232001.png" srcset="/img/loading.gif" lazyload><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230105232010.png" srcset="/img/loading.gif" lazyload><br>至于这8bit是如何进一步表示属性的，这里也不展开说了，具体可以看架构手册D13.2.97</p><p>通过stage1 page中的attrindex属性域段，加上MAIR寄存器中配置的Attr，才能够表示一个地址空间的属性。这样可以理解，但重点在于为什么要这样做。</p><p>减少无效化操作，就是这种设计的核心意义。</p><p>如果想要改变属性，就需要改页表的话，修改页表后必须发出无效化命令到各个tlb中进行无效化，<br>而进行无效化的代价其实是很大的。<br>那为了减少无效化操作，就尽可能不要修改页表，</p><p>这里使用attrindex，索引寄存器中配置的属性信息，这意味着如果想要修改属性，仅仅需要修改寄存器值就好了，软件修改寄存器的代价那就比较小了。</p><p>至于为什么只有stage1 的页表是这样设计的，还没想太明白。可能终究这样也是需要付出寄存器的代价的，而stage2翻译（虚拟化，IPA-&gt;PA）的需求比较小，所以就直接把MemAttr放到页表的属性域段中吧。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>技术笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>ARM</tag>
       
       <tag>内存管理</tag>
       
@@ -1081,33 +1141,6 @@
   
   
   <entry>
-    <title>什么是CRC校验</title>
-    <link href="/posts/ffadf7ba.html"/>
-    <url>/posts/ffadf7ba.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>我们知道，数据在传输过程中可能会因为传输介质故障或外界的干扰而产生比特差错（使原来的0变为1，原来的1变为0），从而导致接收方接收到错误的数据。为尽量提高接收方收到数据的正确率，在接收数据之前需要对数据进行差错检测，仅当检测的结果为正确时才接收数据。</p><p>差错检测的方式有多种，常见的有奇偶校验、求和校验、CRC校验等。他们的工作原理都是发送端对数据按照某种算法计算出来校验码，将校验码和数据一起发送到接收端，然后接收端进行检验确定数据是否发生变化。</p><p>CRC是由W. Wesley Peterson在1961年发表的论文中提出，由于CRC校验在速度、成本、正确率等方面比其他校验方式更具有优势，因此，CRC成为计算机信息、通信领域最为普遍的校验方式。例如在标准的以太帧格式中，最后有4个字节长度的冗余位，用于存储CRC校验的值，这个冗余位又常称为帧检验序列FCS（Frame Check Sequence）。</p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250303235601.png" srcset="/img/loading.gif" lazyload alt="帧尾增加4Bytes CRC码"></p><h1 id="核心原理"><a href="#核心原理" class="headerlink" title="核心原理"></a>核心原理</h1><p>CRC的思想就是先在要发送的K比特长度的数据后面附加一个R比特长度的校验码，然后生成一个新帧发送给接收端。接收端接收到新帧后，根据收到的数据和校验码来验证接收到的数据是否正确。</p><h2 id="多项式除法："><a href="#多项式除法：" class="headerlink" title="多项式除法："></a>多项式除法：</h2><p>要使所生成的新帧能与发送端和接收端共同选定的某个特定数整除（“模2除法”）。接收端把接收到的新帧除以这个选定的除数。<br><strong>因为在发送数据帧之前就已通过附加一个数，做了“去余”处理（也就已经能整除了），所以结果应该是没有余数。</strong><br>如果有余数，则表明该帧在传输过程中出现了差错。</p><p>将待传输的原始数据视为一个二进制数（例如 101001）。<br>选择一个预定义的生成多项式（如 x³ + x + 1，对应二进制 1011）。<br>通过多项式除法，计算原始数据与生成多项式的余数，该余数即为CRC校验码。</p><h2 id="附加校验码："><a href="#附加校验码：" class="headerlink" title="附加校验码："></a>附加校验码：</h2><p>将计算出的CRC校验码附加到原始数据末尾，形成完整的传输数据。</p><h2 id="接收端验证："><a href="#接收端验证：" class="headerlink" title="接收端验证："></a>接收端验证：</h2><p>接收方用相同的生成多项式对接收到的数据（含CRC码）再次计算余数。<br>若余数为零，则数据正确；否则判定为传输错误。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250304000031.png" srcset="/img/loading.gif" lazyload alt="常见CRC生成多项式"></p><h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>CRC-4-ITU（生成多项式&nbsp;<code>x⁴ + x + 1</code>）</p><ol><li><strong>原始数据</strong>：<code>1101 0110</code></li><li><strong>生成多项式</strong>：<code>10011</code>（对应&nbsp;<code>x⁴ + x + 1</code>）</li><li><strong>计算步骤</strong>：<ul><li>在原始数据后补4个零（生成多项式最高次为4）：<code>1101 0110 0000</code></li><li>用生成多项式进行模2除法，得到余数&nbsp;<code>1110</code></li></ul></li><li><strong>最终传输数据</strong>：<code>1101 0110 1110</code><br>可检测所有单比特错误、双比特错误、奇数个错误，及大多数突发错误（取决于生成多项式）。</li></ol><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>CRC校验通过多项式除法生成冗余校验码，以极低的计算成本实现高可靠性的错误检测，是数字系统中保障数据完整性的基础技术。<br>其性能取决于生成多项式的选择（如CRC-8、CRC-16、CRC-32等不同标准）。</p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://info.support.huawei.com/info-finder/encyclopedia/zh/CRC.html">什么是CRC（Cyclic Redundancy Check）？如何解决CRC错误？ - 华为</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
-    
-    
-    <categories>
-      
-      <category>技术笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>算法</tag>
-      
-      <tag>功能安全</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>虚拟内存的意义</title>
     <link href="/posts/ada5d828.html"/>
     <url>/posts/ada5d828.html</url>
@@ -1135,11 +1168,11 @@
   
   
   <entry>
-    <title>CHI flitpend是干嘛的</title>
-    <link href="/posts/b6eda8db.html"/>
-    <url>/posts/b6eda8db.html</url>
+    <title>什么是CRC校验</title>
+    <link href="/posts/ffadf7ba.html"/>
+    <url>/posts/ffadf7ba.html</url>
     
-    <content type="html"><![CDATA[<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>ARM官方手册：<a href="https://developer.arm.com/documentation/ihi0050/ec/?lang=en">AMBA 5 CHI Architecture Specification</a>&nbsp;<a href="https://zhuanlan.zhihu.com/p/483365845">CHI协议链路层 - 知乎</a></p><h2 id="FLITPEND协议描述"><a href="#FLITPEND协议描述" class="headerlink" title="FLITPEND协议描述"></a>FLITPEND协议描述</h2><p>CHI协议链路层的一个信号<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png" srcset="/img/loading.gif" lazyload></p><p>之前看协议的时候有点忽略了这个东西 这个PEND信号是什么含义，可能字面上不太好理解。 它其实就是个时钟门控信号</p><p>FLITPEND信号预测接下来会有一笔有效的flit传输。 可以用来开启时钟 正常来讲，FLITPEND需要比FLITV快一个时钟， 也就是在FLITPEND有效的下一拍发来数据， 所以该信号就是一笔预测信号，帮助SLV开启时钟的。<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109223107.png" srcset="/img/loading.gif" lazyload></p><h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2><p>这次定位问题就是在这个地方， 使用了pend，但是发过来的pend不准。 本来FLITPEND需要比FLITV早一拍到， 但可能由于multicycle的原因，导致慢了一点点， FLITPEND没有在早一拍的时钟上升沿到达， FLITPEND和FLITV同拍了， 这会导致时钟门控打开的晚了，</p><p>从时序图可以看到， FLITV和FLIT才是应该同拍的信号， 时钟门控打开的晚了， 导致在某个模块中，同拍输入FLITV和FLIT， 在下一个时钟变成了错拍的情况： FLITV过了一拍，FLIT过了一拍才输出。</p><p>FLITV和FLIT错拍了， 后续所有采集都会采错，就，导致系统挂死了。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>我们知道，数据在传输过程中可能会因为传输介质故障或外界的干扰而产生比特差错（使原来的0变为1，原来的1变为0），从而导致接收方接收到错误的数据。为尽量提高接收方收到数据的正确率，在接收数据之前需要对数据进行差错检测，仅当检测的结果为正确时才接收数据。</p><p>差错检测的方式有多种，常见的有奇偶校验、求和校验、CRC校验等。他们的工作原理都是发送端对数据按照某种算法计算出来校验码，将校验码和数据一起发送到接收端，然后接收端进行检验确定数据是否发生变化。</p><p>CRC是由W. Wesley Peterson在1961年发表的论文中提出，由于CRC校验在速度、成本、正确率等方面比其他校验方式更具有优势，因此，CRC成为计算机信息、通信领域最为普遍的校验方式。例如在标准的以太帧格式中，最后有4个字节长度的冗余位，用于存储CRC校验的值，这个冗余位又常称为帧检验序列FCS（Frame Check Sequence）。</p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250303235601.png" srcset="/img/loading.gif" lazyload alt="帧尾增加4Bytes CRC码"></p><h1 id="核心原理"><a href="#核心原理" class="headerlink" title="核心原理"></a>核心原理</h1><p>CRC的思想就是先在要发送的K比特长度的数据后面附加一个R比特长度的校验码，然后生成一个新帧发送给接收端。接收端接收到新帧后，根据收到的数据和校验码来验证接收到的数据是否正确。</p><h2 id="多项式除法："><a href="#多项式除法：" class="headerlink" title="多项式除法："></a>多项式除法：</h2><p>要使所生成的新帧能与发送端和接收端共同选定的某个特定数整除（“模2除法”）。接收端把接收到的新帧除以这个选定的除数。<br><strong>因为在发送数据帧之前就已通过附加一个数，做了“去余”处理（也就已经能整除了），所以结果应该是没有余数。</strong><br>如果有余数，则表明该帧在传输过程中出现了差错。</p><p>将待传输的原始数据视为一个二进制数（例如 101001）。<br>选择一个预定义的生成多项式（如 x³ + x + 1，对应二进制 1011）。<br>通过多项式除法，计算原始数据与生成多项式的余数，该余数即为CRC校验码。</p><h2 id="附加校验码："><a href="#附加校验码：" class="headerlink" title="附加校验码："></a>附加校验码：</h2><p>将计算出的CRC校验码附加到原始数据末尾，形成完整的传输数据。</p><h2 id="接收端验证："><a href="#接收端验证：" class="headerlink" title="接收端验证："></a>接收端验证：</h2><p>接收方用相同的生成多项式对接收到的数据（含CRC码）再次计算余数。<br>若余数为零，则数据正确；否则判定为传输错误。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250304000031.png" srcset="/img/loading.gif" lazyload alt="常见CRC生成多项式"></p><h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>CRC-4-ITU（生成多项式&nbsp;<code>x⁴ + x + 1</code>）</p><ol><li><strong>原始数据</strong>：<code>1101 0110</code></li><li><strong>生成多项式</strong>：<code>10011</code>（对应&nbsp;<code>x⁴ + x + 1</code>）</li><li><strong>计算步骤</strong>：<ul><li>在原始数据后补4个零（生成多项式最高次为4）：<code>1101 0110 0000</code></li><li>用生成多项式进行模2除法，得到余数&nbsp;<code>1110</code></li></ul></li><li><strong>最终传输数据</strong>：<code>1101 0110 1110</code><br>可检测所有单比特错误、双比特错误、奇数个错误，及大多数突发错误（取决于生成多项式）。</li></ol><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>CRC校验通过多项式除法生成冗余校验码，以极低的计算成本实现高可靠性的错误检测，是数字系统中保障数据完整性的基础技术。<br>其性能取决于生成多项式的选择（如CRC-8、CRC-16、CRC-32等不同标准）。</p><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://info.support.huawei.com/info-finder/encyclopedia/zh/CRC.html">什么是CRC（Cyclic Redundancy Check）？如何解决CRC错误？ - 华为</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
     
     <categories>
@@ -1151,11 +1184,9 @@
     
     <tags>
       
-      <tag>CHI</tag>
+      <tag>算法</tag>
       
-      <tag>AMBA</tag>
-      
-      <tag>知识分享</tag>
+      <tag>功能安全</tag>
       
     </tags>
     
@@ -1193,33 +1224,6 @@
   
   
   <entry>
-    <title>CHI l-credit的使用关注点</title>
-    <link href="/posts/418ca596.html"/>
-    <url>/posts/418ca596.html</url>
-    
-    <content type="html"><![CDATA[<h2 id="握手差异"><a href="#握手差异" class="headerlink" title="握手差异"></a>握手差异</h2><p>CHI和AXI的一个很大不同，<br>就在于握手机制。</p><p>AXI协议中使用的是valid-ready握手的方式，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112231021.png" srcset="/img/loading.gif" lazyload></p><p>CHI协议中则设计了一套credit机制进行握手。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112230920.png" srcset="/img/loading.gif" lazyload></p><h2 id="credit握手"><a href="#credit握手" class="headerlink" title="credit握手"></a>credit握手</h2><p>credit由rx发出，tx接收。<br>tx每拥有一个credit，就可以向rx发送一笔数据，即一次flitv。<br>rx每收到一个flitv，就再发出一个credit给tx。<br>每个通道（REQ/SNP/RSP/DATA）都有独立的credit。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112231157.png" srcset="/img/loading.gif" lazyload></p><p>credit和valid-ready的一个最大区别，就在于：<br>valid-ready握手是必须握完一个事务才能握下一个，<br>credit握手则是，我可以一次性给你发很多个credit，你慢慢发事务。</p><p>给credit的含义就是，你可以发，而我必须接收，<br>所以rx内的buffer深度必须大于等于credit数量，<br>不然就会丢包。</p><h2 id="接口流水"><a href="#接口流水" class="headerlink" title="接口流水"></a>接口流水</h2><p>两个节点之间，假定路径上有4拍延迟，<br>那么需要4个credit，就可以保证流水。</p><p>如果flitv或者credit因为走线加拍，那么credit数量就需要对应增加。</p><p>当然，在4拍路径下，给6个credit，有2个credit的裕量，这肯定也是可以的，<br>不会有功能问题，但存在面积代价。</p><p>由于多了2个credit，RX的buffer或者FIFO就必须对应增加2深。<br>当数据位宽较大时，FIFO深度多了2深就算是比较明显的浪费了。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>技术笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>ARM</tag>
-      
-      <tag>CHI</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>数字IC设计开发Gvim配置</title>
     <link href="/posts/f60848c2.html"/>
     <url>/posts/f60848c2.html</url>
@@ -1247,6 +1251,33 @@
   
   
   <entry>
+    <title>CHI l-credit的使用关注点</title>
+    <link href="/posts/418ca596.html"/>
+    <url>/posts/418ca596.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="握手差异"><a href="#握手差异" class="headerlink" title="握手差异"></a>握手差异</h2><p>CHI和AXI的一个很大不同，<br>就在于握手机制。</p><p>AXI协议中使用的是valid-ready握手的方式，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112231021.png" srcset="/img/loading.gif" lazyload></p><p>CHI协议中则设计了一套credit机制进行握手。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112230920.png" srcset="/img/loading.gif" lazyload></p><h2 id="credit握手"><a href="#credit握手" class="headerlink" title="credit握手"></a>credit握手</h2><p>credit由rx发出，tx接收。<br>tx每拥有一个credit，就可以向rx发送一笔数据，即一次flitv。<br>rx每收到一个flitv，就再发出一个credit给tx。<br>每个通道（REQ/SNP/RSP/DATA）都有独立的credit。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230112231157.png" srcset="/img/loading.gif" lazyload></p><p>credit和valid-ready的一个最大区别，就在于：<br>valid-ready握手是必须握完一个事务才能握下一个，<br>credit握手则是，我可以一次性给你发很多个credit，你慢慢发事务。</p><p>给credit的含义就是，你可以发，而我必须接收，<br>所以rx内的buffer深度必须大于等于credit数量，<br>不然就会丢包。</p><h2 id="接口流水"><a href="#接口流水" class="headerlink" title="接口流水"></a>接口流水</h2><p>两个节点之间，假定路径上有4拍延迟，<br>那么需要4个credit，就可以保证流水。</p><p>如果flitv或者credit因为走线加拍，那么credit数量就需要对应增加。</p><p>当然，在4拍路径下，给6个credit，有2个credit的裕量，这肯定也是可以的，<br>不会有功能问题，但存在面积代价。</p><p>由于多了2个credit，RX的buffer或者FIFO就必须对应增加2深。<br>当数据位宽较大时，FIFO深度多了2深就算是比较明显的浪费了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ARM</tag>
+      
+      <tag>CHI</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>从零开始EDA环境搭建</title>
     <link href="/posts/f07a99ab.html"/>
     <url>/posts/f07a99ab.html</url>
@@ -1266,6 +1297,35 @@
       <tag>数字IC</tag>
       
       <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CHI flitpend是干嘛的</title>
+    <link href="/posts/b6eda8db.html"/>
+    <url>/posts/b6eda8db.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>ARM官方手册：<a href="https://developer.arm.com/documentation/ihi0050/ec/?lang=en">AMBA 5 CHI Architecture Specification</a>&nbsp;<a href="https://zhuanlan.zhihu.com/p/483365845">CHI协议链路层 - 知乎</a></p><h2 id="FLITPEND协议描述"><a href="#FLITPEND协议描述" class="headerlink" title="FLITPEND协议描述"></a>FLITPEND协议描述</h2><p>CHI协议链路层的一个信号<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109222754.png" srcset="/img/loading.gif" lazyload></p><p>之前看协议的时候有点忽略了这个东西 这个PEND信号是什么含义，可能字面上不太好理解。 它其实就是个时钟门控信号</p><p>FLITPEND信号预测接下来会有一笔有效的flit传输。 可以用来开启时钟 正常来讲，FLITPEND需要比FLITV快一个时钟， 也就是在FLITPEND有效的下一拍发来数据， 所以该信号就是一笔预测信号，帮助SLV开启时钟的。<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230109223107.png" srcset="/img/loading.gif" lazyload></p><h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2><p>这次定位问题就是在这个地方， 使用了pend，但是发过来的pend不准。 本来FLITPEND需要比FLITV早一拍到， 但可能由于multicycle的原因，导致慢了一点点， FLITPEND没有在早一拍的时钟上升沿到达， FLITPEND和FLITV同拍了， 这会导致时钟门控打开的晚了，</p><p>从时序图可以看到， FLITV和FLIT才是应该同拍的信号， 时钟门控打开的晚了， 导致在某个模块中，同拍输入FLITV和FLIT， 在下一个时钟变成了错拍的情况： FLITV过了一拍，FLIT过了一拍才输出。</p><p>FLITV和FLIT错拍了， 后续所有采集都会采错，就，导致系统挂死了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CHI</tag>
+      
+      <tag>AMBA</tag>
+      
+      <tag>知识分享</tag>
       
     </tags>
     
@@ -1328,6 +1388,31 @@
   
   
   <entry>
+    <title>markdown笔记工具分析</title>
+    <link href="/posts/c1f4e46a.html"/>
+    <url>/posts/c1f4e46a.html</url>
+    
+    <content type="html"><![CDATA[<p>兜兜转转选择了使用obsidian作为自己的markdown笔记工具。记录一下自己使用其他笔记工具的感受。</p><h1 id="typora"><a href="#typora" class="headerlink" title="typora"></a>typora</h1><p>能很好的完成markdown的编写工作，但缺少文件管理能力。<br>没有标签页。没有其他功能。</p><h1 id="思源"><a href="#思源" class="headerlink" title="思源"></a>思源</h1><p>支持markdown编辑，但数据格式其实是sy这样的私有格式。<br>每一段都有链接能力，粒度太小，其实我用不上。<br>加载速度较慢。<br>导出markdown还算方便，可以整个笔记本导出。</p><h1 id="语雀"><a href="#语雀" class="headerlink" title="语雀"></a>语雀</h1><p>建议不要使用它进行编辑。只作为发布平台。<br>真的，绑架用户是最垃圾的行为。<br>导出便捷性极差，不能整个知识库导出。<br>文章只能一篇一篇导出。<br>我清楚的记得，早期的语雀是可以整个知识库一起导出的，<br>而且导出的格式有很多种，包括word，pdf，markdown等等。<br>我才放心使用的，没想到后面更新后把这些都嘎掉了。<br>现在知识库导出只能导出私有格式，<br>文章导出除了私有格式只有markdown，<br>真的，很，讨厌你们这样的行为。</p><p>迁移成本高，说到底就是绑架用户，<br>网页端体验不佳，切换页面加载很不舒服。<br>不能离线使用。</p><h1 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h1><p>比较全面的工具。<br>官方同步功能价格昂贵，<br>还好有remote save这样的插件可以实现同步功能，<br>我个人结合OneDrive使用十分方便，<br>移动端和PC端同步数据方便。<br>数据就是markdown，备份方便。</p><p>缺点：在公司不敢用。</p><h1 id="VSCODE-office-view扩展"><a href="#VSCODE-office-view扩展" class="headerlink" title="VSCODE+office view扩展"></a>VSCODE+office view扩展</h1><p>不得已的选择，不过比typora文件管理方便一些。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具套件</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Markdown</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Readwise文献剪藏有用吗</title>
     <link href="/posts/22e0203a.html"/>
     <url>/posts/22e0203a.html</url>
@@ -1382,91 +1467,6 @@
   
   
   <entry>
-    <title>markdown笔记工具分析</title>
-    <link href="/posts/c1f4e46a.html"/>
-    <url>/posts/c1f4e46a.html</url>
-    
-    <content type="html"><![CDATA[<p>兜兜转转选择了使用obsidian作为自己的markdown笔记工具。记录一下自己使用其他笔记工具的感受。</p><h1 id="typora"><a href="#typora" class="headerlink" title="typora"></a>typora</h1><p>能很好的完成markdown的编写工作，但缺少文件管理能力。<br>没有标签页。没有其他功能。</p><h1 id="思源"><a href="#思源" class="headerlink" title="思源"></a>思源</h1><p>支持markdown编辑，但数据格式其实是sy这样的私有格式。<br>每一段都有链接能力，粒度太小，其实我用不上。<br>加载速度较慢。<br>导出markdown还算方便，可以整个笔记本导出。</p><h1 id="语雀"><a href="#语雀" class="headerlink" title="语雀"></a>语雀</h1><p>建议不要使用它进行编辑。只作为发布平台。<br>真的，绑架用户是最垃圾的行为。<br>导出便捷性极差，不能整个知识库导出。<br>文章只能一篇一篇导出。<br>我清楚的记得，早期的语雀是可以整个知识库一起导出的，<br>而且导出的格式有很多种，包括word，pdf，markdown等等。<br>我才放心使用的，没想到后面更新后把这些都嘎掉了。<br>现在知识库导出只能导出私有格式，<br>文章导出除了私有格式只有markdown，<br>真的，很，讨厌你们这样的行为。</p><p>迁移成本高，说到底就是绑架用户，<br>网页端体验不佳，切换页面加载很不舒服。<br>不能离线使用。</p><h1 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h1><p>比较全面的工具。<br>官方同步功能价格昂贵，<br>还好有remote save这样的插件可以实现同步功能，<br>我个人结合OneDrive使用十分方便，<br>移动端和PC端同步数据方便。<br>数据就是markdown，备份方便。</p><p>缺点：在公司不敢用。</p><h1 id="VSCODE-office-view扩展"><a href="#VSCODE-office-view扩展" class="headerlink" title="VSCODE+office view扩展"></a>VSCODE+office view扩展</h1><p>不得已的选择，不过比typora文件管理方便一些。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>工具套件</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Markdown</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Obsidian PARA改造思路</title>
-    <link href="/posts/b0a35424.html"/>
-    <url>/posts/b0a35424.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="对于当前Obsidian笔记的PARA改造思路"><a href="#对于当前Obsidian笔记的PARA改造思路" class="headerlink" title="对于当前Obsidian笔记的PARA改造思路"></a>对于当前Obsidian笔记的PARA改造思路</h1><p>相关项目：<a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E7%AC%94%E8%AE%B0%E4%BA%BA%E7%94%9F/%E5%9F%BA%E4%BA%8EPARA%E6%B3%95%E7%9A%84%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E6%9E%B6%E6%9E%84%E5%AE%9E%E7%8E%B0.md">基于PARA法的任务管理架构实现</a></p><h2 id="记忆阵列"><a href="#记忆阵列" class="headerlink" title="记忆阵列"></a>记忆阵列</h2><p>存放的还是日记、周记、年记。<br>目前日记好说，周记和年记做的不是很好，没有执行起来。<br>是否能类似项目的方式去管理？这个待定。</p><h2 id="思维殿堂"><a href="#思维殿堂" class="headerlink" title="思维殿堂"></a>思维殿堂</h2><p>作为我思想的存放处，不需要做项目、领域的概念。<br>每一篇笔记都是零散的也没有关系？<br>此处还是可以考究的，如果是正在进行某些技术的学习，或者课题的研究，是否还是需要建立领域去维系？<br>这个也待定。</p><h2 id="兴趣档案"><a href="#兴趣档案" class="headerlink" title="兴趣档案"></a>兴趣档案</h2><p>每一篇档案，就是一篇领域笔记。<br>每一篇档案承载的是一件事物的信息，对于这件事物如果有正在进行的工作，那么就建立项目。</p><h2 id="文献仓库"><a href="#文献仓库" class="headerlink" title="文献仓库"></a>文献仓库</h2><p>全部为剪藏文献，包括一些文章、语录。作为资源调用即可。</p><h2 id="创作空间"><a href="#创作空间" class="headerlink" title="创作空间"></a>创作空间</h2><p>以某个系列来建立领域，比如：<br>EasyAXI系列视频、怪物猎人模型重涂、喵&amp;汪的日常~ 绘画</p><p>在对这个系列的某次具体工作建立项目，比如：<br>EasyAXI 第五期 AXI Outstanding特性实现、灭尽龙历战王重涂、喵&amp;汪 日本旅游篇等等</p><h2 id="认真生活"><a href="#认真生活" class="headerlink" title="认真生活"></a>认真生活</h2><p>一件需要长期管理的活动作为领域笔记<br>如：小红的成长记录，而某一件具体的工作作为项目，如：2025年Q3 小红背甲、体重月度测量</p><p>如：我的舒适小屋作为领域笔记，桌面整改计划作为项目。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>方法学论</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>笔记</tag>
-      
-      <tag>PARA</tag>
-      
-      <tag>Obsidian</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>哪些笔记应该做PARA化？</title>
-    <link href="/posts/d8e09664.html"/>
-    <url>/posts/d8e09664.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="哪些笔记应该做PARA化？"><a href="#哪些笔记应该做PARA化？" class="headerlink" title="哪些笔记应该做PARA化？"></a>哪些笔记应该做PARA化？</h1><p>相关项目：<a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E7%AC%94%E8%AE%B0%E4%BA%BA%E7%94%9F/%E5%9F%BA%E4%BA%8EPARA%E6%B3%95%E7%9A%84%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E6%9E%B6%E6%9E%84%E5%AE%9E%E7%8E%B0.md">基于PARA法的任务管理架构实现</a></p><h2 id="1-任务型笔记"><a href="#1-任务型笔记" class="headerlink" title="1. 任务型笔记"></a>1. 任务型笔记</h2><ul><li>有明确的达成目标，有目的性获得某种结果。如，完成视频创作，制作生日礼物等。</li><li>倾向于行动导向</li><li>需要较长时间推进完成</li><li>可以分解为多项具体行为</li><li>有明确的完成时间，至少是计划完成时间</li><li>进度可以跟踪</li></ul><p>这其实是在分析适合做Project的笔记，有了项目，那就有相应的领域。</p><h2 id="2-学习型笔记"><a href="#2-学习型笔记" class="headerlink" title="2. 学习型笔记"></a>2. 学习型笔记</h2><ul><li>有明确的领域，如数字芯片设计</li><li>需要长时间推进完成；</li><li>可以分散成多个项目推进领域扩张，如AXI、CHI、Cache……等一系列学习内容，均可独立项目</li></ul><h2 id="3-兴趣型笔记"><a href="#3-兴趣型笔记" class="headerlink" title="3. 兴趣型笔记"></a>3. 兴趣型笔记</h2><ul><li>有明确的领域，如动漫、游戏</li><li>长期关注，长期维护，可谓永无止境。比如会一直看新的动漫、玩新的游戏</li></ul><h2 id="4-资源型笔记"><a href="#4-资源型笔记" class="headerlink" title="4. 资源型笔记"></a>4. 资源型笔记</h2><ul><li>具备参考价值，如各种文献</li><li>灵感库，收集的创意、思维的发散点</li><li>查询的资料，通常因为项目推进而发现，存档后链接到项目</li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>方法学论</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>PARA</tag>
-      
-      <tag>Obsidian</tag>
-      
-      <tag>方法论</tag>
-      
-      <tag>笔记人生</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>家有小红</title>
     <link href="/posts/cea648c2.html"/>
     <url>/posts/cea648c2.html</url>
@@ -1480,6 +1480,73 @@
       <tag>爬宠</tag>
       
       <tag>红腿陆龟</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>完成比完美更重要的日记系统</title>
+    <link href="/posts/8a5ecb4c.html"/>
+    <url>/posts/8a5ecb4c.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="完成比完美更重要的日记系统"><a href="#完成比完美更重要的日记系统" class="headerlink" title="完成比完美更重要的日记系统"></a>完成比完美更重要的日记系统</h1><p><strong>关联领域</strong>: <a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E7%AC%94%E8%AE%B0%E4%BA%BA%E7%94%9F.md">笔记人生</a></p><h2 id="项目计划"><a href="#项目计划" class="headerlink" title="项目计划"></a>项目计划</h2><ul><li><input checked="" disabled="" type="checkbox"> #TODO 公司的方案较好，改造本笔记系统  [due:: 2025-06-29]  [completion:: 2025-07-28]</li><li>[/] #TODO 如何在周记体现打卡情况  [due:: 2025-09-05]</li><li><input checked="" disabled="" type="checkbox"> 习惯跟踪还需要优化显示 #TODO  [due:: 2025-05-31]  [completion:: 2025-06-08]</li><li><input disabled="" type="checkbox"> 如何在周记体现项目进度 #TODO [due:: 2025-05-30]</li><li><input checked="" disabled="" type="checkbox"> quickadd日记按键语法优化  [due:: 2025-05-29]  [completion:: 2025-05-30]</li><li><input checked="" disabled="" type="checkbox"> 尝试调整嵌入小记时的间距  [due:: 2025-05-29]  [completion:: 2025-05-29]</li><li><input checked="" disabled="" type="checkbox"> 小记嵌入显示背景色修改  [due:: 2025-05-29]  [completion:: 2025-05-29]</li><li><input checked="" disabled="" type="checkbox"> 完成三次周记维护，养成习惯 #TODO  [repeat:: every week]  [due:: 2025-06-15]  [completion:: 2025-07-05]</li><li><input checked="" disabled="" type="checkbox"> 完成三次周记维护，养成习惯 #TODO  [repeat:: every week]  [due:: 2025-06-08]  [completion:: 2025-07-05]</li><li><input checked="" disabled="" type="checkbox"> 完成三次周记维护，养成习惯 #TODO  [repeat:: every week]  [due:: 2025-06-01]  [completion:: 2025-07-05]</li><li><input disabled="" type="checkbox"> 添加年记模板 #TODO  [due:: 2025-06-30]</li><li><input disabled="" type="checkbox"> 添加月记模板 #TODO  [due:: 2025-06-15]</li><li><input disabled="" type="checkbox"> 分析月记意义 #TODO  [due:: 2025-06-01]</li><li><input checked="" disabled="" type="checkbox"> 实现日记按键note toolbar美化  [due:: 2025-05-28]  [completion:: 2025-05-28]</li><li><input checked="" disabled="" type="checkbox"> 实现记账按键  [due:: 2025-05-27]  [completion:: 2025-05-28]</li><li><input checked="" disabled="" type="checkbox"> 实现周记汇总打卡进度  [due:: 2025-05-27]  [completion:: 2025-05-30]</li><li><input checked="" disabled="" type="checkbox"> 优化周记模板，更好的整理，并撰写小结  [due:: 2025-05-27]  [completion:: 2025-05-30]</li><li><input checked="" disabled="" type="checkbox"> 建立项目计划  [due:: 2025-05-26]  [completion:: 2025-05-28]</li><li><input checked="" disabled="" type="checkbox"> 优化日记模板  [due:: 2025-05-26]  [completion:: 2025-05-27]</li></ul><h2 id="项目笔记"><a href="#项目笔记" class="headerlink" title="项目笔记"></a>项目笔记</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 获取当前笔记名称（不含.md）<br>const currentNoteName = dv.current().file.name.replace(".md", "");<br><br>// 查询所有链接到当前 project 笔记的 `type=note` 笔记<br>const notePages = dv.pages()<br>    .where(n =&gt; <br>        n.type === "note" &amp;&amp;<br>        n.file.outlinks.some(link =&gt; link.path === dv.current().file.path)<br>    )<br>    .sort(n =&gt; n.modify, 'desc'); // 按修改时间排序<br><br>// 计算统计信息<br>const totalNotes = notePages.length;<br>const completedNotes = notePages.filter(n =&gt; n.done).length;<br>const recentUpdated = notePages[0]?.file.mday.toISODate() || "无记录";<br><br>// 显示结果<br>if (totalNotes &gt; 0) {<br>    dv.table(<br>        ["状态", "笔记名称", "最近修改", "进度"], <br>        [<br>            ...notePages.map(n =&gt; [<br>                n.done ? "✅ 已完成" : "🟡 进行中",<br>                n.file.link,<br>                n.file.mday.toISODate(),<br>                n.progress || "无进度数据"<br>            ]),<br>            // 统计行<br>            [<br>                `**${completedNotes}/${totalNotes}**`,<br>                `**笔记统计**`,<br>                `**最近更新: ${recentUpdated}**`,<br>                ` `<br>            ]<br>        ]<br>    );<br>} else {<br>    dv.span(`当前 project 笔记没有链接到任何笔记`);<br>}<br><br></code></pre></td></tr></tbody></table></figure><h2 id="项目资源"><a href="#项目资源" class="headerlink" title="项目资源"></a>项目资源</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>日记</tag>
+      
+      <tag>PARA</tag>
+      
+      <tag>生活</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>第一次购房计划</title>
+    <link href="/posts/18a15a97.html"/>
+    <url>/posts/18a15a97.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="第一次购房计划"><a href="#第一次购房计划" class="headerlink" title="第一次购房计划"></a>第一次购房计划</h1><p><strong>关联领域</strong>: <a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E8%88%92%E9%80%82%E7%9A%84%E5%AE%B6.md">舒适的家</a></p><h2 id="项目计划"><a href="#项目计划" class="headerlink" title="项目计划"></a>项目计划</h2><ul><li><input checked="" disabled="" type="checkbox"> #TODO 看房黄埔雅苑三期  [due:: 2025-06-22]  [completion:: 2025-06-22]</li><li><input checked="" disabled="" type="checkbox"> #TODO 整理买房核心要素  [due:: 2025-06-18]  [completion:: 2025-06-22]</li><li><input checked="" disabled="" type="checkbox"> #TODO 建立项目计划  [due:: 2025-06-18]  [completion:: 2025-06-23]</li></ul><h2 id="项目笔记"><a href="#项目笔记" class="headerlink" title="项目笔记"></a>项目笔记</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 获取当前笔记名称（不含.md）<br>const currentNoteName = dv.current().file.name.replace(".md", "");<br><br>// 查询所有链接到当前 project 笔记的 `type=note` 笔记<br>const notePages = dv.pages()<br>    .where(n =&gt; <br>        n.type === "notes" &amp;&amp;<br>        n.file.outlinks.some(link =&gt; link.path === dv.current().file.path)<br>    )<br>    .sort(n =&gt; n.modify, 'desc'); // 按修改时间排序<br><br>// 计算统计信息<br>const totalNotes = notePages.length;<br>const completedNotes = notePages.filter(n =&gt; n.done).length;<br>const recentUpdated = notePages[0]?.file.mday.toISODate() || "无记录";<br><br>// 显示结果<br>if (totalNotes &gt; 0) {<br>    dv.table(<br>        ["状态", "笔记名称", "最近修改", "进度"], <br>        [<br>            ...notePages.map(n =&gt; [<br>                n.done ? "✅ 已完成" : "🟡 进行中",<br>                n.file.link,<br>                n.file.mday.toISODate(),<br>                n.progress || "无进度数据"<br>            ]),<br>            // 统计行<br>            [<br>                `**${completedNotes}/${totalNotes}**`,<br>                `**笔记统计**`,<br>                `**最近更新: ${recentUpdated}**`,<br>                ` `<br>            ]<br>        ]<br>    );<br>} else {<br>    dv.span(`当前 project 笔记没有链接到任何笔记`);<br>}<br><br></code></pre></td></tr></tbody></table></figure><h2 id="项目资源"><a href="#项目资源" class="headerlink" title="项目资源"></a>项目资源</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>购房</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>基于PARA法的任务管理架构实现</title>
+    <link href="/posts/43d2d36c.html"/>
+    <url>/posts/43d2d36c.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="基于PARA法的任务管理架构实现"><a href="#基于PARA法的任务管理架构实现" class="headerlink" title="基于PARA法的任务管理架构实现"></a>基于PARA法的任务管理架构实现</h1><p><strong>关联领域</strong>: <a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E7%AC%94%E8%AE%B0%E4%BA%BA%E7%94%9F.md">笔记人生</a></p><h2 id="项目计划"><a href="#项目计划" class="headerlink" title="项目计划"></a>项目计划</h2><ul><li><input disabled="" type="checkbox"> #TODO hexo发布自动化 [due:: 2025-09-07]</li><li><input checked="" disabled="" type="checkbox"> #TODO 建立习惯打卡规则  [due:: 2025-09-04]  [completion:: 2025-09-05]</li><li><input checked="" disabled="" type="checkbox"> #TODO 主页项目领域笔记显示优化。  [due:: 2025-08-17]  [completion:: 2025-08-29]</li><li><input disabled="" type="checkbox"> #TODO 三天打鱼两天晒网的计划，是否还能重拾？还剩小半年，现在开始还不晚。  [due:: 2025-09-06]</li><li><input checked="" disabled="" type="checkbox"> #TODO type修改project为复数  [due:: 2025-08-03]  [completion:: 2025-08-19]</li><li><input checked="" disabled="" type="checkbox"> #TODO 如何在主页呈现项目信息  [due:: 2025-06-08]  [completion:: 2025-09-01]</li><li><input checked="" disabled="" type="checkbox"> #TODO 按键改造成note toolbar  [due:: 2025-05-26]  [completion:: 2025-05-28]</li><li><input disabled="" type="checkbox"> 增加项目延期场景 #TODO [due:: 2025-05-26]</li><li><input checked="" disabled="" type="checkbox"> 增加项目计划关闭时间 #TODO  [due:: 2025-05-26]  [completion:: 2025-06-08]</li><li><input disabled="" type="checkbox"> 整理PARA笔记执行流程 #TODO  [due:: 2025-05-31]</li><li><input disabled="" type="checkbox"> 完成PARA改造 #TODO  [due:: 2025-09-30]</li><li><input checked="" disabled="" type="checkbox"> 领域笔记模板准备 #TODO  [due:: 2025-05-26]  [completion:: 2025-06-18]</li><li><input disabled="" type="checkbox"> 项目笔记模板准备 #TODO [due:: 2025-05-26]</li><li><input checked="" disabled="" type="checkbox"> #TODO 建立项目计划  [due:: 2025-05-21]  [completion:: 2025-05-26]</li><li><input checked="" disabled="" type="checkbox"> #TODO 支持在项目的目录下直接新建笔记  [due:: 2025-05-25]  [completion:: 2025-05-25]</li><li><input checked="" disabled="" type="checkbox"> #TODO 明确哪些类型的笔记需要PARA化  [due:: 2025-05-25]  [completion:: 2025-05-25]</li><li><input checked="" disabled="" type="checkbox"> #TODO 实现项目看板，显示进度、完成状态、结项日期等  [due:: 2025-05-24]  [completion:: 2025-05-24]</li><li><input checked="" disabled="" type="checkbox"> #TODO 建立folder note，实现文件层次化归档  [due:: 2025-05-23]  [completion:: 2025-05-23]</li><li><input checked="" disabled="" type="checkbox"> #TODO 支持领域笔记自动查询相关项目笔记，显示修改时间及进度  [due:: 2025-05-21]  [completion:: 2025-05-22]</li><li><input checked="" disabled="" type="checkbox"> #TODO 支持自动更新笔记进度  [due:: 2025-05-21]  [completion:: 2025-05-22]</li></ul><h2 id="项目日志"><a href="#项目日志" class="headerlink" title="项目日志"></a>项目日志</h2><h3 id="2025-09-07-hexo自动化不方便"><a href="#2025-09-07-hexo自动化不方便" class="headerlink" title="2025-09-07 hexo自动化不方便"></a>2025-09-07 hexo自动化不方便</h3><p><a href="https://github.com/Enveloppe/obsidian-enveloppe">https://github.com/Enveloppe/obsidian-enveloppe</a> 研究下这个 </p><h3 id="2025-08-31-理解进一步加深"><a href="#2025-08-31-理解进一步加深" class="headerlink" title="2025-08-31 理解进一步加深"></a>2025-08-31 理解进一步加深</h3><p>需要绘制一个系统架构图，来推进PARA架构了。 </p><h2 id="项目笔记"><a href="#项目笔记" class="headerlink" title="项目笔记"></a>项目笔记</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 获取当前笔记名称（不含.md）<br>const currentNoteName = dv.current().file.name.replace(".md", "");<br><br>// 查询所有链接到当前 project 笔记的 `type=note` 笔记<br>const notePages = dv.pages()<br>    .where(n =&gt; <br>        n.type === "notes" &amp;&amp;<br>        n.file.outlinks.some(link =&gt; link.path === dv.current().file.path)<br>    )<br>    .sort(n =&gt; n.modify, 'desc'); // 按修改时间排序<br><br>// 计算统计信息<br>const totalNotes = notePages.length;<br>const completedNotes = notePages.filter(n =&gt; n.done).length;<br>const recentUpdated = notePages[0]?.file.mday.toISODate() || "无记录";<br><br>// 显示结果<br>if (totalNotes &gt; 0) {<br>    dv.table(<br>        ["状态", "笔记名称", "最近修改", "进度"], <br>        [<br>            ...notePages.map(n =&gt; [<br>                n.done ? "✅ 已完成" : "🟡 进行中",<br>                n.file.link,<br>                n.file.mday.toISODate(),<br>                n.progress || "无进度数据"<br>            ]),<br>            // 统计行<br>            [<br>                `**${completedNotes}/${totalNotes}**`,<br>                `**笔记统计**`,<br>                `**最近更新: ${recentUpdated}**`,<br>                ` `<br>            ]<br>        ]<br>    );<br>} else {<br>    dv.span(`当前 project 笔记没有链接到任何笔记`);<br>}<br><br></code></pre></td></tr></tbody></table></figure><h2 id="项目资源"><a href="#项目资源" class="headerlink" title="项目资源"></a>项目资源</h2><ul><li>[[让模糊的愿望一步步落地：基于 Obsidian 的目标项目化实践]]</li><li>[[笔记软件及剪藏：Obsidian与Markdownload - 知乎]]</li><li>[[文献仓库/待读/让模糊的愿望一步步落地：基于 Obsidian 的目标项目化实践]]</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>PARA</tag>
+      
+      <tag>Obsidian</tag>
+      
+      <tag>方法论</tag>
+      
+      <tag>任务管理</tag>
       
     </tags>
     
@@ -1515,65 +1582,27 @@
   
   
   <entry>
-    <title>基于PARA法的任务管理架构实现</title>
-    <link href="/posts/43d2d36c.html"/>
-    <url>/posts/43d2d36c.html</url>
+    <title>2025 五一 巴厘岛</title>
+    <link href="/posts/a1ad8d3c.html"/>
+    <url>/posts/a1ad8d3c.html</url>
     
-    <content type="html"><![CDATA[<h1 id="基于PARA法的任务管理架构实现"><a href="#基于PARA法的任务管理架构实现" class="headerlink" title="基于PARA法的任务管理架构实现"></a>基于PARA法的任务管理架构实现</h1><p><strong>关联领域</strong>: <a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E7%AC%94%E8%AE%B0%E4%BA%BA%E7%94%9F.md">笔记人生</a></p><h2 id="项目计划"><a href="#项目计划" class="headerlink" title="项目计划"></a>项目计划</h2><ul><li><input checked="" disabled="" type="checkbox"> #TODO 建立习惯打卡规则  [due:: 2025-09-04]  [completion:: 2025-09-05]</li><li><input checked="" disabled="" type="checkbox"> #TODO 主页项目领域笔记显示优化。  [due:: 2025-08-17]  [completion:: 2025-08-29]</li><li><input disabled="" type="checkbox"> #TODO 三天打鱼两天晒网的计划，是否还能重拾？还剩小半年，现在开始还不晚。  [due:: 2025-09-06]</li><li><input checked="" disabled="" type="checkbox"> #TODO type修改project为复数  [due:: 2025-08-03]  [completion:: 2025-08-19]</li><li><input checked="" disabled="" type="checkbox"> #TODO 如何在主页呈现项目信息  [due:: 2025-06-08]  [completion:: 2025-09-01]</li><li><input checked="" disabled="" type="checkbox"> #TODO 按键改造成note toolbar  [due:: 2025-05-26]  [completion:: 2025-05-28]</li><li><input disabled="" type="checkbox"> 增加项目延期场景 #TODO [due:: 2025-05-26]</li><li><input checked="" disabled="" type="checkbox"> 增加项目计划关闭时间 #TODO  [due:: 2025-05-26]  [completion:: 2025-06-08]</li><li><input disabled="" type="checkbox"> 整理PARA笔记执行流程 #TODO  [due:: 2025-05-31]</li><li><input disabled="" type="checkbox"> 完成PARA改造 #TODO  [due:: 2025-09-30]</li><li><input checked="" disabled="" type="checkbox"> 领域笔记模板准备 #TODO  [due:: 2025-05-26]  [completion:: 2025-06-18]</li><li><input disabled="" type="checkbox"> 项目笔记模板准备 #TODO [due:: 2025-05-26]</li><li><input checked="" disabled="" type="checkbox"> #TODO 建立项目计划  [due:: 2025-05-21]  [completion:: 2025-05-26]</li><li><input checked="" disabled="" type="checkbox"> #TODO 支持在项目的目录下直接新建笔记  [due:: 2025-05-25]  [completion:: 2025-05-25]</li><li><input checked="" disabled="" type="checkbox"> #TODO 明确哪些类型的笔记需要PARA化  [due:: 2025-05-25]  [completion:: 2025-05-25]</li><li><input checked="" disabled="" type="checkbox"> #TODO 实现项目看板，显示进度、完成状态、结项日期等  [due:: 2025-05-24]  [completion:: 2025-05-24]</li><li><input checked="" disabled="" type="checkbox"> #TODO 建立folder note，实现文件层次化归档  [due:: 2025-05-23]  [completion:: 2025-05-23]</li><li><input checked="" disabled="" type="checkbox"> #TODO 支持领域笔记自动查询相关项目笔记，显示修改时间及进度  [due:: 2025-05-21]  [completion:: 2025-05-22]</li><li><input checked="" disabled="" type="checkbox"> #TODO 支持自动更新笔记进度  [due:: 2025-05-21]  [completion:: 2025-05-22]</li></ul><h2 id="项目日志"><a href="#项目日志" class="headerlink" title="项目日志"></a>项目日志</h2><h3 id="2025-08-31-理解进一步加深"><a href="#2025-08-31-理解进一步加深" class="headerlink" title="2025-08-31 理解进一步加深"></a>2025-08-31 理解进一步加深</h3><p>需要绘制一个系统架构图，来推进PARA架构了。 </p><h2 id="项目笔记"><a href="#项目笔记" class="headerlink" title="项目笔记"></a>项目笔记</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 获取当前笔记名称（不含.md）<br>const currentNoteName = dv.current().file.name.replace(".md", "");<br><br>// 查询所有链接到当前 project 笔记的 `type=note` 笔记<br>const notePages = dv.pages()<br>    .where(n =&gt; <br>        n.type === "notes" &amp;&amp;<br>        n.file.outlinks.some(link =&gt; link.path === dv.current().file.path)<br>    )<br>    .sort(n =&gt; n.modify, 'desc'); // 按修改时间排序<br><br>// 计算统计信息<br>const totalNotes = notePages.length;<br>const completedNotes = notePages.filter(n =&gt; n.done).length;<br>const recentUpdated = notePages[0]?.file.mday.toISODate() || "无记录";<br><br>// 显示结果<br>if (totalNotes &gt; 0) {<br>    dv.table(<br>        ["状态", "笔记名称", "最近修改", "进度"], <br>        [<br>            ...notePages.map(n =&gt; [<br>                n.done ? "✅ 已完成" : "🟡 进行中",<br>                n.file.link,<br>                n.file.mday.toISODate(),<br>                n.progress || "无进度数据"<br>            ]),<br>            // 统计行<br>            [<br>                `**${completedNotes}/${totalNotes}**`,<br>                `**笔记统计**`,<br>                `**最近更新: ${recentUpdated}**`,<br>                ` `<br>            ]<br>        ]<br>    );<br>} else {<br>    dv.span(`当前 project 笔记没有链接到任何笔记`);<br>}<br><br></code></pre></td></tr></tbody></table></figure><h2 id="项目资源"><a href="#项目资源" class="headerlink" title="项目资源"></a>项目资源</h2><ul><li>[[让模糊的愿望一步步落地：基于 Obsidian 的目标项目化实践]]</li><li>[[笔记软件及剪藏：Obsidian与Markdownload - 知乎]]</li><li>[[文献仓库/待读/让模糊的愿望一步步落地：基于 Obsidian 的目标项目化实践]]</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="第一天-在途"><a href="#第一天-在途" class="headerlink" title="第一天 在途"></a>第一天 在途</h1><p>这一天值得说的是去程，<br>这次选择了蛇口轮渡到香港机场的方案，<br>我只能说非常舒适，人少，过关快，有厕所，到机场时间稳定可控，全程很放松。<br>这次选择了国泰航空，比较贵，但是确实很好。飞机餐食有准备特色印尼菜，味道好，最后哈根达斯收尾。</p><p>大约五点半，落地机场后就是光速出关，找接机。是那种拿着纸写着BAI的那种哈哈，找着以后坐车前往酒店。<br>这里开始感受巴厘岛落后了……主干道路也窄，所以很堵，非常堵，开了很久。路上也是摩托乱窜。两侧店铺破旧，小平房，经济发展毫无疑问是比较差滴，不过能看到当地风格的建筑，所以还算新奇。<br>但到了酒店就不一样了。<br>直接到酒店入住，酒店是那种度假酒店，围了一个泳池的那种，看着贼好，第一次住这样的酒店还是很新奇的。</p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250430_183819.jpg" srcset="/img/loading.gif" lazyload alt="20250430_183819.jpg"><br>酒店内很豪华，酒店外真的就很破，直接进小县城的感觉。<br>为了吃晚饭，很保守的在酒店旁的餐厅吃了一顿。<br>味道很独特但称不上好吃，那个炒饭好咸……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250430_204252.jpg" srcset="/img/loading.gif" lazyload alt="20250430_204252.jpg"></p><h1 id="第二天-渐入佳境"><a href="#第二天-渐入佳境" class="headerlink" title="第二天 渐入佳境"></a>第二天 渐入佳境</h1><p>第二天，我开始有度假的感觉啦<br>首先是好好睡了一觉，睡醒慢悠悠的去吃了早餐。五星级酒店的早餐就是赞啊，自助餐，东西很丰富，水准很高。特别的，他们的咖啡很好喝，我点的那杯拿铁很香，很润，喝起来很舒服，唤醒我精神的感觉。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_094209.jpg" srcset="/img/loading.gif" lazyload alt="20250501_094209.jpg"></p><p>然后出门购物，说实话，乡下地方，街道两旁的东西并不是很好逛，东西少，价格贵，但我依旧在一个手工艺品店挑了一个木雕猫头鹰，莫名的就看对眼了，价格15rmb就也还好。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_115105.jpg" srcset="/img/loading.gif" lazyload alt="20250501_115105.jpg"></p><p>最后还是在一个小mall里买齐了东西，柳依要的裤子，编织袋，我还买了一件花衬衫哈哈，挺帅，适合我的气质。<br>午饭吃的泰国菜，柳依是越南粉，我是鸡肉绿咖喱，还喝了泰式奶茶和椰子。泰奶很好喝，不知道咋做的，风味上很像港奶，但是比它丝滑，也更甜一点。绿咖喱很有特色，很好吃，但我觉得咖喱少了一点，饭没法全部配着吃完，可惜可惜。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_130201.jpg" srcset="/img/loading.gif" lazyload alt="20250501_130201.jpg"></p><p>下午就很度假啦，我直接拒绝了白白出门找甜点的计划，美美的享受酒店泳池旁的闲适感。穿上我新买的花衬衫和泳裤，找一张凳子，铺上免费的毛巾，往那一趟，嘴里喝着冰可乐，手里拿着电子书，别提多安逸了～身体稍微沾点水，再躺在椅子上，风轻轻吹过带来凉意，感觉特别特别舒服，心情很放松，没有压力没有烦恼，短暂且珍贵。白白最后也被这舒服的氛围所吸引，没有出门，换上泳装跟我一起下水玩了一会。我老婆泳装真好看，心动的感觉。最后慢悠悠地把我的败犬女主第三卷看完啦，至此动漫第一季的剧情我也是补完了，文字版依旧有趣，真的好喜欢这些角色的性格和对话，看得我很开心。后面就是新鲜的剧情了，好期待啊！<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_151606.jpg" srcset="/img/loading.gif" lazyload alt="20250501_151606.jpg"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_154956.jpg" srcset="/img/loading.gif" lazyload alt="20250501_154956.jpg"></p><p>大约五点钟，才再次出门前往沙滩。沙滩很近走路五分钟就到了，他们这沙滩海岸线很长，可以沿着一直走。幸运的是沙滩比较实，我没有拖鞋，穿着徒步鞋走过也完全没有进沙子。吹着海风，听着海浪，心情愈发平和。最后花了50r两个人，租了两张舒服的沙滩椅躺着等日落。有点可惜的是日落到海平面的最后一节被厚厚的云层遮挡住了，幸运的是即便没到最后一节，夕阳也已经散发出了绝美的红颜，感恩。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/DSCF0049.JPG" srcset="/img/loading.gif" lazyload alt="DSCF0049.JPG"></p><p>日落后，我们就去觅食了。莫名找到一家bar，主要是因为白白把海鲜拼盘误认为烤猪扒了……bar的氛围很好，所以也呆的下去。两人共喝一瓶BINTANG啤酒，但很遗憾东西没有很好吃，点了个羊肉塔可？量很少，一口就无啦，全靠标准水平的玛格丽塔披萨保住了肚子不饿。饭后再步行回酒店的路上，再次发现了冰淇淋，点了一个朗姆口味和柠檬口味，朗姆酒香醇厚，柠檬清爽，好吃滴。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_183842.jpg" srcset="/img/loading.gif" lazyload alt="20250501_183842.jpg"></p><p>第二天并未就此结束，今天早上我们已经预约好了晚上八点的SPA，所以回到酒店休整一下就前往享受Spa生活。精油推拿我没怎么体验过，这次全是享受到了，确实是很舒服。技师小姐姐力气不算大，在我略微有疼痛感的水平。但是推的很认真很到位，六十分钟流程很扎实，捏完身体酥酥软软滴。<br>第二天全是真真进入假期状态了，而且第一次体验到这种度假，而非旅游的感觉。整个人就是放松，放松，不像旅游，其实还挺累的，晚上在酒店就是摊着，腰酸疼的要死那种……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_195907.jpg" srcset="/img/loading.gif" lazyload alt="20250501_195907.jpg"></p><h1 id="第三天-转移AYANA"><a href="#第三天-转移AYANA" class="headerlink" title="第三天 转移AYANA"></a>第三天 转移AYANA</h1><p>今天睡醒的就比较早了，所以计划好了去泳池游泳再吃早餐。白白犹豫了老半天，还是禁不住游泳的诱惑一起去了。我游的不多，主要是躺在浮床上凉爽地晒太阳，最后游了十分钟就很舒服了。<br>运动完再吃早餐果然胃口极佳，直接拿了满满一大盆，还能快速全部吃完了。这酒店自助是真心不错，可能我标准低吧，反正觉得都挺好吃的，吃的挺开心。<br>顺利的拉完屎，现在瘫在阳台的沙发上敲游记。今天天气依旧很好，不算热，风吹过暖暖地很舒服的那种。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250502_090610.jpg" srcset="/img/loading.gif" lazyload alt="20250502_090610.jpg"></p><p>中午没吃饭，找了个小咖啡馆消磨了一些时间，再打车前往超高级度假村，ayana。<br>真是长见识了，一个超大的度假村区域，就是直接围了一块地，里面分四个区域的旅馆。我们选择的是最便宜的林巴区，但环境也很棒很大。每个区域都有泳池，餐厅，酒吧，真的极尽享受。这天下午入住休整了一下，就前往主要的海边悬崖区，ayana lobby那边，看看海景。这个区域整体建筑就是很有印度风，顺着台阶而下可以纵览海景，没有遮挡。运气不错，天虽不蓝但并没有雨，所以海景还是很赞，就是天气有点热，闷得我一下就出汗了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/DSCF0078.JPG" srcset="/img/loading.gif" lazyload alt="DSCF0078.JPG"></p><p>网上预定的餐厅是kisik海鲜&amp;烧烤，没选那个最有名的岩石餐厅。岩石餐厅那里也就是下去看了一眼，真想看日落我觉得还是kisik强，坐到了刚好正看日落的桌子。预定的五点半，日落是六点零几分的时候，顺利看到了全程，开心。晚饭比较一般了，也没有指望，点的牛排，虾，海鲜串，全都只能说还过得去，谈不上特别好吃。唯一亮点是免费送的空心菜，我甚至找服务员加了一份。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250502_174855.jpg" srcset="/img/loading.gif" lazyload alt="20250502_174855.jpg"></p><p>回酒店泡了个澡，养足精神后，去了unique屋顶泳池酒吧搞浪漫。我也是第一次喝鸡尾酒，点了杯大名鼎鼎的长岛冰茶。挺好喝，但是太上头了，印象深刻的伏特加味道。柳依喝了个无酒精混合果汁，感觉那个也很好喝。两个人在那强行搞浪漫哈哈。不过我确实喝的太上头了，晚上直接昏睡。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250502_210910.jpg" srcset="/img/loading.gif" lazyload alt="20250502_210910.jpg"></p><h1 id="第四天-完美海滩游"><a href="#第四天-完美海滩游" class="headerlink" title="第四天 完美海滩游"></a>第四天 完美海滩游</h1><p>今天的主要任务就是AYANA的私人海滩，库布海滩。早上睡到自然醒，但也赶在九点高峰期前吃上了TOGE餐厅的自助早餐。价格着实高，但好在吃的确实不错。主打的就是种类丰富多样，覆盖各国美食，我属于啥也喜欢的流派，所以拿了好大一碟。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_085900.jpg" srcset="/img/loading.gif" lazyload alt="20250503_085900.jpg"></p><p>吃饱喝足坐摆渡车前往库布海滩，此时天气已经有点热意了。先说结论，本次海滩游非常完美，拍到了很多美照，也在海浪中好好玩耍了一番。库布海滩需要乘坐电梯到悬崖下，是一个在峡口的海滩。沙子很白很美，海水也很透亮，是那种浅水绿深水蓝，最符合海岛形象的海水。能看到这样的海景，本次旅程的价值就达成一大半了。<br>我比较兴奋，虽然海浪比较大，估计是浮潜不了了，但是玩水本身就很有乐趣。白白老是嫌晒，被我催促了好几次才愿意换上泳衣。事实证明不穿泳衣拍就太可惜了，天气真的绝赞，海浪也很美，沙滩很白很长，轻而易举就拍出了大量美腻的泳装照片。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_103744.jpg" srcset="/img/loading.gif" lazyload alt="20250503_103744.jpg"></p><p>话说我老婆身材真好啊。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/DSCF0452.JPG" srcset="/img/loading.gif" lazyload alt="DSCF0452.JPG"></p><p>拍了照片以后白白就躲到沙滩椅下了，我自己跑去玩水。稍微试着游了一下，感觉浪真的是太大了，好凶，怪吓人的。比较大的浪能直接把人掀翻，不做好准备站都站不稳，所以放弃了游太远，更别说浮潜了。最后直接在海滩边上玩海浪对抗小游戏，尝试在每一波海浪冲击下站稳。这么无聊的游戏我愣是开心的玩了十多分钟哈哈哈。有一次浪真的是太大了，我直接被掀翻，人都懵懵的。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_111345.jpg" srcset="/img/loading.gif" lazyload alt="20250503_111345.jpg"></p><p>上午库布海滩顺利结束后，中午打车去吃烤猪扒。比较有名的一家猪扒店，叫做wahaha。烤猪扒保守了，点了小份的，没想到香嫩酥脆，吸溜几口就没了，很可惜。<br>吃完还逛了纪念品店，以及当地的大超市sideway。这个大超市其实就是类似ole的那种进口商品店。稍微买了点特色零食后就回酒店了，下午没睡觉巨困。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_133649.jpg" srcset="/img/loading.gif" lazyload alt="20250503_133649.jpg"></p><p>回酒店休整周，又接着去泳池放松。我们住的这个wana有一个长条的森林泳池，来的人比较少，所以很放松。我发现了一个绝赞姿势，就是躺在浮床上，边泡泳池边看电子书。这样很凉快，下午的阳光洒在身上也暖暖的，很舒服。而白白又去她的长距离游泳去了，估摸着游了一公里，太强了哦喵喵。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_162331.jpg" srcset="/img/loading.gif" lazyload alt="20250503_162331.jpg"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_162331.jpg" srcset="/img/loading.gif" lazyload alt="20250503_162331.jpg"></p><p>晚上再次去觅食，很无语的是没有预约上那个日料餐厅，本膳，吃个拉面啥的。去了以后说只能进食60分钟，那还是算了。反身去TO’GE，反而吃到了好东西。不愧是最多元的餐厅，点到了仁当牛肉，这可是印尼国菜，吃上了真的太棒了，貌似是用各种香辛料咖喱粉炖煮后的牛肉，非常好吃，非常扎实，这个吃起来比昨晚的牛排幸福多了。叻沙比较贵比较一般。还有巴厘猪肉卷，卷很大很厚，一口下去有很丰富的香味。今晚吃的很好吃，很有特色，感谢本膳没能让我吃上。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_193048.jpg" srcset="/img/loading.gif" lazyload alt="20250503_193048.jpg"></p><p>晚上本来计划去runa屋顶泳池酒吧，但因为今天也泡过水，白白也吃撑了，就选择散步去看看岩石后酒吧。入住的时候还送了免费的鸡尾酒，可以去白嫖体验一下。气氛还可以，是乐队在表演，不是那种轰轰轰的DJ音乐。但就是不习惯蹦迪，玩不起来。两个人安静地在那嘬着免费的鸡尾酒，欣赏到了欧美白人大叔的熟练蹦迪。听了几首曲子后就溜了，终究是享受不来呢。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_214853.jpg" srcset="/img/loading.gif" lazyload alt="20250503_214853.jpg"></p><h1 id="第五天-最后的躺平"><a href="#第五天-最后的躺平" class="headerlink" title="第五天 最后的躺平"></a>第五天 最后的躺平</h1><p>今天下午的飞机，所以上午还能好好享受完整的半天假期。<br>早上起的稍微早一点，带着昨天超市买好的面包当早餐，去rimba特色的tevana花园晨间散步。这个花园还挺大的，里面有大片漂亮的草坪和各种花卉，看不太懂。人很少，应该没啥人会来这个景点，所以可以安安静静的散步一圈。早晨的时候到花园里呼吸一下，感觉还是挺不错滴。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250504_082041.jpg" srcset="/img/loading.gif" lazyload alt="20250504_082041.jpg"></p><p>然后还跑了一趟runa屋顶泳池，把昨晚没去的也去见识了一下。屋顶的泳池风景确实挺不错的，可以看到海，可惜太晒了，所以白白待不下去就撤退了。<br>最后我们两兵分两路。我去rimba的无边泳池泡水晒太阳看书，白白去健身房。这个泳池感觉很不错啊，有一个半没在水池的躺椅，我可以躺在上面看书，哇塞这个体验太爽了。只要没在水里，即便偶尔被太阳晒着也不觉得热，很舒服。泡够了再随便游个两圈，就上岸躺在椅子上享受微风吹拂。很难阐述那种安逸和舒适，只能说舒服到容易睡着。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250504_103509.jpg" srcset="/img/loading.gif" lazyload alt="20250504_082041.jpg"></p><p>十一点多，就回房收拾行李啦，虽然恋恋不舍但还是得离开了。退房寄存行李，我们再次去TOGE吃午饭。这次点了心心念念的海南鸡饭和马来鱼咖喱，终于是正经地吃了一顿咖喱，冬阴功风味的那种，我超爱。这个马来鱼肉很大，很扎实，而且完全没有刺，这下真的爽吃咖喱了。再配上经典可口可乐，一口咖喱一口可乐，顶级。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250504_122548.jpg" srcset="/img/loading.gif" lazyload alt="20250504_122548.jpg"></p><p>吃完饭甚至还跑了趟精品店，想要买AYANA的客房睡衣，穿着真的很方便很舒服，可惜没有蓝色的了，最后我买了AYANA的深红色，白白买了RIMBA的绿色，也算是此行最大的纪念品。因为预先订好了送机的车，所以一点十五分准时上车前往机场。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250504_125657.jpg" srcset="/img/loading.gif" lazyload alt="20250504_125657.jpg"></p><p>至此，本次巴厘岛度假之旅正式结束。</p><h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>这是一次非常完美的度假旅游，全程都很顺利。而且天气很好，每一天都是晴天，太给面子了，真的非常感谢！<br>天气加持下，巴厘岛的海很蓝很美，度假酒店的泳池待着也很舒适。这次和白白也多次对齐行程主旨：不是旅行，而是度假。<br>很成功，度假不会紧张，也不需要奔波，不会疲惫。身体和心理真的好好得到了休息。<br>我也是第一次体会到度假的快乐，现在工作真的太紧张太忙太累了，幸好有这个假期让我好好恢复了一下。<br>现在在候机室，过一会就登机啦，再见咯BALI～</p>]]></content>
     
+    
+    <categories>
+      
+      <category>世界巡礼</category>
+      
+    </categories>
     
     
     <tags>
       
-      <tag>PARA</tag>
+      <tag>巴厘岛</tag>
       
-      <tag>Obsidian</tag>
+      <tag>度假</tag>
       
-      <tag>方法论</tag>
-      
-      <tag>任务管理</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>完成比完美更重要的日记系统</title>
-    <link href="/posts/8a5ecb4c.html"/>
-    <url>/posts/8a5ecb4c.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="完成比完美更重要的日记系统"><a href="#完成比完美更重要的日记系统" class="headerlink" title="完成比完美更重要的日记系统"></a>完成比完美更重要的日记系统</h1><p><strong>关联领域</strong>: <a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E7%AC%94%E8%AE%B0%E4%BA%BA%E7%94%9F.md">笔记人生</a></p><h2 id="项目计划"><a href="#项目计划" class="headerlink" title="项目计划"></a>项目计划</h2><ul><li><input checked="" disabled="" type="checkbox"> #TODO 公司的方案较好，改造本笔记系统  [due:: 2025-06-29]  [completion:: 2025-07-28]</li><li>[/] #TODO 如何在周记体现打卡情况  [due:: 2025-09-05]</li><li><input checked="" disabled="" type="checkbox"> 习惯跟踪还需要优化显示 #TODO  [due:: 2025-05-31]  [completion:: 2025-06-08]</li><li><input disabled="" type="checkbox"> 如何在周记体现项目进度 #TODO [due:: 2025-05-30]</li><li><input checked="" disabled="" type="checkbox"> quickadd日记按键语法优化  [due:: 2025-05-29]  [completion:: 2025-05-30]</li><li><input checked="" disabled="" type="checkbox"> 尝试调整嵌入小记时的间距  [due:: 2025-05-29]  [completion:: 2025-05-29]</li><li><input checked="" disabled="" type="checkbox"> 小记嵌入显示背景色修改  [due:: 2025-05-29]  [completion:: 2025-05-29]</li><li><input checked="" disabled="" type="checkbox"> 完成三次周记维护，养成习惯 #TODO  [repeat:: every week]  [due:: 2025-06-15]  [completion:: 2025-07-05]</li><li><input checked="" disabled="" type="checkbox"> 完成三次周记维护，养成习惯 #TODO  [repeat:: every week]  [due:: 2025-06-08]  [completion:: 2025-07-05]</li><li><input checked="" disabled="" type="checkbox"> 完成三次周记维护，养成习惯 #TODO  [repeat:: every week]  [due:: 2025-06-01]  [completion:: 2025-07-05]</li><li><input disabled="" type="checkbox"> 添加年记模板 #TODO  [due:: 2025-06-30]</li><li><input disabled="" type="checkbox"> 添加月记模板 #TODO  [due:: 2025-06-15]</li><li><input disabled="" type="checkbox"> 分析月记意义 #TODO  [due:: 2025-06-01]</li><li><input checked="" disabled="" type="checkbox"> 实现日记按键note toolbar美化  [due:: 2025-05-28]  [completion:: 2025-05-28]</li><li><input checked="" disabled="" type="checkbox"> 实现记账按键  [due:: 2025-05-27]  [completion:: 2025-05-28]</li><li><input checked="" disabled="" type="checkbox"> 实现周记汇总打卡进度  [due:: 2025-05-27]  [completion:: 2025-05-30]</li><li><input checked="" disabled="" type="checkbox"> 优化周记模板，更好的整理，并撰写小结  [due:: 2025-05-27]  [completion:: 2025-05-30]</li><li><input checked="" disabled="" type="checkbox"> 建立项目计划  [due:: 2025-05-26]  [completion:: 2025-05-28]</li><li><input checked="" disabled="" type="checkbox"> 优化日记模板  [due:: 2025-05-26]  [completion:: 2025-05-27]</li></ul><h2 id="项目笔记"><a href="#项目笔记" class="headerlink" title="项目笔记"></a>项目笔记</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 获取当前笔记名称（不含.md）<br>const currentNoteName = dv.current().file.name.replace(".md", "");<br><br>// 查询所有链接到当前 project 笔记的 `type=note` 笔记<br>const notePages = dv.pages()<br>    .where(n =&gt; <br>        n.type === "note" &amp;&amp;<br>        n.file.outlinks.some(link =&gt; link.path === dv.current().file.path)<br>    )<br>    .sort(n =&gt; n.modify, 'desc'); // 按修改时间排序<br><br>// 计算统计信息<br>const totalNotes = notePages.length;<br>const completedNotes = notePages.filter(n =&gt; n.done).length;<br>const recentUpdated = notePages[0]?.file.mday.toISODate() || "无记录";<br><br>// 显示结果<br>if (totalNotes &gt; 0) {<br>    dv.table(<br>        ["状态", "笔记名称", "最近修改", "进度"], <br>        [<br>            ...notePages.map(n =&gt; [<br>                n.done ? "✅ 已完成" : "🟡 进行中",<br>                n.file.link,<br>                n.file.mday.toISODate(),<br>                n.progress || "无进度数据"<br>            ]),<br>            // 统计行<br>            [<br>                `**${completedNotes}/${totalNotes}**`,<br>                `**笔记统计**`,<br>                `**最近更新: ${recentUpdated}**`,<br>                ` `<br>            ]<br>        ]<br>    );<br>} else {<br>    dv.span(`当前 project 笔记没有链接到任何笔记`);<br>}<br><br></code></pre></td></tr></tbody></table></figure><h2 id="项目资源"><a href="#项目资源" class="headerlink" title="项目资源"></a>项目资源</h2>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>PARA</tag>
-      
-      <tag>日记</tag>
-      
-      <tag>生活</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>第一次购房计划</title>
-    <link href="/posts/18a15a97.html"/>
-    <url>/posts/18a15a97.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="第一次购房计划"><a href="#第一次购房计划" class="headerlink" title="第一次购房计划"></a>第一次购房计划</h1><p><strong>关联领域</strong>: <a href="%E8%AE%A4%E7%9C%9F%E7%94%9F%E6%B4%BB/%E8%88%92%E9%80%82%E7%9A%84%E5%AE%B6.md">舒适的家</a></p><h2 id="项目计划"><a href="#项目计划" class="headerlink" title="项目计划"></a>项目计划</h2><ul><li><input checked="" disabled="" type="checkbox"> #TODO 看房黄埔雅苑三期  [due:: 2025-06-22]  [completion:: 2025-06-22]</li><li><input checked="" disabled="" type="checkbox"> #TODO 整理买房核心要素  [due:: 2025-06-18]  [completion:: 2025-06-22]</li><li><input checked="" disabled="" type="checkbox"> #TODO 建立项目计划  [due:: 2025-06-18]  [completion:: 2025-06-23]</li></ul><h2 id="项目笔记"><a href="#项目笔记" class="headerlink" title="项目笔记"></a>项目笔记</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 获取当前笔记名称（不含.md）<br>const currentNoteName = dv.current().file.name.replace(".md", "");<br><br>// 查询所有链接到当前 project 笔记的 `type=note` 笔记<br>const notePages = dv.pages()<br>    .where(n =&gt; <br>        n.type === "notes" &amp;&amp;<br>        n.file.outlinks.some(link =&gt; link.path === dv.current().file.path)<br>    )<br>    .sort(n =&gt; n.modify, 'desc'); // 按修改时间排序<br><br>// 计算统计信息<br>const totalNotes = notePages.length;<br>const completedNotes = notePages.filter(n =&gt; n.done).length;<br>const recentUpdated = notePages[0]?.file.mday.toISODate() || "无记录";<br><br>// 显示结果<br>if (totalNotes &gt; 0) {<br>    dv.table(<br>        ["状态", "笔记名称", "最近修改", "进度"], <br>        [<br>            ...notePages.map(n =&gt; [<br>                n.done ? "✅ 已完成" : "🟡 进行中",<br>                n.file.link,<br>                n.file.mday.toISODate(),<br>                n.progress || "无进度数据"<br>            ]),<br>            // 统计行<br>            [<br>                `**${completedNotes}/${totalNotes}**`,<br>                `**笔记统计**`,<br>                `**最近更新: ${recentUpdated}**`,<br>                ` `<br>            ]<br>        ]<br>    );<br>} else {<br>    dv.span(`当前 project 笔记没有链接到任何笔记`);<br>}<br><br></code></pre></td></tr></tbody></table></figure><h2 id="项目资源"><a href="#项目资源" class="headerlink" title="项目资源"></a>项目资源</h2>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>购房</tag>
+      <tag>海滩</tag>
       
     </tags>
     
@@ -1623,11 +1652,11 @@
     
     <tags>
       
+      <tag>PARA</tag>
+      
       <tag>AI</tag>
       
       <tag>Deepseek</tag>
-      
-      <tag>PARA</tag>
       
     </tags>
     
@@ -1725,38 +1754,9 @@
     
     <tags>
       
-      <tag>买房</tag>
-      
       <tag>舒适的家</tag>
       
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>2025 五一 巴厘岛</title>
-    <link href="/posts/a1ad8d3c.html"/>
-    <url>/posts/a1ad8d3c.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="第一天-在途"><a href="#第一天-在途" class="headerlink" title="第一天 在途"></a>第一天 在途</h1><p>这一天值得说的是去程，<br>这次选择了蛇口轮渡到香港机场的方案，<br>我只能说非常舒适，人少，过关快，有厕所，到机场时间稳定可控，全程很放松。<br>这次选择了国泰航空，比较贵，但是确实很好。飞机餐食有准备特色印尼菜，味道好，最后哈根达斯收尾。</p><p>大约五点半，落地机场后就是光速出关，找接机。是那种拿着纸写着BAI的那种哈哈，找着以后坐车前往酒店。<br>这里开始感受巴厘岛落后了……主干道路也窄，所以很堵，非常堵，开了很久。路上也是摩托乱窜。两侧店铺破旧，小平房，经济发展毫无疑问是比较差滴，不过能看到当地风格的建筑，所以还算新奇。<br>但到了酒店就不一样了。<br>直接到酒店入住，酒店是那种度假酒店，围了一个泳池的那种，看着贼好，第一次住这样的酒店还是很新奇的。</p><p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250430_183819.jpg" srcset="/img/loading.gif" lazyload alt="20250430_183819.jpg"><br>酒店内很豪华，酒店外真的就很破，直接进小县城的感觉。<br>为了吃晚饭，很保守的在酒店旁的餐厅吃了一顿。<br>味道很独特但称不上好吃，那个炒饭好咸……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250430_204252.jpg" srcset="/img/loading.gif" lazyload alt="20250430_204252.jpg"></p><h1 id="第二天-渐入佳境"><a href="#第二天-渐入佳境" class="headerlink" title="第二天 渐入佳境"></a>第二天 渐入佳境</h1><p>第二天，我开始有度假的感觉啦<br>首先是好好睡了一觉，睡醒慢悠悠的去吃了早餐。五星级酒店的早餐就是赞啊，自助餐，东西很丰富，水准很高。特别的，他们的咖啡很好喝，我点的那杯拿铁很香，很润，喝起来很舒服，唤醒我精神的感觉。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_094209.jpg" srcset="/img/loading.gif" lazyload alt="20250501_094209.jpg"></p><p>然后出门购物，说实话，乡下地方，街道两旁的东西并不是很好逛，东西少，价格贵，但我依旧在一个手工艺品店挑了一个木雕猫头鹰，莫名的就看对眼了，价格15rmb就也还好。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_115105.jpg" srcset="/img/loading.gif" lazyload alt="20250501_115105.jpg"></p><p>最后还是在一个小mall里买齐了东西，柳依要的裤子，编织袋，我还买了一件花衬衫哈哈，挺帅，适合我的气质。<br>午饭吃的泰国菜，柳依是越南粉，我是鸡肉绿咖喱，还喝了泰式奶茶和椰子。泰奶很好喝，不知道咋做的，风味上很像港奶，但是比它丝滑，也更甜一点。绿咖喱很有特色，很好吃，但我觉得咖喱少了一点，饭没法全部配着吃完，可惜可惜。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_130201.jpg" srcset="/img/loading.gif" lazyload alt="20250501_130201.jpg"></p><p>下午就很度假啦，我直接拒绝了白白出门找甜点的计划，美美的享受酒店泳池旁的闲适感。穿上我新买的花衬衫和泳裤，找一张凳子，铺上免费的毛巾，往那一趟，嘴里喝着冰可乐，手里拿着电子书，别提多安逸了～身体稍微沾点水，再躺在椅子上，风轻轻吹过带来凉意，感觉特别特别舒服，心情很放松，没有压力没有烦恼，短暂且珍贵。白白最后也被这舒服的氛围所吸引，没有出门，换上泳装跟我一起下水玩了一会。我老婆泳装真好看，心动的感觉。最后慢悠悠地把我的败犬女主第三卷看完啦，至此动漫第一季的剧情我也是补完了，文字版依旧有趣，真的好喜欢这些角色的性格和对话，看得我很开心。后面就是新鲜的剧情了，好期待啊！<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_151606.jpg" srcset="/img/loading.gif" lazyload alt="20250501_151606.jpg"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_154956.jpg" srcset="/img/loading.gif" lazyload alt="20250501_154956.jpg"></p><p>大约五点钟，才再次出门前往沙滩。沙滩很近走路五分钟就到了，他们这沙滩海岸线很长，可以沿着一直走。幸运的是沙滩比较实，我没有拖鞋，穿着徒步鞋走过也完全没有进沙子。吹着海风，听着海浪，心情愈发平和。最后花了50r两个人，租了两张舒服的沙滩椅躺着等日落。有点可惜的是日落到海平面的最后一节被厚厚的云层遮挡住了，幸运的是即便没到最后一节，夕阳也已经散发出了绝美的红颜，感恩。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/DSCF0049.JPG" srcset="/img/loading.gif" lazyload alt="DSCF0049.JPG"></p><p>日落后，我们就去觅食了。莫名找到一家bar，主要是因为白白把海鲜拼盘误认为烤猪扒了……bar的氛围很好，所以也呆的下去。两人共喝一瓶BINTANG啤酒，但很遗憾东西没有很好吃，点了个羊肉塔可？量很少，一口就无啦，全靠标准水平的玛格丽塔披萨保住了肚子不饿。饭后再步行回酒店的路上，再次发现了冰淇淋，点了一个朗姆口味和柠檬口味，朗姆酒香醇厚，柠檬清爽，好吃滴。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_183842.jpg" srcset="/img/loading.gif" lazyload alt="20250501_183842.jpg"></p><p>第二天并未就此结束，今天早上我们已经预约好了晚上八点的SPA，所以回到酒店休整一下就前往享受Spa生活。精油推拿我没怎么体验过，这次全是享受到了，确实是很舒服。技师小姐姐力气不算大，在我略微有疼痛感的水平。但是推的很认真很到位，六十分钟流程很扎实，捏完身体酥酥软软滴。<br>第二天全是真真进入假期状态了，而且第一次体验到这种度假，而非旅游的感觉。整个人就是放松，放松，不像旅游，其实还挺累的，晚上在酒店就是摊着，腰酸疼的要死那种……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250501_195907.jpg" srcset="/img/loading.gif" lazyload alt="20250501_195907.jpg"></p><h1 id="第三天-转移AYANA"><a href="#第三天-转移AYANA" class="headerlink" title="第三天 转移AYANA"></a>第三天 转移AYANA</h1><p>今天睡醒的就比较早了，所以计划好了去泳池游泳再吃早餐。白白犹豫了老半天，还是禁不住游泳的诱惑一起去了。我游的不多，主要是躺在浮床上凉爽地晒太阳，最后游了十分钟就很舒服了。<br>运动完再吃早餐果然胃口极佳，直接拿了满满一大盆，还能快速全部吃完了。这酒店自助是真心不错，可能我标准低吧，反正觉得都挺好吃的，吃的挺开心。<br>顺利的拉完屎，现在瘫在阳台的沙发上敲游记。今天天气依旧很好，不算热，风吹过暖暖地很舒服的那种。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250502_090610.jpg" srcset="/img/loading.gif" lazyload alt="20250502_090610.jpg"></p><p>中午没吃饭，找了个小咖啡馆消磨了一些时间，再打车前往超高级度假村，ayana。<br>真是长见识了，一个超大的度假村区域，就是直接围了一块地，里面分四个区域的旅馆。我们选择的是最便宜的林巴区，但环境也很棒很大。每个区域都有泳池，餐厅，酒吧，真的极尽享受。这天下午入住休整了一下，就前往主要的海边悬崖区，ayana lobby那边，看看海景。这个区域整体建筑就是很有印度风，顺着台阶而下可以纵览海景，没有遮挡。运气不错，天虽不蓝但并没有雨，所以海景还是很赞，就是天气有点热，闷得我一下就出汗了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/DSCF0078.JPG" srcset="/img/loading.gif" lazyload alt="DSCF0078.JPG"></p><p>网上预定的餐厅是kisik海鲜&amp;烧烤，没选那个最有名的岩石餐厅。岩石餐厅那里也就是下去看了一眼，真想看日落我觉得还是kisik强，坐到了刚好正看日落的桌子。预定的五点半，日落是六点零几分的时候，顺利看到了全程，开心。晚饭比较一般了，也没有指望，点的牛排，虾，海鲜串，全都只能说还过得去，谈不上特别好吃。唯一亮点是免费送的空心菜，我甚至找服务员加了一份。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250502_174855.jpg" srcset="/img/loading.gif" lazyload alt="20250502_174855.jpg"></p><p>回酒店泡了个澡，养足精神后，去了unique屋顶泳池酒吧搞浪漫。我也是第一次喝鸡尾酒，点了杯大名鼎鼎的长岛冰茶。挺好喝，但是太上头了，印象深刻的伏特加味道。柳依喝了个无酒精混合果汁，感觉那个也很好喝。两个人在那强行搞浪漫哈哈。不过我确实喝的太上头了，晚上直接昏睡。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250502_210910.jpg" srcset="/img/loading.gif" lazyload alt="20250502_210910.jpg"></p><h1 id="第四天-完美海滩游"><a href="#第四天-完美海滩游" class="headerlink" title="第四天 完美海滩游"></a>第四天 完美海滩游</h1><p>今天的主要任务就是AYANA的私人海滩，库布海滩。早上睡到自然醒，但也赶在九点高峰期前吃上了TOGE餐厅的自助早餐。价格着实高，但好在吃的确实不错。主打的就是种类丰富多样，覆盖各国美食，我属于啥也喜欢的流派，所以拿了好大一碟。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_085900.jpg" srcset="/img/loading.gif" lazyload alt="20250503_085900.jpg"></p><p>吃饱喝足坐摆渡车前往库布海滩，此时天气已经有点热意了。先说结论，本次海滩游非常完美，拍到了很多美照，也在海浪中好好玩耍了一番。库布海滩需要乘坐电梯到悬崖下，是一个在峡口的海滩。沙子很白很美，海水也很透亮，是那种浅水绿深水蓝，最符合海岛形象的海水。能看到这样的海景，本次旅程的价值就达成一大半了。<br>我比较兴奋，虽然海浪比较大，估计是浮潜不了了，但是玩水本身就很有乐趣。白白老是嫌晒，被我催促了好几次才愿意换上泳衣。事实证明不穿泳衣拍就太可惜了，天气真的绝赞，海浪也很美，沙滩很白很长，轻而易举就拍出了大量美腻的泳装照片。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_103744.jpg" srcset="/img/loading.gif" lazyload alt="20250503_103744.jpg"></p><p>话说我老婆身材真好啊。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/DSCF0452.JPG" srcset="/img/loading.gif" lazyload alt="DSCF0452.JPG"></p><p>拍了照片以后白白就躲到沙滩椅下了，我自己跑去玩水。稍微试着游了一下，感觉浪真的是太大了，好凶，怪吓人的。比较大的浪能直接把人掀翻，不做好准备站都站不稳，所以放弃了游太远，更别说浮潜了。最后直接在海滩边上玩海浪对抗小游戏，尝试在每一波海浪冲击下站稳。这么无聊的游戏我愣是开心的玩了十多分钟哈哈哈。有一次浪真的是太大了，我直接被掀翻，人都懵懵的。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_111345.jpg" srcset="/img/loading.gif" lazyload alt="20250503_111345.jpg"></p><p>上午库布海滩顺利结束后，中午打车去吃烤猪扒。比较有名的一家猪扒店，叫做wahaha。烤猪扒保守了，点了小份的，没想到香嫩酥脆，吸溜几口就没了，很可惜。<br>吃完还逛了纪念品店，以及当地的大超市sideway。这个大超市其实就是类似ole的那种进口商品店。稍微买了点特色零食后就回酒店了，下午没睡觉巨困。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_133649.jpg" srcset="/img/loading.gif" lazyload alt="20250503_133649.jpg"></p><p>回酒店休整周，又接着去泳池放松。我们住的这个wana有一个长条的森林泳池，来的人比较少，所以很放松。我发现了一个绝赞姿势，就是躺在浮床上，边泡泳池边看电子书。这样很凉快，下午的阳光洒在身上也暖暖的，很舒服。而白白又去她的长距离游泳去了，估摸着游了一公里，太强了哦喵喵。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_162331.jpg" srcset="/img/loading.gif" lazyload alt="20250503_162331.jpg"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_162331.jpg" srcset="/img/loading.gif" lazyload alt="20250503_162331.jpg"></p><p>晚上再次去觅食，很无语的是没有预约上那个日料餐厅，本膳，吃个拉面啥的。去了以后说只能进食60分钟，那还是算了。反身去TO’GE，反而吃到了好东西。不愧是最多元的餐厅，点到了仁当牛肉，这可是印尼国菜，吃上了真的太棒了，貌似是用各种香辛料咖喱粉炖煮后的牛肉，非常好吃，非常扎实，这个吃起来比昨晚的牛排幸福多了。叻沙比较贵比较一般。还有巴厘猪肉卷，卷很大很厚，一口下去有很丰富的香味。今晚吃的很好吃，很有特色，感谢本膳没能让我吃上。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_193048.jpg" srcset="/img/loading.gif" lazyload alt="20250503_193048.jpg"></p><p>晚上本来计划去runa屋顶泳池酒吧，但因为今天也泡过水，白白也吃撑了，就选择散步去看看岩石后酒吧。入住的时候还送了免费的鸡尾酒，可以去白嫖体验一下。气氛还可以，是乐队在表演，不是那种轰轰轰的DJ音乐。但就是不习惯蹦迪，玩不起来。两个人安静地在那嘬着免费的鸡尾酒，欣赏到了欧美白人大叔的熟练蹦迪。听了几首曲子后就溜了，终究是享受不来呢。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250503_214853.jpg" srcset="/img/loading.gif" lazyload alt="20250503_214853.jpg"></p><h1 id="第五天-最后的躺平"><a href="#第五天-最后的躺平" class="headerlink" title="第五天 最后的躺平"></a>第五天 最后的躺平</h1><p>今天下午的飞机，所以上午还能好好享受完整的半天假期。<br>早上起的稍微早一点，带着昨天超市买好的面包当早餐，去rimba特色的tevana花园晨间散步。这个花园还挺大的，里面有大片漂亮的草坪和各种花卉，看不太懂。人很少，应该没啥人会来这个景点，所以可以安安静静的散步一圈。早晨的时候到花园里呼吸一下，感觉还是挺不错滴。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250504_082041.jpg" srcset="/img/loading.gif" lazyload alt="20250504_082041.jpg"></p><p>然后还跑了一趟runa屋顶泳池，把昨晚没去的也去见识了一下。屋顶的泳池风景确实挺不错的，可以看到海，可惜太晒了，所以白白待不下去就撤退了。<br>最后我们两兵分两路。我去rimba的无边泳池泡水晒太阳看书，白白去健身房。这个泳池感觉很不错啊，有一个半没在水池的躺椅，我可以躺在上面看书，哇塞这个体验太爽了。只要没在水里，即便偶尔被太阳晒着也不觉得热，很舒服。泡够了再随便游个两圈，就上岸躺在椅子上享受微风吹拂。很难阐述那种安逸和舒适，只能说舒服到容易睡着。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250504_103509.jpg" srcset="/img/loading.gif" lazyload alt="20250504_082041.jpg"></p><p>十一点多，就回房收拾行李啦，虽然恋恋不舍但还是得离开了。退房寄存行李，我们再次去TOGE吃午饭。这次点了心心念念的海南鸡饭和马来鱼咖喱，终于是正经地吃了一顿咖喱，冬阴功风味的那种，我超爱。这个马来鱼肉很大，很扎实，而且完全没有刺，这下真的爽吃咖喱了。再配上经典可口可乐，一口咖喱一口可乐，顶级。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250504_122548.jpg" srcset="/img/loading.gif" lazyload alt="20250504_122548.jpg"></p><p>吃完饭甚至还跑了趟精品店，想要买AYANA的客房睡衣，穿着真的很方便很舒服，可惜没有蓝色的了，最后我买了AYANA的深红色，白白买了RIMBA的绿色，也算是此行最大的纪念品。因为预先订好了送机的车，所以一点十五分准时上车前往机场。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20250504_125657.jpg" srcset="/img/loading.gif" lazyload alt="20250504_125657.jpg"></p><p>至此，本次巴厘岛度假之旅正式结束。</p><h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>这是一次非常完美的度假旅游，全程都很顺利。而且天气很好，每一天都是晴天，太给面子了，真的非常感谢！<br>天气加持下，巴厘岛的海很蓝很美，度假酒店的泳池待着也很舒适。这次和白白也多次对齐行程主旨：不是旅行，而是度假。<br>很成功，度假不会紧张，也不需要奔波，不会疲惫。身体和心理真的好好得到了休息。<br>我也是第一次体会到度假的快乐，现在工作真的太紧张太忙太累了，幸好有这个假期让我好好恢复了一下。<br>现在在候机室，过一会就登机啦，再见咯BALI～</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>世界巡礼</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>巴厘岛</tag>
-      
-      <tag>度假</tag>
-      
-      <tag>海滩</tag>
+      <tag>买房</tag>
       
     </tags>
     
@@ -1792,19 +1792,6 @@
   
   
   <entry>
-    <title>身心健康</title>
-    <link href="/posts/4be51cea.html"/>
-    <url>/posts/4be51cea.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="身心健康"><a href="#身心健康" class="headerlink" title="身心健康"></a>身心健康</h1><h2 id="核心目标"><a href="#核心目标" class="headerlink" title="核心目标"></a>核心目标</h2><ul><li>健全的灵魂，寄宿在健全的精神和健全的身体上。</li></ul><h2 id="当前关注"><a href="#当前关注" class="headerlink" title="当前关注"></a>当前关注</h2><ul><li><input disabled="" type="checkbox"> 保持运动习惯</li><li><input disabled="" type="checkbox"> 戒除“无意义”手淫</li></ul><h2 id="里程碑"><a href="#里程碑" class="headerlink" title="里程碑"></a>里程碑</h2><h3 id="2025-08-17"><a href="#2025-08-17" class="headerlink" title="2025-08-17"></a>2025-08-17</h3><p>运动日常化进入第四阶段<br>建立早睡打卡项目，跟踪每日睡眠情况。正常睡眠就打卡，晚睡就记录原因。</p><h2 id="相关项目"><a href="#相关项目" class="headerlink" title="相关项目"></a>相关项目</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 获取当前笔记名称（不含.md）<br>const currentNoteName = dv.current().file.name.replace(".md", "");<br><br>// 查询所有链接到当前 project 笔记的 `type=project` 笔记<br>const projectPages = dv.pages()<br>    .where(p =&gt; <br>        p.type === "projects" &amp;&amp;<br>        p.file.outlinks.some(link =&gt; link.path === dv.current().file.path)<br>    )<br>    .sort(p =&gt; p.file.cday, 'asc'); // 仍按创建时间排序<br><br>// 状态显示函数（基于 done 状态）<br>function getStatusIcon(project) {<br>    return project.done ? "✅ 已完成" : "🟡 进行中";<br>}<br><br>// 进度显示函数（支持多种格式）<br>function getProgressDisplay(project) {<br>    if (project.done) return "▮▮▮▮▮ 100%";<br>    if (!project.progress) return "▯▯▯▯▯ 0%";<br>    <br>    // 处理不同进度格式<br>    if (project.progress.includes("▮")) {<br>        return project.progress;<br>    } else {<br>        const percent = parseInt(project.progress.toString().replace(/\D/g, '')) || 0;<br>        const filled = Math.floor(percent / 20);<br>        return "▮".repeat(filled) + "▯".repeat(5-filled) + ` ${percent}%`;<br>    }<br>}<br><br>// 结项日期显示函数<br>function getCompletionDate(project) {<br>    if (!project.done) return " ";<br>    if (project.completion) {<br>        return dv.date(project.completion).toISODate();<br>    }<br>    if (project.file.mtime) {<br>        return project.file.mtime.toISODate(); // 降级使用最后修改时间<br>    }<br>    return "无记录";<br>}<br><br>// 显示结果<br>if (projectPages.length &gt; 0) {<br>    // 统计项目状态及关联笔记数量<br>    const projectsWithNoteCount = projectPages.map(p =&gt; {<br>        const noteCount = dv.pages()<br>            .where(n =&gt; <br>                n.type === "notes" &amp;&amp;<br>                n.file.outlinks.some(link =&gt; link.path === p.file.path)<br>            ).length;<br><br>        return {<br>            ...p,<br>            noteCount,<br>            status: getStatusIcon(p),<br>            progress: getProgressDisplay(p),<br>            completion: getCompletionDate(p)<br>        };<br>    });<br><br>    // 计算统计信息<br>    const doneCount = projectsWithNoteCount.filter(p =&gt; p.done).length;<br>    const totalCount = projectsWithNoteCount.length;<br><br>    dv.table(<br>    ["状态", "项目名称", "进度", "关联笔记", "创建时间", "结项日期"], <br>    [<br>        ...projectsWithNoteCount.map(p =&gt; [<br>            p.status,<br>            p.file.link,<br>            p.progress,<br>            p.noteCount &gt; 0 ? `📝 ${p.noteCount}` : "无",<br>            p.file.cday.toISODate(),<br>            p.completion<br>        ]),<br>        // 统计行（已修复）<br>        [<br>            `**${doneCount}/${totalCount}**`,<br>            `**项目统计**`,<br>            `**完成率: ${Math.round(doneCount/totalCount*100)}%**`,<br>            "",<br>            "",<br>            `**最近结项: ${<br>                projectsWithNoteCount<br>                    .filter(p =&gt; p.done)<br>                    .sort((a, b) =&gt; (b.file?.mtime || new Date(0)) - (a.file?.mtime || new Date(0)))<br>                    [0]?.completion || "无"<br>            }**`<br>        ]<br>    ]<br>);<br>} else {<br>    dv.span(`当前领域笔记没有链接到任何项目笔记`);<br>}<br><br></code></pre></td></tr></tbody></table></figure><h2 id="相关笔记"><a href="#相关笔记" class="headerlink" title="相关笔记"></a>相关笔记</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 获取当前领域名<br>const currentAreaName = dv.current().file.name.toLowerCase();<br><br>// 查找所有 type 为 notes 且 tags 中包含领域名的笔记<br>const relatedNotes = dv.pages()<br>    .where(p =&gt; <br>        p.type === "notes" &amp;&amp;<br>        Array.isArray(p.tags) &amp;&amp;<br>        p.tags.some(tag =&gt; <br>            typeof tag === "string" &amp;&amp;<br>            tag.toLowerCase().includes(currentAreaName)<br>        )<br>    )<br>    .sort(p =&gt; p.file.mtime, 'desc'); // 按修改时间倒序<br><br>// 生成表格<br>dv.table(<br>    ["笔记名称", "最后修改时间"],<br>    relatedNotes.map(p =&gt; [<br>        p.file.link,<br>        p.file.mtime ? p.file.mtime.toFormat("yyyy-MM-dd HH:mm") : "未知"<br>    ])<br>);<br><br></code></pre></td></tr></tbody></table></figure><h2 id="相关资源"><a href="#相关资源" class="headerlink" title="相关资源"></a>相关资源</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 当前领域名（小写）<br>const currentAreaName = dv.current().file.name.toLowerCase();<br><br>// 获取当前领域笔记的 tags（全部小写）<br>const areaTags = (dv.current().tags || [])<br>    .filter(t =&gt; typeof t === "string")<br>    .map(t =&gt; t.toLowerCase());<br><br>// 查找相关的 resources<br>const relatedResources = dv.pages()<br>    .where(p =&gt; <br>        p.type === "resources" &amp;&amp;<br>        Array.isArray(p.tags) &amp;&amp;<br>        (<br>            // 方式1：tags 包含领域名<br>            p.tags.some(tag =&gt; typeof tag === "string" &amp;&amp; tag.toLowerCase().includes(currentAreaName))<br>            ||<br>            // 方式2：tags 与领域的 tags 有交集<br>            p.tags.some(tag =&gt; typeof tag === "string" &amp;&amp; areaTags.includes(tag.toLowerCase()))<br>        )<br>    )<br>    .sort(p =&gt; p.file.mtime, 'desc'); // 按最后修改时间降序<br><br>// 输出表格<br>dv.table(<br>    ["资源笔记", "最后修改时间", "匹配标签"],<br>    relatedResources.map(p =&gt; {<br>        const resTags = (p.tags || []).map(t =&gt; t.toLowerCase());<br>        const matched = resTags.filter(t =&gt; t.includes(currentAreaName) || areaTags.includes(t));<br>        return [<br>            p.file.link,<br>            p.file.mtime ? p.file.mtime.toFormat("yyyy-MM-dd HH:mm") : "未知",<br>            matched.join("，") || "—"<br>        ];<br>    })<br>);<br><br></code></pre></td></tr></tbody></table></figure>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>舒适的家</title>
     <link href="/posts/a874d6b4.html"/>
     <url>/posts/a874d6b4.html</url>
@@ -1820,6 +1807,19 @@
       <tag>深圳</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>身心健康</title>
+    <link href="/posts/4be51cea.html"/>
+    <url>/posts/4be51cea.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="身心健康"><a href="#身心健康" class="headerlink" title="身心健康"></a>身心健康</h1><h2 id="核心目标"><a href="#核心目标" class="headerlink" title="核心目标"></a>核心目标</h2><ul><li>健全的灵魂，寄宿在健全的精神和健全的身体上。</li></ul><h2 id="当前关注"><a href="#当前关注" class="headerlink" title="当前关注"></a>当前关注</h2><ul><li><input disabled="" type="checkbox"> 保持运动习惯</li><li><input disabled="" type="checkbox"> 戒除“无意义”手淫</li></ul><h2 id="里程碑"><a href="#里程碑" class="headerlink" title="里程碑"></a>里程碑</h2><h3 id="2025-08-17"><a href="#2025-08-17" class="headerlink" title="2025-08-17"></a>2025-08-17</h3><p>运动日常化进入第四阶段<br>建立早睡打卡项目，跟踪每日睡眠情况。正常睡眠就打卡，晚睡就记录原因。</p><h2 id="相关项目"><a href="#相关项目" class="headerlink" title="相关项目"></a>相关项目</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 获取当前笔记名称（不含.md）<br>const currentNoteName = dv.current().file.name.replace(".md", "");<br><br>// 查询所有链接到当前 project 笔记的 `type=project` 笔记<br>const projectPages = dv.pages()<br>    .where(p =&gt; <br>        p.type === "projects" &amp;&amp;<br>        p.file.outlinks.some(link =&gt; link.path === dv.current().file.path)<br>    )<br>    .sort(p =&gt; p.file.cday, 'asc'); // 仍按创建时间排序<br><br>// 状态显示函数（基于 done 状态）<br>function getStatusIcon(project) {<br>    return project.done ? "✅ 已完成" : "🟡 进行中";<br>}<br><br>// 进度显示函数（支持多种格式）<br>function getProgressDisplay(project) {<br>    if (project.done) return "▮▮▮▮▮ 100%";<br>    if (!project.progress) return "▯▯▯▯▯ 0%";<br>    <br>    // 处理不同进度格式<br>    if (project.progress.includes("▮")) {<br>        return project.progress;<br>    } else {<br>        const percent = parseInt(project.progress.toString().replace(/\D/g, '')) || 0;<br>        const filled = Math.floor(percent / 20);<br>        return "▮".repeat(filled) + "▯".repeat(5-filled) + ` ${percent}%`;<br>    }<br>}<br><br>// 结项日期显示函数<br>function getCompletionDate(project) {<br>    if (!project.done) return " ";<br>    if (project.completion) {<br>        return dv.date(project.completion).toISODate();<br>    }<br>    if (project.file.mtime) {<br>        return project.file.mtime.toISODate(); // 降级使用最后修改时间<br>    }<br>    return "无记录";<br>}<br><br>// 显示结果<br>if (projectPages.length &gt; 0) {<br>    // 统计项目状态及关联笔记数量<br>    const projectsWithNoteCount = projectPages.map(p =&gt; {<br>        const noteCount = dv.pages()<br>            .where(n =&gt; <br>                n.type === "notes" &amp;&amp;<br>                n.file.outlinks.some(link =&gt; link.path === p.file.path)<br>            ).length;<br><br>        return {<br>            ...p,<br>            noteCount,<br>            status: getStatusIcon(p),<br>            progress: getProgressDisplay(p),<br>            completion: getCompletionDate(p)<br>        };<br>    });<br><br>    // 计算统计信息<br>    const doneCount = projectsWithNoteCount.filter(p =&gt; p.done).length;<br>    const totalCount = projectsWithNoteCount.length;<br><br>    dv.table(<br>    ["状态", "项目名称", "进度", "关联笔记", "创建时间", "结项日期"], <br>    [<br>        ...projectsWithNoteCount.map(p =&gt; [<br>            p.status,<br>            p.file.link,<br>            p.progress,<br>            p.noteCount &gt; 0 ? `📝 ${p.noteCount}` : "无",<br>            p.file.cday.toISODate(),<br>            p.completion<br>        ]),<br>        // 统计行（已修复）<br>        [<br>            `**${doneCount}/${totalCount}**`,<br>            `**项目统计**`,<br>            `**完成率: ${Math.round(doneCount/totalCount*100)}%**`,<br>            "",<br>            "",<br>            `**最近结项: ${<br>                projectsWithNoteCount<br>                    .filter(p =&gt; p.done)<br>                    .sort((a, b) =&gt; (b.file?.mtime || new Date(0)) - (a.file?.mtime || new Date(0)))<br>                    [0]?.completion || "无"<br>            }**`<br>        ]<br>    ]<br>);<br>} else {<br>    dv.span(`当前领域笔记没有链接到任何项目笔记`);<br>}<br><br></code></pre></td></tr></tbody></table></figure><h2 id="相关笔记"><a href="#相关笔记" class="headerlink" title="相关笔记"></a>相关笔记</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 获取当前领域名<br>const currentAreaName = dv.current().file.name.toLowerCase();<br><br>// 查找所有 type 为 notes 且 tags 中包含领域名的笔记<br>const relatedNotes = dv.pages()<br>    .where(p =&gt; <br>        p.type === "notes" &amp;&amp;<br>        Array.isArray(p.tags) &amp;&amp;<br>        p.tags.some(tag =&gt; <br>            typeof tag === "string" &amp;&amp;<br>            tag.toLowerCase().includes(currentAreaName)<br>        )<br>    )<br>    .sort(p =&gt; p.file.mtime, 'desc'); // 按修改时间倒序<br><br>// 生成表格<br>dv.table(<br>    ["笔记名称", "最后修改时间"],<br>    relatedNotes.map(p =&gt; [<br>        p.file.link,<br>        p.file.mtime ? p.file.mtime.toFormat("yyyy-MM-dd HH:mm") : "未知"<br>    ])<br>);<br><br></code></pre></td></tr></tbody></table></figure><h2 id="相关资源"><a href="#相关资源" class="headerlink" title="相关资源"></a>相关资源</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs dataviewjs">// 当前领域名（小写）<br>const currentAreaName = dv.current().file.name.toLowerCase();<br><br>// 获取当前领域笔记的 tags（全部小写）<br>const areaTags = (dv.current().tags || [])<br>    .filter(t =&gt; typeof t === "string")<br>    .map(t =&gt; t.toLowerCase());<br><br>// 查找相关的 resources<br>const relatedResources = dv.pages()<br>    .where(p =&gt; <br>        p.type === "resources" &amp;&amp;<br>        Array.isArray(p.tags) &amp;&amp;<br>        (<br>            // 方式1：tags 包含领域名<br>            p.tags.some(tag =&gt; typeof tag === "string" &amp;&amp; tag.toLowerCase().includes(currentAreaName))<br>            ||<br>            // 方式2：tags 与领域的 tags 有交集<br>            p.tags.some(tag =&gt; typeof tag === "string" &amp;&amp; areaTags.includes(tag.toLowerCase()))<br>        )<br>    )<br>    .sort(p =&gt; p.file.mtime, 'desc'); // 按最后修改时间降序<br><br>// 输出表格<br>dv.table(<br>    ["资源笔记", "最后修改时间", "匹配标签"],<br>    relatedResources.map(p =&gt; {<br>        const resTags = (p.tags || []).map(t =&gt; t.toLowerCase());<br>        const matched = resTags.filter(t =&gt; t.includes(currentAreaName) || areaTags.includes(t));<br>        return [<br>            p.file.link,<br>            p.file.mtime ? p.file.mtime.toFormat("yyyy-MM-dd HH:mm") : "未知",<br>            matched.join("，") || "—"<br>        ];<br>    })<br>);<br><br></code></pre></td></tr></tbody></table></figure>]]></content>
+    
+    
     
   </entry>
   
