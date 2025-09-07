@@ -1,0 +1,955 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon1.png">
+  <link rel="icon" href="/img/favicon1.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Rong晔">
+  <meta name="keywords" content="ASIC">
+  
+    <meta name="description" content="封面  回到最初的起点，永远的休憩所。 20230803摆烂了。每天做完问餐厅就下线 20230716240了，吃了一点经验過了小丑了 20230714普通女皇也能过了，这确实是没遇过的体验 20230712默默的238了输出逐渐够了，前面死的少，后面拖爆发就过了火毒的爆确实不太行……混沌四傻好像也能打？挺轻松的 20230710快乐 20230709小游戲還有點意思……但是太花時間了第一次自己s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新枫之谷">
+<meta property="og:url" content="https://rongyel.github.io/posts/e9c8023b.html">
+<meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
+<meta property="og:description" content="封面  回到最初的起点，永远的休憩所。 20230803摆烂了。每天做完问餐厅就下线 20230716240了，吃了一点经验過了小丑了 20230714普通女皇也能过了，这确实是没遇过的体验 20230712默默的238了输出逐渐够了，前面死的少，后面拖爆发就过了火毒的爆确实不太行……混沌四傻好像也能打？挺轻松的 20230710快乐 20230709小游戲還有點意思……但是太花時間了第一次自己s">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008215926-d.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230716121157.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230716121906.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230716132020.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230716132607.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230716132703.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230717225707.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230714205815.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230712222127.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230712230548.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230712230641.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230712231306.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230710215416.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709104027.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709114923.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709115832.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709132022.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709132058.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709133411.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709134951.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709140945.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709143926.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230705234326.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230707221815.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230707235505.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702004128.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702100723.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702101515.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702102400.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702102951.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702103457.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702104640.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702105402.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702105518.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702153826.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230703000143.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230629230257.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230629232514.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628230820.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628231334.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628231410.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628231427.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628231457.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628234655.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230629002210.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627202153.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627205519.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627220418.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627222103.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627232101.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627232549.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230626235505.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627002002.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627002940.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627003012.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627003103.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627003143.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627003151.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230625213028.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230625234015.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624092313.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624151250.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624195512.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624195627.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624203100.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624203200.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624203223.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624204446.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624210117.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624210740.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624211105.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624224208.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624234240.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623015056.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623023316.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623023321.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623154251.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623184943.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623214620.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230621223302.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622000926.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622003313.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622003848.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622004021.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622004611.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622010035.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622012832.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622012946.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622013026.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622090835.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622105529.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622112154.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622113742.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622115640.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622115906.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622120028.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622123646.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622132119.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622134211.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622215553.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622215710.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622215935.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622220957.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622221959.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622224646.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622232737.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230616225202.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230617001205.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230617001252.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230617010335.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230617011641.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230621212512.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230615212440.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230615231514.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614232623.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614230711.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614231135.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614234126.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230615001051.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610160106.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610161915.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610163724.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610170319.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610170955.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610203833.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610231708.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610232647.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611003717.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611010223.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611105115.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611105322.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611163343.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611163412.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611221517.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611222741.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611232551.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611233240.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611233302.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611233447.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611233537.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611233624.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611234026.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611234053.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611234108.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611235017.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614010029.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614220641.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614224129.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614224148.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614225652.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614225903.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614225909.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610003500.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610142802.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230609225344.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230609231021.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230608232537.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220005-om9xc3m.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220015-idz73il.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220026-24unihx.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220035-9amnrqn.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220052-iwwdllh.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220103-acpepas.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220130-rbwu5w1.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220136-k16s3u4.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220156-falxbt7.png">
+<meta property="og:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220203-a22npe7.png">
+<meta property="article:published_time" content="2025-06-29T15:31:18.000Z">
+<meta property="article:modified_time" content="2025-09-07T14:27:03.190Z">
+<meta property="article:author" content="Rong晔">
+<meta property="article:tag" content="兴趣档案">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008215926-d.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>新枫之谷 - IC攻城狮的摸鱼小屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"rongyel.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>IC攻城狮的摸鱼小屋</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">新枫之谷</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-29 23:31" pubdate>
+          2025年6月29日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">新枫之谷</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="封面"><a href="#封面" class="headerlink" title="封面"></a>封面</h3><hr>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008215926-d.png" srcset="/img/loading.gif" lazyload alt="image-20221008215926-d.png"></p>
+<h3 id="回到最初的起点，永远的休憩所。"><a href="#回到最初的起点，永远的休憩所。" class="headerlink" title="回到最初的起点，永远的休憩所。"></a>回到最初的起点，永远的休憩所。</h3><hr>
+<p>20230803<br>摆烂了。每天做完问餐厅就下线</p>
+<p>20230716<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230716121157.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>240了，吃了一点经验<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230716121906.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230716132020.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230716132607.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230716132703.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230717225707.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>過了小丑了</p>
+<p>20230714<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230714205815.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>普通女皇也能过了，这确实是没遇过的体验</p>
+<p>20230712<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230712222127.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>默默的238了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230712230548.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230712230641.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>输出逐渐够了，前面死的少，后面拖爆发就过了<br>火毒的爆确实不太行……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230712231306.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>混沌四傻好像也能打？挺轻松的</p>
+<p>20230710<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230710215416.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>快乐</p>
+<p>20230709<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709104027.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>小游戲還有點意思……但是太花時間了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709114923.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>第一次自己solo二核培羅德~<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709115832.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>耐心等待了一下，就買到了便宜10e的白狐狸戒指~開心<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709132022.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>100r買了十個……至少給我一條魔攻吧求求了！<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709132058.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709133411.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>一發，有boss傷和無視，我覺得可以留了……雖然沒有魔攻<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709134951.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>卡麗，劇情不是很感興趣角色不對我胃口呢，不過爲了2000聯盟還是練了吧大鬥燃呢<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709140945.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>emmmmmm<br>哎<br>蠢啊<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230709143926.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>醉了開局那麽慘</p>
+<p>20230705<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230705234326.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>慢悠悠的，235了<br>新的活動小游戲，也算有點意思，就是要做的事情有點多，又是第六顆星，又是神秘河每日……有點累</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230707221815.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>只能在劇情裏打的boss……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230707235505.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>20230703<br>隐月的剧情看哭了……怎么会有这么虐的……</p>
+<p>20230702<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702004128.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>嘿嘿，每天做着小游戏就升级了，差不多三天一级现在<br>早上再把这个新剧情做了</p>
+<p>……台服这个翻译真的跟屎一样……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702100723.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702101515.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702102400.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702102951.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这个剧情吧……在这个翻译下就稀碎<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702103457.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702104640.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702105402.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702105518.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>狗屎翻译……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230702153826.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>现在每日boss清一轮也很快了呢<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230703000143.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>哇，刷这个给怪物收藏……几千只怪肯定是有的<br>20230629<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230629230257.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>靠著小游戲升級<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230629232514.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>送的皇家，火毒已經很好看了，就建了個機械師小號用掉了，運氣還不錯？挺好看的</p>
+<p>20230628<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628230820.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>參加一下新活動<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628231334.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628231410.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628231427.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628231457.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>我擦<br>太特麽失望了……居然不能直接吃兩個，升到232級唉<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230628234655.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>終於搞定裝備合成，拿到一個頂唄了……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230629002210.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>留一個吊墜吧……混20天換一個</p>
+<p>20230627<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627202153.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627205519.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>226咯~</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627220418.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>話説我這娃，這麽屑的臉真的233333<br> <img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627222103.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>新地圖的小精靈好可愛<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627232101.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627232549.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>20230625<br>纪念第一次过混沌扎昆<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230626235505.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627002002.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>終於混了一次三核，紀念~<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627002940.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>20e，也就是60塊，買了一個傳説卷<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627003012.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627003103.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>唉，運氣真差<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627003143.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230627003151.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>洗一次1000w，每天洗一下吧，烏魯斯勉强覆蓋這個價格</p>
+<p>20230625<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230625213028.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>HD送的整容，啊hi不錯~是我想要的！有點拽拽可愛的臉<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230625234015.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>第一次打過困難希拉……吸血太麻煩了</p>
+<p>20230624<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624092313.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>運氣還挺不錯？上寶珠直接10%<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624151250.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>100r，直接買的披風~<br>兔兔完全體<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624195512.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>220……<br>這次耐著心狂刷圖<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624195627.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>第一次看220劇情咯<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624203100.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>？這個是？<br>路西坦老婆的劇情應該是<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624203200.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624203223.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624204446.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624210117.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>啊這，什麽白學劇情<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624210740.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624211105.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624224208.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>我擦……連續刷了1個半小時的級……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230624234240.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>混沌黑龍原來我已經能打了……</p>
+<p>20230623<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623015056.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>搞点装备容易吗我……<br>而且还买错变化箱额，原本的装备没转化我也不敢留，亏了个把亿了……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623023316.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623023321.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>第一次做裝備……感覺應該浪費了一些錢……<br>就武器先用著吧，其他的不搞了<br>把飾品什麽的補上<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623154251.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>現在愈發上頭，感覺到了做裝備的快感。<br>不過boss打的稀爛……老被秒殺，也不知道咋回事唉。</p>
+<p>直接玩到3點，感覺要猝死……</p>
+<p>这个感觉比较详细，我可以以这个为目标做吧。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623184943.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>然後我又剋了300…………<br>買金我就買了900了……算上電捲應該已經1100了<br>emmmm<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230623214620.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>刷级……差不多一小时一级的样子，就硬刷的话</p>
+<p>20230621 台服接着玩，大斗燃来了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230621223302.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>虽然都说不要拍卖买装备，我直接自爆自弃买了几件link装备，就这样吧。<br>然后花了111买卡，随头，直到最后一张！！居然出了我最想要的发型，绝了</p>
+<p>这一期并没有我喜欢的脸，就不随了，练级吧！<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622000926.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>火毒刷图真的豪爽<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622003313.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>鬥燃太舒服了，一晚上就100級了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622003848.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>这个次元图书馆任务没有做过，感觉跟以前不太一样<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622004021.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>这个主要是看以前剧情的<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622004611.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这个姑姑神社，我居然是没有過的？之前做的是啥？<br>话说台服的这个翻译我觉得真的很垃圾……语句不通顺错误百出唉<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622010035.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>只希望我明天不会被封号，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622012832.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这个温泉厅任务没有做过，有意思嘿嘿右边老哥不是林中之城的守卫吗<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622012946.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>是活动任务啊原来，<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622013026.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>1点半了还有人，感觉到了网游的意义了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622090835.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>艾琳森林的剧情好像跟以前不一样了<img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622105529.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这个剧情我没有玩过<br>帕尔坦遗迹<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622112154.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622113742.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>星光之塔的剧情也跟以前不一样了~有意思，好多可爱的妹子<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622115640.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622115906.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>斗燃练级真的安逸<br>可以用到9月份啊<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622120028.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>岩壁巨人的剧情我做过了，就快速练级吧<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622123646.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这个也做过了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622132119.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622134211.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>今天肯定升到200级了，爽啊s<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622215553.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>190了，听说接着吃三个药，避风港对话完就202了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622215710.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>舒服，三个药下去199了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622215935.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>避风港对话完直接202，感谢！<br>一天就100-》200了，爽啊<br>轻松五转<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622220957.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622221959.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622224646.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230622232737.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>五转的火毒真的轻松的……太吊了<br>123456技能按顺序按过去就行了，都是跟踪，大范围的技能</p>
+<p>然后又氪了300买金……</p>
+<p>20230616 又来了，台服直接买了300r，100e的金……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230616225202.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>逛了几个小时的拍卖行，最后买了这个，61e……也就是200r<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230617001205.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230617001252.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>还好能够共享商城保管箱，以后练个冰雷更搭感觉<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230617010335.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>直接大變樣。可愛了很多！！！衣服絕贊搭配，剩下帽子想要換一下。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230617011641.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>太贊了，看著心情就好好~~~~<br>300r基本花完了……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230621212512.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>20230615  开始玩具城任务<br>神木剧情好少啊，感觉几个任务就做完了，很奇怪。<br>算了，接着做玩具城。这个也没有完整做完应该<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230615212440.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>哇，玩具城这个塔<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230615231514.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>刷完了……感觉没看到什么重要而有趣的剧情</p>
+<p>20230614  开始神木村任务<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614232623.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>渊远征队，还是有点意思的，可惜我玩的太晚了……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614230711.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614231135.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614234126.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230615001051.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>神木村开始强行星之力强化了……</p>
+<p>20230610 废都剧情做完了，感觉看了又跟没看一样？<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610160106.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>勇士部落50多级的剧情，没看过<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610161915.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610163724.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>em……拿了两个杂役<br>话说这个号，还挺久了。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610170319.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>林中之城补档<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610170955.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>妖精这个主题，做了无数遍了，已经只是折磨<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610203833.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>黑色矿山任务，这个就是我没好好做过的任务了；这段剧情有点意思。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610231708.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610232647.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611003717.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>天空之城的任务，这个弹琴有点意思，应该之前没有好好做过。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611010223.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>天空之城任务也清光了……现在感觉内容真的挺少的<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611105115.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这个小石球……就是我童年恶梦啊，战士打全是miss<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611105322.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>其实这次国服冒险岛体验还不错<br>突然想起了，当初不愿意玩的最大原因不是别的，是外挂。<br>但这次，再没有见过外挂了，真的整顿了一波。</p>
+<p>台服福利啊，数值啥的，其实跟我关系不大，也不是很在乎，<br>所以国服对我来讲也是能玩的真的<br>冰峰雪域的任务，我也是第一次完整做完呢<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611163343.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611163412.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>水下世界，原来鲁滨逊是地球本部的啊，这个地方的剧情我一直都没有怎么做过……<br>唉，终究还是遇到挂了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611221517.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>阿里安特的剧情做过好几次了，先跳过吧<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611222741.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>玛吉提亚的剧情，都只做了一部分，没有完整做完。<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611232551.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>100级咯<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611233240.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611233302.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>冒险家的剧情好像有所调整？跟以前不太一样<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611233447.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>老黑果然是好人……<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611233537.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>黑魔法师的剧情，后续补一下，boss根本打不了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611233624.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611234026.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611234053.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611234108.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>好，转职完成~<br>冰雷刷图好爽啊，圣骑的飞锤冰雷随便连锁闪电<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230611235017.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>玛加提亚的任务，有点意思，以前也没有完全做完<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614010029.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614220641.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614224129.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614224148.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>哦哦哦哦哦主线终于做完了<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614225652.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614225903.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230614225909.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>我靠，这个剧情有点感动……<br>人造人A就是boss，研究永生，最终研究出来的是给女儿的药</p>
+<hr>
+<p>又回到了台服冒险岛这个地方……<br>慢慢玩吧，希望能玩久一点。主要是放松嘛对不对。<br>玩了两周了，给我疲惫的论文生活带来一些放松</p>
+<p>不过这个游戏我也就玩到230级，<br>后面每天都要刷日常任务，啊这不是手游的套路吗。<br>这个真的受不了，就到这吧。</p>
+<h3 id="截图记录"><a href="#截图记录" class="headerlink" title="截图记录"></a>截图记录</h3><hr>
+<p>20230610<br>突然绝对还是回国服玩……玩我72级的小冰雷就好了<br>卧槽！<br>把昨天浪费的6600电卷赠送到这边来，随发型结果一发入魂！！！<br>这就是我最想要的！！！天啊！！！<br>好吧，那就国服随便玩玩吧。真的不用考虑太多，台服那些福利与我关系真不大……<br>而且216级了，很多低级的任务都找不到了，还是在这边慢慢玩吧。</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610003500.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230610142802.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>20230609<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230609225344.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>玩玩脑残的小活动，感觉人生很美好<br><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230609231021.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>原来是个boss……根本打不了，没意思</p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/20230608232537.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220005-om9xc3m.png" srcset="/img/loading.gif" lazyload alt="image"><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220015-idz73il.png" srcset="/img/loading.gif" lazyload alt="image"><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220026-24unihx.png" srcset="/img/loading.gif" lazyload alt="image"><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220035-9amnrqn.png" srcset="/img/loading.gif" lazyload alt="image"><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220052-iwwdllh.png" srcset="/img/loading.gif" lazyload alt="image"><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220103-acpepas.png" srcset="/img/loading.gif" lazyload alt="image"><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220130-rbwu5w1.png" srcset="/img/loading.gif" lazyload alt="image"><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220136-k16s3u4.png" srcset="/img/loading.gif" lazyload alt="image"><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220156-falxbt7.png" srcset="/img/loading.gif" lazyload alt="image"><img src="https://picgo-2022.obs.cn-south-1.myhuaweicloud.com/image-20221008220203-a22npe7.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%B8%B8%E6%88%8F/" class="category-chain-item">游戏</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%85%B4%E8%B6%A3%E6%A1%A3%E6%A1%88/" class="print-no-link">#兴趣档案</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>新枫之谷</div>
+      <div>https://rongyel.github.io/posts/e9c8023b.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Rong晔</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月29日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/d573cb82.html" title="彩虹岛物语">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">彩虹岛物语</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/f4a5c635.html" title="明日方舟">
+                        <span class="hidden-mobile">明日方舟</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments">
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"yxU2T5rz8PlfrGZTFbIWlVPr-gzGzoHsz","appKey":"Cgutgrh3GMVacKZ0TKHkXINN","path":"window.location.pathname","placeholder":"留言仅限讨论，禁止广告等行为","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <a href="https://rongyel.top/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i>RSS</a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

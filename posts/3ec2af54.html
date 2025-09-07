@@ -1,0 +1,1175 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon1.png">
+  <link rel="icon" href="/img/favicon1.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Rong晔">
+  <meta name="keywords" content="ASIC">
+  
+    <meta name="description" content="剪藏纪要 在构建我自己的obsidian系统时，困扰很久的一个问题就是如何进行笔记目录的分配，这篇文章给了我不小的启发，用来调整自己的系统结构。重点在于把闪念胶囊给利用起来。 文献链接 原文 Matrix 首页推荐&nbsp; Matrix&nbsp;是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选 Matrix 最优质的文章，展示来自用户的最真实的体验和观">
+<meta property="og:type" content="article">
+<meta property="og:title" content="找笔记方便、写作又给力的知识库，我是这么搭建出来的 - 少数派">
+<meta property="og:url" content="https://rongyel.github.io/posts/3ec2af54.html">
+<meta property="og:site_name" content="IC攻城狮的摸鱼小屋">
+<meta property="og:description" content="剪藏纪要 在构建我自己的obsidian系统时，困扰很久的一个问题就是如何进行笔记目录的分配，这篇文章给了我不小的启发，用来调整自己的系统结构。重点在于把闪念胶囊给利用起来。 文献链接 原文 Matrix 首页推荐&nbsp; Matrix&nbsp;是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选 Matrix 最优质的文章，展示来自用户的最真实的体验和观">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/2b5e05d14dbf4214802d3e9b330e980c.png">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/8e6e0b694cdcd2a43167bf1a5a98ca85.png">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/06/323b22dfd4c1567a55573b8adebb38cb.gif">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/06/9bc636bf2f12b0ed03f4fdbfd1adda31.gif">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/06/a606f3f520d7b34a93bb56f8030cf991.gif">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/06/1335c00b09eef40a7e0cf5f57bda6c90.gif">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/346c506a53fceebe2e5a53702e6cb566.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/1670322f32083133006316c612f20202.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/5724ffc35e6a3f37697c7f7bb4de1014.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/03402bff7f7987aea414ba5c11125f81.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/dff349bcc6f3f583c7e1b96dddbcd6df.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/fde8ca5b385e6a1a6f2fd7bb7a7ca786.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/5b223f4cd5f6b68bbe5d3960ace1bd5d.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/bb732bf363f546e433e065ff3719f2b7.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/52eba261e1fcca2fe4c854f5134e6c13.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/97135aaa08e3c26d7c8b411286994470.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/b828bf5d18e349fef3045c2f45ee08f4.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/0e72dec06d4ffb3e4f7a4fbdc3d865c7.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/c241ecfa2e2620cbf9fe433c037628a6.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/f92633807e6d28989998f01e51c9347f.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/daa925052555da47d0d533efc6307e7a.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/f9ffc77813b9361b097098e2175a73e3.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/ff2f6469a7d864915fc1467062221591.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/c6d9af5f8a505f9278206ee32213d117.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/49a9035b33a6751a5f9f666191a29f20.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/b5043955fd2025c227ec9f8824b95a1d.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/72e6ab6a047580c46e058d0de839f5cc.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/daeab90a2b20c2aea47f195ef13e96e4.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/5aad0fb93ed70ff4db0ebbfcb3880542.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/2c48c6e97d4ece1a602657670a7ae4e2.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/430957a9b464df2049ca110c65acc248.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/425713e9f83c6670d666eac2fb02270f.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/4d84f8294e05664415efab7c42ed3301.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/408dbe55af1d09a74328f180470e64b4.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/b1abccffd138678e1fbe53b9d41247ce.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/0331ad1f2c4c39c3fb03738445e18909.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/0700c483c2e94b4917f33011a9f94eb8.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/869d13995e94bf6c4d9be8ceacc36087.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/ccbb3832d26097e2e0f4ca284c52981a.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/88ef07299e3a5b697d92e33140941dd3.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/efb44eaec9d3f6d1a5d553e51a7e38e8.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/1a898b3568e7e320421ca519bb0485fe.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/f3be0c539a6104b13dd97edfb83d494f.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/aed9edce6c6c98e5e92bbf3b612e25ad.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/7c8fbf64cde4b7485a156fd23a5dcabf.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/e8f6e9252ce995b02732407ecb19acbc.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/1708225f08d3e17770014ed32b99ad15.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/c0d6039a2ac869c860ac83c0dfa7e46f.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/a7d299259e66660c55586acc77d6c747.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/98096e3d27717cbfa41741e4c984eacc.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/b9561e18af7b2deedb8c949670d50404.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/e451a289b216e91aed8c1f4b6849c580.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/3b4556e4a2474f9765961696adfd530a.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/3cee216e8e69b086efac5ab0cda315f8.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/8ea543f7498be26f096df40928ee3af5.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/9a0e3410a03d463ca019ad3db24c34d5.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/7172f61fd8be0e298ede1e939f21cd8b.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/23905fc31544e83e8570aaaa3d315508.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/c99a798ec2d3340fc4d67b5860e510b6.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/301feeffe7743159120efd6d61310052.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/55d1f2f099d65f24c9bf6faf6ca5032e.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/a1df1679c6bd8c2f8df77223bc3a8103.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/0b5fd3d83dd9fd680612730ad075b530.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/59f310bc7444a4effc0c3e4b424b6bca.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/39601171040a5d6f56916b9d139742c1.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/bbbdc4c97b52230f322630696f48488b.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/bc3dd1c649d6ed5733aacb5daf1ad262.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/eeec76b71081f7911122fddcc56a77bb.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/b0bf8287118f07c4fba8da9e9fdf1fb2.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://cdn.sspai.com/2022/12/07/ee5e6bb8e0fd865090417193f9a24f0b.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1">
+<meta property="article:published_time" content="2025-06-29T15:30:36.000Z">
+<meta property="article:modified_time" content="2025-09-07T08:41:43.216Z">
+<meta property="article:author" content="Rong晔">
+<meta property="article:tag" content="剪藏">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.sspai.com/2022/12/07/2b5e05d14dbf4214802d3e9b330e980c.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>找笔记方便、写作又给力的知识库，我是这么搭建出来的 - 少数派 - IC攻城狮的摸鱼小屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"rongyel.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="IC攻城狮的摸鱼小屋" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>IC攻城狮的摸鱼小屋</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">找笔记方便、写作又给力的知识库，我是这么搭建出来的 - 少数派</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-29 23:30" pubdate>
+          2025年6月29日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          76 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">找笔记方便、写作又给力的知识库，我是这么搭建出来的 - 少数派</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="剪藏纪要"><a href="#剪藏纪要" class="headerlink" title="剪藏纪要"></a>剪藏纪要</h3><hr>
+<p>在构建我自己的obsidian系统时，困扰很久的一个问题就是如何进行笔记目录的分配，<br>这篇文章给了我不小的启发，用来调整自己的系统结构。<br>重点在于把闪念胶囊给利用起来。</p>
+<h3 id="文献链接"><a href="#文献链接" class="headerlink" title="文献链接"></a>文献链接</h3><hr>
+<h3 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h3><hr>
+<p><strong>Matrix 首页推荐</strong>&nbsp;</p>
+<p><a target="_blank" rel="noopener" href="https://sspai.com/matrix">Matrix</a>&nbsp;是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选 Matrix 最优质的文章，展示来自用户的最真实的体验和观点。&nbsp;<br>文章代表作者个人观点，少数派仅对标题和排版略作修改。</p>
+<hr>
+<p>「早就想偷学你记笔记的方法了」</p>
+<p>听闻我要分享如何做知识管理，我的一个朋友如是说。</p>
+<p>我大概能理解他想学的原因，多半是我之前发的文章给他留下了印象，在最近的这一年内，我写了 10 篇文章，其中 6 篇发机核的拿到了精选、两篇发少数派的拿到了首页推荐，而最近在机核新发的两篇，也都获得了过百的收藏量。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/2b5e05d14dbf4214802d3e9b330e980c.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/8e6e0b694cdcd2a43167bf1a5a98ca85.png" srcset="/img/loading.gif" lazyload></p>
+<p>我近期发在机核的两篇文章，都得到了不错的反响</p>
+<p><strong>能做到这些，离不开我的笔记和知识库。</strong></p>
+<p>我其实摸索知识管理一年多了，但此前一直没有分享过自己是怎么做的，因为我卡在了实践上。试了不少工具方法、也看了很多教程，但就是很难理解好的知识管理具体要怎么做。</p>
+<p>这其中印象最深的就要属「卡片笔记写作法」，即便去看原书，也硬是弄不明白如何做，就好像刻意藏着掖着不想给人知道，让我一度非常沮丧，我只能照着自己对书中内容的理解，一边试验性的搭建知识库，一边搜集其他相关的教程、根据实际使用的情况迭代。</p>
+<p>好在经过一年多的摸索，我已经愈发感觉到自己的知识库在接近期望的形态了，能让我写出那么多精选文章，已经能从某种程度体现这套知识库的实用性。而<strong>每当我要写文章、想找知识库里现成的笔记时，我都能发现有至少 4 种可选的搜索方法</strong>：</p>
+<p>回想一个或多个标题/正文里的关键词，直接找：</p>
+<p><img src="https://cdn.sspai.com/2022/12/06/323b22dfd4c1567a55573b8adebb38cb.gif" srcset="/img/loading.gif" lazyload></p>
+<p>回想笔记所在的位置，顺着目录结构逐级往下找：</p>
+<p><img src="https://cdn.sspai.com/2022/12/06/9bc636bf2f12b0ed03f4fdbfd1adda31.gif" srcset="/img/loading.gif" lazyload></p>
+<p>回想可能链接到这篇笔记的另一篇笔记，顺藤摸瓜的找：</p>
+<p><img src="https://cdn.sspai.com/2022/12/06/a606f3f520d7b34a93bb56f8030cf991.gif" srcset="/img/loading.gif" lazyload></p>
+<p>回想笔记可能归入的专题索引，通过索引内的分类寻找并跳转到笔记：</p>
+<p><img src="https://cdn.sspai.com/2022/12/06/1335c00b09eef40a7e0cf5f57bda6c90.gif" srcset="/img/loading.gif" lazyload></p>
+<p>在这篇文章中，我将介绍自己是如何搭建这一套知识库的，<strong>如果你也曾像我一样，苦于不知道如何做好个人的知识管理，或是面临笔记堆积成山、找起来头大的问题，我的分享或许能帮到你。</strong></p>
+<p>为了避免理解上的困难，在具体说明我的搭建方法前，我想先介绍下这套知识库的构成，但如果你已经开始好奇这套知识库是怎么搭建的了，也可以直接跳转到「我是如何搭建的」。</p>
+<p>因为我目前在用的工具是 Obsidian，本文中都会以 Obsidian 举例，但这并不代表搭知识库只能用这一种工具或只能用我的步骤方法，<strong>希望你能更关注我在选用特定工具方法时的目的，以便寻找最适合你的工具方法。</strong></p>
+<h2 id="这套知识库的构成"><a href="#这套知识库的构成" class="headerlink" title="这套知识库的构成"></a>这套知识库的构成</h2><h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3><p>我基于自己从《卡片笔记写作法》的理解，在知识库里存放了 3 种笔记。</p>
+<p><strong>闪念笔记</strong>：储存突然出现、稍纵即逝的灵感或感悟的简短笔记，比如某一天突然想到两个领域可以碰撞出某种新的火花，就会写一条这种笔记。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/346c506a53fceebe2e5a53702e6cb566.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><strong>文献笔记</strong>：储存基本沿用原文表达和结构的笔记，比如译文、摘抄的原文。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/1670322f32083133006316c612f20202.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><strong>永久笔记</strong>：储存用自己的话表达、以复用为首要目的的笔记，类似一篇篇独立的文档，知识库最主要的组成部分。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/5724ffc35e6a3f37697c7f7bb4de1014.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<h3 id="文件夹"><a href="#文件夹" class="headerlink" title="文件夹"></a>文件夹</h3><p>对应上面介绍的 3 种笔记，我也建立了 3 个一级目录分别存放它们：</p>
+<ul>
+<li>1-闪念笔记</li>
+<li>2-文献笔记</li>
+<li>3-永久笔记</li>
+</ul>
+<p>文件夹名称里的数字仅用于排序，而这个顺序则是根据我自己的感觉来定的，我觉闪念笔记算是思考得最浅的，永久笔记则是思考得最深的。</p>
+<p>除了这 3 个目录，我还新建了一个名为 images 的目录用来储存图片，因为我的笔记是用 Markdown 写的，而 Markdown 文件的图片必须从外部引用，将所有图片存在同一个地方能让我的笔记目录保持简洁清爽。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/03402bff7f7987aea414ba5c11125f81.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>而这 3 个目录之下，也都有着不同的二级目录结构：</p>
+<ul>
+<li><strong>闪念笔记</strong>：没有二级目录，所有笔记存放在同一层级</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/dff349bcc6f3f583c7e1b96dddbcd6df.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><strong>文献笔记</strong>：以信息的媒体类型、来源区分二级目录，比如图书、视频、文章，再到三级可能是具体的书名/作者</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/fde8ca5b385e6a1a6f2fd7bb7a7ca786.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><strong>永久笔记</strong>：以自己对不同领域的认知分类，自下而上形成各级的分类文件夹，如 000-效率实用/010-工具软件教程、200-游戏/220-营销发行</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/5b223f4cd5f6b68bbe5d3960ace1bd5d.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>可能有人会好奇，<strong>为什么这 3 个目录下要用不同的结构？</strong>由于这套结构是在实践中逐步摸索发展出来、并非最开始就设计好的，这里仅分享下我对这些做法的个人理解：</p>
+<ul>
+<li><strong>闪念笔记不作二级分类</strong>：本身定位就是快速记录的简短笔记，默认的时间戳已经能满足区分不同笔记的需求，如果要找特定的笔记，基本也可以靠关键词、时间戳和标题定位到</li>
+<li><strong>文献笔记用媒体类型和来源分类</strong>：这些笔记几乎都是照搬原文、没有经过大脑记忆的，对我来说要找特定笔记时，回想起「曾经在 B 站看过一个这样的视频……」比「曾经记过一个 xx 领域的笔记」更容易，因而我选择用媒体类型和来源分类，方便后续查找</li>
+<li><strong>永久笔记用符合自己认知的分类结构</strong>：能存入其中的笔记，大多是经过自己思考、再表达的，也就是说我的记忆中已经对这些知识做了某种分门别类，因而我更倾向于用自己理解的结构对它们分类，这样能让我更快找到特定的笔记</li>
+</ul>
+<p>其实我确定分类方法的思路，可以总结为两点：</p>
+<ul>
+<li>必须有助于让我快速找到特定笔记</li>
+<li>将更多投入留给深度思考的笔记</li>
+</ul>
+<p>下面我来说说，我是如何从零开始搭建这套知识库的。</p>
+<h2 id="我是如何搭建的"><a href="#我是如何搭建的" class="headerlink" title="我是如何搭建的"></a>我是如何搭建的</h2><h3 id="创建顶层目录"><a href="#创建顶层目录" class="headerlink" title="创建顶层目录"></a>创建顶层目录</h3><p>我最先做的一步，就是为前面提到的 3 种笔记创建对应的文件夹，我在 Obsidian 库中最顶层分别创建了 3 个文件夹：</p>
+<ul>
+<li>1-闪念笔记</li>
+<li>2-文献笔记</li>
+<li>3-永久笔记</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/bb732bf363f546e433e065ff3719f2b7.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>这之后，为了集中存放图片、保持笔记目录的清爽，我创建了一个名为 images 的文件夹，在目录中右键，将其设为了附件文件夹</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/52eba261e1fcca2fe4c854f5134e6c13.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>至此，这套知识库有了一个基础的框架，就像为了种植不同的作物、在一大块田里划分了多块区域，接下来该准备播种了。</p>
+<h3 id="写闪念笔记"><a href="#写闪念笔记" class="headerlink" title="写闪念笔记"></a>写闪念笔记</h3><p>就像我在前面所说，我理解的闪念笔记是一种简短的笔记，用于记录突发的灵感或感悟，以便后续合并到其他笔记。</p>
+<p>我在 Obsidian 里写这种笔记时，会用到软件自带的核心插件「时间戳生成器」，第一次使用需要先手动启用插件，再 Obsidian 中依次打开：设置 &gt; 核心插件 &gt; 搜索插件 &gt; 时间戳生成器，点击开关启用。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/97135aaa08e3c26d7c8b411286994470.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>在核心插件设置中，启用时间戳生成器</p>
+<p>启用后，就可以通过各种方式创建时间戳笔记了：</p>
+<ul>
+<li><strong>快捷键</strong>：ctrl/cmd+shift+K</li>
+<li><strong>指令面板</strong>：ctrl/cmd+P 唤出指令搜索框，输入并选择「时间戳生成器：创建时间戳笔记」</li>
+<li><strong>侧边栏按钮</strong>：点击 Obsidian 窗口左侧的「创建时间戳笔记」</li>
+</ul>
+<p>每当我有突然的灵感时，只要条件允许，我都会立即打开 Obsidian 新建一个时间戳笔记。通常我更倾向于用快捷键创建笔记，因为这样速度更快、能让我尽快抓住稍纵即逝的灵感。</p>
+<p>新建笔记后，我会在标题的时间戳后加上一段话、作为正式的标题描述，这段话要尽可能概括我准备在笔记中写的内容，比如《202211252119 免费内容如何参与黑五促销》。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/b828bf5d18e349fef3045c2f45ee08f4.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>闪念笔记先写标题、再写内容</p>
+<p>对我来说，这样做的好处有两点：</p>
+<ul>
+<li>引导自己沿着预期的方向写作，防止写得太过跳跃发散</li>
+<li>方便后续回顾，看到标题就能大概了解里面的内容</li>
+</ul>
+<p><strong>写闪念笔记的正文时，我不会给自己特定的结构限制</strong>，只要记录的信息有助于日后再次使用，是否插图、用不用有序/无序列表都无所谓。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/0e72dec06d4ffb3e4f7a4fbdc3d865c7.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/c241ecfa2e2620cbf9fe433c037628a6.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><strong>如果写的过程中涉及到了自己知识库中的其他笔记，我也会加上链接</strong>，以便后续顺着关联性整理笔记。在 Obsidian 中，默认输入两个左方括号即可唤出笔记的搜索框，再输入文本就可以按标题搜索笔记，最后选择要关联的笔记，就会创建一条新的链接。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/f92633807e6d28989998f01e51c9347f.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>Obsidian 唤出笔记搜索框</p>
+<p>如果一时半会想不起要找的笔记标题是什么、或是找不到笔记，我会按 ctrl/cmd+shift+F 切换到全局搜索，用标题/正文的关键词找笔记，再回到闪念笔记中创建链接。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/daa925052555da47d0d533efc6307e7a.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>全局搜索，用标题/正文关键词找笔记</p>
+<p>在此基础上，继续完善写完标题概括的内容，一篇闪念笔记就完成了。</p>
+<p>对我来说，闪念笔记就像是某天吃到了惊艳的料理，激动的写了一段评价，讲这道料理有多好吃、让自己想起了某段愉快的记忆，简短、但没法让我做出同一道菜。</p>
+<h3 id="写文献笔记"><a href="#写文献笔记" class="headerlink" title="写文献笔记"></a>写文献笔记</h3><p>文献笔记是保持原文表达的笔记，我通常会在这几种条件下写：</p>
+<ul>
+<li>看到了引起我兴趣的内容，想从里面学到些什么，可能是一篇文章、一个视频，甚至一串推文</li>
+<li>学习一门课程时，需要记录课程中所学的内容</li>
+<li>从某本书里读到了觉得很有价值、或很实用的内容</li>
+</ul>
+<p>记这类笔记时，我通常要关注两个区域，一是原文，二是新建的笔记，因而我的查看方式也会取决于原文：</p>
+<ul>
+<li><strong>文章、视频或推文</strong>：在 PC / iPad 分屏，一个窗口看原文、另一个写笔记，因为原文是电子化的、而且信息量通常不会很大</li>
+<li><strong>MOOC（网课）</strong>：先通过 PC / iPad 观看、写纸质笔记，一段时间内再转电子化，因为原文更系统化、需要高度专注和长期学习，看的时候尽量保证大屏幕，笔记写两次也可以加深记忆、优化内容结构</li>
+</ul>
+<p>图书和论文方面，因为我平时输入比较少，这里就暂不分享了。</p>
+<p>新建一条文献笔记后，如果原文自带标题，我会直接沿用原标题或将其译为中文，如果原文没有标题，我再根据内容概括一个标题，就像写闪念笔记时所做的那样。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/f9ffc77813b9361b097098e2175a73e3.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/ff2f6469a7d864915fc1467062221591.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>如果原文自带标题，我会直接沿用原标题或将其译为中文</p>
+<p>接着，我会<strong>参考原文的类型将笔记移动到合适的位置</strong>。比如要翻译一篇宣传片教程文章、作者是资深宣传片制作人 <a target="_blank" rel="noopener" href="https://twitter.com/derek_lieu">Derek Lieu</a>，我会将笔记移动到 <code>2-文献笔记/文章/Derek Lieu</code> 目录下，这样一来，之后就可以通过回忆原文信息快速找到这篇笔记。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/c6d9af5f8a505f9278206ee32213d117.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>出于习惯，完成这一步后我也会<strong>在笔记的结尾记下原文链接/出处</strong>，以便下次需要确认原文或继续查看时，能快速回到原位。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/49a9035b33a6751a5f9f666191a29f20.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>我习惯于在文献笔记结尾放链接</p>
+<p>到这里，一篇文献笔记就有了标题、放到了合适的位置、也存好了原文链接，<strong>剩下的正文我通常有两种记录方式</strong>：</p>
+<ul>
+<li><strong>翻译全文</strong>：原文表达清晰且内容量不大时，我会从头到尾翻译一遍，记录下来，比如一篇文章、一个教程视频</li>
+<li><strong>摘录重构</strong>：原文内容量较大，或表达发散时，我会提取部分有价值的信息，在保留原意的前提下，重构为逻辑性更强的结构，比如 MOOC 里的一节课、一串推文</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/b5043955fd2025c227ec9f8824b95a1d.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/72e6ab6a047580c46e058d0de839f5cc.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>一串推文的原文 vs 笔记</p>
+<p>这一步完成后，一篇文献笔记也就写完了。</p>
+<p>文献笔记对我来说，就像是吃到了惊艳的料理，拍下照片，记下了食用体验、能看出来用到的食材，甚至冲进厨房从头到尾拍下厨师的制作过程，相比吃后评价（闪念笔记）多出了一些具体的信息，但也还不足以让我做出同一道菜。</p>
+<h3 id="写永久笔记"><a href="#写永久笔记" class="headerlink" title="写永久笔记"></a>写永久笔记</h3><p>永久笔记是用我自己的话表达、以复用为目的的笔记，我一般会在这些情况下写：</p>
+<ul>
+<li>近期从实践中学到了有复用价值的新知识，比如通过 wiki 和教程理解了某个专业术语、写代码实现了一个自动化</li>
+<li>在闪念笔记/文献笔记中发现了有复用价值的信息，能拆解重组、用自己的话写一篇新笔记了</li>
+<li>有个想写的文章选题，定好标题就能立即开写了</li>
+<li>发现几篇笔记可以归入一个共同的主题，而且能延伸写一些自己的思考</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/daeab90a2b20c2aea47f195ef13e96e4.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>近期学到的新知识，可以写成永久笔记</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/5aad0fb93ed70ff4db0ebbfcb3880542.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>文献笔记里发现有价值的知识，也可以重构成永久笔记</p>
+<p>上面这些情况，能说明某个时间点、我在某个主题下知识储备够多了，但<strong>要怎样才能写出易于复用的笔记？</strong></p>
+<p>我的答案是<strong>为笔记选用合适的框架</strong>。</p>
+<p>每当我准备写一篇永久笔记，我都会先想象写完后自己要如何用这篇笔记，再从 3 种文档类型里选择最合适的一种（文章类除外）：</p>
+<ul>
+<li><strong>操作指南</strong>：如何解决一个具体的问题/实现特定的结果，重在描述做法</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/2c48c6e97d4ece1a602657670a7ae4e2.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><strong>解释</strong>：解释概念、术语、原因等需要思考理解的内容</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/430957a9b464df2049ca110c65acc248.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><strong>参考</strong>：做某事时要查阅其中的部分信息，像字典/ wiki 般有整齐统一的结构</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/425713e9f83c6670d666eac2fb02270f.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>这套文档分类并非我的原创，而是从别的领域迁移过来的，我曾有段时间在研究如何写出好的开发文档，偶然找到了 Youtube 视频《What nobody tells you about documentation》，其中介绍了 4 种文档类型（比上面介绍的 3 种多了一个教程）。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/4d84f8294e05664415efab7c42ed3301.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>4 种文档目的各异、却又被学习和工作串联，大部分教程/笔记之所以难用，往往是混杂了多种类型</p>
+<p>因为这些文档和知识库中笔记的定位很贴近，我便尝试用在了自己的知识库里，意外发现完美匹配我的使用需求，便一直用下来了。</p>
+<p>在 Obsidian 中，可以通过 <code>#</code> 和文本来加标签，选定一种文档类型后，我便会在笔记的开头加上对应的标签：</p>
+<ul>
+<li>操作指南：how-to</li>
+<li>解释：explanation</li>
+<li>参考：reference</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/408dbe55af1d09a74328f180470e64b4.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>这样不仅指定了笔记的预期用途，而且可以用标题时刻提醒自己，避免写的过程中偏离了预期的方向。</p>
+<p>但这还只是开了个头，选择的文档类型不同，笔记的写作思路也会有所不同，接下来我分别介绍下自己写这 3 种笔记时的关注点。</p>
+<h4 id="操作指南"><a href="#操作指南" class="headerlink" title="操作指南"></a>操作指南</h4><p>操作指南是帮助解决一个具体问题的笔记，侧重于描述指导实践的做法。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/b1abccffd138678e1fbe53b9d41247ce.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>写操作指南时，我会先起个好标题，需要满足这两个条件：</p>
+<ul>
+<li>一眼就能看出来是解决什么问题的，用「如何 xxx」这样的句式</li>
+<li>尽可能接近找笔记时会用的表达，侧重「做什么」而非「怎么做」</li>
+</ul>
+<p>比如我想写一篇笔记，讲用 Python 从网页爬取数据、需要用到一个名为 Scrapy 的库，好的标题可以是《如何用 Python 爬取网页》，不太好的标题可能是《如何使用 Python 的 Scrapy 库》，因为前者更好的体现了「做什么」。</p>
+<p>明确标题后，为了确保自己能写出清晰的操作指南，我在写笔记正文时还会考虑一些点。</p>
+<ul>
+<li><strong>提供可实践的步骤/做法</strong>：描述每个步骤要做的，或是多种实践向的建议，以便我日后翻看笔记时能知道怎么做</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/0331ad1f2c4c39c3fb03738445e18909.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/0700c483c2e94b4917f33011a9f94eb8.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>操作指南可以分步骤，也可以是实践向、没有特别明显步骤的</p>
+<ul>
+<li><strong>选择合理的起点</strong>：适当省去一些无需关注的前置步骤，比如讲如何在 Obsidian 中引用文本块，就不需要讲如何下载和安装 Obsidian 了</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/869d13995e94bf6c4d9be8ceacc36087.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><strong>注重结果，而非解释</strong>：笔记全文要能帮助我达成最终的结果，尽量不做任何解释，如果实在有必要、也尽量链接引用解释类笔记</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/ccbb3832d26097e2e0f4ca284c52981a.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li><strong>允许多种途径</strong>：做一件事的方法往往不只一种，操作指南中也要对多种做法保持包容，比如「如何独特的介绍一款游戏」，既可以写一段体现游戏主旨的描述、也可以为游戏选择 3 个独特的关键词组合、还可以用独特的方式展示游戏</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/88ef07299e3a5b697d92e33140941dd3.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>总结一下，操作指南我是这么写的：</p>
+<ol>
+<li>起个面向实践的标题，比如《如何 xxx》</li>
+<li>提供可实践的步骤/做法</li>
+<li>选择合适的起点</li>
+<li>注重结果，而非解释</li>
+<li>允许多种途径</li>
+</ol>
+<h4 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h4><p>解释类笔记正如其名，旨在帮助读者理解一个或多个相关的术语、概念或某些因果关系。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/efb44eaec9d3f6d1a5d553e51a7e38e8.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>我在写这类笔记时同样很关注标题，好的标题应该一眼就能看出来是解释某些东西的，具体来说，我会考虑这两种表达：</p>
+<ul>
+<li>用名词，并限定讨论范围，比如《游戏中的钩子》</li>
+<li>用问句，预期的回答显然是对概念/因果的解释，比如《为什么游戏预告那么引人入胜》</li>
+</ul>
+<p>定好标题后，写这类笔记的正文时，为了做到通俗易懂、实用的解释，我也会关注一些点。</p>
+<ul>
+<li><strong>讲自己能听懂的话</strong>：不复制粘贴 wiki 或其他人的解释、少用专业术语，用自己的话解释，毕竟笔记是写给自己看的，要是写进去的东西自己都看不懂就闹笑话了。</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/1a898b3568e7e320421ca519bb0485fe.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/f3be0c539a6104b13dd97edfb83d494f.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>wiki 的内容很详细，但写给自己看的东西，还是得用自己看得懂的话</p>
+<ul>
+<li><strong>选择合适的解释方法</strong>：根据要解释的内容，从配图、举例子或打比方这 3 种方法中选择最合适的，这是我从擅长打通游戏和教育的 <a target="_blank" rel="noopener" href="https://ncase.me/">Nicky Case</a> 那学来的。</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/aed9edce6c6c98e5e92bbf3b612e25ad.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>用图像、视觉化的内容解释</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/7c8fbf64cde4b7485a156fd23a5dcabf.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>举个例子</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/e8f6e9252ce995b02732407ecb19acbc.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>打比方、用比喻</p>
+<ul>
+<li><strong>讲清前因后果</strong>：注重因果的描述，比如是什么背景导致了这样的设计、为什么要选用这一种工具方法，讲清这些也有利于举一反三，或是深入思考。</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/1708225f08d3e17770014ed32b99ad15.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>在分享自己创作经验的文章中，为了更好的让读者理解工具的适用场景，我会特别解释选工具的原因</p>
+<ul>
+<li><strong>避免讲做法、或写成结构化的参考</strong>：解释类笔记的目的是把东西讲清楚，不是为了让我跟着做什么，或是像字典一样快速跳到特定的部分查阅，因而要避免写成其他类型的文档。</li>
+</ul>
+<p>最后，我还会<strong>为解释类笔记加上别名</strong>，这是一个 Obsidian 中支持的功能，为笔记指定一个或多个文本作为别名后，就可以额外通过这些文本搜到这篇笔记，这其实是方便了我后续的找笔记。</p>
+<p>比如《游戏的钩子》这篇笔记，这个概念对应的英文是 hook，我就会在笔记的开头写上这样一段内容，加上「hook」和「钩子」这两个别名：</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/c0d6039a2ac869c860ac83c0dfa7e46f.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>它们在 Markdown 里其实是这样写在开头的：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">alias:</span> <span class="hljs-string">hook,</span> <span class="hljs-string">钩子</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></tbody></table></figure>
+
+<p>加上别名后，我就可以通过别名的文本搜到这篇笔记，不管是全局搜索还是创建链接时都支持：</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/a7d299259e66660c55586acc77d6c747.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/98096e3d27717cbfa41741e4c984eacc.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>总结一下，解释类笔记我是这么写的：</p>
+<ol>
+<li>选一个能体现出概念/因果解释的标题</li>
+<li>讲自己能听懂的话</li>
+<li>选择合适的解释方法</li>
+<li>讲清前因后果</li>
+<li>避免讲做法、或写成结构化的参考</li>
+</ol>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p>参考类笔记像 wiki、字典一样结构化，查阅时往往只需要关注特定部分的信息，比如发布文章前的检查项目、数据库常用的查询代码、用不同器具制作咖啡时手磨的研磨度。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/b9561e18af7b2deedb8c949670d50404.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>和前面两种笔记一样，参考类笔记也要一个好的标题，根据我的经验，我倾向于<strong>在标题中纳入找笔记会用的关键词</strong>。</p>
+<p>比如一篇参考类笔记，描述了用不同器具制作咖啡时，推荐手磨设置的刻度，我用的标题是《C40 制作各类咖啡的研磨刻度参考》，其中的关键词是「C40」和「刻度」。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/e451a289b216e91aed8c1f4b6849c580.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>在写这类笔记的正文时，为了让自己日后能更便捷的查阅参考，我也有一些考虑的点。</p>
+<p><strong>使用对查阅友好的结构</strong>：就像我找笔记时借标题理解其中的内容，在查阅参考类笔记时，我也会通过大纲中的子级标题理解对应部分的内容。为了帮助自己更高效的查阅，我也习惯于将查阅的关键词作为标题。</p>
+<p>比如上面咖啡手磨刻度的笔记，我在查阅这个笔记时相当于在问「要制作 xx 类型的咖啡，我应该将手磨的刻度调到什么范围内？」，查阅的关键词都是「咖啡类型」，因而笔记内的子级标题最好都是咖啡的类型。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/3b4556e4a2474f9765961696adfd530a.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/3cee216e8e69b086efac5ab0cda315f8.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>C40 手磨研磨刻度的笔记，不过这个例子算比较极端了，其实这里数据这么少、我完全可以用一个表格解决</p>
+<p><strong>只提供查阅所需信息</strong>：提供的信息应该刚好能满足查阅的需求，避免添加过多无关信息、导致查阅的效率变低。</p>
+<p>还是手磨刻度笔记的例子，我在查阅时只需要知道「刻度范围」，因而每块内容中讲清推荐的刻度范围即可，而不应出现「如何调节刻度」这样的内容，后者适合单独写一篇笔记，必要时通过链接引用。</p>
+<p><strong>保持准确一致</strong>：参考类笔记中的内容需要经常查看，为了避免误导，需要持续更新、保持内容的准确性，而为了提高查阅的效率，也最好使用一致的结构、语气和格式。</p>
+<p>总结一下，参考类笔记我是这么写的：</p>
+<ol>
+<li>用找笔记的关键词起标题</li>
+<li>使用对查阅友好的结构</li>
+<li>只提供查阅所需信息</li>
+<li>保持准确一致</li>
+</ol>
+<p>至此，便是我用 3 类文档框架写永久笔记的做法。</p>
+<p>永久笔记对我来说，就像是我为了能还原某道好吃的料理，反复摸索尝试后写出的食谱，能指导我的实践行动，告诉我要准备哪些食材、如何烹饪、最终还原出那一道料理。</p>
+<p><strong>这样的笔记不管内容上还是形式上，都离不开「让自己高效复用知识」的目的。</strong></p>
+<h3 id="链接笔记"><a href="#链接笔记" class="headerlink" title="链接笔记"></a>链接笔记</h3><p>每次写笔记时，我也会关注其中是否有关联到其他笔记的内容，如果有的话，便会新建一个链接、在对应的位置链接关联笔记。</p>
+<p>在知识库的长期使用中，我发现链接笔记主要有这两个好处：</p>
+<ul>
+<li><strong>让信息的表达和获取更高效</strong>：对于永久笔记而言，通过链接操作指南、解释和参考，可以保持各类笔记的简洁，确保每篇笔记都能专注于自身的目的，讲步骤的就交给操作指南、理解术语概念就交给解释</li>
+<li><strong>帮我更好理解知识、或启发灵感</strong>：发现知识间的新联系，比如整理自由职业经验的笔记时，我就发现其中提到了我在项目管理中学过的提案书，虽然我想不起提案书是什么，但靠着回顾当时的笔记，我就可以更好的理解新旧知识</li>
+</ul>
+<p>但什么时候才要链接笔记？在写这篇文章的期间，我也随机回顾了不少知识库中的笔记，发现<strong>我创建链接的场景主要有这 3 种</strong>：</p>
+<ul>
+<li><strong>提到了某个术语/概念</strong>：比如我在写宣传片领域的笔记时，「游戏的钩子」就是一个高频出现的概念，我便会在提到它的地方引用对应的解释类笔记</li>
+<li><strong>需要同时使用操作指南和参考类笔记</strong>：比如一篇分步骤介绍如何做某事的笔记，需要用到另一篇笔记里的某种规范/标准，我会在更有可能被找到的笔记中链接到另一方</li>
+<li><strong>提及笔记本身</strong>：就像「那篇笔记」、「这篇文章」，关注的焦点是笔记本身，而不是笔记中储存的知识，主要出现在一些背景/摘要里</li>
+</ul>
+<p>Obsidian 管这种内部笔记间的链接叫「内部链接」，要新建一个内部链接，可以在编辑笔记时连输两个 <code>[</code> 、唤出内部链接菜单：</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/8ea543f7498be26f096df40928ee3af5.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>Obsidian 唤出内部链接菜单</p>
+<p>此时输入文本，即可用关键词搜索标题，查找匹配的笔记：</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/9a0e3410a03d463ca019ad3db24c34d5.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>Obsidian 内部链接，输入文本搜索笔记</p>
+<p>最后，选中要链接的笔记，链接就创建成功了：</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/7172f61fd8be0e298ede1e939f21cd8b.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>创建好的内部链接</p>
+<p>点击内部链接，便会打开对应的笔记、跳转到开头，但我通常还会有一些额外的需求：</p>
+<ul>
+<li>希望打开笔记后，能直接跳转到特定的位置，比如某个标题、或具体的一段内容</li>
+<li>希望链接能显示成自定义的文本，比如显示成「这篇文章」，不然有时候笔记标题放在上下文里看着怪别扭</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/23905fc31544e83e8570aaaa3d315508.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>大部分情况下，我更需要下面一种简洁的表达</p>
+<p>我在 Obsidian 里都找到了对应的解决方案，比如希望打开笔记后跳转到特定位置，可以在链接中输入 <code>#</code> 搜索并选择标题。在内部链接中用 # 唤出标题选单</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/c99a798ec2d3340fc4d67b5860e510b6.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/301feeffe7743159120efd6d61310052.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>在内部链接中用 # 唤出标题选单</p>
+<p>如果想要跳转到更精确的位置，比如另一篇笔记里的某一段文字，则可以在链接中输入 <code>^</code> 搜索并选择对应的内容，<strong>注意这种格式和链接到标题只能二选一</strong>。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/55d1f2f099d65f24c9bf6faf6ca5032e.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/a1df1679c6bd8c2f8df77223bc3a8103.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>在内部链接中用 ^ 唤出文本块选单</p>
+<p>要自定义链接显示的文本，可以在链接的末端输入 <code>|</code> ，然后输入要显示的文本，比如 <code>[[一大串超长的笔记名称|这篇笔记]]</code> 会显示为「这篇笔记」。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/0b5fd3d83dd9fd680612730ad075b530.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.sspai.com/2022/12/07/59f310bc7444a4effc0c3e4b424b6bca.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>自定义链接文本编辑模式 vs 阅读模式</p>
+<p>在链接笔记时，笔记的别名也能提高我找笔记的效率和成功率，就是我在解释类笔记里提到过的那个 <code>alias</code>，因为有时候脑子一抽、就是想不起来要找到的那个概念的中文/英文叫什么，如果设置了自己印象深刻的别名，就可以用还记得的关键词都试试。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/39601171040a5d6f56916b9d139742c1.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>链接笔记时也能搜索 alias 别名</p>
+<h3 id="维护子级目录"><a href="#维护子级目录" class="headerlink" title="维护子级目录"></a>维护子级目录</h3><p>前面已经讲了我是怎么写各种笔记的，但搭建易用的知识库显然不只是写笔记这么简单，因为<strong>时间一长，知识库里的笔记也会堆积，导致很难在文件列表里找笔记</strong>，这也是我不得不面对的问题。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/bbbdc4c97b52230f322630696f48488b.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>想象一下这个列表的长度翻上几倍，大概就是我曾经面临的情况</p>
+<p>试过不少方法后，我最终选择了不预先创建目录、而是等某个文件夹的笔记堆积到一定量再建，也就是<strong>自下而上的搭建目录</strong>，因为我发现这么做<strong>对我有两个好处</strong>：</p>
+<ul>
+<li><strong>省事</strong>：相当于只在必要的时间触发目录更新，不会像定期维护目录那样浪费一部分时间</li>
+<li><strong>提升找笔记的效率</strong>：目录都是根据自己的认知和理解建立的，因而找特定笔记时，可以通过回忆快速想到对应的目录位置，我早期也试过参考专业的图书分类建自己的目录，但既不能很好匹配我的关注领域，也不能帮助我快速回想起笔记的存放位置，因为有些分类我自己都搞不懂</li>
+</ul>
+<p>具体来说，<strong>我并没有为触发目录更新设定一个精确的笔记堆积量，更多是凭感觉</strong>。</p>
+<p>每当我存入一篇新笔记、或是随意浏览文件列表时，我都会扫一眼可见范围内同级的笔记数量，<strong>如果笔记数量已经堆到我一眼看了就无法忍受，我就会开始在这一级更新目录</strong>。</p>
+<p>我会快速扫视这些笔记的标题、先对它们的内容有一个大致的印象，然后选一个能纳入最多笔记的分类、新建文件夹、将对应的笔记移动进去。</p>
+<p>文献笔记大多可以依靠原文类型、来源平台/作者建立子级目录，但永久笔记都是自己的话写出来的，最好有一套定制的目录，而且目录的结构不能太过复杂，否则找笔记也头疼。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/bc3dd1c649d6ed5733aacb5daf1ad262.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>文献笔记的子级目录</p>
+<p>为此，<strong>我为永久笔记下的子级目录指定了命名规范</strong>，统一用 <code>000-分类名</code> 这样的格式，3 位数字分别代表一级、二级、三级目录的序号，也由此限制了子级目录的宽度和深度。</p>
+<p>以我最近在学的游戏宣传片领域为例，对应的目录逐层深入就是：</p>
+<ul>
+<li>3-永久笔记</li>
+<li>200-游戏</li>
+<li>220-营销发行</li>
+</ul>
+<p><img src="https://cdn.sspai.com/2022/12/07/eeec76b71081f7911122fddcc56a77bb.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>在为子级目录写分类名称时，我也会尽可能保留一定的拓展空间、避免范围限得太小，但即便一时没选好也不会有太大负担，因为后续的目录维护也能换更合适的分类名，必要时还可以重新移动笔记位置。</p>
+<h3 id="维护索引"><a href="#维护索引" class="headerlink" title="维护索引"></a>维护索引</h3><p>要找一篇笔记，除了搜索标题/正文关键词、顺着目录结构找、顺着内部链接找，我在开头还提到过一种途径，不知你是否还能回想起来？</p>
+<p>答案是通过索引跳转。</p>
+<p>索引相当于笔记的中转站、传送大厅，其中专门整理了同一专题笔记的链接，并且会用多级标题将关联的笔记分门别类，便于我高效查阅、找到所需的笔记，这个角度来说，索引也算是一种参考类笔记。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/b0bf8287118f07c4fba8da9e9fdf1fb2.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><strong>每当我发现知识库里的笔记可以凑够一个专题，我就会尝试新建一个索引笔记</strong>，将关联的笔记链接都收录进来。</p>
+<p>至于多级标题如何取，一级标题我会用文档框架分，比如如何做、参考、解释，二级再视情况「自下而上」创建，选择对我自己有意义的分类。</p>
+<p><img src="https://cdn.sspai.com/2022/12/07/ee5e6bb8e0fd865090417193f9a24f0b.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>索引内的标题，也是自下而上生成的</p>
+<p>对我来说，索引算是锦上添花的存在，相当于额外搭建了一个找笔记的途径，而整理索引的过程中，也会帮助我深入理解原有的笔记。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上，便是我目前<strong>这套知识库的搭建方法，基本可以概括为 3 步</strong>：</p>
+<ol>
+<li>创建顶层目录</li>
+<li>写笔记存入</li>
+<li>维护发现笔记的渠道</li>
+</ol>
+<p>在摸索这套知识库的过程中，我也发现了这 <strong>4 个对我帮助较大、让我学得更深的技巧</strong>：</p>
+<ul>
+<li>写笔记时尽量用自己的话、不摘录原文</li>
+<li>以复用为目的写笔记，选择合适的文档框架</li>
+<li>常维护多整理，而不是记上一堆笔记吃灰</li>
+<li>尽早输出，不管是写文章、做视频教别人，还是用项目练手</li>
+</ul>
+<p>但我必须承认，这套搭建方法并不完美，比如现在就还存在这两个问题：</p>
+<ul>
+<li>闪念笔记缺少高效的处理机制，导致这类笔记堆积如山，处理起来略头大</li>
+<li>没有纳入项目相关的笔记，项目知识输入主要靠套文档框架写笔记、或写长篇的复盘文章</li>
+</ul>
+<p>要搭好个人的知识库，方法也不一定只有这一种，这么做只是暂时满足了我当前对找笔记和写作的需求。可以预见的是，在未来的时间里，我也会继续把这套知识库折腾下去，在学习、记笔记和创作的过程中持续优化它。</p>
+<p>希望我的做法和经验能对你有所启发，帮你更好的学习新知识、创作自己的内容。</p>
+<p>至于开头提到的那位朋友，看完这篇文章的草稿后，他留下了这句话：</p>
+<p>「一年，你知道我这一年怎么过的吗」</p>
+<p>&gt; 少数派请你做地图：城市声音收藏夹<a target="_blank" rel="noopener" href="https://sspai.com/post/76807">火热征集中</a>，期待你创作的城市之声 🎧</p>
+<p>&gt; 下载<a target="_blank" rel="noopener" href="https://sspai.com/page/client">少数派 2.0 客户端</a> 、关注<a target="_blank" rel="noopener" href="https://sspai.com/s/J71e">少数派公众号</a>，解锁全新阅读体验 📰</p>
+<p>&gt; 实用、好用的<a target="_blank" rel="noopener" href="https://sspai.com/mall">正版软件</a>，少数派为你呈现 🚀</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%8C%AE/" class="category-chain-item">技术文献</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%89%AA%E8%97%8F/" class="print-no-link">#剪藏</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>找笔记方便、写作又给力的知识库，我是这么搭建出来的 - 少数派</div>
+      <div>https://rongyel.github.io/posts/3ec2af54.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Rong晔</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月29日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/0.html" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/7c156962.html" title="物念 2.0：追踪物品价值，给你的购物欲戴上口罩">
+                        <span class="hidden-mobile">物念 2.0：追踪物品价值，给你的购物欲戴上口罩</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments">
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"yxU2T5rz8PlfrGZTFbIWlVPr-gzGzoHsz","appKey":"Cgutgrh3GMVacKZ0TKHkXINN","path":"window.location.pathname","placeholder":"留言仅限讨论，禁止广告等行为","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <a href="https://rongyel.top/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i>RSS</a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
