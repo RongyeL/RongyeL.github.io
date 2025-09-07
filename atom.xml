@@ -6,7 +6,7 @@
   <link href="https://rongyel.github.io/atom.xml" rel="self"/>
   
   <link href="https://rongyel.github.io/"/>
-  <updated>2025-09-07T14:28:15.541Z</updated>
+  <updated>2025-09-07T14:27:03.090Z</updated>
   <id>https://rongyel.github.io/</id>
   
   <author>
@@ -15,35 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>我的OBSIDIAN笔记维护手册</title>
-    <link href="https://rongyel.github.io/posts/7b397f34.html"/>
-    <id>https://rongyel.github.io/posts/7b397f34.html</id>
-    <published>2025-09-07T14:11:14.201Z</published>
-    <updated>2025-09-07T14:28:15.541Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;我的OBSIDIAN笔记维护手册&quot;&gt;&lt;a href=&quot;#我的OBSIDIAN笔记维护手册&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="用户手册" scheme="https://rongyel.github.io/categories/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/"/>
-    
-    
-    <category term="Obsidian" scheme="https://rongyel.github.io/tags/Obsidian/"/>
-    
-    <category term="PARA" scheme="https://rongyel.github.io/tags/PARA/"/>
-    
-    <category term="笔记人生" scheme="https://rongyel.github.io/tags/%E7%AC%94%E8%AE%B0%E4%BA%BA%E7%94%9F/"/>
-    
-  </entry>
   
   <entry>
     <title>2025 东京 出游物品清单</title>
@@ -210,9 +181,9 @@
     
     <category term="方法学论" scheme="https://rongyel.github.io/tags/%E6%96%B9%E6%B3%95%E5%AD%A6%E8%AE%BA/"/>
     
-    <category term="Obsidian" scheme="https://rongyel.github.io/tags/Obsidian/"/>
-    
     <category term="PARA" scheme="https://rongyel.github.io/tags/PARA/"/>
+    
+    <category term="Obsidian" scheme="https://rongyel.github.io/tags/Obsidian/"/>
     
   </entry>
   
@@ -555,6 +526,37 @@
     
     
     <category term="旅游" scheme="https://rongyel.github.io/tags/%E6%97%85%E6%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不要害怕讨论，充分交流可以减少走弯路。</title>
+    <link href="https://rongyel.github.io/posts/f718ab89.html"/>
+    <id>https://rongyel.github.io/posts/f718ab89.html</id>
+    <published>2025-07-23T15:52:49.041Z</published>
+    <updated>2025-09-07T14:27:02.920Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;记录一次工作有感。&lt;br&gt;自己吭哧吭哧写了两三天方案，自以为自己方案写的很完美，画了很多图。&lt;br&gt;结果一讨论，好家伙，根本没有必要。&lt;/p&gt;
+&lt;p&gt;完全可以用复杂度更低的方式实现90%的功能，而且风险还小。&lt;/p&gt;
+&lt;p&gt;所以，一定不要闭门造车。&lt;br&gt;在开发过程中多交流</summary>
+        
+      
+    
+    
+    
+    <category term="工作经验" scheme="https://rongyel.github.io/categories/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+    <category term="工作" scheme="https://rongyel.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+    <category term="芯片" scheme="https://rongyel.github.io/tags/%E8%8A%AF%E7%89%87/"/>
+    
+    <category term="开发" scheme="https://rongyel.github.io/tags/%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
